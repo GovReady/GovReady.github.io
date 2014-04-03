@@ -20,3 +20,6 @@ audit/reports/results-*
 credentials.inc.php
 
 # test note
+
+# Jekyll
+_site
