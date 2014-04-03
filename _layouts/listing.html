@@ -1,0 +1,15 @@
+{% include header.html %}
+
+<h2>{{ page.name }}</h2>
+
+<h3>Accreditations</h3>
+
+<ul>
+{% for accreditation in page.accreditations %}
+  <li>{{ accreditation }}</li>
+{% endfor %}
+</ul>
+
+{{ content }}
+
+{% include footer.html %}
