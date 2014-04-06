@@ -1,0 +1,47 @@
+---
+layout: control
+permalink: /CCE-26919-1/
+name: CCE-26919-1
+title: Set SSH Idle Timeout Interval
+ident: CCE-26919-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Causing idle users to be automatically logged out
+guards against compromises one system leading trivially
+to compromises on another.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to set ssh idle timeout interval is of <b>low</b> severity.</p>
+<p><small>View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">SSH allows administrators to set an idle timeout
+interval.
+After this interval has passed, the idle user will be
+automatically logged out.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+To set an idle timeout interval, edit the following line in <xhtml:code>/etc/ssh/sshd_config</xhtml:code> as
+follows:
+<pre xmlns="http://www.w3.org/1999/xhtml">ClientAliveInterval <b>interval</b></pre>
+The timeout <b xmlns="http://www.w3.org/1999/xhtml">interval</b> is given in seconds. To have a timeout
+of 15 minutes, set <b xmlns="http://www.w3.org/1999/xhtml">interval</b> to 900.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+If a shorter timeout has already been set for the login
+shell, that value will preempt any SSH
+setting made here. Keep in mind that some processes may stop SSH
+from correctly detecting that the user is idle.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

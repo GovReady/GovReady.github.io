@@ -1,0 +1,34 @@
+---
+layout: control
+permalink: /CCE-27199-9/
+name: CCE-27199-9
+title: Disable Network File System (nfs)
+ident: CCE-27199-9
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Unnecessary services should be disabled to decrease the attack surface of the system.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable network file system (nfs) is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Disable NFS Server Daemons</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The Network File System (NFS) service allows remote hosts to mount
+and interact with shared filesystems on the local machine. If the local machine
+is not designated as a NFS server then this service should be disabled.
+
+    The <xhtml:code>nfs</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig nfs off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

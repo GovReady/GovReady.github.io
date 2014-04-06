@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27098-3/
+name: CCE-27098-3
+title: Specify a Remote NTP Server
+ident: CCE-27098-3
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Synchronizing with an NTP server makes it possible
+to collate system logs from multiple sources or correlate computer events with
+real time events.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to specify a remote ntp server is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Network Time Protocol</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To specify a remote NTP server for time synchronization, edit
+the file <xhtml:code>/etc/ntp.conf</xhtml:code>. Add or correct the following lines,
+substituting the IP or hostname of a remote NTP server for <em xmlns="http://www.w3.org/1999/xhtml">ntpserver</em>:
+<pre xmlns="http://www.w3.org/1999/xhtml">server <i>ntpserver</i></pre>
+This instructs the NTP software to contact that remote server to obtain time
+data.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

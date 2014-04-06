@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27267-4/
+name: CCE-27267-4
+title: Disable Certmonger Service (certmonger)
+ident: CCE-27267-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The services provided by certmonger may be essential for systems
+fulfilling some roles a PKI infrastructure, but its functionality is not necessary
+for many other use cases.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable certmonger service (certmonger) is of <b>low</b> severity.</p>
+<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Certmonger is a D-Bus based service that attempts to simplify interaction
+with certifying authorities on networks which use public-key infrastructure. It is often
+combined with Red Hat's IPA (Identity Policy Audit) security information management
+solution to aid in the management of certificates.
+
+    The <xhtml:code>certmonger</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig certmonger off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

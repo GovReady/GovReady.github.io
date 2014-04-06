@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-26792-2/
+name: CCE-26792-2
+title: Require Client SMB Packet Signing, if using mount.cifs
+ident: CCE-26792-2
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Packet signing can prevent man-in-the-middle
+attacks which modify SMB packets in transit.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to require client smb packet signing, if using mount.cifs is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Configure Samba if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Require packet signing of clients who mount Samba
+shares using the <xhtml:code>mount.cifs</xhtml:code> program (e.g., those who specify shares
+in <xhtml:code>/etc/fstab</xhtml:code>). To do so, ensure signing options (either
+<xhtml:code>sec=krb5i</xhtml:code> or <xhtml:code>sec=ntlmv2i</xhtml:code>) are used.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+See the <xhtml:code>mount.cifs(8)</xhtml:code> man page for more information. A Samba
+client should only communicate with servers who can support SMB
+packet signing.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

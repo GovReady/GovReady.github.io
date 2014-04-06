@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-27256-7/
+name: CCE-27256-7
+title: Disable ntpdate Service (ntpdate)
+ident: CCE-27256-7
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>ntpdate</xhtml:code> service may only be suitable for systems which
+are rebooted frequently enough that clock drift does not cause problems between
+reboots. In any event, the functionality of the ntpdate service is now
+available in the ntpd program and should be considered deprecated.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable ntpdate service (ntpdate) is of <b>low</b> severity.</p>
+<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>ntpdate</xhtml:code> service sets the local hardware clock by polling NTP servers
+when the system boots. It synchronizes to the NTP servers listed in
+<xhtml:code>/etc/ntp/step-tickers</xhtml:code> or <xhtml:code>/etc/ntp.conf</xhtml:code>
+and then sets the local hardware clock to the newly synchronized
+system time.
+
+    The <xhtml:code>ntpdate</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig ntpdate off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

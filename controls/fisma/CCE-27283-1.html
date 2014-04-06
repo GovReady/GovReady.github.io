@@ -1,0 +1,47 @@
+---
+layout: control
+permalink: /CCE-27283-1/
+name: CCE-27283-1
+title: Set Account Expiration Following Inactivity
+ident: CCE-27283-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Disabling inactive accounts ensures that accounts which may not
+have been responsibly removed are not available to attackers
+who may have compromised their credentials.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to set account expiration following inactivity is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Set Account Expiration Parameters</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To specify the number of days after a password expires (which
+signifies inactivity) until an account is permanently disabled, add or correct
+the following lines in <xhtml:code>/etc/default/useradd</xhtml:code>, substituting
+<xhtml:code><i xmlns="http://www.w3.org/1999/xhtml">NUM_DAYS</i></xhtml:code> appropriately:
+<pre xmlns="http://www.w3.org/1999/xhtml">INACTIVE=<i>NUM_DAYS</i></pre>
+A value of 35 is recommended.  
+If a password is currently on the
+verge of expiration, then 35 days remain until the account is automatically
+disabled. However, if the password will not expire for another 60 days, then 95
+days could elapse until the account would be automatically disabled. See the
+<xhtml:code>useradd</xhtml:code> man page for more information.  Determining the inactivity
+timeout must be done with careful consideration of the length of a "normal"
+period of inactivity for users in the particular environment. Setting
+the timeout too low incurs support costs and also has the potential to impact
+availability of the system to legitimate users.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

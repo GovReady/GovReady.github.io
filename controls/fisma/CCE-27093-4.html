@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-27093-4/
+name: CCE-27093-4
+title: Enable the NTP Daemon
+ident: CCE-27093-4
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Enabling the <xhtml:code>ntpd</xhtml:code> service ensures that the <xhtml:code>ntpd</xhtml:code>
+service will be running and that the system will synchronize its time to
+any servers specified. This is important whether the system is configured to be
+a client (and synchronize only its own clock) or it is also acting as an NTP
+server to other systems.  Synchronizing time is essential for authentication
+services such as Kerberos, but it is also important for maintaining accurate
+logs and auditing possible security breaches.  
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+The NTP daemon offers all of the functionality of <xhtml:code>ntpdate</xhtml:code>, which is now 
+deprecated.  Additional information on this is available at 
+http://support.ntp.org/bin/view/Dev/DeprecatingNtpdate</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to enable the ntp daemon is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Network Time Protocol</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+          
+    The <xhtml:code>ntpd</xhtml:code> service can be enabled with the following command:
+    <xhtml:pre># chkconfig --level 2345 ntpd on</xhtml:pre>
+        </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

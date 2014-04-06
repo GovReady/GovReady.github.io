@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-27056-1/
+name: CCE-27056-1
+title: Add nosuid Option to Removable Media Partitions
+ident: CCE-27056-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The presence of suid and sgid executables should be tightly controlled. Allowing
+users to introduce suid or sgid binaries from partitions mounted off of
+removable media would allow them to introduce their own highly-privileged programs.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to add nosuid option to removable media partitions is of <b>low</b> severity.</p>
+<p><small>View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>nosuid</xhtml:code> mount option prevents set-user-identifier (suid)
+and set-group-identifier (sgid) permissions from taking effect. These permissions
+allow users to execute binaries with the same permissions as the owner and group
+of the file respectively. Users should not be allowed to introduce suid and guid
+files into the system via partitions mounted from removeable media.
+
+	Add the <xhtml:code>nosuid</xhtml:code> option to the fourth column of
+	<xhtml:code>/etc/fstab</xhtml:code> for the line which controls mounting of
+	any removable media partitions.
+	
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

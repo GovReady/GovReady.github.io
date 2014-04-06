@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27259-1/
+name: CCE-27259-1
+title: Enable Process Accounting (psacct)
+ident: CCE-27259-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>psacct</xhtml:code> service can provide administrators a convenient
+view into some user activities. However, it should be noted that the auditing
+system and its audit records provide more authoritative and comprehensive
+records.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to enable process accounting (psacct) is of <b>low</b> severity.</p>
+<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The process accounting service, <xhtml:code>psacct</xhtml:code>, works with programs
+including <xhtml:code>acct</xhtml:code> and <xhtml:code>ac</xhtml:code> to allow system administrators to view
+user activity, such as commands issued by users of the system.
+
+    The <xhtml:code>psacct</xhtml:code> service can be enabled with the following command:
+    <xhtml:pre># chkconfig --level 2345 psacct on</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

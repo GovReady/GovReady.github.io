@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26991-0/
+name: CCE-26991-0
+title: Enable the SELinux Context Restoration Service (restorecond)
+ident: CCE-26991-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>restorecond</xhtml:code> service helps ensure that the default SELinux
+file context is applied to files. This allows automatic correction
+of file contexts created by some programs.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to enable the selinux context restoration service (restorecond) is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>SELinux</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>restorecond</xhtml:code> service utilizes <xhtml:code>inotify</xhtml:code> to look
+for the creation of new files listed in the
+<xhtml:code>/etc/selinux/restorecond.conf</xhtml:code> configuration file. When a file is
+created, <xhtml:code>restorecond</xhtml:code> ensures the file receives the proper SELinux
+security context.
+
+    The <xhtml:code>restorecond</xhtml:code> service can be enabled with the following command:
+    <xhtml:pre># chkconfig --level 2345 restorecond on</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

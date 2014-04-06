@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-26215-4/
+name: CCE-26215-4
+title: Ensure /var/log Located On Separate Partition
+ident: CCE-26215-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Placing <xhtml:code>/var/log</xhtml:code> in its own partition
+enables better separation between log files
+and other files in <xhtml:code>/var/</xhtml:code>.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure /var/log located on separate partition is of <b>low</b> severity.</p>
+<p><small>View all 6 <i>Disk Partitioning</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+System logs are stored in the <xhtml:code>/var/log</xhtml:code> directory.
+Ensure that it has its own partition or logical
+volume at installation time, or migrate it using LVM.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

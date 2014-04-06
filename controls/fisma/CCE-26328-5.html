@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-26328-5/
+name: CCE-26328-5
+title: Require Client SMB Packet Signing, if using smbclient
+ident: CCE-26328-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Packet signing can prevent
+man-in-the-middle attacks which modify SMB packets in
+transit.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to require client smb packet signing, if using smbclient is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Configure Samba if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To require samba clients running <xhtml:code>smbclient</xhtml:code> to use
+packet signing, add the following to the <xhtml:code>[global]</xhtml:code> section
+of the Samba configuration file, <xhtml:code>/etc/samba/smb.conf</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">client signing = mandatory</pre>
+Requiring samba clients such as <xhtml:code>smbclient</xhtml:code> to use packet
+signing ensures they can
+only communicate with servers that support packet signing.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

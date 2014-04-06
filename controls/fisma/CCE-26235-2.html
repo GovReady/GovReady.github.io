@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-26235-2/
+name: CCE-26235-2
+title: Enable Screen Lock Activation After Idle Period
+ident: CCE-26235-2
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Enabling the activation of the screen lock after an idle period
+ensures password entry will be required in order to
+access the system, preventing access by passersby.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to enable screen lock activation after idle period is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Configure GUI Screen Locking</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Run the following command to activate locking of the screensaver
+in the GNOME desktop when it is activated:
+<pre xmlns="http://www.w3.org/1999/xhtml"># gconftool-2 --direct \
+  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \
+  --type bool \
+  --set /apps/gnome-screensaver/lock_enabled true</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

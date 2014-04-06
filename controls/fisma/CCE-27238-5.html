@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-27238-5/
+name: CCE-27238-5
+title: Configure auditd space_left Action on Low Disk Space
+ident: CCE-27238-5
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Notifying administrators of an impending disk space problem may
+allow them to take corrective action prior to any disruption.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to configure auditd space_left action on low disk space is of <b>medium</b> severity.</p>
+<p><small>View all 7 <i>Configure auditd Data Retention</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>auditd</xhtml:code> service can be configured to take an action
+when disk space <i xmlns="http://www.w3.org/1999/xhtml">starts</i> to run low. 
+Edit the file <xhtml:code>/etc/audit/auditd.conf</xhtml:code>. Modify the following line,
+substituting <i xmlns="http://www.w3.org/1999/xhtml">ACTION</i> appropriately:
+<pre xmlns="http://www.w3.org/1999/xhtml">space_left_action = <i>ACTION</i></pre>
+Possible values for <i xmlns="http://www.w3.org/1999/xhtml">ACTION</i> are described in the <xhtml:code>auditd.conf</xhtml:code> man page.
+These include:
+<ul xmlns="http://www.w3.org/1999/xhtml"><li><xhtml:code>ignore</xhtml:code></li><li><xhtml:code>syslog</xhtml:code></li><li><xhtml:code>email</xhtml:code></li><li><xhtml:code>exec</xhtml:code></li><li><xhtml:code>suspend</xhtml:code></li><li><xhtml:code>single</xhtml:code></li><li><xhtml:code>halt</xhtml:code></li></ul>
+Set this to <xhtml:code>email</xhtml:code> (instead of the default,
+which is <xhtml:code>suspend</xhtml:code>) as it is more likely to get prompt attention. Acceptable values
+also include <xhtml:code>suspend</xhtml:code>, <xhtml:code>single</xhtml:code>, and <xhtml:code>halt</xhtml:code>.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

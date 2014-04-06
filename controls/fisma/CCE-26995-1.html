@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-26995-1/
+name: CCE-26995-1
+title: Verify /etc/grub.conf User Ownership
+ident: CCE-26995-1
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Only root should be able to modify important boot parameters.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to verify /etc/grub.conf user ownership is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Set Boot Loader Password</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The file <xhtml:code>/etc/grub.conf</xhtml:code> should 
+be owned by the <xhtml:code>root</xhtml:code> user to prevent destruction 
+or modification of the file.
+
+    To properly set the owner of <xhtml:code>/etc/grub.conf</xhtml:code>, run the command:
+    <xhtml:pre xml:space="preserve"># chown root /etc/grub.conf </xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26476-2/
+name: CCE-26476-2
+title: Verify All Account Password Hashes are Shadowed
+ident: CCE-26476-2
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The hashes for all user account passwords should be stored in
+the file <xhtml:code>/etc/shadow</xhtml:code> and never in <xhtml:code>/etc/passwd</xhtml:code>,
+which is readable by all users.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to verify all account password hashes are shadowed is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Verify Proper Storage and Existence of Password
+Hashes</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+If any password hashes are stored in <xhtml:code>/etc/passwd</xhtml:code> (in the second field,
+instead of an <xhtml:code>x</xhtml:code>), the cause of this misconfiguration should be
+investigated.  The account should have its password reset and the hash should be
+properly stored, or the account should be deleted entirely.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

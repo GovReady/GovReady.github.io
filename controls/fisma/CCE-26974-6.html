@@ -1,0 +1,61 @@
+---
+layout: control
+permalink: /CCE-26974-6/
+name: CCE-26974-6
+title: Modify the System Login Banner
+ident: CCE-26974-6
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+An appropriate warning message reinforces policy awareness during the logon
+process and facilitates possible legal action against attackers.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to modify the system login banner is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>Warning Banners for System Accesses</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To configure the system login banner:
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+Edit <xhtml:code>/etc/issue</xhtml:code>. Replace the default text with a message
+compliant with the local site policy or a legal disclaimer.
+
+The DoD required text is either:
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+<xhtml:code>You are accessing a U.S. Government (USG) Information System (IS) that is
+provided for USG-authorized use only. By using this IS (which includes any
+device attached to this IS), you consent to the following conditions: 
+<br xmlns="http://www.w3.org/1999/xhtml"/>-The USG routinely intercepts and monitors communications on this IS for purposes
+including, but not limited to, penetration testing, COMSEC monitoring, network
+operations and defense, personnel misconduct (PM), law enforcement (LE), and
+counterintelligence (CI) investigations. 
+<br xmlns="http://www.w3.org/1999/xhtml"/>-At any time, the USG may inspect and seize data stored on this IS. 
+<br xmlns="http://www.w3.org/1999/xhtml"/>-Communications using, or data stored on, this IS are not private, are subject 
+to routine monitoring, interception, and search, and may be disclosed or used 
+for any USG-authorized purpose. 
+<br xmlns="http://www.w3.org/1999/xhtml"/>-This IS includes security measures (e.g., authentication and access controls) 
+to protect USG interests -- not for your personal benefit or privacy. 
+<br xmlns="http://www.w3.org/1999/xhtml"/>-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative
+searching or monitoring of the content of privileged communications, or work
+product, related to personal representation or services by attorneys,
+psychotherapists, or clergy, and their assistants. Such communications and work
+product are private and confidential. See User Agreement for details.</xhtml:code>
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+OR:
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+<xhtml:code>I've read &amp; consent to terms in IS user agreem't.</xhtml:code>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

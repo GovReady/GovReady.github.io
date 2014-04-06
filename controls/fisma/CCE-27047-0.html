@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27047-0/
+name: CCE-27047-0
+title: Restrict Serial Port Root Logins
+ident: CCE-27047-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Preventing direct root login to serial port interfaces
+helps ensure accountability for actions taken on the systems
+using the root account.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to restrict serial port root logins is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Restrict Root Logins</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To restrict root logins on serial ports,
+ensure lines of this form do not appear in <xhtml:code>/etc/securetty</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">ttyS0
+ttyS1</pre>
+<!-- TODO: discussion/description of serial port -->
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

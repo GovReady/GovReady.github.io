@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26615-5/
+name: CCE-26615-5
+title: Set Password Strength Minimum Different Characters
+ident: CCE-26615-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Requiring a minimum number of different characters during password changes ensures that
+newly changed passwords should not resemble previously compromised ones.
+Note that passwords which are changed on compromised systems will still be compromised, however.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to set password strength minimum different characters is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Set Password Quality Requirements, if using
+pam_cracklib</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The pam_cracklib module's <xhtml:code>difok</xhtml:code> parameter controls requirements for
+usage of different characters during a password change.
+Add <xhtml:code>difok=<i xmlns="http://www.w3.org/1999/xhtml">NUM</i></xhtml:code> after pam_cracklib.so to require differing
+characters when changing passwords, substituting <i xmlns="http://www.w3.org/1999/xhtml">NUM</i> appropriately.
+The DoD requirement is <xhtml:code>4</xhtml:code>.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

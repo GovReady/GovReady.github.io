@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-26868-0/
+name: CCE-26868-0
+title: Verify Permissions on passwd File
+ident: CCE-26868-0
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If the <xhtml:code>/etc/passwd</xhtml:code> file is writable by a group-owner or the
+world the risk of its compromise is increased. The file contains the list of
+accounts on the system and associated information, and protection of this file
+is critical for system security.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to verify permissions on passwd file is of <b>medium</b> severity.</p>
+<p><small>View all 12 <i>Verify Permissions on Files with Local Account Information and Credentials</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+    To properly set the permissions of <xhtml:code>/etc/passwd</xhtml:code>, run the command:
+    <xhtml:pre xml:space="preserve"># chmod 0644 /etc/passwd</xhtml:pre>
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

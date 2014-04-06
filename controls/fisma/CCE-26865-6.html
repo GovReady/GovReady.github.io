@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26865-6/
+name: CCE-26865-6
+title: Disable rlogin Service
+ident: CCE-26865-6
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The rlogin service uses unencrypted network communications, which
+means that data from the login session, including passwords and
+all other information transmitted during the session, can be
+stolen by eavesdroppers on the network.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to disable rlogin service is of <b>high</b> severity.</p>
+<p><small>View all 5 <i>Rlogin, Rsh, and Rexec</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>rlogin</xhtml:code> service, which is available with
+the <xhtml:code>rsh-server</xhtml:code> package and runs as a service through xinetd,
+should be disabled.
+
+    The <xhtml:code>rlogin</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig rlogin off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

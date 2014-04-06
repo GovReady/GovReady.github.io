@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26971-2/
+name: CCE-26971-2
+title: Verify Only Root Has UID 0
+ident: CCE-26971-2
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+An account has root authority if it has a UID of 0. Multiple accounts
+with a UID of 0 afford more opportunity for potential intruders to
+guess a password for a privileged account. Proper configuration of
+sudo is recommended to afford multiple system administrators
+access to root privileges in an accountable manner.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to verify only root has uid 0 is of <b>medium</b> severity.</p>
+<p><small>View all 7 <i>Restrict Root Logins</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+If any account other than root has a UID of 0,
+this misconfiguration should be investigated and the
+accounts other than root should be removed or have their UID changed.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

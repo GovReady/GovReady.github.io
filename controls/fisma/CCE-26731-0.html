@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-26731-0/
+name: CCE-26731-0
+title: Verify and Correct File Permissions with RPM
+ident: CCE-26731-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Permissions on system binaries and configuration files that are too generous
+could allow an unauthorized user to gain privileges that they should not have.
+The permissions set by the vendor should be maintained. Any deviations from
+this baseline should be investigated.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to verify and correct file permissions with rpm is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Verify Integrity with RPM</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The RPM package management system can check file access
+permissions of installed software packages, including many that are
+important to system security. 
+After locating a file with incorrect permissions, run the following command to determine which package owns it:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rpm -qf <i>FILENAME</i></pre>
+Next, run the following command to reset its permissions to 
+the correct values:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rpm --setperms <i>PACKAGENAME</i></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

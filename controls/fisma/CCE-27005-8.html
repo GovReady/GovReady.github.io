@@ -1,0 +1,33 @@
+---
+layout: control
+permalink: /CCE-27005-8/
+name: CCE-27005-8
+title: Uninstall xinetd Package
+ident: CCE-27005-8
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Removing the <xhtml:code>xinetd</xhtml:code> package decreases the risk of the
+xinetd service's accidental (or intentional) activation.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to uninstall xinetd package is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Xinetd</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>xinetd</xhtml:code> package can be uninstalled with the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># yum erase xinetd</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

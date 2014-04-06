@@ -1,0 +1,43 @@
+---
+layout: control
+permalink: /CCE-27224-5/
+name: CCE-27224-5
+title: Disable All GNOME Thumbnailers
+ident: CCE-27224-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">An attacker with knowledge of a flaw in a GNOME thumbnailer application could craft a malicious
+file to exploit this flaw. Assuming the attacker could place the malicious file on the local filesystem
+(via a web upload for example) and assuming a user browses the same location using Nautilus, the
+malicious file would exploit the thumbnailer with the potential for malicious code execution. It
+is best to disable these thumbnailer applications unless they are explicitly required.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable all gnome thumbnailers is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Restrict Dynamic Mounting and Unmounting of
+Filesystems</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The system's default desktop environment, GNOME, uses
+a number of different thumbnailer programs to generate thumbnails
+for any new or modified content in an opened folder. The following
+command can disable the execution of these thumbnail applications:
+<pre xmlns="http://www.w3.org/1999/xhtml"># gconftool-2 --direct \
+  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \
+  --type bool \
+  --set /desktop/gnome/thumbnailers/disable_all true</pre>
+This effectively prevents an attacker from gaining access to a
+system through a flaw in GNOME's Nautilus thumbnail creators.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

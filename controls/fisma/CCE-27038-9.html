@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-27038-9/
+name: CCE-27038-9
+title: Prevent Log In to Accounts With Empty Password
+ident: CCE-27038-9
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+If an account has an empty password, anyone could log in and
+run commands with the privileges of that account. Accounts with
+empty passwords should never be used in operational
+environments.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to prevent log in to accounts with empty password is of <b>high</b> severity.</p>
+<p><small>View all 4 <i>Verify Proper Storage and Existence of Password
+Hashes</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If an account is configured for password authentication
+but does not have an assigned password, it may be possible to log
+into the account without authentication. Remove any instances of the <xhtml:code>nullok</xhtml:code>
+option in <xhtml:code>/etc/pam.d/system-auth</xhtml:code> to
+prevent logins with empty passwords.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

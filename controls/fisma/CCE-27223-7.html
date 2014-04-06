@@ -1,0 +1,46 @@
+---
+layout: control
+permalink: /CCE-27223-7/
+name: CCE-27223-7
+title: Verify File Hashes with RPM
+ident: CCE-27223-7
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The hashes of important files like system executables should match the
+information given by the RPM database. Executables with erroneous hashes could
+be a sign of nefarious activity on the system.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to verify file hashes with rpm is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Verify Integrity with RPM</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The RPM package management system can check the hashes of
+installed software packages, including many that are important to system
+security. Run the following command to list which files on the system
+have hashes that differ from what is expected by the RPM database:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rpm -Va | grep '^..5'</pre>
+A "c" in the second column indicates that a file is a configuration file, which
+may appropriately be expected to change.  If the file was not expected to
+change, investigate the cause of the change using audit logs or other means.
+The package can then be reinstalled to restore the file.
+Run the following command to determine which package owns the file:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rpm -qf <i>FILENAME</i></pre>
+The package can be reinstalled from a yum repository using the command:
+<pre xmlns="http://www.w3.org/1999/xhtml">yum reinstall <i>PACKAGENAME</i></pre>
+Alternatively, the package can be reinstalled from trusted media using the command:
+<pre xmlns="http://www.w3.org/1999/xhtml">rpm -Uvh <i>PACKAGENAME</i></pre> 
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

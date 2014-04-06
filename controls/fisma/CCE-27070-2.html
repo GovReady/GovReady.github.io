@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27070-2/
+name: CCE-27070-2
+title: Enable cron Service
+ident: CCE-27070-2
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Due to its usage for maintenance and security-supporting tasks,
+enabling the cron daemon is essential.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to enable cron service is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Cron and At Daemons</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>crond</xhtml:code> service is used to execute commands at
+preconfigured times. It is required by almost all systems to perform necessary
+maintenance tasks, such as notifying root of system activity.
+
+    The <xhtml:code>crond</xhtml:code> service can be enabled with the following command:
+    <xhtml:pre># chkconfig --level 2345 crond on</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

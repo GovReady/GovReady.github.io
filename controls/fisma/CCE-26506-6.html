@@ -1,0 +1,43 @@
+---
+layout: control
+permalink: /CCE-26506-6/
+name: CCE-26506-6
+title: Ensure Red Hat GPG Key Installed
+ident: CCE-26506-6
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The Red Hat GPG key is necessary to cryptographically verify packages
+are from Red Hat.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to ensure red hat gpg key installed is of <b>high</b> severity.</p>
+<p><small>View all 4 <i>Updating Software</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To ensure the system can cryptographically verify base software
+packages come from Red Hat (and to connect to the Red Hat Network to
+receive them), the Red Hat GPG key must properly be installed.  
+To install the Red Hat GPG key, run:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rhn_register</pre>
+If the system is not connected to the Internet or an RHN Satellite,
+then install the Red Hat GPG key from trusted media such as
+the Red Hat installation CD-ROM or DVD. Assuming the disc is mounted
+in <xhtml:code>/media/cdrom</xhtml:code>, use the following command as the root user to import
+it into the keyring:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rpm --import /media/cdrom/RPM-GPG-KEY</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

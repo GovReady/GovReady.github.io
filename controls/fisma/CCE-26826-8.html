@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-26826-8/
+name: CCE-26826-8
+title: Ensure that Root's Path Does Not Include Relative Paths or Null Directories
+ident: CCE-26826-8
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Including these entries increases the risk that root could
+execute code from an untrusted location.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure that root's path does not include relative paths or null directories is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Ensure that No Dangerous Directories Exist in Root's Path</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Ensure that none of the directories in root's path is equal to a single
+<xhtml:code>.</xhtml:code> character, or
+that it contains any instances that lead to relative path traversal, such as
+<xhtml:code>..</xhtml:code> or beginning a path without the slash (<xhtml:code>/</xhtml:code>) character.
+Also ensure that there are no "empty" elements in the path, such as in these examples:
+<pre xmlns="http://www.w3.org/1999/xhtml">PATH=:/bin
+PATH=/bin:
+PATH=/bin::/sbin</pre>
+These empty elements have the same effect as a single <xhtml:code>.</xhtml:code> character.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

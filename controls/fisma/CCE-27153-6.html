@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27153-6/
+name: CCE-27153-6
+title: Disable IPv6 Networking Support Automatic Loading
+ident: CCE-27153-6
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Any unnecessary network stacks - including IPv6 - should be disabled, to reduce
+the vulnerability to exploitation.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable ipv6 networking support automatic loading is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Disable Support for IPv6 Unless Needed</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To prevent the IPv6 kernel module (<xhtml:code>ipv6</xhtml:code>) from loading the
+IPv6 networking stack, add the following line to
+<xhtml:code>/etc/modprobe.d/disabled.conf</xhtml:code> (or another file in
+<xhtml:code>/etc/modprobe.d</xhtml:code>):
+<pre xmlns="http://www.w3.org/1999/xhtml">options ipv6 disable=1</pre>
+This permits the IPv6 module to be loaded (and thus satisfy other modules that
+depend on it), while disabling support for the IPv6 protocol.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

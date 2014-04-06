@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27236-9/
+name: CCE-27236-9
+title: Enable rsyslog to Accept Messages via UDP, if Acting As Log Server
+ident: CCE-27236-9
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Many devices, such as switches, routers, and other Unix-like systems, may only support
+the traditional syslog transmission over UDP. If the system must act as a log server,
+this enables it to receive their messages as well.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to enable rsyslog to accept messages via udp, if acting as log server is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Configure rsyslogd to Accept Remote Messages If Acting as a Log Server</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>rsyslog</xhtml:code> daemon should not accept remote messages
+unless the system acts as a log server.
+If the system needs to act as a central log server, add the following lines to
+<xhtml:code>/etc/rsyslog.conf</xhtml:code> to enable reception of messages over UDP:
+<pre xmlns="http://www.w3.org/1999/xhtml">$ModLoad imudp.so
+$InputUDPServerRun 514</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

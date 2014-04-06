@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26325-1/
+name: CCE-26325-1
+title: Enable Postfix Service
+ident: CCE-26325-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Local mail delivery is essential to some system maintenance and
+notification tasks.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to enable postfix service is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Mail Server Software</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The Postfix mail transfer agent is used for local mail delivery
+within the system. The default configuration only listens for connections to
+the default SMTP port (port 25) on the loopback interface (127.0.0.1).  It is
+recommended to leave this service enabled for local mail delivery.
+
+    The <xhtml:code>postfix</xhtml:code> service can be enabled with the following command:
+    <xhtml:pre># chkconfig --level 2345 postfix on</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

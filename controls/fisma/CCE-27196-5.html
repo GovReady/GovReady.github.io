@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-27196-5/
+name: CCE-27196-5
+title: Add noexec Option to Removable Media Partitions
+ident: CCE-27196-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Allowing users to execute binaries from removable media such as USB keys exposes
+the system to potential compromise.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to add noexec option to removable media partitions is of <b>low</b> severity.</p>
+<p><small>View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>noexec</xhtml:code> mount option prevents the direct
+execution of binaries on the mounted filesystem. 
+Preventing the direct execution of binaries from removable media (such as a USB
+key) provides a defense against malicious software that may be present on such
+untrusted media.
+
+	Add the <xhtml:code>noexec</xhtml:code> option to the fourth column of
+	<xhtml:code>/etc/fstab</xhtml:code> for the line which controls mounting of
+	any removable media partitions.
+	
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

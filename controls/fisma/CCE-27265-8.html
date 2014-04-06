@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27265-8/
+name: CCE-27265-8
+title: Disable System Statistics Reset Service (sysstat)
+ident: CCE-27265-8
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">By default the <xhtml:code>sysstat</xhtml:code> service merely runs a program at
+boot to reset the statistics, which can be retrieved using programs such as
+<xhtml:code>sar</xhtml:code> and <xhtml:code>sadc</xhtml:code>. These may provide useful insight into system
+operation, but unless used this service can be disabled.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable system statistics reset service (sysstat) is of <b>low</b> severity.</p>
+<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>sysstat</xhtml:code> service resets various I/O and CPU
+performance statistics to zero in order to begin counting from a fresh state
+at boot time.
+
+    The <xhtml:code>sysstat</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig sysstat off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

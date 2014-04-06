@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27164-3/
+name: CCE-27164-3
+title: Disable Accepting IPv6 Router Advertisements
+ident: CCE-27164-3
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+An illicit router advertisement message could result in a man-in-the-middle attack.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable accepting ipv6 router advertisements is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Disable Automatic Configuration</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+                
+    To set the runtime status of the <xhtml:code>net.ipv6.conf.default.accept_ra</xhtml:code> kernel parameter,
+    run the following command:
+    <xhtml:pre xml:space="preserve"># sysctl -w net.ipv6.conf.default.accept_ra=0</xhtml:pre>
+    If this is not the system's default value, add the following line to <xhtml:code>/etc/sysctl.conf</xhtml:code>:
+    <xhtml:pre xml:space="preserve">net.ipv6.conf.default.accept_ra = 0</xhtml:pre>
+              </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

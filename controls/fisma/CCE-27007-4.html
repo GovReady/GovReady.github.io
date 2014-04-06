@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-27007-4/
+name: CCE-27007-4
+title: Enable ExecShield
+ident: CCE-27007-4
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">ExecShield uses the segmentation feature on all x86 systems
+to prevent execution in memory higher than a certain address. It
+writes an address as a limit in the code segment descriptor, to
+control where code can be executed, on a per-process basis. When
+the kernel places a process's memory regions such as the stack and
+heap higher than this address, the hardware prevents execution in that
+address range.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to enable execshield is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>Enable ExecShield</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+    To set the runtime status of the <xhtml:code>kernel.exec-shield</xhtml:code> kernel parameter,
+    run the following command:
+    <xhtml:pre xml:space="preserve"># sysctl -w kernel.exec-shield=1</xhtml:pre>
+    If this is not the system's default value, add the following line to <xhtml:code>/etc/sysctl.conf</xhtml:code>:
+    <xhtml:pre xml:space="preserve">kernel.exec-shield = 1</xhtml:pre>
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,34 @@
+---
+layout: control
+permalink: /CCE-27241-9/
+name: CCE-27241-9
+title: Configure auditd mail_acct Action on Low Disk Space
+ident: CCE-27241-9
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Email sent to the root account is typically aliased to the
+administrators of the system, who can take appropriate action.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to configure auditd mail_acct action on low disk space is of <b>medium</b> severity.</p>
+<p><small>View all 7 <i>Configure auditd Data Retention</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>auditd</xhtml:code> service can be configured to send email to
+a designated account in certain situations. Add or correct the following line
+in <xhtml:code>/etc/audit/auditd.conf</xhtml:code> to ensure that administrators are notified
+via email for those situations:
+<pre xmlns="http://www.w3.org/1999/xhtml">action_mail_acct = root</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

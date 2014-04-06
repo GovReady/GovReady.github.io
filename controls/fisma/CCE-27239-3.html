@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-27239-3/
+name: CCE-27239-3
+title: Configure auditd admin_space_left Action on Low Disk Space
+ident: CCE-27239-3
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Administrators should be made aware of an inability to record
+audit records. If a separate partition or logical volume of adequate size
+is used, running low on space for audit records should never occur.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to configure auditd admin_space_left action on low disk space is of <b>medium</b> severity.</p>
+<p><small>View all 7 <i>Configure auditd Data Retention</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>auditd</xhtml:code> service can be configured to take an action
+when disk space is running low but prior to running out of space completely. 
+Edit the file <xhtml:code>/etc/audit/auditd.conf</xhtml:code>. Add or modify the following line,
+substituting <i xmlns="http://www.w3.org/1999/xhtml">ACTION</i> appropriately:
+<pre xmlns="http://www.w3.org/1999/xhtml">admin_space_left_action = <i>ACTION</i></pre>
+Set this value to <xhtml:code>single</xhtml:code> to cause the system to switch to single user
+mode for corrective action. Acceptable values also include <xhtml:code>suspend</xhtml:code> and
+<xhtml:code>halt</xhtml:code>. For certain systems, the need for availability
+outweighs the need to log all actions, and a different setting should be
+determined. Details regarding all possible values for <i xmlns="http://www.w3.org/1999/xhtml">ACTION</i> are described in the
+<xhtml:code>auditd.conf</xhtml:code> man page.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

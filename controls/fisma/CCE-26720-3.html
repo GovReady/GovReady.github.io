@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26720-3/
+name: CCE-26720-3
+title: Add noexec Option to /tmp
+ident: CCE-26720-3
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Allowing users to execute binaries from world-writable directories
+such as <xhtml:code>/tmp</xhtml:code> should never be necessary in normal operation and
+can expose the system to potential compromise.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to add noexec option to /tmp is of <b>low</b> severity.</p>
+<p><small>View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>noexec</xhtml:code> mount option can be used to prevent binaries
+from being executed out of <xhtml:code>/tmp</xhtml:code>.
+
+	Add the <xhtml:code>noexec</xhtml:code> option to the fourth column of
+	<xhtml:code>/etc/fstab</xhtml:code> for the line which controls mounting of
+	<xhtml:code>/tmp</xhtml:code>.
+	
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

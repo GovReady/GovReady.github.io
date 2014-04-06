@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-27043-9/
+name: CCE-27043-9
+title: Disable Interactive Boot
+ident: CCE-27043-9
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Using interactive boot,
+the console user could disable auditing, firewalls, or other
+services, weakening system security.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable interactive boot is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Protect Physical Console Access</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To disable the ability for users to perform interactive startups,
+edit the file <xhtml:code>/etc/sysconfig/init</xhtml:code>.
+Add or correct the line:
+<pre xmlns="http://www.w3.org/1999/xhtml">PROMPT=no</pre>
+The <xhtml:code>PROMPT</xhtml:code> option allows the console user to perform an
+interactive system startup, in which it is possible to select the
+set of services which are started on boot.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

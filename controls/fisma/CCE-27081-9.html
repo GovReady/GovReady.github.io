@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27081-9/
+name: CCE-27081-9
+title: Disable Bluetooth Service
+ident: CCE-27081-9
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Disabling the <xhtml:code>bluetooth</xhtml:code> service prevents the system from attempting
+connections to Bluetooth devices, which entails some security risk.
+Nevertheless, variation in this risk decision may be expected due to the
+utility of Bluetooth connectivity and its limited range.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable bluetooth service is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Disable Wireless Through Software Configuration</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+    The <xhtml:code>bluetooth</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig bluetooth off</xhtml:pre>
+              <pre xmlns="http://www.w3.org/1999/xhtml"># service bluetooth stop</pre>
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

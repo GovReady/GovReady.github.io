@@ -1,0 +1,45 @@
+---
+layout: control
+permalink: /CCE-26981-1/
+name: CCE-26981-1
+title: Ensure that User Home Directories are not Group-Writable or World-Readable
+ident: CCE-26981-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+User home directories contain many configuration files which
+affect the behavior of a user's account. No user should ever have
+write permission to another user's home directory. Group shared
+directories can be configured in sub-directories or elsewhere in the
+filesystem if they are needed. Typically, user home directories
+should not be world-readable, as it would disclose file names
+to other users. If a subset of users need read access
+to one another's home directories, this can be provided using
+groups or ACLs.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure that user home directories are not group-writable or world-readable is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Secure Session Configuration Files for Login Accounts</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">For each human user of the system, view the
+permissions of the user's home directory:
+<pre xmlns="http://www.w3.org/1999/xhtml"># ls -ld /home/<i>USER</i></pre>
+Ensure that the directory is not group-writable and that it
+is not world-readable. If necessary, repair the permissions:
+<pre xmlns="http://www.w3.org/1999/xhtml"># chmod g-w /home/<i>USER</i>
+# chmod o-rwx /home/<i>USER</i></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

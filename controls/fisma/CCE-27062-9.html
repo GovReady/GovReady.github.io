@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27062-9/
+name: CCE-27062-9
+title: Uninstall rsh-server Package
+ident: CCE-27062-9
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>rsh-server</xhtml:code> package provides several obsolete and insecure
+network services. Removing it
+decreases the risk of those services' accidental (or intentional)
+activation.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to uninstall rsh-server package is of <b>high</b> severity.</p>
+<p><small>View all 5 <i>Rlogin, Rsh, and Rexec</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>rsh-server</xhtml:code> package can be uninstalled with
+the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># yum erase rsh-server</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

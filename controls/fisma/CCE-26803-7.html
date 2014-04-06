@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-26803-7/
+name: CCE-26803-7
+title: Ensure rsyslog Does Not Accept Remote Messages Unless Acting As Log Server
+ident: CCE-26803-7
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Any process which receives messages from the network incurs some risk
+of receiving malicious messages. This risk can be eliminated for
+rsyslog by configuring it not to listen on the network.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure rsyslog does not accept remote messages unless acting as log server is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Configure rsyslogd to Accept Remote Messages If Acting as a Log Server</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>rsyslog</xhtml:code> daemon should not accept remote messages
+unless the system acts as a log server.
+To ensure that it is not listening on the network, ensure the following lines are
+<i xmlns="http://www.w3.org/1999/xhtml">not</i> found in <xhtml:code>/etc/rsyslog.conf</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">$ModLoad imtcp.so
+$InputTCPServerRun <i>port</i>
+$ModLoad imudp.so
+$InputUDPServerRun <i>port</i>
+$ModLoad imrelp.so
+$InputRELPServerRun <i>port</i></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

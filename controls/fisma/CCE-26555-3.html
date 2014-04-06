@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26555-3/
+name: CCE-26555-3
+title: Use Only Approved Ciphers
+ident: CCE-26555-3
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Approved algorithms should impart some level of confidence in their
+implementation. These are also required for compliance.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to use only approved ciphers is of <b>medium</b> severity.</p>
+<p><small>View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Limit the ciphers to those algorithms which are FIPS-approved.
+Counter (CTR) mode is also preferred over cipher-block chaining (CBC) mode.
+The following line in <xhtml:code>/etc/ssh/sshd_config</xhtml:code>
+demonstrates use of FIPS-approved ciphers:
+<pre xmlns="http://www.w3.org/1999/xhtml">Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc</pre>
+The man page <xhtml:code>sshd_config(5)</xhtml:code> contains a list of supported ciphers.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

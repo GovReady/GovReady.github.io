@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27090-0/
+name: CCE-27090-0
+title: Mount Remote Filesystems with nodev
+ident: CCE-27090-0
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Legitimate device files should only exist in the /dev directory. NFS mounts
+should not present device files to users.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to mount remote filesystems with nodev is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>Mount Remote Filesystems with Restrictive Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+	Add the <xhtml:code>nodev</xhtml:code> option to the fourth column of
+	<xhtml:code>/etc/fstab</xhtml:code> for the line which controls mounting of
+	any NFS mounts.
+	
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

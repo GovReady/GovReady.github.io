@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-27249-2/
+name: CCE-27249-2
+title: Disable At Service (atd)
+ident: CCE-27249-2
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The <xhtml:code>atd</xhtml:code> service could be used by an unsophisticated insider to carry
+out activities outside of a normal login session, which could complicate
+accountability. Furthermore, the need to schedule tasks with <xhtml:code>at</xhtml:code> or
+<xhtml:code>batch</xhtml:code> is not common.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable at service (atd) is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Cron and At Daemons</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>at</xhtml:code> and <xhtml:code>batch</xhtml:code> commands can be used to
+schedule tasks that are meant to be executed only once. This allows delayed
+execution in a manner similar to cron, except that it is not
+recurring. The daemon <xhtml:code>atd</xhtml:code> keeps track of tasks scheduled via
+<xhtml:code>at</xhtml:code> and <xhtml:code>batch</xhtml:code>, and executes them at the specified time.
+
+    The <xhtml:code>atd</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig atd off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

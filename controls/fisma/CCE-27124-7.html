@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27124-7/
+name: CCE-27124-7
+title: Disable SSH Support for .rhosts Files
+ident: CCE-27124-7
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+SSH trust relationships mean a compromise on one host
+can allow an attacker to move trivially to other hosts.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable ssh support for .rhosts files is of <b>medium</b> severity.</p>
+<p><small>View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">SSH can emulate the behavior of the obsolete rsh
+command in allowing users to enable insecure access to their
+accounts via <xhtml:code>.rhosts</xhtml:code> files.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+To ensure this behavior is disabled, add or correct the
+following line in <xhtml:code>/etc/ssh/sshd_config</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">IgnoreRhosts yes</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

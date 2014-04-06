@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26709-6/
+name: CCE-26709-6
+title: Ensure gpgcheck Enabled In Main Yum Configuration
+ident: CCE-26709-6
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Ensuring the validity of packages' cryptographic signatures prior to
+installation ensures the authenticity of the software and
+protects against malicious tampering.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to ensure gpgcheck enabled in main yum configuration is of <b>high</b> severity.</p>
+<p><small>View all 4 <i>Updating Software</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>gpgcheck</xhtml:code> option controls whether
+RPM packages' signatures are always checked prior to installation.
+To configure yum to check package signatures before installing
+them, ensure the following line appears in <xhtml:code>/etc/yum.conf</xhtml:code> in
+the <xhtml:code>[main]</xhtml:code> section:
+<pre xmlns="http://www.w3.org/1999/xhtml">gpgcheck=1</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

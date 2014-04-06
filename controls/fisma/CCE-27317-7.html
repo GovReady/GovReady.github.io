@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27317-7/
+name: CCE-27317-7
+title: Set Default ip6tables Policy for Incoming Packets
+ident: CCE-27317-7
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">In <xhtml:code>ip6tables</xhtml:code> the default policy is applied only after all
+the applicable rules in the table are examined for a match. Setting the
+default policy to <xhtml:code>DROP</xhtml:code> implements proper design for a firewall, i.e.
+any packets which are not explicitly permitted should not be
+accepted.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to set default ip6tables policy for incoming packets is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Inspect and Activate Default Rules</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To set the default policy to DROP (instead of ACCEPT) for
+the built-in INPUT chain which processes incoming packets,
+add or correct the following line in
+<xhtml:code>/etc/sysconfig/ip6tables</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">:INPUT DROP [0:0]</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

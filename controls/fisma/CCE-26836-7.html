@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26836-7/
+name: CCE-26836-7
+title: Disable telnet Service
+ident: CCE-26836-7
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The telnet protocol uses unencrypted network communication, which
+means that data from the login session, including passwords and
+all other information transmitted during the session, can be
+stolen by eavesdroppers on the network. The telnet protocol is also
+subject to man-in-the-middle attacks.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to disable telnet service is of <b>high</b> severity.</p>
+<p><small>View all 2 <i>Telnet</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+            
+    The <xhtml:code>telnet</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig telnet off</xhtml:pre>
+          </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

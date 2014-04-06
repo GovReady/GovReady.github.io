@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-26985-2/
+name: CCE-26985-2
+title: Set Password Maximum Age
+ident: CCE-26985-2
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Setting the password maximum age ensures users are required to
+periodically change their passwords. This could possibly decrease
+the utility of a stolen password. Requiring shorter password lifetimes
+increases the risk of users writing down the password in a convenient
+location subject to physical compromise.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to set password maximum age is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Set Password Expiration Parameters</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To specify password maximum age for new accounts,
+edit the file <xhtml:code>/etc/login.defs</xhtml:code>
+and add or correct the following line, replacing <i xmlns="http://www.w3.org/1999/xhtml">DAYS</i> appropriately:
+<pre xmlns="http://www.w3.org/1999/xhtml">PASS_MAX_DAYS <i>DAYS</i></pre>
+A value of 180 days is sufficient for many environments. 
+The DoD requirement is 60.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

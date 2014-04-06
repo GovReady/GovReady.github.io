@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27172-6/
+name: CCE-27172-6
+title: Record Attempts to Alter the localtime File
+ident: CCE-27172-6
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Arbitrary changes to the system time can be used to obfuscate 
+nefarious activities in log files, as well as to confuse network services that 
+are highly dependent upon an accurate system time (such as sshd). All changes 
+to the system time should be audited.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to record attempts to alter the localtime file is of <b>low</b> severity.</p>
+<p><small>View all 5 <i>Records Events that Modify Date and Time Information</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Add the following to <xhtml:code>/etc/audit/audit.rules</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">-w /etc/localtime -p wa -k audit_time_rules</pre>
+The -k option allows for the specification of a key in string form that can 
+be used for better reporting capability through ausearch and aureport and
+should always be used.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

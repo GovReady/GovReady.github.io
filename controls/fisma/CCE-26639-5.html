@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26639-5/
+name: CCE-26639-5
+title: Ensure /var Located On Separate Partition
+ident: CCE-26639-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Ensuring that <xhtml:code>/var</xhtml:code> is mounted on its own partition enables the
+setting of more restrictive mount options. This helps protect
+system services such as daemons or other programs which use it.
+It is not uncommon for the <xhtml:code>/var</xhtml:code> directory to contain
+world-writable directories, installed by other software packages.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure /var located on separate partition is of <b>low</b> severity.</p>
+<p><small>View all 6 <i>Disk Partitioning</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>/var</xhtml:code> directory is used by daemons and other system
+services to store frequently-changing data. Ensure that <xhtml:code>/var</xhtml:code> has its own partition
+or logical volume at installation time, or migrate it using LVM.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

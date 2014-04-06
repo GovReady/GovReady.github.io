@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-27016-5/
+name: CCE-27016-5
+title: Disable Modprobe Loading of USB Storage Driver
+ident: CCE-27016-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">USB storage devices such as thumb drives can be used to introduce
+malicious software.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable modprobe loading of usb storage driver is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Restrict Dynamic Mounting and Unmounting of
+Filesystems</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To prevent USB storage devices from being used, configure the kernel module loading system
+to prevent automatic loading of the USB storage driver. 
+
+To configure the system to prevent the <xhtml:code>usb-storage</xhtml:code>
+kernel module from being loaded, add the following line to a file in the directory <xhtml:code>/etc/modprobe.d</xhtml:code>:
+<xhtml:pre xml:space="preserve">install usb-storage /bin/false</xhtml:pre>
+This will prevent the <xhtml:code>modprobe</xhtml:code> program from loading the <xhtml:code>usb-storage</xhtml:code>
+module, but will not prevent an administrator (or another program) from using the
+<xhtml:code>insmod</xhtml:code> program to load the module manually.</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+
