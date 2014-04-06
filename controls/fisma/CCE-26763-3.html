@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-26763-3/
+name: CCE-26763-3
+title: Disable Bluetooth Kernel Modules
+ident: CCE-26763-3
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If Bluetooth functionality must be disabled, preventing the kernel
+from loading the kernel module provides an additional safeguard against its
+activation.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable bluetooth kernel modules is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Disable Wireless Through Software Configuration</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The kernel's module loading system can be configured to prevent
+loading of the Bluetooth module. Add the following to
+the appropriate <xhtml:code>/etc/modprobe.d</xhtml:code> configuration file
+to prevent the loading of the Bluetooth module:
+<pre xmlns="http://www.w3.org/1999/xhtml">install net-pf-31 /bin/false
+install bluetooth /bin/false</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

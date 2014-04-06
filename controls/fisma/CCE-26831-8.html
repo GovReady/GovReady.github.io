@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26831-8/
+name: CCE-26831-8
+title: Disable Kernel Parameter for Accepting Secure Redirects By Default
+ident: CCE-26831-8
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Accepting "secure" ICMP redirects (from those gateways listed as
+default gateways) has few legitimate uses. It should be disabled unless it is
+absolutely required.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable kernel parameter for accepting secure redirects by default is of <b>medium</b> severity.</p>
+<p><small>View all 12 <i>Network Related Kernel Runtime Parameters for Hosts and Routers</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+    To set the runtime status of the <xhtml:code>net.ipv4.conf.default.secure_redirects</xhtml:code> kernel parameter,
+    run the following command:
+    <xhtml:pre xml:space="preserve"># sysctl -w net.ipv4.conf.default.secure_redirects=0</xhtml:pre>
+    If this is not the system's default value, add the following line to <xhtml:code>/etc/sysctl.conf</xhtml:code>:
+    <xhtml:pre xml:space="preserve">net.ipv4.conf.default.secure_redirects = 0</xhtml:pre>
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

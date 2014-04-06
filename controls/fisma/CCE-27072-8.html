@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27072-8/
+name: CCE-27072-8
+title: Allow Only SSH Protocol 2
+ident: CCE-27072-8
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+SSH protocol version 1 suffers from design flaws that
+result in security vulnerabilities and
+should not be used.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to allow only ssh protocol 2 is of <b>high</b> severity.</p>
+<p><small>View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Only SSH protocol version 2 connections should be
+permitted. The default setting in
+<xhtml:code>/etc/ssh/sshd_config</xhtml:code> is correct, and can be
+verified by ensuring that the following
+line appears:
+<pre xmlns="http://www.w3.org/1999/xhtml">Protocol 2</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

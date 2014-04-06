@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27291-4/
+name: CCE-27291-4
+title: Set Last Logon/Access Notification
+ident: CCE-27291-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Users need to be aware of activity that occurs regarding
+their account. Providing users with information regarding the number
+of unsuccessful attempts that were made to login to their account
+allows the user to determine if any unauthorized activity has occurred
+and gives them an opportunity to notify administrators.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to set last logon/access notification is of <b>low</b> severity.</p>
+<p><small>View all 1 <i>Protect Accounts by Configuring PAM</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To configure the system to notify users of last logon/access
+using <xhtml:code>pam_lastlog</xhtml:code>, add the following line immediately after <xhtml:code>session  required  pam_limits.so</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">session       required     pam_lastlog.so showfailed</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

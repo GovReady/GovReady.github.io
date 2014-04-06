@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27001-7/
+name: CCE-27001-7
+title: Disable Kernel Parameter for Sending ICMP Redirects by Default
+ident: CCE-27001-7
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Sending ICMP redirects permits the system to instruct other systems
+to update their routing information.  The ability to send ICMP redirects is
+only appropriate for systems acting as routers.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable kernel parameter for sending icmp redirects by default is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Network Parameters for Hosts Only</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+    To set the runtime status of the <xhtml:code>net.ipv4.conf.default.send_redirects</xhtml:code> kernel parameter,
+    run the following command:
+    <xhtml:pre xml:space="preserve"># sysctl -w net.ipv4.conf.default.send_redirects=0</xhtml:pre>
+    If this is not the system's default value, add the following line to <xhtml:code>/etc/sysctl.conf</xhtml:code>:
+    <xhtml:pre xml:space="preserve">net.ipv4.conf.default.send_redirects = 0</xhtml:pre>
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

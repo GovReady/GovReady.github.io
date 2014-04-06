@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-27017-3/
+name: CCE-27017-3
+title: Set GUI Warning Banner Text
+ident: CCE-27017-3
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+An appropriate warning message reinforces policy awareness during the logon
+process and facilitates possible legal action against attackers.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to set gui warning banner text is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>Implement a GUI Warning Banner</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To set the text shown by the GNOME Display Manager
+in the login screen, run the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml">sudo -u gdm gconftool-2 \
+  --type string \
+  --set /apps/gdm/simple-greeter/banner_message_text \
+  "Text of the warning banner here"</pre>
+When entering a warning banner that spans several lines, remember
+to begin and end the string with <xhtml:code>"</xhtml:code>. This command writes
+directly to the file <xhtml:code>/var/lib/gdm/.gconf/apps/gdm/simple-greeter/%gconf.xml</xhtml:code>,
+and this file can later be edited directly if necessary.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

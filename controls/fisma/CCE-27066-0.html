@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27066-0/
+name: CCE-27066-0
+title: Enable Kernel Parameter to Log Martian Packets
+ident: CCE-27066-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The presence of "martian" packets (which have impossible addresses)
+as well as spoofed packets, source-routed packets, and redirects could be a
+sign of nefarious network activity. Logging these packets enables this activity
+to be detected.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to enable kernel parameter to log martian packets is of <b>low</b> severity.</p>
+<p><small>View all 12 <i>Network Related Kernel Runtime Parameters for Hosts and Routers</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+              
+    To set the runtime status of the <xhtml:code>net.ipv4.conf.all.log_martians</xhtml:code> kernel parameter,
+    run the following command:
+    <xhtml:pre xml:space="preserve"># sysctl -w net.ipv4.conf.all.log_martians=1</xhtml:pre>
+    If this is not the system's default value, add the following line to <xhtml:code>/etc/sysctl.conf</xhtml:code>:
+    <xhtml:pre xml:space="preserve">net.ipv4.conf.all.log_martians = 1</xhtml:pre>
+            </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

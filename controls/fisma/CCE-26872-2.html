@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-26872-2/
+name: CCE-26872-2
+title: Ensure All Files Are Owned by a Group
+ident: CCE-26872-2
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Unowned files do not directly imply a security problem, but they are generally
+a sign that something is amiss. They may
+be caused by an intruder, by incorrect software installation or
+draft software removal, or by failure to remove all files belonging
+to a deleted account. The files should be repaired so they
+will not cause problems when accounts are created in the future,
+and the cause should be discovered and addressed.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure all files are owned by a group is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Verify Permissions on Important Files and
+Directories</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If any files are not owned by a group, then the
+cause of their lack of group-ownership should be investigated.
+Following this, the files should be deleted or assigned to an
+appropriate group.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

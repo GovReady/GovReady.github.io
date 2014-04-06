@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27049-6/
+name: CCE-27049-6
+title: Do Not Use Dynamic DNS
+ident: CCE-27049-6
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The Dynamic DNS protocol is used to remotely update the data served
+by a DNS server. DHCP servers can use Dynamic DNS to publish information about
+their clients. This setup carries security risks, and its use is not
+recommended.  If Dynamic DNS must be used despite the risks it poses, it is
+critical that Dynamic DNS transactions be protected using TSIG or some other
+cryptographic authentication mechanism. See dhcpd.conf(5) for more information
+about protecting the DHCP server from passing along malicious DNS data from its
+clients.  </rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to do not use dynamic dns is of <b>low</b> severity.</p>
+<p><small>View all 4 <i>Disable DHCP Server</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To prevent the DHCP server from receiving DNS information from
+clients, edit <xhtml:code>/etc/dhcp/dhcpd.conf</xhtml:code>, and add or correct the following global
+option: <pre xmlns="http://www.w3.org/1999/xhtml">ddns-update-style none;</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

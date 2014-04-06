@@ -1,0 +1,44 @@
+---
+layout: control
+permalink: /CCE-27021-5/
+name: CCE-27021-5
+title: Disable DHCP Client
+ident: CCE-27021-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+DHCP relies on trusting the local network. If the local network is not trusted,
+then it should not be used.  However, the automatic configuration provided by
+DHCP is commonly used and the alternative, manual configuration, presents an
+unacceptable burden in many circumstances.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable dhcp client is of <b>low</b> severity.</p>
+<p><small>View all 1 <i>Disable DHCP Client</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+For each interface on the system (e.g. eth0), edit
+<xhtml:code>/etc/sysconfig/network-scripts/ifcfg-<i xmlns="http://www.w3.org/1999/xhtml">interface</i></xhtml:code> and make the
+following changes:
+<ul xmlns="http://www.w3.org/1999/xhtml"><li> Correct the BOOTPROTO line to read:
+<pre>BOOTPROTO=static</pre>
+</li><li> Add or correct the following lines, substituting the appropriate
+values based on your site's addressing scheme:
+<pre>NETMASK=255.255.255.0
+IPADDR=192.168.1.2
+GATEWAY=192.168.1.1</pre>
+</li></ul>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

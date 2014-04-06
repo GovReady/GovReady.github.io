@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-26611-4/
+name: CCE-26611-4
+title: Ensure auditd Collects Information on Kernel Module Loading and Unloading
+ident: CCE-26611-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The addition/removal of kernel modules can be used to alter the behavior of
+the kernel and potentially introduce malicious code into kernel space. It is important
+to have an audit trail of modules that have been introduced into the kernel.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure auditd collects information on kernel module loading and unloading is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Add the following to <xhtml:code>/etc/audit/audit.rules</xhtml:code> in order
+to capture kernel module loading and unloading events, setting ARCH to either b32 or b64 as appropriate for your system:
+<pre xmlns="http://www.w3.org/1999/xhtml">-w /sbin/insmod -p x -k modules
+-w /sbin/rmmod -p x -k modules
+-w /sbin/modprobe -p x -k modules
+-a always,exit -F arch=<i>ARCH</i> -S init_module -S delete_module -k modules</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

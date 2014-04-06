@@ -1,0 +1,54 @@
+---
+layout: control
+permalink: /CCE-26801-1/
+name: CCE-26801-1
+title: Ensure Logs Sent To Remote Host
+ident: CCE-26801-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">A log server (loghost) receives syslog messages from one or more
+systems. This data can be used as an additional log source in the event a
+system is compromised and its local logs are suspect. Forwarding log messages
+to a remote loghost also provides system administrators with a centralized
+place to view the status of multiple hosts within the enterprise.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure logs sent to remote host is of <b>low</b> severity.</p>
+<p><small>View all 1 <i>Rsyslog Logs Sent To Remote Host</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To configure rsyslog to send logs to a remote log server,
+open <xhtml:code>/etc/rsyslog.conf</xhtml:code> and read and understand the last section of the file,
+which describes the multiple directives necessary to activate remote
+logging.
+Along with these other directives, the system can be configured
+to forward its logs to a particular log server by
+adding or correcting one of the following lines,
+substituting <xhtml:code><i xmlns="http://www.w3.org/1999/xhtml">loghost.example.com</i></xhtml:code> appropriately.
+The choice of protocol depends on the environment of the system; 
+although TCP and RELP provide more reliable message delivery, 
+they may not be supported in all environments.
+<br xmlns="http://www.w3.org/1999/xhtml"/>
+To use UDP for log message delivery:
+<pre xmlns="http://www.w3.org/1999/xhtml">*.* @<i>loghost.example.com</i></pre>
+<br xmlns="http://www.w3.org/1999/xhtml"/>
+To use TCP for log message delivery:
+<pre xmlns="http://www.w3.org/1999/xhtml">*.* @@<i>loghost.example.com</i></pre>
+<br xmlns="http://www.w3.org/1999/xhtml"/>
+To use RELP for log message delivery:
+<pre xmlns="http://www.w3.org/1999/xhtml">*.* :omrelp:<i>loghost.example.com</i></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

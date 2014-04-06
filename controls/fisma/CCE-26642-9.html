@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-26642-9/
+name: CCE-26642-9
+title: Ensure All World-Writable Directories Are Owned by a System Account
+ident: CCE-26642-9
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Allowing a user account to own a world-writable directory is
+undesirable because it allows the owner of that directory to remove
+or replace any files that may be placed in the directory by other
+users.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure all world-writable directories are owned by a system account is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Verify Permissions on Important Files and
+Directories</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">All directories in local partitions which are
+world-writable should be owned by root or another
+system account.  If any world-writable directories are not
+owned by a system account, this should be investigated.
+Following this, the files should be deleted or assigned to an
+appropriate group.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

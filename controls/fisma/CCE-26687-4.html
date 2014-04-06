@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-26687-4/
+name: CCE-26687-4
+title: Uninstall vsftpd Package
+ident: CCE-26687-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Removing the vsftpd package decreases the risk of its
+accidental activation.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to uninstall vsftpd package is of <b>low</b> severity.</p>
+<p><small>View all 2 <i>Disable vsftpd if Possible</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+            
+    The <xhtml:code>vsftpd</xhtml:code> package can be removed with the following command:
+    <xhtml:pre># yum erase vsftpd</xhtml:pre>
+          </description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

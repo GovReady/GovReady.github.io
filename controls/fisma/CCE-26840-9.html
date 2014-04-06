@@ -1,0 +1,50 @@
+---
+layout: control
+permalink: /CCE-26840-9/
+name: CCE-26840-9
+title: Verify that All World-Writable Directories Have Sticky Bits Set
+ident: CCE-26840-9
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Failing to set the sticky bit on public directories allows unauthorized users to delete files in the directory structure.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+The only authorized public directories are those temporary directories supplied with the system, 
+or those designed to be temporary file repositories.  The setting is normally reserved for directories 
+used by the system, by users for temporary file storage (such as <xhtml:code>/tmp</xhtml:code>), and for directories 
+requiring global read/write access.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to verify that all world-writable directories have sticky bits set is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Verify Permissions on Important Files and
+Directories</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">When the so-called 'sticky bit' is set on a directory,
+only the owner of a given file may remove that file from the
+directory. Without the sticky bit, any user with write access to a
+directory may remove any file in the directory. Setting the sticky
+bit prevents users from removing each other's files. In cases where
+there is no reason for a directory to be world-writable, a better
+solution is to remove that permission rather than to set the sticky
+bit. However, if a directory is used by a particular application,
+consult that application's documentation instead of blindly
+changing modes.
+<br xmlns="http://www.w3.org/1999/xhtml"/>
+To set the sticky bit on a world-writable directory <i xmlns="http://www.w3.org/1999/xhtml">DIR</i>, run the
+following command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># chmod +t <i>DIR</i></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

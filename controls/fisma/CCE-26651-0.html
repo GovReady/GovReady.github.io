@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-26651-0/
+name: CCE-26651-0
+title: Ensure auditd Collects File Deletion Events by User
+ident: CCE-26651-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Auditing file deletions will create an audit trail for files that are removed
+from the system. The audit trail could aid in system troubleshooting, as well as, detecting
+malicious processes that attempt to delete log files to conceal their presence.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure auditd collects file deletion events by user is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">At a minimum the audit system should collect file
+deletion events for all users and root. Add the following to
+<xhtml:code>/etc/audit/audit.rules</xhtml:code>, setting ARCH to either b32 or b64 as
+appropriate for your system:
+<pre xmlns="http://www.w3.org/1999/xhtml">-a always,exit -F arch=ARCH -S unlink -S unlinkat -S rename -S renameat -F auid&gt;=500 -F auid!=4294967295 -k delete</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

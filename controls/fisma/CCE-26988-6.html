@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26988-6/
+name: CCE-26988-6
+title: Set Password Warning Age
+ident: CCE-26988-6
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Setting the password warning age enables users to
+make the change at a practical time.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to set password warning age is of <b>low</b> severity.</p>
+<p><small>View all 4 <i>Set Password Expiration Parameters</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To specify how many days prior to password
+expiration that a warning will be issued to users,
+edit the file <xhtml:code>/etc/login.defs</xhtml:code> and add or correct
+ the following line, replacing <i xmlns="http://www.w3.org/1999/xhtml">DAYS</i> appropriately:
+<pre xmlns="http://www.w3.org/1999/xhtml">PASS_WARN_AGE <i>DAYS</i></pre>
+The DoD requirement is 7.
+<!-- <sub idref="accounts_password_warn_age_login_defs_login_defs_value" /> -->
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

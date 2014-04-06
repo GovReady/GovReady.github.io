@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-27167-6/
+name: CCE-27167-6
+title: Ensure Insecure File Locking is Not Allowed
+ident: CCE-27167-6
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Allowing insecure file locking could allow for sensitive data to be
+viewed or edited by an unauthorized user.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to ensure insecure file locking is not allowed is of <b>medium</b> severity.</p>
+<p><small>View all 3 <i>Configure NFS Servers</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">By default the NFS server requires secure file-lock requests,
+which require credentials from the client in order to lock a file. Most NFS
+clients send credentials with file lock requests, however, there are a few
+clients that do not send credentials when requesting a file-lock, allowing the
+client to only be able to lock world-readable files. To get around this, the
+<xhtml:code>insecure_locks</xhtml:code> option can be used so these clients can access the
+desired export. This poses a security risk by potentially allowing the client
+access to data for which it does not have authorization.
+Remove any instances of the 
+<xhtml:code>insecure_locks</xhtml:code> option from the file <xhtml:code>/etc/exports</xhtml:code>.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27144-5/
+name: CCE-27144-5
+title: Disable Plaintext Authentication
+ident: CCE-27144-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Using plain text authentication to the mail server could allow an 
+attacker access to credentials by monitoring network traffic.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable plaintext authentication is of <b>low</b> severity.</p>
+<p><small>View all 4 <i>Enable SSL Support</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To prevent Dovecot from attempting plaintext 
+authentication of clients, edit <xhtml:code>/etc/dovecot/conf.d/10-auth.conf</xhtml:code> and add
+or correct the following line:
+<pre xmlns="http://www.w3.org/1999/xhtml">disable_plaintext_auth = yes</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

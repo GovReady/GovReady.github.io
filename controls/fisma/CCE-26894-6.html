@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-26894-6/
+name: CCE-26894-6
+title: Disable ypbind Service
+ident: CCE-26894-6
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Disabling the <xhtml:code>ypbind</xhtml:code> service ensures the system is not acting
+as a client in a NIS or NIS+ domain.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable ypbind service is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>NIS</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>ypbind</xhtml:code> service, which allows the system to act as a client in
+a NIS or NIS+ domain, should be disabled.
+
+    The <xhtml:code>ypbind</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig ypbind off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

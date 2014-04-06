@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27232-8/
+name: CCE-27232-8
+title: Disable Support for RPC IPv6
+ident: CCE-27232-8
+severity: low
+---
+<blockquote>
+<p class=""></p>
+</blockquote>
+
+<p class="text-info">Failing to disable support for rpc ipv6 is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Disable Support for IPv6 Unless Needed</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">RPC services for NFSv4 try to load transport modules for
+<xhtml:code>udp6</xhtml:code> and <xhtml:code>tcp6</xhtml:code> by default, even if IPv6 has been disabled in
+<xhtml:code>/etc/modprobe.d</xhtml:code>. To prevent RPC services such as <xhtml:code>rpc.mountd</xhtml:code>
+from attempting to start IPv6 network listeners, remove or comment out the
+following two lines in <xhtml:code>/etc/netconfig</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">udp6       tpi_clts      v     inet6    udp     -       -
+tcp6       tpi_cots_ord  v     inet6    tcp     -       -</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26409-3/
+name: CCE-26409-3
+title: Set Password Strength Minimum Special Characters
+ident: CCE-26409-3
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Requiring a minimum number of special characters makes password guessing attacks
+more difficult by ensuring a larger search space.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to set password strength minimum special characters is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Set Password Quality Requirements, if using
+pam_cracklib</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The pam_cracklib module's <xhtml:code>ocredit=</xhtml:code> parameter controls requirements for
+usage of special (or ``other'') characters in a password. When set to a negative number, any password will be required to
+contain that many special characters. When set to a positive number, pam_cracklib will grant +1 additional
+length credit for each special character.
+Add <xhtml:code>ocredit=-1</xhtml:code> after pam_cracklib.so to require use of a special character in passwords.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

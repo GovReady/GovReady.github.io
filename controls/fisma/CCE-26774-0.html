@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-26774-0/
+name: CCE-26774-0
+title: Ensure No Device Files are Unlabeled by SELinux
+ident: CCE-26774-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+If a device file carries the SELinux type <xhtml:code>unlabeled_t</xhtml:code>, then SELinux
+cannot properly restrict access to the device file.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure no device files are unlabeled by selinux is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>SELinux</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Device files, which are used for communication with important
+system resources, should be labeled with proper SELinux types. If any device
+files carry the SELinux type <xhtml:code>unlabeled_t</xhtml:code>, investigate the cause and
+correct the file's context.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

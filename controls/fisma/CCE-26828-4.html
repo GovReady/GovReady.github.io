@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-26828-4/
+name: CCE-26828-4
+title: Set GNOME Login Inactivity Timeout
+ident: CCE-26828-4
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Setting the idle delay controls when the
+screensaver will start, and can be combined with
+screen locking to prevent access from passersby.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to set gnome login inactivity timeout is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Configure GUI Screen Locking</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Run the following command to set the idle time-out value for
+inactivity in the GNOME desktop to 15 minutes:
+<pre xmlns="http://www.w3.org/1999/xhtml"># gconftool-2 \
+  --direct \
+  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \
+  --type int \
+  --set /apps/gnome-screensaver/idle_delay 15</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

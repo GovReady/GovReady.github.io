@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-27189-0/
+name: CCE-27189-0
+title: Configure Certificate Directives for LDAP Use of TLS
+ident: CCE-27189-0
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The tls_cacertdir or tls_cacertfile directives are required when
+tls_checkpeer is configured (which is the default for openldap versions 2.1 and
+up). These directives define the path to the trust certificates signed by the
+site CA.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to configure certificate directives for ldap use of tls is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>Configure OpenLDAP Clients</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Ensure a copy of a trusted CA certificate has been placed in
+the file <xhtml:code>/etc/pki/tls/CA/cacert.pem</xhtml:code>. Configure LDAP to enforce TLS 
+use and to trust certificates signed by that CA. First, edit the file 
+<xhtml:code>/etc/pam_ldap.conf</xhtml:code>, and add or correct either of the following lines:
+<pre xmlns="http://www.w3.org/1999/xhtml">tls_cacertdir /etc/pki/tls/CA</pre>
+or
+<pre xmlns="http://www.w3.org/1999/xhtml">tls_cacertfile /etc/pki/tls/CA/cacert.pem</pre>
+Then review the LDAP server and ensure TLS has been configured.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

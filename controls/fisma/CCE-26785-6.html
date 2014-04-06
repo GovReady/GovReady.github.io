@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26785-6/
+name: CCE-26785-6
+title: Enable Auditing for Processes Which Start Prior to the Audit Daemon
+ident: CCE-26785-6
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Each process on the system carries an "auditable" flag which
+indicates whether its activities can be audited. Although <xhtml:code>auditd</xhtml:code>
+takes care of enabling this for all processes which launch after it
+does, adding the kernel argument ensures it is set for every
+process during boot.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to enable auditing for processes which start prior to the audit daemon is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>System Accounting with auditd</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To ensure all processes can be audited, even
+those which start prior to the audit daemon, add the argument
+<xhtml:code>audit=1</xhtml:code> to the kernel line in <xhtml:code>/etc/grub.conf</xhtml:code>, in the manner below:
+<pre xmlns="http://www.w3.org/1999/xhtml">kernel /vmlinuz-version ro vga=ext root=/dev/VolGroup00/LogVol00 rhgb quiet audit=1</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

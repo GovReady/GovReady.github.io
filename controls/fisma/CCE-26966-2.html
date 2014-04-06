@@ -1,0 +1,44 @@
+---
+layout: control
+permalink: /CCE-26966-2/
+name: CCE-26966-2
+title: Ensure that System Accounts Do Not Run a Shell Upon Login
+ident: CCE-26966-2
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Ensuring shells are not given to system accounts upon login
+makes it more difficult for attackers to make use of
+system accounts.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to ensure that system accounts do not run a shell upon login is of <b>medium</b> severity.</p>
+<p><small>View all 7 <i>Restrict Root Logins</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Some accounts are not associated with a human
+user of the system, and exist to perform some administrative
+function. Should an attacker be able to log into these accounts,
+they should not be granted access to a shell.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+The login shell for each local account is stored in the last field of each line
+in <xhtml:code>/etc/passwd</xhtml:code>. System accounts are those user accounts with a user ID less than
+500. The user ID is stored in the third field.
+If any system account <i xmlns="http://www.w3.org/1999/xhtml">SYSACCT</i> (other than root) has a login shell,
+disable it with the command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># usermod -s /sbin/nologin <i>SYSACCT</i></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

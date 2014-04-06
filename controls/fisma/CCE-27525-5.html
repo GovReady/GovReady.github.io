@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27525-5/
+name: CCE-27525-5
+title: Install mod_security
+ident: CCE-27525-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"><xhtml:code>mod_security</xhtml:code> provides an additional level of protection for the web server by
+enabling the administrator to implement content access policies and filters at the
+application layer.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to install mod_security is of <b>low</b> severity.</p>
+<p><small>View all 1 <i>Deploy mod_security</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Install the <xhtml:code>security</xhtml:code> module:
+<pre xmlns="http://www.w3.org/1999/xhtml"># yum install mod_security</pre>
+<!-- this is in EPEL and this rule should not be included in any RHEL-only baselines -->
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

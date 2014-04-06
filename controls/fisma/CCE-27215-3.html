@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27215-3/
+name: CCE-27215-3
+title: Set Interval For Counting Failed Password Attempts
+ident: CCE-27215-3
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Locking out user accounts after a number of incorrect attempts within a
+specific period of time prevents direct password guessing attacks.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to set interval for counting failed password attempts is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Set Lockouts for Failed Password Attempts</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To configure the system to lock out accounts after a number of incorrect login
+attempts within a 15 minute interval using <xhtml:code>pam_faillock.so</xhtml:code>:
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+Add the following lines immediately below the <xhtml:code>pam_env.so</xhtml:code> statement in <xhtml:code>/etc/pam.d/system-auth</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">auth [default=die] pam_faillock.so authfail deny=3 unlock_time=604800 fail_interval=900</pre>
+<pre xmlns="http://www.w3.org/1999/xhtml">auth required pam_faillock.so authsucc deny=3 unlock_time=604800 fail_interval=900</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27272-4/
+name: CCE-27272-4
+title: Ensure tftp Daemon Uses Secure Mode
+ident: CCE-27272-4
+severity: high
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Using the <xhtml:code>-s</xhtml:code> option causes the TFTP service to only serve files from the
+given directory. Serving files from an intentionally-specified directory
+reduces the risk of sharing files which should remain private.
+</rationale></p>
+</blockquote>
+
+<p class="text-danger">Failing to ensure tftp daemon uses secure mode is of <b>high</b> severity.</p>
+<p><small>View all 3 <i>TFTP Server</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If running the <xhtml:code>tftp</xhtml:code> service is necessary, it should be configured
+to change its root directory at startup. To do so, ensure
+<xhtml:code>/etc/xinetd.d/tftp</xhtml:code> includes <xhtml:code>-s</xhtml:code> as a command line argument, as shown in
+the following example (which is also the default):
+<pre xmlns="http://www.w3.org/1999/xhtml">server_args = -s /var/lib/tftpboot</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

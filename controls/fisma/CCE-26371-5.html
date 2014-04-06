@@ -1,0 +1,34 @@
+---
+layout: control
+permalink: /CCE-26371-5/
+name: CCE-26371-5
+title: Ensure the Default Umask is Set Correctly in login.defs
+ident: CCE-26371-5
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The umask value influences the permissions assigned to files when they are created.
+A misconfigured umask value could result in files with excessive permissions that can be read and 
+written to by unauthorized users.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure the default umask is set correctly in login.defs is of <b>low</b> severity.</p>
+<p><small>View all 4 <i>Ensure that Users Have Sensible Umask Values</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To ensure the default umask controlled by <xhtml:code>/etc/login.defs</xhtml:code> is set properly,
+add or correct the <xhtml:code>UMASK</xhtml:code> setting in <xhtml:code>/etc/login.defs</xhtml:code> to read as follows:
+<pre xmlns="http://www.w3.org/1999/xhtml">UMASK 077<!-- <sub idref="umask_user_value" /> --></pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

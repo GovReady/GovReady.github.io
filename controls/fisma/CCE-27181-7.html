@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27181-7/
+name: CCE-27181-7
+title: Record Events that Modify the System's Discretionary Access Controls - lchown
+ident: CCE-27181-7
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The changing of file permissions could indicate that a user is attempting to
+gain access to information that would otherwise be disallowed. Auditing DAC modifications
+can facilitate the identification of patterns of abuse among both authorized and
+unauthorized users.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to record events that modify the system's discretionary access controls - lchown is of <b>low</b> severity.</p>
+<p><small>View all 13 <i>Record Events that Modify the System's Discretionary Access Controls</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">At a minimum the audit system should collect file 
+permission changes for all users and root. Add the following to
+<xhtml:code>/etc/audit/audit.rules</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">-a always,exit -F arch=b32 -S lchown -F auid&gt;=500 -F auid!=4294967295 -k perm_mod</pre>
+If the system is 64 bit then also add the following:
+<pre xmlns="http://www.w3.org/1999/xhtml">-a always,exit -F arch=b64 -S lchown -F auid&gt;=500 -F auid!=4294967295 -k perm_mod</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

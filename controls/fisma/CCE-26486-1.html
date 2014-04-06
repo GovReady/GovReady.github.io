@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26486-1/
+name: CCE-26486-1
+title: Add nosuid Option to /dev/shm
+ident: CCE-26486-1
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The presence of suid and sgid executables should be tightly controlled. Users
+should not be able to execute suid or sgid binaries from temporary storage partitions.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to add nosuid option to /dev/shm is of <b>low</b> severity.</p>
+<p><small>View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>nosuid</xhtml:code> mount option can be used to prevent execution
+of setuid programs in <xhtml:code>/dev/shm</xhtml:code>.  The suid/sgid permissions should not
+be required in these world-writable directories.
+
+	Add the <xhtml:code>nosuid</xhtml:code> option to the fourth column of
+	<xhtml:code>/etc/fstab</xhtml:code> for the line which controls mounting of
+	<xhtml:code>/dev/shm</xhtml:code>.
+	
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

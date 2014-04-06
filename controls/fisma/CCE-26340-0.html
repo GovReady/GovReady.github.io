@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-26340-0/
+name: CCE-26340-0
+title: Disable Mounting of cramfs
+ident: CCE-26340-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Linux kernel modules which implement filesystems that are not needed by the
+local system should be disabled.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable mounting of cramfs is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Restrict Dynamic Mounting and Unmounting of
+Filesystems</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To configure the system to prevent the <xhtml:code>cramfs</xhtml:code>
+kernel module from being loaded, add the following line to a file in the directory <xhtml:code>/etc/modprobe.d</xhtml:code>:
+<xhtml:pre xml:space="preserve">install cramfs /bin/false</xhtml:pre>
+This effectively prevents usage of this uncommon filesystem.
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27014-0/
+name: CCE-27014-0
+title: Ensure Logrotate Runs Periodically
+ident: CCE-27014-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Log files that are not properly rotated run the risk of growing so large
+that they fill up the /var/log partition. Valuable logging information could be lost
+if the /var/log partition becomes full.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure logrotate runs periodically is of <b>low</b> severity.</p>
+<p><small>View all 1 <i>Ensure All Logs are Rotated by logrotate</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>logrotate</xhtml:code> utility allows for the automatic rotation of 
+log files.  The frequency of rotation is specified in <xhtml:code>/etc/logrotate.conf</xhtml:code>, 
+which triggers a cron task.  To configure logrotate to run daily, add or correct 
+the following line in <xhtml:code>/etc/logrotate.conf</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml"># rotate log files <i>frequency</i>
+daily</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

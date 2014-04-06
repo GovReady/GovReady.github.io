@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-27045-4/
+name: CCE-27045-4
+title: Add nodev Option to Non-Root Local Partitions
+ident: CCE-27045-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>nodev</xhtml:code> mount option prevents files from being
+interpreted as character or block devices. The only legitimate location
+for device files is the <xhtml:code>/dev</xhtml:code> directory located on the root partition.
+The only exception to this is chroot jails, for which it is not advised
+to set <xhtml:code>nodev</xhtml:code> on these filesystems.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to add nodev option to non-root local partitions is of <b>low</b> severity.</p>
+<p><small>View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>nodev</xhtml:code> mount option prevents files from being
+interpreted as character or block devices. 
+Legitimate character and block devices should exist only in
+the <xhtml:code>/dev</xhtml:code> directory on the root partition or within chroot
+jails built for system services.
+
+	Add the <xhtml:code>nodev</xhtml:code> option to the fourth column of
+	<xhtml:code>/etc/fstab</xhtml:code> for the line which controls mounting of
+	any non-root local partitions.
+	
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

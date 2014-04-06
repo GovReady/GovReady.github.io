@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-27186-6/
+name: CCE-27186-6
+title: Set Default iptables Policy for Forwarded Packets
+ident: CCE-27186-6
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">In <xhtml:code>iptables</xhtml:code> the default policy is applied only after all
+the applicable rules in the table are examined for a match. Setting the
+default policy to <xhtml:code>DROP</xhtml:code> implements proper design for a firewall, i.e.
+any packets which are not explicitly permitted should not be
+accepted.</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to set default iptables policy for forwarded packets is of <b>medium</b> severity.</p>
+<p><small>View all 2 <i>Strengthen the Default Ruleset</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To set the default policy to DROP (instead of ACCEPT) for
+the built-in FORWARD chain which processes packets that will be forwarded from
+one interface to another,
+add or correct the following line in
+<xhtml:code>/etc/sysconfig/iptables</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">:FORWARD DROP [0:0]</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

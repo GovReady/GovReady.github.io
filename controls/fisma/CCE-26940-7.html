@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26940-7/
+name: CCE-26940-7
+title: Install the screen Package
+ident: CCE-26940-7
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Installing <xhtml:code>screen</xhtml:code> ensures a console locking capability is available
+for users who may need to suspend console logins.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to install the screen package is of <b>low</b> severity.</p>
+<p><small>View all 1 <i>Configure Console Screen Locking</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To enable console screen locking, install the <xhtml:code>screen</xhtml:code> package:
+<pre xmlns="http://www.w3.org/1999/xhtml"># yum install screen</pre>
+Instruct users to begin new terminal sessions with the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml">$ screen</pre>
+The console can now be locked with the following key combination:
+<pre xmlns="http://www.w3.org/1999/xhtml">ctrl+a x</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

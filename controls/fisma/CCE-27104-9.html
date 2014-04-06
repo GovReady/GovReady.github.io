@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27104-9/
+name: CCE-27104-9
+title: Disable Network File System Lock Service (nfslock)
+ident: CCE-27104-9
+severity: low
+---
+<blockquote>
+<p class=""></p>
+</blockquote>
+
+<p class="text-info">Failing to disable network file system lock service (nfslock) is of <b>low</b> severity.</p>
+<p><small>View all 3 <i>Disable Services Used Only by NFS</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The Network File System Lock (nfslock) service starts the required
+remote procedure call (RPC) processes which allow clients to lock files on the
+server. If the local machine is not configured to mount NFS filesystems then
+this service should be disabled.
+
+    The <xhtml:code>nfslock</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig nfslock off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

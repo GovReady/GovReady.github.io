@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-27011-6/
+name: CCE-27011-6
+title: Disable Kernel Support for USB via Bootloader Configuration
+ident: CCE-27011-6
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Disabling the USB subsystem within the Linux kernel at system boot will
+protect against potentially malicious USB devices, although it is only practical
+in specialized systems.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable kernel support for usb via bootloader configuration is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Restrict Dynamic Mounting and Unmounting of
+Filesystems</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+All USB support can be disabled by adding the <xhtml:code>nousb</xhtml:code>
+argument to the kernel's boot loader configuration. To do so, 
+append "nousb" to the kernel line in <xhtml:code>/etc/grub.conf</xhtml:code> as shown:
+<pre xmlns="http://www.w3.org/1999/xhtml">kernel /vmlinuz-<i>VERSION</i> ro vga=ext root=/dev/VolGroup00/LogVol00 rhgb quiet nousb</pre>
+<i xmlns="http://www.w3.org/1999/xhtml"><b>WARNING:</b> Disabling all kernel support for USB will cause problems for
+systems with USB-based keyboards, mice, or printers. This configuration is
+infeasible for systems which require USB devices, which is common.</i></description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

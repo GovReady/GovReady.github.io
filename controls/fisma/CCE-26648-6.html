@@ -1,0 +1,38 @@
+---
+layout: control
+permalink: /CCE-26648-6/
+name: CCE-26648-6
+title: Record Events that Modify the System's Network Environment
+ident: CCE-26648-6
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The network environment should not be modified by anything other
+than administrator action. Any change to network parameters should be
+audited.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to record events that modify the system's network environment is of <b>low</b> severity.</p>
+<p><small>View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Add the following to <xhtml:code>/etc/audit/audit.rules</xhtml:code>, setting
+ARCH to either b32 or b64 as appropriate for your system:
+<pre xmlns="http://www.w3.org/1999/xhtml"># audit_network_modifications
+-a always,exit -F arch=ARCH -S sethostname -S setdomainname -k audit_network_modifications
+-w /etc/issue -p wa -k audit_network_modifications
+-w /etc/issue.net -p wa -k audit_network_modifications
+-w /etc/hosts -p wa -k audit_network_modifications
+-w /etc/sysconfig/network -p wa -k audit_network_modifications</pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

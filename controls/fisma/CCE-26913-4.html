@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-26913-4/
+name: CCE-26913-4
+title: Disable D-Bus IPC Service (messagebus)
+ident: CCE-26913-4
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If no services which require D-Bus are needed, then it
+can be disabled. As a broker for IPC between processes of different privilege levels,
+it could be a target for attack. However, disabling D-Bus is likely to be
+impractical for any system which needs to provide
+a graphical login session.
+</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to disable d-bus ipc service (messagebus) is of <b>low</b> severity.</p>
+<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">D-Bus provides an IPC mechanism used by 
+a growing list of programs, such as those used for Gnome, Bluetooth, and Avahi.
+Due to these dependencies, disabling D-Bus may not be practical for
+many systems.
+
+    The <xhtml:code>messagebus</xhtml:code> service can be disabled with the following command:
+    <xhtml:pre># chkconfig messagebus off</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

@@ -1,0 +1,39 @@
+---
+layout: control
+permalink: /CCE-26696-5/
+name: CCE-26696-5
+title: Disable TIPC Support
+ident: CCE-26696-5
+severity: medium
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Disabling TIPC protects
+the system against exploitation of any flaws in its implementation.
+</rationale></p>
+</blockquote>
+
+<p class="text-warning">Failing to disable tipc support is of <b>medium</b> severity.</p>
+<p><small>View all 4 <i>Uncommon Network Protocols</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The Transparent Inter-Process Communication (TIPC) protocol
+is designed to provide communications between nodes in a
+cluster.
+
+To configure the system to prevent the <xhtml:code>tipc</xhtml:code>
+kernel module from being loaded, add the following line to a file in the directory <xhtml:code>/etc/modprobe.d</xhtml:code>:
+<xhtml:pre xml:space="preserve">install tipc /bin/false</xhtml:pre>
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+

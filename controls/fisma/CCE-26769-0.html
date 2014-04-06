@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-26769-0/
+name: CCE-26769-0
+title: Ensure All SGID Executables Are Authorized
+ident: CCE-26769-0
+severity: low
+---
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Executable files with the SGID permission run with the privileges of
+the owner of the file. SGID files of uncertain provenance could allow for
+unprivileged users to elevate privileges. The presence of these files should be
+strictly controlled on the system.</rationale></p>
+</blockquote>
+
+<p class="text-info">Failing to ensure all sgid executables are authorized is of <b>low</b> severity.</p>
+<p><small>View all 7 <i>Verify Permissions on Important Files and
+Directories</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The SGID (set group id) bit should be set only on files that were
+installed via authorized means. A straightforward means of identifying
+unauthorized SGID files is determine if any were not installed as part of an
+RPM package, which is cryptographically verified. Investigate the origin
+of any unpackaged SGID files. 
+</description></p>
+
+
+<!--
+<hr />
+<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
+<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
+-->
+
+<hr />
+<a href="/cce/">Back to CCE List</a>
+
