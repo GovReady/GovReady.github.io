@@ -10,4 +10,4 @@ accreditations:
 ---
 
 
-GitHub is **awesome**.
+GitHub is very **awesome**.
