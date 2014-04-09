@@ -6,16 +6,18 @@ title: Ensure SELinux Not Disabled in /etc/grub.conf
 ident: CCE-26956-3
 severity: medium
 ---
+<p class="text-warning">Failing to ensure selinux not disabled in /etc/grub.conf is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Disabling a major host protection feature, such as SELinux, at boot time prevents
 it from confining system services at boot time.  Further, it increases
 the chances that it will remain off during system operation.
 </rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Enable SELinux</i> rules. <a href="/cce/ssg/group/enabling_selinux"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to ensure selinux not disabled in /etc/grub.conf is of <b>medium</b> severity.</p>
-<p><small>View all 3 <i>Enable SELinux</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">SELinux can be disabled at boot time by an argument in
@@ -24,13 +26,4 @@ Remove any instances of <xhtml:code>selinux=0</xhtml:code> from the kernel argum
 file to prevent SELinux from being disabled at boot.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

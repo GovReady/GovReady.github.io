@@ -1,0 +1,31 @@
+---
+layout: cce
+permalink: /cce/ssg/group/ldap_server_config_certificate_files/
+name: high
+title: high
+---
+<h2>Install and Protect LDAP Certificate Files Rules </small></h2>
+<blockquote>
+<p class="">Create the PKI directory for LDAP certificates if it does not already exist:
+
+Using removable media or some other secure transmission format, install the certificate files
+onto the LDAP server:
+
+Verify the ownership and permissions of these files:
+
+Verify that the CA's public certificate file has been installed as
+, and has the correct permissions:
+
+
+As a result of these steps, the LDAP server will have access to its own private
+certificate and the key with which that certificate is encrypted, and to the
+public certificate file belonging to the CA. Note that it would be possible for
+the key to be protected further, so that processes running as ldap could not
+read it. If this were done, the LDAP server process would need to be restarted
+manually whenever the server rebooted.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

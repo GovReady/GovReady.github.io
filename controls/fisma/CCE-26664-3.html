@@ -6,15 +6,17 @@ title: Record Events that Modify User/Group Information
 ident: CCE-26664-3
 severity: low
 ---
+<p class="text-info">Failing to record events that modify user/group information is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">In addition to auditing new user and group accounts, these watches
 will alert the system administrator(s) to any modifications. Any
 unexpected users, groups, or modifications should be investigated for
 legitimacy.</rationale></p>
+<p><small>via FISMA SSG. View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="/cce/ssg/group/auditd_configure_rules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to record events that modify user/group information is of <b>low</b> severity.</p>
-<p><small>View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Add the following to <xhtml:code>/etc/audit/audit.rules</xhtml:code>, in order
@@ -27,13 +29,4 @@ to capture events that modify account changes:
 -w /etc/security/opasswd -p wa -k audit_account_changes</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

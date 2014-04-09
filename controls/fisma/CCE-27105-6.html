@@ -6,6 +6,9 @@ title: Disable Dynamic Updates
 ident: CCE-27105-6
 severity: low
 ---
+<p class="text-info">Failing to disable dynamic updates is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Dynamic updates allow remote servers to add, delete, or modify any
 entries in your zone file. Therefore, they should be considered highly risky,
@@ -14,10 +17,9 @@ updates must be allowed, IP-based ACLs are insufficient protection, since they
 are easily spoofed. Instead, use TSIG keys (see the previous section for an
 example), and consider using the update-policy directive to restrict changes to
 only the precise type of change needed.</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Protect DNS Data from Tampering or Attack</i> rules. <a href="/cce/ssg/group/dns_server_protection"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable dynamic updates is of <b>low</b> severity.</p>
-<p><small>View all 3 <i>Protect DNS Data from Tampering or Attack</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Is there a mission-critical reason to enable the risky dynamic
@@ -29,13 +31,4 @@ specification, correct the following directive if necessary:
 };</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

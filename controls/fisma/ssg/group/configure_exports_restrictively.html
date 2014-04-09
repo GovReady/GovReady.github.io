@@ -1,0 +1,26 @@
+---
+layout: cce
+permalink: /cce/ssg/group/configure_exports_restrictively/
+name: high
+title: high
+---
+<h2>Configure the Exports File Restrictively Rules </small></h2>
+<blockquote>
+<p class="">Linux's NFS implementation uses the file  to control what filesystems
+and directories may be accessed via NFS. (See the  manpage for more information about the
+format of this file.)
+
+The syntax of the  file is not necessarily checked fully on reload, and syntax errors
+can leave your NFS configuration more open than intended. Therefore, exercise caution when modifying
+the file.
+
+The syntax of each line in  is:
+
+where  is a directory or filesystem to export,  is an IP address, netblock,
+hostname, domain, or netgroup to which to export, and  is an option.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

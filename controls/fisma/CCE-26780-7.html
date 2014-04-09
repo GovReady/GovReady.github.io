@@ -6,16 +6,18 @@ title: Disable Postfix Network Listening
 ident: CCE-26780-7
 severity: medium
 ---
+<p class="text-warning">Failing to disable postfix network listening is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 This ensures <xhtml:code>postfix</xhtml:code> accepts mail messages
 (such as cron job reports) from the local system only,
 and not from the network, which protects it from network attack.
 </rationale></p>
+<p><small>via FISMA SSG. View all 1 <i>Configure SMTP For Mail Clients</i> rules. <a href="/cce/ssg/group/postfix_client"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to disable postfix network listening is of <b>medium</b> severity.</p>
-<p><small>View all 1 <i>Configure SMTP For Mail Clients</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -24,13 +26,4 @@ Edit the file <xhtml:code>/etc/postfix/main.cf</xhtml:code> to ensure that only 
 <pre xmlns="http://www.w3.org/1999/xhtml">inet_interfaces = localhost</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

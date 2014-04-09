@@ -1,0 +1,32 @@
+---
+layout: cce
+permalink: /cce/ssg/group/coredumps/
+name: high
+title: high
+---
+<h2>Disable Core Dumps Rules </small></h2>
+<blockquote>
+<p class="">A core dump file is the memory image of an executable
+program when it was terminated by the operating system due to
+errant behavior. In most cases, only software developers
+legitimately need to access these files. The core dump files may
+also contain sensitive information, or unnecessarily occupy large
+amounts of disk space.
+
+Once a hard limit is set in , a
+user cannot increase that limit within his or her own session. If access
+to core dumps is required, consider restricting them to only
+certain users or groups. See the  man page for more
+information.
+
+The core dumps of setuid programs are further protected. The
+ variable  controls whether
+the kernel allows core dumps from these programs at all. The default
+value of 0 is recommended.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27033-0">CCE-27033-0</a></td> <td>disable_users_coredumps</td> <td class="text-info">low</td> <td><i>coredumps (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27044-7">CCE-27044-7</a></td> <td>disable_setuid_coredumps</td> <td class="text-info">low</td> <td><i>coredumps (2)</i></td> </tr></div>
+
+</table>

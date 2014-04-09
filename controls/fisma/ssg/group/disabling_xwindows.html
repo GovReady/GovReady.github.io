@@ -1,0 +1,22 @@
+---
+layout: cce
+permalink: /cce/ssg/group/disabling_xwindows/
+name: high
+title: high
+---
+<h2>Disable X Windows Rules </small></h2>
+<blockquote>
+<p class="">Unless there is a mission-critical reason for the
+system to run a graphical user interface, ensure X is not set to start
+automatically at boot and remove the X Windows software packages.
+There is usually no reason to run X Windows
+on a dedicated server machine, as it increases the system's attack surface and consumes
+system resources. Administrators of server systems should instead login via
+SSH or on the text console.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27119-7">CCE-27119-7</a></td> <td>disable_xwindows_with_runlevel</td> <td class="text-info">low</td> <td><i>disabling_xwindows (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27198-1">CCE-27198-1</a></td> <td>packagegroup_xwindows_remove</td> <td class="text-info">low</td> <td><i>disabling_xwindows (2)</i></td> </tr></div>
+
+</table>

@@ -6,14 +6,16 @@ title: Configure statd to use static port
 ident: CCE-26889-6
 severity: low
 ---
+<p class="text-info">Failing to configure statd to use static port is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"> Restricting services to always use a given port enables firewalling
 to be done more effectively.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Configure NFS Services to Use Fixed Ports (NFSv3 and NFSv2)</i> rules. <a href="/cce/ssg/group/nfs_configure_fixed_ports"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to configure statd to use static port is of <b>low</b> severity.</p>
-<p><small>View all 4 <i>Configure NFS Services to Use Fixed Ports (NFSv3 and NFSv2)</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Configure the <xhtml:code>statd</xhtml:code> daemon to use a static port as
@@ -23,13 +25,4 @@ file <xhtml:code>/etc/sysconfig/nfs</xhtml:code>. Add or correct the following l
 Where <xhtml:code>statd-port</xhtml:code> is a port which is not used by any other service on your network. 
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

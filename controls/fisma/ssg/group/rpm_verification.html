@@ -1,0 +1,25 @@
+---
+layout: cce
+permalink: /cce/ssg/group/rpm_verification/
+name: high
+title: high
+---
+<h2>Verify Integrity with RPM Rules </small></h2>
+<blockquote>
+<p class="">The RPM package management system includes the ability
+to verify the integrity of installed packages by comparing the
+installed files with information about the files taken from the
+package metadata stored in the RPM database. Although an attacker
+could corrupt the RPM database (analogous to attacking the AIDE
+database as described above), this check can still reveal
+modification of important files. To list which files on the system differ from what is expected by the RPM database:
+
+See the man page for  to see a complete explanation of each column.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26731-0">CCE-26731-0</a></td> <td>rpm_verify_permissions</td> <td class="text-info">low</td> <td><i>rpm_verification (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27223-7">CCE-27223-7</a></td> <td>rpm_verify_hashes</td> <td class="text-info">low</td> <td><i>rpm_verification (2)</i></td> </tr></div>
+
+</table>

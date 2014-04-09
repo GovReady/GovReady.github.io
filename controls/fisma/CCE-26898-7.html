@@ -6,14 +6,16 @@ title: Configure Logging
 ident: CCE-26898-7
 severity: low
 ---
+<p class="text-info">Failing to configure logging is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">By default, dhcpd logs notices to the daemon facility. Sending all
 daemon messages to a dedicated log file is part of the syslog configuration
 outlined in the Logging and Auditing section</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Disable DHCP Server</i> rules. <a href="/cce/ssg/group/dhcp_server_configuration"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to configure logging is of <b>low</b> severity.</p>
-<p><small>View all 4 <i>Disable DHCP Server</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Ensure that the following line exists in
@@ -22,13 +24,4 @@ outlined in the Logging and Auditing section</rationale></p>
 Configure logwatch or other log monitoring tools to summarize error conditions
 reported by the dhcpd process.</description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

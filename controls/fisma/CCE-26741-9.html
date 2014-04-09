@@ -6,14 +6,16 @@ title: Limit Password Reuse
 ident: CCE-26741-9
 severity: medium
 ---
+<p class="text-warning">Failing to limit password reuse is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Preventing re-use of previous passwords helps ensure that a compromised password is not re-used by a user.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Set Lockouts for Failed Password Attempts</i> rules. <a href="/cce/ssg/group/locking_out_password_attempts"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to limit password reuse is of <b>medium</b> severity.</p>
-<p><small>View all 4 <i>Set Lockouts for Failed Password Attempts</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Do not allow users to reuse recent passwords. This can
@@ -23,13 +25,4 @@ line which refers to the <xhtml:code>pam_unix.so</xhtml:code> module, as shown:
 <pre xmlns="http://www.w3.org/1999/xhtml">password sufficient pam_unix.so <i>existing_options</i> remember=24</pre>
 The DoD and FISMA requirement is 24 passwords.</description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

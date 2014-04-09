@@ -6,14 +6,16 @@ title: Disable Core Dumps for All Users
 ident: CCE-27033-0
 severity: low
 ---
+<p class="text-info">Failing to disable core dumps for all users is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">A core dump includes a memory image taken at the time the operating system
 terminates an application. The memory image could contain sensitive data and is generally useful
 only for developers trying to debug problems.</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Disable Core Dumps</i> rules. <a href="/cce/ssg/group/coredumps"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable core dumps for all users is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Disable Core Dumps</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To disable core dumps for all users, add the following line to
@@ -21,13 +23,4 @@ only for developers trying to debug problems.</rationale></p>
 <pre xmlns="http://www.w3.org/1999/xhtml">*     hard   core    0</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

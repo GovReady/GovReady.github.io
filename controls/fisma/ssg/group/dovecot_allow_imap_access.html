@@ -1,0 +1,26 @@
+---
+layout: cce
+permalink: /cce/ssg/group/dovecot_allow_imap_access/
+name: high
+title: high
+---
+<h2>Allow IMAP Clients to Access the Server Rules </small></h2>
+<blockquote>
+<p class="">The default iptables configuration does not allow inbound 
+access to any services. This modification will allow remote hosts to 
+initiate connections to the IMAP daemon, while keeping all other ports 
+on the server in their default protected state. 
+
+        To configure  to allow port 
+        143 traffic one must edit 
+          and 
+         (if IPv6 is in use).
+        Add the following line, ensuring that it appears before the final LOG 
+        and DROP lines for the INPUT chain:
+        
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

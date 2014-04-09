@@ -6,6 +6,9 @@ title: Ensure that User Home Directories are not Group-Writable or World-Readabl
 ident: CCE-26981-1
 severity: low
 ---
+<p class="text-info">Failing to ensure that user home directories are not group-writable or world-readable is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 User home directories contain many configuration files which
@@ -18,10 +21,9 @@ to other users. If a subset of users need read access
 to one another's home directories, this can be provided using
 groups or ACLs.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Secure Session Configuration Files for Login Accounts</i> rules. <a href="/cce/ssg/group/accounts-session"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to ensure that user home directories are not group-writable or world-readable is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Secure Session Configuration Files for Login Accounts</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">For each human user of the system, view the
@@ -33,13 +35,4 @@ is not world-readable. If necessary, repair the permissions:
 # chmod o-rwx /home/<i>USER</i></pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

@@ -1,0 +1,37 @@
+---
+layout: cce
+permalink: /cce/ssg/group/iptables_log_and_drop_suspicious/
+name: high
+title: high
+---
+<h2>Log and Drop Packets with Suspicious Source Addresses Rules </small></h2>
+<blockquote>
+<p class="">Packets with non-routable source addresses should be rejected, as they may indicate spoofing. Because the
+modified policy will reject non-matching packets, you only need to add these rules if you are interested in also
+logging these spoofing or suspicious attempts before they are dropped. If you do choose to log various suspicious
+traffic, add identical rules with a target of DROP after each LOG.
+To log and then drop these IPv4 packets, insert the following rules in  (excepting
+any that are intentionally used):
+
+Similarly, you might wish to log packets containing some IPv6 reserved addresses if they are not expected
+on your network:
+
+If you are not expecting to see site-local multicast or auto-tunneled traffic, you can log those:
+
+If you wish to block multicasts to all link-local nodes (e.g. if you are not using router auto-configuration and
+do not plan to have any services that multicast to the entire local network), you can block the link-local
+all-nodes multicast address (before accepting incoming ICMPv6):
+
+However, if you're going to allow IPv4 compatible IPv6 addresses (of the form ::0.0.0.0/96), you should
+then consider logging the non-routable IPv4-compatible addresses:
+
+If you are not expecting to see any IPv4 (or IPv4-compatible) traffic on your network, consider logging it before it gets dropped:
+
+The following rule will log all traffic originating from a site-local address, which is deprecated address space:
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

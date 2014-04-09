@@ -1,0 +1,32 @@
+---
+layout: cce
+permalink: /cce/ssg/group/httpd_minimize_config_files_included/
+name: high
+title: high
+---
+<h2>Minimize Configuration Files Included Rules </small></h2>
+<blockquote>
+<p class="">
+The  directive directs  to load supplementary configuration files
+from a provided path. The default configuration loads all files that end in 
+from the  directory.
+
+To restrict excess configuration, the following line should be commented out and
+replaced with  directives that only reference required configuration files:
+
+If the above change was made, ensure that the SSL encryption remains loaded by
+explicitly including the corresponding configuration file:
+
+If PHP is necessary, a similar alteration must be made:
+
+
+Explicitly listing the configuration files to be loaded during web server start-up avoids
+the possibility of unwanted or malicious configuration files to be automatically included as
+part of the server's running configuration.
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

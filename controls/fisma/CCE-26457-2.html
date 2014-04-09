@@ -6,16 +6,18 @@ title: Ensure auditd Collects Information on the Use of Privileged Commands
 ident: CCE-26457-2
 severity: low
 ---
+<p class="text-info">Failing to ensure auditd collects information on the use of privileged commands is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Privileged programs are subject to escalation-of-privilege attacks,
 which attempt to subvert their normal role of providing some necessary but
 limited capability. As such, motivation exists to monitor these programs for
 unusual activity.
 </rationale></p>
+<p><small>via FISMA SSG. View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="/cce/ssg/group/auditd_configure_rules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to ensure auditd collects information on the use of privileged commands is of <b>low</b> severity.</p>
-<p><small>View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">At a minimum the audit system should collect the
@@ -28,13 +30,4 @@ in the list:
 <pre xmlns="http://www.w3.org/1999/xhtml">-a always,exit -F path=<i>SETUID_PROG_PATH</i> -F perm=x -F auid&gt;=500 -F auid!=4294967295 -k privileged</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

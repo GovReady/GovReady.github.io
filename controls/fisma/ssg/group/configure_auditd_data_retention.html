@@ -1,0 +1,50 @@
+---
+layout: cce
+permalink: /cce/ssg/group/configure_auditd_data_retention/
+name: high
+title: high
+---
+<h2>Configure auditd Data Retention Rules </small></h2>
+<blockquote>
+<p class="">
+The audit system writes data to . By default,
+ rotates 5 logs by size (6MB), retaining a maximum of 30MB of
+data in total, and refuses to write entries when the disk is too
+full. This minimizes the risk of audit data filling its partition
+and impacting other services. This also minimizes the risk of the audit
+daemon temporarily disabling the system if it cannot write audit log (which
+it can be configured to do).
+
+For a busy
+system or a system which is thoroughly auditing system activity, the default settings
+for data retention may be
+ insufficient. The log file size needed will depend heavily on what types
+of events are being audited. First configure auditing to log all the events of
+interest. Then monitor the log size manually for awhile to determine what file
+size will allow you to keep the required data for the correct time period.
+
+Using a dedicated partition for  prevents the
+ logs from disrupting system functionality if they fill, and,
+more importantly, prevents other activity in  from filling the
+partition and stopping the audit trail. (The audit logs are size-limited and
+therefore unlikely to grow without bound unless configured to do so.) Some
+machines may have requirements that no actions occur which cannot be audited.
+If this is the case, then  can be configured to halt the machine
+if it runs out of space.  Since older logs are rotated,
+configuring  this way does not prevent older logs from being
+rotated away before they can be viewed.
+
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/"></a></td> <td>configure_auditd_num_logs</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/"></a></td> <td>configure_auditd_max_log_file</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27237-7">CCE-27237-7</a></td> <td>configure_auditd_max_log_file_action</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-27238-5">CCE-27238-5</a></td> <td>auditd_data_retention_space_left_action</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-27239-3">CCE-27239-3</a></td> <td>auditd_data_retention_admin_space_left_action</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+<div><tr> <td>6</td> <td><a href="/CCE-27241-9">CCE-27241-9</a></td> <td>auditd_data_retention_action_mail_acct</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+<div><tr> <td>7</td> <td><a href="/"></a></td> <td>configure_auditd_audispd</td> <td class="text-warning">medium</td> <td><i>configure_auditd_data_retention (7)</i></td> </tr></div>
+
+</table>

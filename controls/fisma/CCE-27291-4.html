@@ -6,6 +6,9 @@ title: Set Last Logon/Access Notification
 ident: CCE-27291-4
 severity: low
 ---
+<p class="text-info">Failing to set last logon/access notification is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Users need to be aware of activity that occurs regarding
@@ -14,10 +17,9 @@ of unsuccessful attempts that were made to login to their account
 allows the user to determine if any unauthorized activity has occurred
 and gives them an opportunity to notify administrators.
 </rationale></p>
+<p><small>via FISMA SSG. View all 1 <i>Protect Accounts by Configuring PAM</i> rules. <a href="/cce/ssg/group/accounts-pam"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to set last logon/access notification is of <b>low</b> severity.</p>
-<p><small>View all 1 <i>Protect Accounts by Configuring PAM</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To configure the system to notify users of last logon/access
@@ -25,13 +27,4 @@ using <xhtml:code>pam_lastlog</xhtml:code>, add the following line immediately a
 <pre xmlns="http://www.w3.org/1999/xhtml">session       required     pam_lastlog.so showfailed</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

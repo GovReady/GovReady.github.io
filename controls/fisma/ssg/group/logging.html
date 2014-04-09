@@ -1,0 +1,32 @@
+---
+layout: cce
+permalink: /cce/ssg/group/logging/
+name: high
+title: high
+---
+<h2>Configure Syslog Rules </small></h2>
+<blockquote>
+<p class="">The syslog service has been the default Unix logging mechanism for
+many years. It has a number of downsides, including inconsistent log format,
+lack of authentication for received messages, and lack of authentication,
+encryption, or reliable transport for messages sent over a network. However,
+due to its long history, syslog is a de facto standard which is supported by
+almost all Unix applications.
+
+
+In RHEL 6, rsyslog has replaced ksyslogd as the
+syslog daemon of choice, and it includes some additional security features
+such as reliable, connection-oriented (i.e. TCP) transmission of logs, the
+option to log to database formats, and the encryption of log data en route to
+a central logging server.
+This section discusses how to configure rsyslog for
+best effect, and how to use tools provided with the system to maintain and
+monitor logs.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26809-4">CCE-26809-4</a></td> <td>package_rsyslog_installed</td> <td class="text-warning">medium</td> <td><i>logging (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26807-8">CCE-26807-8</a></td> <td>service_rsyslog_enabled</td> <td class="text-warning">medium</td> <td><i>logging (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/"></a></td> <td>disable_logwatch_for_logserver</td> <td class="text-info">low</td> <td><i>logging (3)</i></td> </tr></div>
+
+</table>

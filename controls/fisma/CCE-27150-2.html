@@ -6,15 +6,17 @@ title: Set Permissions on the /var/log/httpd/ Directory
 ident: CCE-27150-2
 severity: low
 ---
+<p class="text-info">Failing to set permissions on the /var/log/httpd/ directory is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Access to the web server's log files may allow an unauthorized user or attacker
 to access information about the web server or alter the server's log files.
 </rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Restrict File and Directory Access</i> rules. <a href="/cce/ssg/group/httpd_restrict_file_dir_access"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to set permissions on the /var/log/httpd/ directory is of <b>low</b> severity.</p>
-<p><small>View all 3 <i>Restrict File and Directory Access</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -23,13 +25,4 @@ Ensure that the permissions on the web server log directory is set to 700:
 This is its default setting.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

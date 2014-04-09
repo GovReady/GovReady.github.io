@@ -6,6 +6,9 @@ title: Enable Randomized Layout of Virtual Address Space
 ident: CCE-26999-3
 severity: medium
 ---
+<p class="text-warning">Failing to enable randomized layout of virtual address space is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"> Address space layout randomization (ASLR) makes it more difficult
 for an attacker to predict the location of attack code they have introduced
@@ -13,10 +16,9 @@ into a process's address space during an attempt at exploitation.  Additionally,
 makes it more difficult for an attacker to know the location of existing code
 in order to re-purpose it using return oriented programming (ROP) techniques.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Enable ExecShield</i> rules. <a href="/cce/ssg/group/enable_execshield_settings"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to enable randomized layout of virtual address space is of <b>medium</b> severity.</p>
-<p><small>View all 2 <i>Enable ExecShield</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -28,13 +30,4 @@ in order to re-purpose it using return oriented programming (ROP) techniques.
     <xhtml:pre xml:space="preserve">kernel.randomize_va_space = 2</xhtml:pre>
             </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

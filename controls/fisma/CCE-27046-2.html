@@ -6,6 +6,9 @@ title: Disable xinetd Service
 ident: CCE-27046-2
 severity: medium
 ---
+<p class="text-warning">Failing to disable xinetd service is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 The xinetd service provides a dedicated listener service for some programs,
@@ -13,10 +16,9 @@ which is no longer necessary for commonly-used network services. Disabling
 it ensures that these uncommon services are not running, and also prevents
 attacks against xinetd itself.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Xinetd</i> rules. <a href="/cce/ssg/group/inetd_and_xinetd"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to disable xinetd service is of <b>medium</b> severity.</p>
-<p><small>View all 2 <i>Xinetd</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -25,13 +27,4 @@ attacks against xinetd itself.
     <xhtml:pre># chkconfig xinetd off</xhtml:pre>
           </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

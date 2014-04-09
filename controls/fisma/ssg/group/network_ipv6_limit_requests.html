@@ -1,0 +1,41 @@
+---
+layout: cce
+permalink: /cce/ssg/group/network_ipv6_limit_requests/
+name: high
+title: high
+---
+<h2>Limit Network-Transmitted Configuration if Using Static IPv6 Addresses Rules </small></h2>
+<blockquote>
+<p class="">To limit the configuration information requested from other
+systems and accepted from the network on a system that uses
+statically-configured IPv6 addresses, add the following lines to
+:
+
+The  setting determines how many router
+solicitations are sent when bringing up the interface. If addresses are
+statically assigned, there is no need to send any solicitations.
+
+The  setting controls whether the system will accept
+prefix info from the router.
+
+The  setting controls whether the system will accept
+Hop Limit settings from a router advertisement. Setting it to 0 prevents a
+router from changing your default IPv6 Hop Limit for outgoing packets.
+
+The  setting controls whether router advertisements can cause
+the system to assign a global unicast address to an interface.
+
+The  setting determines how many neighbor solicitations
+to send out per address (global and link-local) when bringing up an interface
+to ensure the desired address is unique on the network.
+
+The  setting determines how many global unicast IPv6
+addresses can be assigned to each interface.  The default is 16, but it should
+be set to exactly the number of statically configured global addresses
+required.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

@@ -6,14 +6,16 @@ title: Disable Automatic Bug Reporting Tool (abrtd)
 ident: CCE-27247-6
 severity: low
 ---
+<p class="text-info">Failing to disable automatic bug reporting tool (abrtd) is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"> Mishandling crash data could expose sensitive information about
 vulnerabilities in software executing on the local machine, as well as sensitive
 information from within a process's address space or registers.</rationale></p>
+<p><small>via FISMA SSG. View all 24 <i>Base Services</i> rules. <a href="/cce/ssg/group/base"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable automatic bug reporting tool (abrtd) is of <b>low</b> severity.</p>
-<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The Automatic Bug Reporting Tool (<xhtml:code>abrtd</xhtml:code>) daemon collects
@@ -26,13 +28,4 @@ system such as RHTSupport.
     <xhtml:pre># chkconfig abrtd off</xhtml:pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

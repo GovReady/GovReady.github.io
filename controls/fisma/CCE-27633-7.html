@@ -6,6 +6,9 @@ title: Configure Dovecot to Use the SSL Key file
 ident: CCE-27633-7
 severity: low
 ---
+<p class="text-info">Failing to configure dovecot to use the ssl key file is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 SSL certificates are used by the client to authenticate the identity
@@ -14,10 +17,9 @@ Not using SSL to encrypt mail server traffic could allow unauthorized
 access to credentials and mail messages since they are sent in plain 
 text over the network.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Enable SSL Support</i> rules. <a href="/cce/ssg/group/dovecot_enabling_ssl"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to configure dovecot to use the ssl key file is of <b>low</b> severity.</p>
-<p><small>View all 4 <i>Enable SSL Support</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">This option tells Dovecot where to find the the mail 
@@ -29,13 +31,4 @@ you are using a different path, ensure you reference the appropriate file</i>):
 <pre xmlns="http://www.w3.org/1999/xhtml">ssl_key = &lt;/etc/pki/dovecot/private/dovecot.pem</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

@@ -6,14 +6,16 @@ title: Uninstall ypserv Package
 ident: CCE-27079-3
 severity: medium
 ---
+<p class="text-warning">Failing to uninstall ypserv package is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Removing the <xhtml:code>ypserv</xhtml:code> package decreases the risk of the
 accidental (or intentional) activation of NIS or NIS+ services.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>NIS</i> rules. <a href="/cce/ssg/group/nis"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to uninstall ypserv package is of <b>medium</b> severity.</p>
-<p><small>View all 2 <i>NIS</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>ypserv</xhtml:code> package can be uninstalled with
@@ -21,13 +23,4 @@ the following command:
 <pre xmlns="http://www.w3.org/1999/xhtml"># yum erase ypserv</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

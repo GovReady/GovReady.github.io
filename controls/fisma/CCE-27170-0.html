@@ -6,15 +6,17 @@ title: Record Attempts to Alter Time Through clock_settime
 ident: CCE-27170-0
 severity: low
 ---
+<p class="text-info">Failing to record attempts to alter time through clock_settime is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Arbitrary changes to the system time can be used to obfuscate 
 nefarious activities in log files, as well as to confuse network services that 
 are highly dependent upon an accurate system time (such as sshd). All changes 
 to the system time should be audited.</rationale></p>
+<p><small>via FISMA SSG. View all 5 <i>Records Events that Modify Date and Time Information</i> rules. <a href="/cce/ssg/group/audit_time_rules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to record attempts to alter time through clock_settime is of <b>low</b> severity.</p>
-<p><small>View all 5 <i>Records Events that Modify Date and Time Information</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">On a 32-bit system, add the following to <xhtml:code>/etc/audit/audit.rules</xhtml:code>:
@@ -31,13 +33,4 @@ desired, but is not required. See an example of multiple combined syscalls:
 -k audit_time_rules</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

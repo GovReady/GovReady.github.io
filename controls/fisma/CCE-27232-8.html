@@ -6,12 +6,14 @@ title: Disable Support for RPC IPv6
 ident: CCE-27232-8
 severity: low
 ---
+<p class="text-info">Failing to disable support for rpc ipv6 is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""></p>
+<p><small>via FISMA SSG. View all 3 <i>Disable Support for IPv6 Unless Needed</i> rules. <a href="/cce/ssg/group/disabling_ipv6"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable support for rpc ipv6 is of <b>low</b> severity.</p>
-<p><small>View all 3 <i>Disable Support for IPv6 Unless Needed</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">RPC services for NFSv4 try to load transport modules for
@@ -23,13 +25,4 @@ following two lines in <xhtml:code>/etc/netconfig</xhtml:code>:
 tcp6       tpi_cots_ord  v     inet6    tcp     -       -</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

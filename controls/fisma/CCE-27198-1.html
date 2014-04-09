@@ -6,12 +6,14 @@ title: Remove the X Windows Package Group
 ident: CCE-27198-1
 severity: low
 ---
+<p class="text-info">Failing to remove the x windows package group is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Unnecessary packages should not be installed to decrease the attack surface of the system.</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Disable X Windows</i> rules. <a href="/cce/ssg/group/disabling_xwindows"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to remove the x windows package group is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Disable X Windows</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Removing all packages which constitute the X Window System
@@ -20,13 +22,4 @@ To do so, run the following command:
 <pre xmlns="http://www.w3.org/1999/xhtml"># yum groupremove "X Window System"</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

@@ -1,0 +1,29 @@
+---
+layout: cce
+permalink: /cce/ssg/group/ensure_rsyslog_log_file_configuration/
+name: high
+title: high
+---
+<h2>Ensure Proper Configuration of Log Files Rules </small></h2>
+<blockquote>
+<p class="">
+The file  controls where log message are written.
+These are controlled by lines called , which consist of a
+ and an .
+These rules are often customized depending on the role of the system, the
+requirements of the environment, and whatever may enable
+the administrator to most effectively make use of log data.
+The default rules in RHEL 6 are:
+
+See the man page  for more information.
+
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26812-8">CCE-26812-8</a></td> <td>userowner_rsyslog_files</td> <td class="text-warning">medium</td> <td><i>ensure_rsyslog_log_file_configuration (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26821-9">CCE-26821-9</a></td> <td>groupowner_rsyslog_files</td> <td class="text-warning">medium</td> <td><i>ensure_rsyslog_log_file_configuration (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27190-8">CCE-27190-8</a></td> <td>rsyslog_file_permissions</td> <td class="text-warning">medium</td> <td><i>ensure_rsyslog_log_file_configuration (3)</i></td> </tr></div>
+
+</table>

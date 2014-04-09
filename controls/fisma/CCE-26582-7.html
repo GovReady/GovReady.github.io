@@ -6,14 +6,16 @@ title: Bind Mount /var/tmp To /tmp
 ident: CCE-26582-7
 severity: low
 ---
+<p class="text-info">Failing to bind mount /var/tmp to /tmp is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Having multiple locations for temporary storage is not required. Unless absolutely
 necessary to meet requirements, the storage location <xhtml:code>/var/tmp</xhtml:code> should be bind mounted to
 <xhtml:code>/tmp</xhtml:code> and thus share the same protections.</rationale></p>
+<p><small>via FISMA SSG. View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="/cce/ssg/group/partitions"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to bind mount /var/tmp to /tmp is of <b>low</b> severity.</p>
-<p><small>View all 11 <i>Restrict Partition Mount Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>/var/tmp</xhtml:code> directory is a world-writable directory.  
@@ -24,13 +26,4 @@ one location protected by the same techniques as <xhtml:code>/tmp</xhtml:code>. 
 See the <xhtml:code>mount(8)</xhtml:code> man page for further explanation of bind mounting.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

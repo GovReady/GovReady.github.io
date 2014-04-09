@@ -1,0 +1,27 @@
+---
+layout: cce
+permalink: /cce/ssg/group/postfix_server_mail_smtpd_recipient_restrictions/
+name: high
+title: high
+---
+<h2>Enact SMTP Recipient Restrictions Rules </small></h2>
+<blockquote>
+<p class="">
+To configure Postfix to restrict addresses to which it
+will send mail, see:
+http://www.postfix.org/SMTPD_ACCESS_README.html#danger
+
+The full contents of  will
+vary by site, since this is a common place to put spam restrictions and other
+site-specific options. The  option allows all mail to
+be relayed from the machines in . Then, the
+ option denies all mail whose destination
+address is not local, preventing any other machines from relaying. These two
+options should always appear in this order, and should usually follow one
+another immediately unless SMTP AUTH is used.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

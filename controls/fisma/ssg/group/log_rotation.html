@@ -1,0 +1,33 @@
+---
+layout: cce
+permalink: /cce/ssg/group/log_rotation/
+name: high
+title: high
+---
+<h2>Ensure All Logs are Rotated by logrotate Rules </small></h2>
+<blockquote>
+<p class="">Edit the file . Find the first
+line, which should look like this (wrapped for clarity):
+
+Edit this line so that it contains a one-space-separated
+listing of each log file referenced in .
+
+All logs in use on a system must be rotated regularly, or the
+log files will consume disk space over time, eventually interfering
+with system operation. The file  is the
+configuration file used by the  program to maintain all
+log files written by . By default, it rotates logs weekly and
+stores four archival copies of each log. These settings can be
+modified by editing , but the defaults are
+sufficient for purposes of this guide.
+
+Note that  is run nightly by the cron job
+. If particularly active logs need to be
+rotated more often than once a day, some other mechanism must be
+used.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27014-0">CCE-27014-0</a></td> <td>ensure_logrotate_activated</td> <td class="text-info">low</td> <td><i>log_rotation (1)</i></td> </tr></div>
+
+</table>

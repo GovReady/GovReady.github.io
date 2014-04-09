@@ -6,14 +6,16 @@ title: Enable Postfix Service
 ident: CCE-26325-1
 severity: low
 ---
+<p class="text-info">Failing to enable postfix service is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Local mail delivery is essential to some system maintenance and
 notification tasks.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Mail Server Software</i> rules. <a href="/cce/ssg/group/mail"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to enable postfix service is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Mail Server Software</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The Postfix mail transfer agent is used for local mail delivery
@@ -25,13 +27,4 @@ recommended to leave this service enabled for local mail delivery.
     <xhtml:pre># chkconfig --level 2345 postfix on</xhtml:pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

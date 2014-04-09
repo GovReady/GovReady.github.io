@@ -1,0 +1,29 @@
+---
+layout: cce
+permalink: /cce/ssg/group/ssh_server/
+name: high
+title: high
+---
+<h2>Configure OpenSSH Server if Necessary Rules </small></h2>
+<blockquote>
+<p class="">If the system needs to act as an SSH server, then
+certain changes should be made to the OpenSSH daemon configuration
+file . The following recommendations can be
+applied to this file. See the  man page for more
+detailed information.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27072-8">CCE-27072-8</a></td> <td>sshd_allow_only_protocol2</td> <td class="text-danger">high</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/"></a></td> <td>sshd_limit_user_access</td> <td class="text-info">low</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26919-1">CCE-26919-1</a></td> <td>sshd_set_idle_timeout</td> <td class="text-info">low</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-26282-4">CCE-26282-4</a></td> <td>sshd_set_keepalive</td> <td class="text-info">low</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-27124-7">CCE-27124-7</a></td> <td>sshd_disable_rhosts</td> <td class="text-warning">medium</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>6</td> <td><a href="/CCE-27091-8">CCE-27091-8</a></td> <td>disable_host_auth</td> <td class="text-warning">medium</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>7</td> <td><a href="/CCE-27100-7">CCE-27100-7</a></td> <td>sshd_disable_root_login</td> <td class="text-warning">medium</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>8</td> <td><a href="/CCE-26887-0">CCE-26887-0</a></td> <td>sshd_disable_empty_passwords</td> <td class="text-danger">high</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>9</td> <td><a href="/CCE-27112-2">CCE-27112-2</a></td> <td>sshd_enable_warning_banner</td> <td class="text-warning">medium</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>10</td> <td><a href="/CCE-27201-3">CCE-27201-3</a></td> <td>sshd_do_not_permit_user_env</td> <td class="text-info">low</td> <td><i>ssh_server (11)</i></td> </tr></div>
+<div><tr> <td>11</td> <td><a href="/CCE-26555-3">CCE-26555-3</a></td> <td>sshd_use_approved_ciphers</td> <td class="text-warning">medium</td> <td><i>ssh_server (11)</i></td> </tr></div>
+
+</table>

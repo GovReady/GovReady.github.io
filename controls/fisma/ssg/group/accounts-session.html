@@ -1,0 +1,25 @@
+---
+layout: cce
+permalink: /cce/ssg/group/accounts-session/
+name: high
+title: high
+---
+<h2>Secure Session Configuration Files for Login Accounts Rules </small></h2>
+<blockquote>
+<p class="">When a user logs into a Unix account, the system
+configures the user's session by reading a number of files. Many of
+these files are located in the user's home directory, and may have
+weak permissions as a result of user error or misconfiguration. If
+an attacker can modify or even read certain types of account
+configuration information, they can often gain full access to the
+affected user's account. Therefore, it is important to test and
+correct configuration file permissions for interactive accounts,
+particularly those of privileged users such as root or system
+administrators.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27457-1">CCE-27457-1</a></td> <td>max_concurrent_login_sessions</td> <td class="text-info">low</td> <td><i>accounts-session (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26981-1">CCE-26981-1</a></td> <td>homedir_perms_no_groupwrite_worldread</td> <td class="text-info">low</td> <td><i>accounts-session (2)</i></td> </tr></div>
+
+</table>

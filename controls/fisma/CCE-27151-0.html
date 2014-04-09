@@ -6,16 +6,18 @@ title: Disable Zeroconf Networking
 ident: CCE-27151-0
 severity: low
 ---
+<p class="text-info">Failing to disable zeroconf networking is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Zeroconf addresses are in the network 169.254.0.0. The networking
 scripts add entries to the system's routing table for these addresses. Zeroconf
 address assignment commonly occurs when the system is configured to use DHCP
 but fails to receive an address assignment from the DHCP server.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Network Configuration and Firewalls</i> rules. <a href="/cce/ssg/group/network"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable zeroconf networking is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Network Configuration and Firewalls</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Zeroconf networking allows the system to assign itself an IP
@@ -26,13 +28,4 @@ subnet, add or correct the following line in <xhtml:code>/etc/sysconfig/network<
 <pre xmlns="http://www.w3.org/1999/xhtml">NOZEROCONF=yes</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

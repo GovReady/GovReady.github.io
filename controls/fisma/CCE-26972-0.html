@@ -6,13 +6,15 @@ title: Mount Remote Filesystems with nosuid
 ident: CCE-26972-0
 severity: medium
 ---
+<p class="text-warning">Failing to mount remote filesystems with nosuid is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">NFS mounts should not present suid binaries to users. Only vendor-supplied suid executables
 should be installed to their default location on the local filesystem.</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Mount Remote Filesystems with Restrictive Options</i> rules. <a href="/cce/ssg/group/mounting_remote_filesystems"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to mount remote filesystems with nosuid is of <b>medium</b> severity.</p>
-<p><small>View all 2 <i>Mount Remote Filesystems with Restrictive Options</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -23,13 +25,4 @@ should be installed to their default location on the local filesystem.</rational
 	
             </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

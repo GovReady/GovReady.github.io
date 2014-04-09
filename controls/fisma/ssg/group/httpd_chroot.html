@@ -1,0 +1,26 @@
+---
+layout: cce
+permalink: /cce/ssg/group/httpd_chroot/
+name: high
+title: high
+---
+<h2>Run httpd in a chroot Jail if Practical Rules </small></h2>
+<blockquote>
+<p class="">
+Running  inside a  jail is designed to isolate the
+web server process to a small section of the filesystem, limiting the damage if
+it is compromised. Versions of Apache greater than 2.2.10 (such as the one
+included with RHEL 6) provide the  directive. To run Apache
+inside a chroot jail in , add the following line to
+:  This
+necessitates placing all files required by  inside
+ , including 's binaries, modules,
+configuration files, and served web pages. The details of this configuration
+are beyond the scope of this guide. This may also require additional SELinux
+configuration.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

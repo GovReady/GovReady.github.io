@@ -6,13 +6,15 @@ title: Configure auditd space_left Action on Low Disk Space
 ident: CCE-27238-5
 severity: medium
 ---
+<p class="text-warning">Failing to configure auditd space_left action on low disk space is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Notifying administrators of an impending disk space problem may
 allow them to take corrective action prior to any disruption.</rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Configure auditd Data Retention</i> rules. <a href="/cce/ssg/group/configure_auditd_data_retention"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to configure auditd space_left action on low disk space is of <b>medium</b> severity.</p>
-<p><small>View all 7 <i>Configure auditd Data Retention</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>auditd</xhtml:code> service can be configured to take an action
@@ -28,13 +30,4 @@ which is <xhtml:code>suspend</xhtml:code>) as it is more likely to get prompt at
 also include <xhtml:code>suspend</xhtml:code>, <xhtml:code>single</xhtml:code>, and <xhtml:code>halt</xhtml:code>.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

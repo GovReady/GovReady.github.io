@@ -1,0 +1,30 @@
+---
+layout: cce
+permalink: /cce/ssg/group/httpd_minimize_loadable_modules/
+name: high
+title: high
+---
+<h2>Minimize Web Server Loadable Modules Rules </small></h2>
+<blockquote>
+<p class="">
+A default installation of  includes a plethora of dynamically shared objects (DSO)
+that are loaded at run-time. Unlike the aforementioned compiled-in modules, a DSO can be
+disabled in the configuration file by removing the corresponding LoadModule directive.
+
+Note: A DSO only provides additional functionality if associated directives are included
+in the  configuration file. It should also be noted that removing a DSO will produce
+errors on  startup if the configuration file contains directives that apply to that
+module. Refer to  for details on which directives
+are associated with each DSO.
+
+Following each DSO removal, the configuration can be tested with the following command
+to check if everything still works:
+
+The purpose of each of the modules loaded by default will now be addressed one at a time.
+If none of a module's directives are being used, remove it.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

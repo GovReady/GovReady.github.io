@@ -1,0 +1,44 @@
+---
+layout: cce
+permalink: /cce/ssg/group/gui_screen_locking/
+name: high
+title: high
+---
+<h2>Configure GUI Screen Locking Rules </small></h2>
+<blockquote>
+<p class="">In the default GNOME desktop, the screen can be locked
+by choosing  from the  menu.
+
+The  program can be used to enforce mandatory
+screen locking settings for the default GNOME environment.
+The
+following sections detail commands to enforce idle activation of the screen saver,
+screen locking, a blank-screen screensaver, and an idle
+activation time.
+
+
+Because users should be trained to lock the screen when they
+step away from the computer, the automatic locking feature is only
+meant as a backup. The Lock Screen icon from the System menu can
+also be dragged to the taskbar in order to facilitate even more
+convenient screen-locking.
+
+The root account cannot be screen-locked, but this should
+have no practical effect as the root account should  be used
+to log into an X Windows environment, and should only be used to
+for direct login via console in emergency circumstances.
+
+For more information about configuring GNOME screensaver, see
+http://live.gnome.org/GnomeScreensaver. For more information about
+enforcing preferences in the GNOME environment using the GConf
+configuration system, see http://projects.gnome.org/gconf and
+the man page .</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26828-4">CCE-26828-4</a></td> <td>set_screensaver_inactivity_timeout</td> <td class="text-warning">medium</td> <td><i>gui_screen_locking (4)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26600-7">CCE-26600-7</a></td> <td>enable_screensaver_after_idle</td> <td class="text-warning">medium</td> <td><i>gui_screen_locking (4)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26235-2">CCE-26235-2</a></td> <td>enable_screensaver_password_lock</td> <td class="text-warning">medium</td> <td><i>gui_screen_locking (4)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-26638-7">CCE-26638-7</a></td> <td>set_blank_screensaver</td> <td class="text-info">low</td> <td><i>gui_screen_locking (4)</i></td> </tr></div>
+
+</table>

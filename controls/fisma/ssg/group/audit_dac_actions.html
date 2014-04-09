@@ -1,0 +1,39 @@
+---
+layout: cce
+permalink: /cce/ssg/group/audit_dac_actions/
+name: high
+title: high
+---
+<h2>Record Events that Modify the System's Discretionary Access Controls Rules </small></h2>
+<blockquote>
+<p class="">At a minimum the audit system should collect file permission 
+changes for all users and root.  Note that the "-F arch=b32" lines should be 
+present even on a 64 bit system.  These commands identify system calls for 
+auditing.  Even if the system is 64 bit it can still execute 32 bit system 
+calls.  Additionally, these rules can be configured in a number of ways while 
+still achieving the desired effect.  An example of this is that the "-S" calls 
+could be split up and placed on separate lines, however, this is less efficient.
+Add the following to :
+
+If your system is 64 bit then these lines should be duplicated and the 
+arch=b32 replaced with arch=b64 as follows:
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26280-8">CCE-26280-8</a></td> <td>audit_rules_dac_modification_chmod</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27173-4">CCE-27173-4</a></td> <td>audit_rules_dac_modification_chown</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27174-2">CCE-27174-2</a></td> <td>audit_rules_dac_modification_fchmod</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-27175-9">CCE-27175-9</a></td> <td>audit_rules_dac_modification_fchmodat</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-27177-5">CCE-27177-5</a></td> <td>audit_rules_dac_modification_fchown</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>6</td> <td><a href="/CCE-27178-3">CCE-27178-3</a></td> <td>audit_rules_dac_modification_fchownat</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>7</td> <td><a href="/CCE-27179-1">CCE-27179-1</a></td> <td>audit_rules_dac_modification_fremovexattr</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>8</td> <td><a href="/CCE-27180-9">CCE-27180-9</a></td> <td>audit_rules_dac_modification_fsetxattr</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>9</td> <td><a href="/CCE-27181-7">CCE-27181-7</a></td> <td>audit_rules_dac_modification_lchown</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>10</td> <td><a href="/CCE-27182-5">CCE-27182-5</a></td> <td>audit_rules_dac_modification_lremovexattr</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>11</td> <td><a href="/CCE-27183-3">CCE-27183-3</a></td> <td>audit_rules_dac_modification_lsetxattr</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>12</td> <td><a href="/CCE-27184-1">CCE-27184-1</a></td> <td>audit_rules_dac_modification_removexattr</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+<div><tr> <td>13</td> <td><a href="/CCE-27185-8">CCE-27185-8</a></td> <td>audit_rules_dac_modification_setxattr</td> <td class="text-info">low</td> <td><i>audit_dac_actions (13)</i></td> </tr></div>
+
+</table>

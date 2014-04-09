@@ -1,0 +1,25 @@
+---
+layout: cce
+permalink: /cce/ssg/group/rsyslog_accepting_remote_messages/
+name: high
+title: high
+---
+<h2>Configure rsyslogd to Accept Remote Messages If Acting as a Log Server Rules </small></h2>
+<blockquote>
+<p class="">
+By default,  does not listen over the network
+for log messages. If needed, modules can be enabled to allow
+the rsyslog daemon to receive messages from other systems and for the system
+thus to act as a log server.
+If the machine is not a log server, then lines concerning these modules
+should remain commented out.
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26803-7">CCE-26803-7</a></td> <td>rsyslog_accept_remote_messages_none</td> <td class="text-info">low</td> <td><i>rsyslog_accepting_remote_messages (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27235-1">CCE-27235-1</a></td> <td>rsyslog_accept_remote_messages_tcp</td> <td class="text-info">low</td> <td><i>rsyslog_accepting_remote_messages (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27236-9">CCE-27236-9</a></td> <td>rsyslog_accept_remote_messages_udp</td> <td class="text-info">low</td> <td><i>rsyslog_accepting_remote_messages (3)</i></td> </tr></div>
+
+</table>
