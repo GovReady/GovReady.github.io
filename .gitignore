@@ -37,3 +37,6 @@ site/_site/
 coverage
 .ruby-version
 .sass-cache
+
+# Sensitive data
+sms.php
