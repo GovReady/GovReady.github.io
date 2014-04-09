@@ -6,16 +6,18 @@ title: Ensure gpgcheck Enabled For All Yum Package Repositories
 ident: CCE-26647-8
 severity: high
 ---
+<p class="text-danger">Failing to ensure gpgcheck enabled for all yum package repositories is of <b>high</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Ensuring all packages' cryptographic signatures are valid prior to
 installation ensures the authenticity of the software and
 protects against malicious tampering.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Updating Software</i> rules. <a href="/cce/ssg/group/updating"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-danger">Failing to ensure gpgcheck enabled for all yum package repositories is of <b>high</b> severity.</p>
-<p><small>View all 4 <i>Updating Software</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To ensure signature checking is not disabled for
@@ -23,13 +25,4 @@ any repos, remove any lines from files in <xhtml:code>/etc/yum.repos.d</xhtml:co
 <pre xmlns="http://www.w3.org/1999/xhtml">gpgcheck=0</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

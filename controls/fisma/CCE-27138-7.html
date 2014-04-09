@@ -6,14 +6,16 @@ title: Use Root-Squashing on All Exports
 ident: CCE-27138-7
 severity: low
 ---
+<p class="text-info">Failing to use root-squashing on all exports is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If the NFS server allows root access to local file systems from remote hosts, this
 access could be used to compromise the system.
 </rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Configure NFS Servers</i> rules. <a href="/cce/ssg/group/nfs_configuring_servers"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to use root-squashing on all exports is of <b>low</b> severity.</p>
-<p><small>View all 3 <i>Configure NFS Servers</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If a filesystem is exported using root squashing, requests from root on the client
@@ -24,13 +26,4 @@ should not be disabled.
 Ensure that no line in <xhtml:code>/etc/exports</xhtml:code> contains the option <xhtml:code>no_root_squash</xhtml:code>.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

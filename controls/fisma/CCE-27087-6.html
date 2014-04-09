@@ -6,6 +6,9 @@ title: Disable Avahi Server Software
 ident: CCE-27087-6
 severity: low
 ---
+<p class="text-info">Failing to disable avahi server software is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Because the Avahi daemon service keeps an open network
@@ -13,10 +16,9 @@ port, it is subject to network attacks. Its functionality
 is convenient but is only appropriate if the local network
 can be trusted.
 </rationale></p>
+<p><small>via FISMA SSG. View all 1 <i>Disable Avahi Server if Possible</i> rules. <a href="/cce/ssg/group/disable_avahi_group"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable avahi server software is of <b>low</b> severity.</p>
-<p><small>View all 1 <i>Disable Avahi Server if Possible</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -25,13 +27,4 @@ can be trusted.
     <xhtml:pre># chkconfig avahi-daemon off</xhtml:pre>
           </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

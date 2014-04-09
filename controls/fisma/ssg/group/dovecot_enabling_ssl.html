@@ -1,0 +1,25 @@
+---
+layout: cce
+permalink: /cce/ssg/group/dovecot_enabling_ssl/
+name: high
+title: high
+---
+<h2>Enable SSL Support Rules </small></h2>
+<blockquote>
+<p class="">SSL should be used to encrypt network traffic between the 
+Dovecot server and its clients. Users must authenticate to the Dovecot 
+server in order to read their mail, and passwords should never be 
+transmitted in clear text. In addition, protecting mail as it is 
+downloaded is a privacy measure, and clients may use SSL certificates 
+to authenticate the server, preventing another system from impersonating 
+the server.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27571-9">CCE-27571-9</a></td> <td>dovecot_enable_ssl</td> <td class="text-info">low</td> <td><i>dovecot_enabling_ssl (4)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27459-7">CCE-27459-7</a></td> <td>dovecot_configure_ssl_cert</td> <td class="text-info">low</td> <td><i>dovecot_enabling_ssl (4)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27633-7">CCE-27633-7</a></td> <td>dovecot_configure_ssl_key</td> <td class="text-info">low</td> <td><i>dovecot_enabling_ssl (4)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-27144-5">CCE-27144-5</a></td> <td>dovecot_disable_plaintext_auth</td> <td class="text-info">low</td> <td><i>dovecot_enabling_ssl (4)</i></td> </tr></div>
+
+</table>

@@ -1,0 +1,33 @@
+---
+layout: cce
+permalink: /cce/ssg/group/httpd_configure_iptables/
+name: high
+title: high
+---
+<h2>Configure iptables to Allow Access to the Web Server Rules </small></h2>
+<blockquote>
+<p class="">
+By default, 
+blocks access to the ports used by the web server.
+
+        To configure  to allow port 
+        80 traffic one must edit 
+          and 
+         (if IPv6 is in use).
+        Add the following line, ensuring that it appears before the final LOG 
+        and DROP lines for the INPUT chain:
+        
+
+        To configure  to allow port 
+        443 traffic one must edit 
+          and 
+         (if IPv6 is in use).
+        Add the following line, ensuring that it appears before the final LOG 
+        and DROP lines for the INPUT chain:
+        
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

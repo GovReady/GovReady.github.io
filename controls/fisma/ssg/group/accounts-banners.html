@@ -1,0 +1,31 @@
+---
+layout: cce
+permalink: /cce/ssg/group/accounts-banners/
+name: high
+title: high
+---
+<h2>Warning Banners for System Accesses Rules </small></h2>
+<blockquote>
+<p class="">Each system should expose as little information about
+itself as possible.
+
+System banners, which are typically displayed just before a
+login prompt, give out information about the service or the host's
+operating system. This might include the distribution name and the
+system kernel version, and the particular version of a network
+service. This information can assist intruders in gaining access to
+the system as it can reveal whether the system is running
+vulnerable software. Most network services can be configured to
+limit what information is displayed.
+
+Many organizations implement security policies that require a
+system banner provide notice of the system's ownership, provide
+warning to unauthorized users, and remind authorized users of their
+consent to monitoring.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26974-6">CCE-26974-6</a></td> <td>set_system_login_banner</td> <td class="text-warning">medium</td> <td><i>accounts-banners (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27230-2">CCE-27230-2</a></td> <td>disable_user_list</td> <td class="text-info">low</td> <td><i>accounts-banners (2)</i></td> </tr></div>
+
+</table>

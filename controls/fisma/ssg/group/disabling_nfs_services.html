@@ -1,0 +1,21 @@
+---
+layout: cce
+permalink: /cce/ssg/group/disabling_nfs_services/
+name: high
+title: high
+---
+<h2>Disable Services Used Only by NFS Rules </small></h2>
+<blockquote>
+<p class="">If NFS is not needed, disable the NFS client daemons nfslock, rpcgssd, and rpcidmapd.
+
+All of these daemons run with elevated privileges, and many listen for network
+connections. If they are not needed, they should be disabled to improve system
+security posture.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27104-9">CCE-27104-9</a></td> <td>service_nfslock_disabled</td> <td class="text-info">low</td> <td><i>disabling_nfs_services (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26864-9">CCE-26864-9</a></td> <td>service_rpcgssd_disabled</td> <td class="text-info">low</td> <td><i>disabling_nfs_services (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26870-6">CCE-26870-6</a></td> <td>service_rpcidmapd_disabled</td> <td class="text-info">low</td> <td><i>disabling_nfs_services (3)</i></td> </tr></div>
+
+</table>

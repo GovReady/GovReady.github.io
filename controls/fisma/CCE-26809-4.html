@@ -6,15 +6,17 @@ title: Ensure rsyslog is Installed
 ident: CCE-26809-4
 severity: medium
 ---
+<p class="text-warning">Failing to ensure rsyslog is installed is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 The rsyslog package provides the rsyslog daemon, which provides
 system logging services.
 </rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Configure Syslog</i> rules. <a href="/cce/ssg/group/logging"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to ensure rsyslog is installed is of <b>medium</b> severity.</p>
-<p><small>View all 3 <i>Configure Syslog</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -24,13 +26,4 @@ Rsyslog is installed by default.
     <xhtml:pre># yum install rsyslog</xhtml:pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

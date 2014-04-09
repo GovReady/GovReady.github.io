@@ -1,0 +1,41 @@
+---
+layout: cce
+permalink: /cce/ssg/group/root_logins/
+name: high
+title: high
+---
+<h2>Restrict Root Logins Rules </small></h2>
+<blockquote>
+<p class="">
+Direct root logins should be allowed only for emergency use.
+In normal situations, the administrator should access the system
+via a unique unprivileged account, and then use  or  to execute
+privileged commands. Discouraging administrators from accessing the
+root account directly ensures an audit trail in organizations with
+multiple administrators. Locking down the channels through which
+root can connect directly also reduces opportunities for
+password-guessing against the root account. The  program
+uses the file  to determine which interfaces
+should allow root logins.
+
+The virtual devices 
+and  represent the system consoles (accessible via
+the Ctrl-Alt-F1 through Ctrl-Alt-F6 keyboard sequences on a default
+installation). The default securetty file also contains .
+These are likely to be deprecated in most environments, but may be retained
+for compatibility. Root should also be prohibited from connecting
+via network protocols. Other sections of this document
+include guidance describing how to prevent root from logging in via SSH.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/"></a></td> <td>no_direct_root_logins</td> <td class="text-warning">medium</td> <td><i>root_logins (7)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26855-7">CCE-26855-7</a></td> <td>securetty_root_login_console_only</td> <td class="text-warning">medium</td> <td><i>root_logins (7)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27047-0">CCE-27047-0</a></td> <td>restrict_serial_port_logins</td> <td class="text-info">low</td> <td><i>root_logins (7)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/"></a></td> <td>no_root_webbrowsing</td> <td class="text-info">low</td> <td><i>root_logins (7)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-26966-2">CCE-26966-2</a></td> <td>no_shelllogin_for_systemaccounts</td> <td class="text-warning">medium</td> <td><i>root_logins (7)</i></td> </tr></div>
+<div><tr> <td>6</td> <td><a href="/CCE-26971-2">CCE-26971-2</a></td> <td>no_uidzero_except_root</td> <td class="text-warning">medium</td> <td><i>root_logins (7)</i></td> </tr></div>
+<div><tr> <td>7</td> <td><a href="/"></a></td> <td>root_path_default</td> <td class="text-info">low</td> <td><i>root_logins (7)</i></td> </tr></div>
+
+</table>

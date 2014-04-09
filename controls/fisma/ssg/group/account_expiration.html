@@ -1,0 +1,31 @@
+---
+layout: cce
+permalink: /cce/ssg/group/account_expiration/
+name: high
+title: high
+---
+<h2>Set Account Expiration Parameters Rules </small></h2>
+<blockquote>
+<p class="">Accounts can be configured to be automatically disabled
+after a certain time period,
+meaning that they will require administrator interaction to become usable again.
+Expiration of accounts after inactivity can be set for all accounts by default
+and also on a per-account basis, such as for accounts that are known to be temporary.
+To configure automatic expiration of an account following
+the expiration of its password (that is, after the password has expired and not been changed),
+run the following command, substituting  and  appropriately:
+
+Accounts, such as temporary accounts, can also be configured to expire on an explicitly-set date with the
+ option.
+The file  controls
+default settings for all newly-created accounts created with the system's
+normal command line utilities.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27283-1">CCE-27283-1</a></td> <td>account_disable_post_pw_expiration</td> <td class="text-info">low</td> <td><i>account_expiration (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27609-7">CCE-27609-7</a></td> <td>account_unique_name</td> <td class="text-info">low</td> <td><i>account_expiration (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/"></a></td> <td>account_temp_expire_date</td> <td class="text-info">low</td> <td><i>account_expiration (3)</i></td> </tr></div>
+
+</table>

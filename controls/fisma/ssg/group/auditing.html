@@ -1,0 +1,39 @@
+---
+layout: cce
+permalink: /cce/ssg/group/auditing/
+name: high
+title: high
+---
+<h2>System Accounting with auditd Rules </small></h2>
+<blockquote>
+<p class="">The audit service provides substantial capabilities
+for recording system activities. By default, the service audits about
+SELinux AVC denials and certain types of security-relevant events
+such as system logins, account modifications, and authentication
+events performed by programs such as sudo.
+Under its default configuration,  has modest disk space
+requirements, and should not noticeably impact system performance.
+
+Government networks often have substantial auditing
+requirements and  can be configured to meet these
+requirements.
+Examining some example audit records demonstrates how the Linux audit system
+satisfies common requirements.  
+The following example from Fedora Documentation available at 
+
+shows the substantial amount of information captured in a
+two typical "raw" audit messages, followed by a breakdown of the most important
+fields. In this example the message is SELinux-related and reports an AVC
+denial (and the associated system call) that occurred when the Apache HTTP
+Server attempted to access the  file (labeled with
+the  type):
+
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27058-7">CCE-27058-7</a></td> <td>service_auditd_enabled</td> <td class="text-warning">medium</td> <td><i>auditing (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26785-6">CCE-26785-6</a></td> <td>enable_auditd_bootloader</td> <td class="text-warning">medium</td> <td><i>auditing (2)</i></td> </tr></div>
+
+</table>

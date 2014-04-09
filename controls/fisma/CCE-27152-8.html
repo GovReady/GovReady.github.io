@@ -6,15 +6,17 @@ title: Ensure System is Not Acting as a Network Sniffer
 ident: CCE-27152-8
 severity: low
 ---
+<p class="text-info">Failing to ensure system is not acting as a network sniffer is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If any results are returned, then a sniffing process (such as tcpdump
 or Wireshark) is likely to be using the interface and this should be
 investigated.
 </rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Network Configuration and Firewalls</i> rules. <a href="/cce/ssg/group/network"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to ensure system is not acting as a network sniffer is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Network Configuration and Firewalls</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The system should not be acting as a network sniffer, which can
@@ -23,13 +25,4 @@ to determine if any interface is running in promiscuous mode:
 <pre xmlns="http://www.w3.org/1999/xhtml">$ ip link | grep PROMISC</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

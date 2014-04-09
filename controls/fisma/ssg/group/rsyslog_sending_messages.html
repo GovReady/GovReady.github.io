@@ -1,0 +1,34 @@
+---
+layout: cce
+permalink: /cce/ssg/group/rsyslog_sending_messages/
+name: high
+title: high
+---
+<h2>Rsyslog Logs Sent To Remote Host Rules </small></h2>
+<blockquote>
+<p class="">
+If system logs are to be useful in detecting malicious
+activities, it is necessary to send logs to a remote server. An
+intruder who has compromised the root account on a machine may
+delete the log entries which indicate that the system was attacked
+before they are seen by an administrator.
+
+However, it is recommended that logs be stored on the local
+host in addition to being sent to the loghost, especially if
+ has been configured to use the UDP protocol to send
+messages over a network. UDP does not guarantee reliable delivery,
+and moderately busy sites will lose log messages occasionally,
+especially in periods of high traffic which may be the result of an
+attack. In addition, remote  messages are not
+authenticated in any way by default, so it is easy for an attacker to
+introduce spurious messages to the central log server. Also, some
+problems cause loss of network connectivity, which will prevent the
+sending of messages to the central server. For all of these reasons, it is
+better to store log messages both centrally and on each host, so
+that they can be correlated if necessary.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26801-1">CCE-26801-1</a></td> <td>rsyslog_send_messages_to_logserver</td> <td class="text-info">low</td> <td><i>rsyslog_sending_messages (1)</i></td> </tr></div>
+
+</table>

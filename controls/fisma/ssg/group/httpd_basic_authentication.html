@@ -1,0 +1,30 @@
+---
+layout: cce
+permalink: /cce/ssg/group/httpd_basic_authentication/
+name: high
+title: high
+---
+<h2>Minimize Modules for HTTP Basic Authentication Rules </small></h2>
+<blockquote>
+<p class="">
+The following modules are necessary if this web server will provide content that will
+be restricted by a password.
+
+Authentication can be performed using local plain text password files (),
+local DBM password files () or an LDAP directory. The only module required by
+the web server depends on your choice of authentication. Comment out the modules you don't
+need from the following:
+
+ allows for authentication based on aliases. 
+allows anonymous authentication similar to that of anonymous ftp sites. 
+allows authorization based on file ownership.  allows for authorization
+based on group membership if the web server is using DBM authentication.
+
+If the above functionality is unnecessary, comment out the related module:
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

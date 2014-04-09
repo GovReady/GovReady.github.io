@@ -1,0 +1,26 @@
+---
+layout: cce
+permalink: /cce/ssg/group/openldap_client/
+name: high
+title: high
+---
+<h2>Configure OpenLDAP Clients Rules </small></h2>
+<blockquote>
+<p class="">This section provides information on which security settings are
+important to configure in OpenLDAP clients by manually editing the appropriate
+configuration files.  RHEL 6 provides an automated configuration tool called
+authconfig and a graphical wrapper for authconfig called
+. However, these tools do not provide as
+much control over configuration as manual editing of configuration files. The
+authconfig tools do not allow you to specify locations of SSL certificate
+files, which is useful when trying to use SSL cleanly across several protocols.
+Installation and configuration of OpenLDAP on RHEL 6 is available at
+https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-Directory_Servers.html.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26690-8">CCE-26690-8</a></td> <td>ldap_client_start_tls</td> <td class="text-warning">medium</td> <td><i>openldap_client (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27189-0">CCE-27189-0</a></td> <td>ldap_client_tls_cacertpath</td> <td class="text-warning">medium</td> <td><i>openldap_client (2)</i></td> </tr></div>
+
+</table>

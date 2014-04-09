@@ -1,0 +1,29 @@
+---
+layout: cce
+permalink: /cce/ssg/group/smb_disable_printing/
+name: high
+title: high
+---
+<h2>Restrict Printer Sharing Rules </small></h2>
+<blockquote>
+<p class="">By default, Samba utilizes the CUPS printing service to enable
+printer sharing with Microsoft Windows workstations. If there are no printers
+on the local machine, or if printer sharing with Microsoft Windows is not
+required, disable the printer sharing capability by commenting out the
+following lines, found in :
+
+There may be other options present, but these are the only options enabled and
+uncommented by default. Removing the  share should be enough
+for most users.  If the Samba printer sharing capability is needed, consider
+disabling the Samba network browsing capability or restricting access to a
+particular set of users or network addresses. Set the 
+parameter to a small subset of users or restrict it to a particular group of
+users with the shorthand . Separate each user or group of users with
+a space. For example, under the  share:
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

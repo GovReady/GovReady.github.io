@@ -1,0 +1,26 @@
+---
+layout: cce
+permalink: /cce/ssg/group/ftp_configure_firewall/
+name: high
+title: high
+---
+<h2>Configure Firewalls to Protect the FTP Server Rules </small></h2>
+<blockquote>
+<p class="">By default, 
+blocks access to the ports used by the web server.
+
+        To configure  to allow port 
+        21 traffic one must edit 
+          and 
+         (if IPv6 is in use).
+        Add the following line, ensuring that it appears before the final LOG 
+        and DROP lines for the INPUT chain:
+        
+Edit the file . Ensure that the space-separated list of modules contains
+the FTP connection tracking module:
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+
+</table>

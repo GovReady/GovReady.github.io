@@ -6,16 +6,18 @@ title: Restrict Serial Port Root Logins
 ident: CCE-27047-0
 severity: low
 ---
+<p class="text-info">Failing to restrict serial port root logins is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Preventing direct root login to serial port interfaces
 helps ensure accountability for actions taken on the systems
 using the root account.
 </rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Restrict Root Logins</i> rules. <a href="/cce/ssg/group/root_logins"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to restrict serial port root logins is of <b>low</b> severity.</p>
-<p><small>View all 7 <i>Restrict Root Logins</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To restrict root logins on serial ports,
@@ -25,13 +27,4 @@ ttyS1</pre>
 <!-- TODO: discussion/description of serial port -->
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

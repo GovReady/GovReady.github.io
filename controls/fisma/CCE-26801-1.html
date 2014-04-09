@@ -6,6 +6,9 @@ title: Ensure Logs Sent To Remote Host
 ident: CCE-26801-1
 severity: low
 ---
+<p class="text-info">Failing to ensure logs sent to remote host is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">A log server (loghost) receives syslog messages from one or more
 systems. This data can be used as an additional log source in the event a
@@ -13,10 +16,9 @@ system is compromised and its local logs are suspect. Forwarding log messages
 to a remote loghost also provides system administrators with a centralized
 place to view the status of multiple hosts within the enterprise.
 </rationale></p>
+<p><small>via FISMA SSG. View all 1 <i>Rsyslog Logs Sent To Remote Host</i> rules. <a href="/cce/ssg/group/rsyslog_sending_messages"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to ensure logs sent to remote host is of <b>low</b> severity.</p>
-<p><small>View all 1 <i>Rsyslog Logs Sent To Remote Host</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -42,13 +44,4 @@ To use RELP for log message delivery:
 <pre xmlns="http://www.w3.org/1999/xhtml">*.* :omrelp:<i>loghost.example.com</i></pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

@@ -6,15 +6,17 @@ title: Set SSH Client Alive Count
 ident: CCE-26282-4
 severity: low
 ---
+<p class="text-info">Failing to set ssh client alive count is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 This ensures a user login will be terminated as soon as the <xhtml:code>ClientAliveCountMax</xhtml:code>
 is reached.
 </rationale></p>
+<p><small>via FISMA SSG. View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="/cce/ssg/group/ssh_server"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to set ssh client alive count is of <b>low</b> severity.</p>
-<p><small>View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To ensure the SSH idle timeout occurs precisely when the <xhtml:code>ClientAliveCountMax</xhtml:code> is set,
@@ -23,13 +25,4 @@ follows:
 <pre xmlns="http://www.w3.org/1999/xhtml">ClientAliveCountMax 0</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

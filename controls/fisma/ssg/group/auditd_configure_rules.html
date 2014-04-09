@@ -1,0 +1,56 @@
+---
+layout: cce
+permalink: /cce/ssg/group/auditd_configure_rules/
+name: high
+title: high
+---
+<h2>Configure auditd Rules for Comprehensive Auditing Rules </small></h2>
+<blockquote>
+<p class="">The  program can perform comprehensive
+monitoring of system activity. This section describes recommended
+configuration settings for comprehensive auditing, but a full
+description of the auditing system's capabilities is beyond the
+scope of this guide. The mailing list  exists
+to facilitate community discussion of the auditing system.
+
+The audit subsystem supports extensive collection of events, including:
+
+
+
+Auditing rules at startup are controlled by the file .
+Add rules to it to meet the auditing requirements for your organization.
+Each line in  represents a series of arguments
+that can be passed to  and can be individually tested
+during runtime. See documentation in  and
+in the related man pages for more details.
+
+If copying any example audit rulesets from ,
+be sure to comment out the
+lines containing  which are not appropriate for your system's
+architecture. Then review and understand the following rules,
+ensuring rules are activated as needed for the appropriate
+architecture.
+
+After reviewing all the rules, reading the following sections, and
+editing as needed, the new rules can be activated as follows:
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26664-3">CCE-26664-3</a></td> <td>audit_account_changes</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26648-6">CCE-26648-6</a></td> <td>audit_network_modifications</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27243-5">CCE-27243-5</a></td> <td>audit_logs_permissions</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-27244-3">CCE-27244-3</a></td> <td>audit_logs_rootowner</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-26657-7">CCE-26657-7</a></td> <td>audit_mac_changes</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>6</td> <td><a href="/CCE-26691-6">CCE-26691-6</a></td> <td>audit_manual_logon_edits</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>7</td> <td><a href="/CCE-26610-6">CCE-26610-6</a></td> <td>audit_manual_session_edits</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>8</td> <td><a href="/CCE-26712-0">CCE-26712-0</a></td> <td>audit_file_access</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>9</td> <td><a href="/CCE-26457-2">CCE-26457-2</a></td> <td>audit_privileged_commands</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>10</td> <td><a href="/CCE-26573-6">CCE-26573-6</a></td> <td>audit_media_exports</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>11</td> <td><a href="/CCE-26651-0">CCE-26651-0</a></td> <td>audit_file_deletions</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>12</td> <td><a href="/CCE-26662-7">CCE-26662-7</a></td> <td>audit_sysadmin_actions</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>13</td> <td><a href="/CCE-26611-4">CCE-26611-4</a></td> <td>audit_kernel_module_loading</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+<div><tr> <td>14</td> <td><a href="/CCE-26612-2">CCE-26612-2</a></td> <td>audit_config_immutable</td> <td class="text-info">low</td> <td><i>auditd_configure_rules (14)</i></td> </tr></div>
+
+</table>

@@ -6,14 +6,16 @@ title: Remove Rsh Trust Files
 ident: CCE-27270-8
 severity: high
 ---
+<p class="text-danger">Failing to remove rsh trust files is of <b>high</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Trust files are convenient, but when
 used in conjunction with the R-services, they can allow
 unauthenticated access to a system.</rationale></p>
+<p><small>via FISMA SSG. View all 5 <i>Rlogin, Rsh, and Rexec</i> rules. <a href="/cce/ssg/group/r_services"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-danger">Failing to remove rsh trust files is of <b>high</b> severity.</p>
-<p><small>View all 5 <i>Rlogin, Rsh, and Rexec</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The files <xhtml:code>/etc/hosts.equiv</xhtml:code> and <xhtml:code>~/.rhosts</xhtml:code> (in
@@ -25,13 +27,4 @@ location:
 <pre xmlns="http://www.w3.org/1999/xhtml">$ rm ~/.rhosts</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

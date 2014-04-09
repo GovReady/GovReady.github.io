@@ -6,17 +6,19 @@ title: Verify All Account Password Hashes are Shadowed
 ident: CCE-26476-2
 severity: medium
 ---
+<p class="text-warning">Failing to verify all account password hashes are shadowed is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 The hashes for all user account passwords should be stored in
 the file <xhtml:code>/etc/shadow</xhtml:code> and never in <xhtml:code>/etc/passwd</xhtml:code>,
 which is readable by all users.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Verify Proper Storage and Existence of Password
+Hashes</i> rules. <a href="/cce/ssg/group/password_storage"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to verify all account password hashes are shadowed is of <b>medium</b> severity.</p>
-<p><small>View all 4 <i>Verify Proper Storage and Existence of Password
-Hashes</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -26,13 +28,4 @@ investigated.  The account should have its password reset and the hash should be
 properly stored, or the account should be deleted entirely.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

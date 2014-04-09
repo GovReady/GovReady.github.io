@@ -1,0 +1,36 @@
+---
+layout: cce
+permalink: /cce/ssg/group/nfs_configure_fixed_ports/
+name: high
+title: high
+---
+<h2>Configure NFS Services to Use Fixed Ports (NFSv3 and NFSv2) Rules </small></h2>
+<blockquote>
+<p class="">Firewalling should be done at each host and at the border
+firewalls to protect the NFS daemons from remote access, since NFS servers
+should never be accessible from outside the organization. However, by default
+for NFSv3 and NFSv2, the RPC Bind service assigns each NFS service to a port
+dynamically at service startup time. Dynamic ports cannot be protected by port
+filtering firewalls such as iptables.
+
+Therefore, restrict each service to always use a given port, so that
+firewalling can be done effectively. Note that, because of the way RPC is
+implemented, it is not possible to disable the RPC Bind service even if ports
+are assigned statically to all RPC services.
+
+In NFSv4, the mounting and locking protocols have been incorporated into the
+protocol, and the server listens on the the well-known TCP port 2049. As such,
+NFSv4 does not need to interact with the 
+daemons, which can and should be disabled in a pure NFSv4 environment. The
+ daemon is still required on the NFS server to setup
+exports, but is not involved in any over-the-wire operations.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27149-4">CCE-27149-4</a></td> <td>nfs_fixed_lockd_tcp_port</td> <td class="text-info">low</td> <td><i>nfs_configure_fixed_ports (4)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27063-7">CCE-27063-7</a></td> <td>nfs_fixed_lockd_udp_port</td> <td class="text-info">low</td> <td><i>nfs_configure_fixed_ports (4)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26889-6">CCE-26889-6</a></td> <td>nfs_fixed_statd_port</td> <td class="text-info">low</td> <td><i>nfs_configure_fixed_ports (4)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-27114-8">CCE-27114-8</a></td> <td>nfs_fixed_mountd_port</td> <td class="text-info">low</td> <td><i>nfs_configure_fixed_ports (4)</i></td> </tr></div>
+
+</table>

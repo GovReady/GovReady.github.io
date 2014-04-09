@@ -1,0 +1,22 @@
+---
+layout: cce
+permalink: /cce/ssg/group/audit_time_rules/
+name: high
+title: high
+---
+<h2>Records Events that Modify Date and Time Information Rules </small></h2>
+<blockquote>
+<p class="">Arbitrary changes to the system time can be used to obfuscate 
+nefarious activities in log files, as well as to confuse network services that 
+are highly dependent upon an accurate system time. All changes to the system 
+time should be audited.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26242-8">CCE-26242-8</a></td> <td>audit_rules_time_adjtimex</td> <td class="text-info">low</td> <td><i>audit_time_rules (5)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27203-9">CCE-27203-9</a></td> <td>audit_rules_time_settimeofday</td> <td class="text-info">low</td> <td><i>audit_time_rules (5)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27169-2">CCE-27169-2</a></td> <td>audit_rules_time_stime</td> <td class="text-info">low</td> <td><i>audit_time_rules (5)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-27170-0">CCE-27170-0</a></td> <td>audit_rules_time_clock_settime</td> <td class="text-info">low</td> <td><i>audit_time_rules (5)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-27172-6">CCE-27172-6</a></td> <td>audit_rules_time_watch_localtime</td> <td class="text-info">low</td> <td><i>audit_time_rules (5)</i></td> </tr></div>
+
+</table>

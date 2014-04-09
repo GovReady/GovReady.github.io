@@ -1,0 +1,31 @@
+---
+layout: cce
+permalink: /cce/ssg/group/disk_partitioning/
+name: high
+title: high
+---
+<h2>Disk Partitioning Rules </small></h2>
+<blockquote>
+<p class="">To ensure separation and protection of data, there
+are top-level system directories which should be placed on their
+own physical partition or logical volume. The installer's default
+partitioning scheme creates separate logical volumes for 
+, , and .
+
+If a system has already been installed, and the default
+partitioning scheme was used, it is possible but nontrivial to
+modify it to create separate logical volumes for the directories
+listed above. The Logical Volume Manager (LVM) makes this possible.
+See the LVM HOWTO at http://tldp.org/HOWTO/LVM-HOWTO/ for more
+detailed information on LVM.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26435-8">CCE-26435-8</a></td> <td>partition_for_tmp</td> <td class="text-info">low</td> <td><i>disk_partitioning (6)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26639-5">CCE-26639-5</a></td> <td>partition_for_var</td> <td class="text-info">low</td> <td><i>disk_partitioning (6)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26215-4">CCE-26215-4</a></td> <td>partition_for_var_log</td> <td class="text-info">low</td> <td><i>disk_partitioning (6)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-26436-6">CCE-26436-6</a></td> <td>partition_for_var_log_audit</td> <td class="text-info">low</td> <td><i>disk_partitioning (6)</i></td> </tr></div>
+<div><tr> <td>5</td> <td><a href="/CCE-26557-9">CCE-26557-9</a></td> <td>partition_for_home</td> <td class="text-info">low</td> <td><i>disk_partitioning (6)</i></td> </tr></div>
+<div><tr> <td>6</td> <td><a href="/"></a></td> <td>encrypt_partitions</td> <td class="text-info">low</td> <td><i>disk_partitioning (6)</i></td> </tr></div>
+
+</table>

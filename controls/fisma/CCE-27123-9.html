@@ -6,6 +6,9 @@ title: Set Password Retry Prompts Permitted Per-Session
 ident: CCE-27123-9
 severity: low
 ---
+<p class="text-info">Failing to set password retry prompts permitted per-session is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Setting the password retry prompts that are permitted on a per-session basis to a low value
@@ -13,11 +16,10 @@ requires some software, such as SSH, to re-connect. This can slow down and
 draw additional attention to some types of password-guessing attacks. Note that this
 is different from account lockout, which is provided by the pam_faillock module.
 </rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Set Password Quality Requirements, if using
+pam_cracklib</i> rules. <a href="/cce/ssg/group/password_quality_pamcracklib"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to set password retry prompts permitted per-session is of <b>low</b> severity.</p>
-<p><small>View all 7 <i>Set Password Quality Requirements, if using
-pam_cracklib</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To configure the number of retry prompts that are permitted per-session:
@@ -28,13 +30,4 @@ show <xhtml:code>retry=3</xhtml:code>, or a lower value if site policy is more r
 The DoD requirement is a maximum of 3 prompts per session.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

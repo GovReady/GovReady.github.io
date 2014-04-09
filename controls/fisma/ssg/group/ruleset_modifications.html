@@ -1,0 +1,36 @@
+---
+layout: cce
+permalink: /cce/ssg/group/ruleset_modifications/
+name: high
+title: high
+---
+<h2>Strengthen the Default Ruleset Rules </small></h2>
+<blockquote>
+<p class="">The default rules can be strengthened. The system
+scripts that activate the firewall rules expect them to be defined
+in the configuration files iptables and ip6tables in the directory
+. Many of the lines in these files are similar
+to the command line arguments that would be provided to the programs
+ or  - but some are quite
+different.
+
+The following recommendations describe how to strengthen the
+default ruleset configuration file. An alternative to editing this
+configuration file is to create a shell script that makes calls to
+the iptables program to load in rules, and then invokes service
+iptables save to write those loaded rules to
+
+
+The following alterations can be made directly to
+ and .
+Instructions apply to both unless otherwise noted. Language and address
+conventions for regular iptables are used throughout this section;
+configuration for ip6tables will be either analogous or explicitly
+covered.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26444-0">CCE-26444-0</a></td> <td>set_iptables_default_rule</td> <td class="text-warning">medium</td> <td><i>ruleset_modifications (2)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27186-6">CCE-27186-6</a></td> <td>set_iptables_default_rule_forward</td> <td class="text-warning">medium</td> <td><i>ruleset_modifications (2)</i></td> </tr></div>
+
+</table>

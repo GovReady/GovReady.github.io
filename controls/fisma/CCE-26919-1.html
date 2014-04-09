@@ -6,16 +6,18 @@ title: Set SSH Idle Timeout Interval
 ident: CCE-26919-1
 severity: low
 ---
+<p class="text-info">Failing to set ssh idle timeout interval is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Causing idle users to be automatically logged out
 guards against compromises one system leading trivially
 to compromises on another.
 </rationale></p>
+<p><small>via FISMA SSG. View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="/cce/ssg/group/ssh_server"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to set ssh idle timeout interval is of <b>low</b> severity.</p>
-<p><small>View all 11 <i>Configure OpenSSH Server if Necessary</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">SSH allows administrators to set an idle timeout
@@ -35,13 +37,4 @@ setting made here. Keep in mind that some processes may stop SSH
 from correctly detecting that the user is idle.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

@@ -6,6 +6,9 @@ title: Set Password Minimum Length in login.defs
 ident: CCE-27002-5
 severity: medium
 ---
+<p class="text-warning">Failing to set password minimum length in login.defs is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Requiring a minimum password length makes password
@@ -14,10 +17,9 @@ search space. However, any security benefit from an onerous requirement
 must be carefully weighed against usability problems, support costs, or counterproductive
 behavior that may result.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Set Password Expiration Parameters</i> rules. <a href="/cce/ssg/group/password_expiration"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to set password minimum length in login.defs is of <b>medium</b> severity.</p>
-<p><small>View all 4 <i>Set Password Expiration Parameters</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To specify password length requirements for new accounts,
@@ -33,13 +35,4 @@ then the most restrictive must be satisfied. See PAM section
 for more information about enforcing password quality requirements.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

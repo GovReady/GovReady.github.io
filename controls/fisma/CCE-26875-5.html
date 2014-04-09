@@ -6,16 +6,18 @@ title: Configure SELinux Policy
 ident: CCE-26875-5
 severity: low
 ---
+<p class="text-info">Failing to configure selinux policy is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Setting the SELinux policy to <xhtml:code>targeted</xhtml:code> or a more specialized policy
 ensures the system will confine processes that are likely to be
 targeted for exploitation, such as network or system services.
 </rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Enable SELinux</i> rules. <a href="/cce/ssg/group/enabling_selinux"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to configure selinux policy is of <b>low</b> severity.</p>
-<p><small>View all 3 <i>Enable SELinux</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The SELinux <xhtml:code>targeted</xhtml:code> policy is appropriate for
@@ -28,13 +30,4 @@ and greater confinement but are not compatible with many general-purpose
 use cases.
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

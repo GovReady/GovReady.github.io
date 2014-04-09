@@ -1,0 +1,35 @@
+---
+layout: cce
+permalink: /cce/ssg/group/user_umask/
+name: high
+title: high
+---
+<h2>Ensure that Users Have Sensible Umask Values Rules </small></h2>
+<blockquote>
+<p class="">
+The umask setting controls the default permissions
+for the creation of new files.
+With a default  setting of 077, files and directories
+created by users will not be readable by any other user on the
+system. Users who wish to make specific files group- or
+world-readable can accomplish this by using the chmod command.
+Additionally, users can make all their files readable to their
+group by default by setting a  of 027 in their shell
+configuration files. If default per-user groups exist (that is, if
+every user has a default group whose name is the same as that
+user's username and whose only member is the user), then it may
+even be safe for users to select a  of 007, making it very
+easy to intentionally share files with groups of which the user is
+a member.
+
+
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26917-5">CCE-26917-5</a></td> <td>user_umask_bashrc</td> <td class="text-info">low</td> <td><i>user_umask (4)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27034-8">CCE-27034-8</a></td> <td>user_umask_cshrc</td> <td class="text-info">low</td> <td><i>user_umask (4)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26669-2">CCE-26669-2</a></td> <td>user_umask_profile</td> <td class="text-info">low</td> <td><i>user_umask (4)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-26371-5">CCE-26371-5</a></td> <td>user_umask_logindefs</td> <td class="text-info">low</td> <td><i>user_umask (4)</i></td> </tr></div>
+
+</table>

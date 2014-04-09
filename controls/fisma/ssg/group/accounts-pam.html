@@ -1,0 +1,43 @@
+---
+layout: cce
+permalink: /cce/ssg/group/accounts-pam/
+name: high
+title: high
+---
+<h2>Protect Accounts by Configuring PAM Rules </small></h2>
+<blockquote>
+<p class="">PAM, or Pluggable Authentication Modules, is a system
+which implements modular authentication for Linux programs. PAM provides
+a flexible and configurable architecture for authentication, and it should be configured
+to minimize exposure to unnecessary risk. This section contains
+guidance on how to accomplish that.
+
+PAM is implemented as a set of shared objects which are
+loaded and invoked whenever an application wishes to authenticate a
+user. Typically, the application must be running as root in order
+to take advantage of PAM, because PAM's modules often need to be able
+to access sensitive stores of account information, such as /etc/shadow.
+Traditional privileged network listeners
+(e.g. sshd) or SUID programs (e.g. sudo) already meet this
+requirement. An SUID root application, userhelper, is provided so
+that programs which are not SUID or privileged themselves can still
+take advantage of PAM.
+
+PAM looks in the directory  for
+application-specific configuration information. For instance, if
+the program login attempts to authenticate a user, then PAM's
+libraries follow the instructions in the file 
+to determine what actions should be taken.
+
+One very important file in  is
+. This file, which is included by
+many other PAM configuration files, defines 'default' system authentication
+measures. Modifying this file is a good way to make far-reaching
+authentication changes, for instance when implementing a
+centralized authentication service.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27291-4">CCE-27291-4</a></td> <td>display_login_attempts</td> <td class="text-info">low</td> <td><i>accounts-pam (1)</i></td> </tr></div>
+
+</table>

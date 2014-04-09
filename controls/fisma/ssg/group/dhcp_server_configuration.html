@@ -1,0 +1,25 @@
+---
+layout: cce
+permalink: /cce/ssg/group/dhcp_server_configuration/
+name: high
+title: high
+---
+<h2>Disable DHCP Server Rules </small></h2>
+<blockquote>
+<p class="">If the system must act as a DHCP server, the configuration
+information it serves should be minimized. Also, support for other protocols
+and DNS-updating schemes should be explicitly disabled unless needed. The
+configuration file for dhcpd is called . The file
+begins with a number of global configuration options. The remainder of the file
+is divided into sections, one for each block of addresses offered by dhcpd,
+each of which contains configuration options specific to that address
+block.</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27049-6">CCE-27049-6</a></td> <td>dhcp_server_disable_ddns</td> <td class="text-info">low</td> <td><i>dhcp_server_configuration (4)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-27106-4">CCE-27106-4</a></td> <td>dhcp_server_deny_decline</td> <td class="text-info">low</td> <td><i>dhcp_server_configuration (4)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27077-7">CCE-27077-7</a></td> <td>dhcp_server_deny_bootp</td> <td class="text-info">low</td> <td><i>dhcp_server_configuration (4)</i></td> </tr></div>
+<div><tr> <td>4</td> <td><a href="/CCE-26898-7">CCE-26898-7</a></td> <td>dhcp_server_configure_logging</td> <td class="text-info">low</td> <td><i>dhcp_server_configuration (4)</i></td> </tr></div>
+
+</table>

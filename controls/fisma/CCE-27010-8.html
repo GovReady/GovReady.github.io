@@ -6,14 +6,16 @@ title: Install PAE Kernel on Supported 32-bit x86 Systems
 ident: CCE-27010-8
 severity: low
 ---
+<p class="text-info">Failing to install pae kernel on supported 32-bit x86 systems is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">On 32-bit systems that support the XD or NX bit, the vendor-supplied
 PAE kernel is required to enable either Execute Disable (XD) or No Execute (NX) support.</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Enable Execute Disable (XD) or No Execute (NX) Support on
+x86 Systems</i> rules. <a href="/cce/ssg/group/enable_nx"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to install pae kernel on supported 32-bit x86 systems is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Enable Execute Disable (XD) or No Execute (NX) Support on
-x86 Systems</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Systems that are using the 64-bit x86 kernel package
@@ -27,13 +29,4 @@ The installation process should also have configured the
 bootloader to load the new kernel at boot. Verify this at reboot
 and modify <xhtml:code>/etc/grub.conf</xhtml:code> if necessary.</description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

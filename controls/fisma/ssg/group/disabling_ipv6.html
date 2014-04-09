@@ -1,0 +1,23 @@
+---
+layout: cce
+permalink: /cce/ssg/group/disabling_ipv6/
+name: high
+title: high
+---
+<h2>Disable Support for IPv6 Unless Needed Rules </small></h2>
+<blockquote>
+<p class="">
+Despite configuration that suggests support for IPv6 has
+been disabled, link-local IPv6 address auto-configuration occurs
+even when only an IPv4 address is assigned. The only way to
+effectively prevent execution of the IPv6 networking stack is to
+instruct the system not to activate the IPv6 kernel module.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-27153-6">CCE-27153-6</a></td> <td>kernel_module_ipv6_option_disabled</td> <td class="text-warning">medium</td> <td><i>disabling_ipv6 (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/"></a></td> <td>network_ipv6_disable_interfaces</td> <td class="text-info">low</td> <td><i>disabling_ipv6 (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-27232-8">CCE-27232-8</a></td> <td>network_ipv6_disable_rpc</td> <td class="text-info">low</td> <td><i>disabling_ipv6 (3)</i></td> </tr></div>
+
+</table>

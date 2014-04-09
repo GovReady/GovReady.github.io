@@ -6,15 +6,17 @@ title: Disable SCTP Support
 ident: CCE-26410-1
 severity: medium
 ---
+<p class="text-warning">Failing to disable sctp support is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Disabling SCTP protects
 the system against exploitation of any flaws in its implementation.
 </rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Uncommon Network Protocols</i> rules. <a href="/cce/ssg/group/network-uncommon"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to disable sctp support is of <b>medium</b> severity.</p>
-<p><small>View all 4 <i>Uncommon Network Protocols</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -28,13 +30,4 @@ kernel module from being loaded, add the following line to a file in the directo
 <xhtml:pre xml:space="preserve">install sctp /bin/false</xhtml:pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

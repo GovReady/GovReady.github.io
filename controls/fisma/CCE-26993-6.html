@@ -6,13 +6,15 @@ title: Enable Kernel Parameter to Ignore Bogus ICMP Error Responses
 ident: CCE-26993-6
 severity: low
 ---
+<p class="text-info">Failing to enable kernel parameter to ignore bogus icmp error responses is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Ignoring bogus ICMP error responses reduces
 log size, although some activity would not be logged.</rationale></p>
+<p><small>via FISMA SSG. View all 12 <i>Network Related Kernel Runtime Parameters for Hosts and Routers</i> rules. <a href="/cce/ssg/group/network_host_and_router_parameters"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to enable kernel parameter to ignore bogus icmp error responses is of <b>low</b> severity.</p>
-<p><small>View all 12 <i>Network Related Kernel Runtime Parameters for Hosts and Routers</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
@@ -24,13 +26,4 @@ log size, although some activity would not be logged.</rationale></p>
     <xhtml:pre xml:space="preserve">net.ipv4.icmp_ignore_bogus_error_responses = 1</xhtml:pre>
             </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

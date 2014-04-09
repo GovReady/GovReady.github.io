@@ -6,13 +6,15 @@ title: Record Attempts to Alter Logon and Logout Events
 ident: CCE-26691-6
 severity: low
 ---
+<p class="text-info">Failing to record attempts to alter logon and logout events is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Manual editing of these files may indicate nefarious activity, such
 as an attacker attempting to remove evidence of an intrusion.</rationale></p>
+<p><small>via FISMA SSG. View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="/cce/ssg/group/auditd_configure_rules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to record attempts to alter logon and logout events is of <b>low</b> severity.</p>
-<p><small>View all 14 <i>Configure auditd Rules for Comprehensive Auditing</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"> 
@@ -22,13 +24,4 @@ files involved in storing logon events, add the following to <xhtml:code>/etc/au
 -w /var/log/lastlog -p wa -k logins</pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

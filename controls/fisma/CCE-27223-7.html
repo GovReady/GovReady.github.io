@@ -6,15 +6,17 @@ title: Verify File Hashes with RPM
 ident: CCE-27223-7
 severity: low
 ---
+<p class="text-info">Failing to verify file hashes with rpm is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 The hashes of important files like system executables should match the
 information given by the RPM database. Executables with erroneous hashes could
 be a sign of nefarious activity on the system.</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Verify Integrity with RPM</i> rules. <a href="/cce/ssg/group/rpm_verification"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to verify file hashes with rpm is of <b>low</b> severity.</p>
-<p><small>View all 2 <i>Verify Integrity with RPM</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The RPM package management system can check the hashes of
@@ -34,13 +36,4 @@ Alternatively, the package can be reinstalled from trusted media using the comma
 <pre xmlns="http://www.w3.org/1999/xhtml">rpm -Uvh <i>PACKAGENAME</i></pre> 
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

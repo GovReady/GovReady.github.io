@@ -6,16 +6,18 @@ title: Disable Quota Netlink (quota_nld)
 ident: CCE-27260-9
 severity: low
 ---
+<p class="text-info">Failing to disable quota netlink (quota_nld) is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If disk quotas are enforced on the local system, then the
 <xhtml:code>quota_nld</xhtml:code> service likely provides useful functionality and should
 remain enabled. However, if disk quotas are not used or user notification of
 disk quota violation is not desired then there is no need to run this
 service.</rationale></p>
+<p><small>via FISMA SSG. View all 24 <i>Base Services</i> rules. <a href="/cce/ssg/group/base"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-info">Failing to disable quota netlink (quota_nld) is of <b>low</b> severity.</p>
-<p><small>View all 24 <i>Base Services</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The <xhtml:code>quota_nld</xhtml:code> service provides notifications to
@@ -28,13 +30,4 @@ last accessed.
     <xhtml:pre># chkconfig quota_nld off</xhtml:pre>
 </description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 

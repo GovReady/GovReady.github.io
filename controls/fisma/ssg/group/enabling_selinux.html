@@ -1,0 +1,46 @@
+---
+layout: cce
+permalink: /cce/ssg/group/enabling_selinux/
+name: high
+title: high
+---
+<h2>Enable SELinux Rules </small></h2>
+<blockquote>
+<p class="">Edit the file . Add or correct the
+following lines:
+
+Edit the file . Ensure that the following
+arguments DO NOT appear on any kernel command line in the file:
+
+The directive  enables SELinux at boot time.
+If SELinux is suspected of involvement with boot-time problems
+(unlikely), it is possible to boot into the warning-only mode
+ for debugging purposes. Make certain to change
+the mode back to enforcing after debugging, set the filesystems to
+be relabeled for consistency using the command , and reboot.
+
+However, the RHEL 6 default SELinux configuration should be
+sufficiently reasonable that most systems will boot without serious
+problems. Some applications that require deep or unusual system
+privileges, such as virtual machine software, may not be compatible
+with SELinux in its default configuration. However, this should be
+uncommon, and SELinux's application support continues to improve.
+In other cases, SELinux may reveal unusual or insecure program
+behavior by design.
+
+The directive  configures SELinux to use
+the default targeted policy.
+
+The SELinux boot mode specified in  can be
+overridden by command-line arguments passed to the kernel. It is
+necessary to check  to ensure that this has not been done
+and to protect the boot process.
+</p>
+</blockquote>
+<table class="table table-striped">
+<thead> <th>Count</th> <th>CCE</th> <th>Rule ID</th> <th>Severity</th> <th><i>Group</i></th> </thead>
+<div><tr> <td>1</td> <td><a href="/CCE-26956-3">CCE-26956-3</a></td> <td>enable_selinux_bootloader</td> <td class="text-warning">medium</td> <td><i>enabling_selinux (3)</i></td> </tr></div>
+<div><tr> <td>2</td> <td><a href="/CCE-26969-6">CCE-26969-6</a></td> <td>set_selinux_state</td> <td class="text-warning">medium</td> <td><i>enabling_selinux (3)</i></td> </tr></div>
+<div><tr> <td>3</td> <td><a href="/CCE-26875-5">CCE-26875-5</a></td> <td>set_selinux_policy</td> <td class="text-info">low</td> <td><i>enabling_selinux (3)</i></td> </tr></div>
+
+</table>

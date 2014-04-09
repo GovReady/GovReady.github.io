@@ -6,6 +6,9 @@ title: Ensure No World-Writable Files Exist
 ident: CCE-26910-0
 severity: medium
 ---
+<p class="text-warning">Failing to ensure no world-writable files exist is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
 <blockquote>
 <p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 Data in world-writable files can be modified by any
@@ -13,11 +16,10 @@ user on the system. In almost all circumstances, files can be
 configured using a combination of user and group permissions to
 support whatever legitimate access is needed without the risk
 caused by world-writable files.</rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Verify Permissions on Important Files and
+Directories</i> rules. <a href="/cce/ssg/group/files"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 </blockquote>
 
-<p class="text-warning">Failing to ensure no world-writable files exist is of <b>medium</b> severity.</p>
-<p><small>View all 7 <i>Verify Permissions on Important Files and
-Directories</i> rules. <a href="#"><span class="glyphicon glyphicon-link"></span></a> </small></p>
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">It is generally a good idea to remove global (other) write
@@ -27,13 +29,4 @@ Also, monitor for recurring world-writable files, as these may be
 symptoms of a misconfigured application or user
 account.</description></p>
 
-
-<!--
-<hr />
-<img src="http://imgs.xkcd.com/comics/password_strength.png" style="width:30%;" /><br/>
-<a href="http://www.explainxkcd.com/wiki/index.php/936:_Password_Strength">XKCD Password Strength Explanation</a>
--->
-
-<hr />
-<a href="/cce/">Back to CCE List</a>
 
