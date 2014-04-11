@@ -13,6 +13,8 @@ accreditations:
   - Awesome
 desc1: loeren ipsum
 desc2: loren ipsum
+esc_source_url: "http://wikipedia.org/en/mysql"
+desc_source: Wikipedia
 usg_instances:
   - agency 1
   - agency 2

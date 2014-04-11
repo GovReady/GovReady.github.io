@@ -18,38 +18,35 @@
         <div style="margin-bottom:12px;"></div>
       </h1>
 
-        <p>
-            {{ page.desc1 }}
-        </p>
-        <p>
-            {{ page.desc2 }}
-        </p>
+        <blockquote>
+          <p>
+              {{ page.desc1 }}
+          </p>
+          <p>
+              {{ page.desc2 }}
+          </p>
+          <p>
+            <small>via <a href="{{ page.desc_source_url }}">{{ page.desc_source_url }}</a></small>
+          </p>
+        </blockquote>
 
-        <h3 style="border-bottom:1px solid #ddd;margin:60px 0 0 0;">USG instances</h3>
-          <ul>
+
+        <h3 style="border-bottom:1px solid #ddd;margin:60px 0 0 0;">US Gov Instances</h3>
+
           {% for instance in page.usg_instances %}
-            <li>{{ instance }}</li>
+            <div>{{ instance }}</div>
           {% endfor %}
-          </ul>
+
+        <h3 style="border-bottom:1px solid #ddd;margin:60px 0 0 0;">Other Gov Instances</h3>
 
 
 
-        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">US-CERT notices</h3>
+
+        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Recent Security Alerts</h3>
         <p>
           10/21/2013: The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.
         </p>
 
-        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Accrediations - test</h3>
-
-        <ul>
-        {% for accreditation in page.accreditations %}
-          <li>{{ accreditation }}</li>
-        {% endfor %}
-        </ul>
-
-        <div>
-          {{ content }}
-        </div>
 
         <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Accessibility - Section 508</h3>
         Accessibility web page: <a href="{{ page.accessibility_url }}">{{ page.accessibility_url }}</a>
@@ -74,9 +71,32 @@
         </div>
 
 <!-- left sidebar -->
-<div class="container lg-font col-sm-3" style="margin-top:30px;border:1px solid gray;">
+<div class="container lg-font col-sm-3" style="margin-top:90px;border:0px solid gray;">
 
-  <p>sidebar info here</p>
+  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">General Information</h5>
+  <dl>
+    <dt>term</dt><dd>definition</dd>
+    <dt>term</dt><dd>definition</dd>
+  </dl>
+
+  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">Accreditations</h5>
+  <ul>
+  {% for accreditation in page.accreditations %}
+    <li>{{ accreditation }}</li>
+  {% endfor %}
+  </ul>
+  
+  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">Virtual Machines</h5>
+  <dl>
+    <dt>term</dt><dd>definition</dd>
+    <dt>term</dt><dd>definition</dd>
+  </dl>
+
+
+  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">Tags</h5>
+  <p>tag1 tag2 tag3</p>
+
+
 </div>
 
     </div>
