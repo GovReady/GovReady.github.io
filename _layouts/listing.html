@@ -2,44 +2,91 @@
 
 
 <div class="" style="background-color: #fff;padding:40px 0 48px 0;min-height: 740px;">
+
+
+
+  <!-- listing section -->
   <div class="container lg-font col-sm-12">
 
-    <h2>{{ page.name }}</h2>
+    <!-- main listing content -->
+    <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
 
-      <h3>Accreditations</h3>
+        <h1 style="border-bottom:1px solid #ddd;">
+        <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
+        <img src="{{ page.logo2 }}" width="60"/>
+        <span class="hidden">GitHub</span>
+        <div style="margin-bottom:12px;"></div>
+      </h1>
 
-      <ul>
-      {% for accreditation in page.accreditations %}
-        <li>{{ accreditation }}</li>
-      {% endfor %}
-      </ul>
+        <p>
+            {{ page.desc1 }}
+        </p>
+        <p>
+            {{ page.desc2 }}
+        </p>
 
-      <div>
-        {{ content }}
-      </div>
+        <h3 style="border-bottom:1px solid #ddd;margin:60px 0 0 0;">USG instances</h3>
+          <ul>
+          {% for instance in page.usg_instances %}
+            <li>{{ instance }}</li>
+          {% endfor %}
+          </ul>
 
-  </div>
 
-  <!--Disqus -->
-  <div class="container lg-font col-lg-12">
-    <h2><small>Comments</small></h2>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'govready'; // required: replace example with your forum shortname
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
-  
+        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">US-CERT notices</h3>
+        <p>
+          10/21/2013: The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.
+        </p>
+
+        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Accrediations - test</h3>
+
+        <ul>
+        {% for accreditation in page.accreditations %}
+          <li>{{ accreditation }}</li>
+        {% endfor %}
+        </ul>
+
+        <div>
+          {{ content }}
+        </div>
+
+        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Accessibility - Section 508</h3>
+        Accessibility web page: <a href="{{ page.accessibility_url }}">{{ page.accessibility_url }}</a>
+
+
+        <!--Disqus -->
+        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Community Comments</h3>
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'govready'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+
+<!-- left sidebar -->
+<div class="container lg-font col-sm-3" style="margin-top:30px;border:1px solid gray;">
+
+  <p>sidebar info here</p>
 </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
 
 
 
