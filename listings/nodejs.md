@@ -17,8 +17,32 @@ desc_source_url: "http://wikipedia.org/en/nodejs"
 desc_source: Wikipedia
 usg_instances:
   - "CFPB is using Nodejs in <a href='https://github.com/cfpb/ec2mapper'>ec2mapper</a>, <a href='https://github.com/cfpb/design-manual'>design-manual</a>"
+managed_by: Joyent
+managed_by_url: "http://www.joyent.com/technology/nodejs"
+license_url: "https://raw.github.com/joyent/node/v0.10.26/LICENSE"
+about_url: "http://www.nodejs.org/about/"
+issue_tracker_url: "https://github.com/joyent/node/issues"
+source_code_url: "https://github.com/joyent/node"
+stable_release: "v0.10.26"
+stable_release_url: "http://www.nodejs.org/download/"
+commercial_support_url: "http://www.joyent.com/products/support-nodejs"
+us_cert_recent: >
+  <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4450">10/21/2013 - CVE-2013-4450</a> <span class="text-warning">Medium severity</span> The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.
+
 ---
 
 [ec2mapper](https://github.com/cfpb/ec2mapper "ec2mapper on GitHub") (internal)
 
 NodeJS
+
+https://nodesecurity.io/advisories
+security feed: https://nodesecurity.io/rss.xml
+twitter: https://twitter.com/nodesecurity
+blog: http://blog.nodejs.org/
+https://groups.google.com/forum/#!forum/nodejs-sec
+http://www.slideshare.net/evilpacket/node-day-enterprise-nodejs-security
+
+
+bekk.github.io/retire.js
+
+oswap

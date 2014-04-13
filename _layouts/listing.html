@@ -8,13 +8,32 @@
   <!-- listing section -->
   <div class="container lg-font col-sm-12">
 
+
+<!-- sidebar -->
+<div class="container lg-font col-sm-3" style="margin-top:0px;border:0px solid gray;">
+
+  <h1 style="border-bottom:0px solid #ddd;">
+  <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
+  <img src="{{ page.logo2 }}" width="60"/>
+  <div style="margin-bottom:12px;"></div>
+</h1>
+
+  <div>Managed by: <a href="{{ page.managed_by_url }}">{{ page.managed_by }}</a></div>
+  <div><a href="{{ page.license_url }}">License</a></div>
+  <div><a href="{{ page.about_url }}">About</a></div>
+  <div><a href="{{ page.issue_tracker_url }}">Issue Tracker</a></div>
+  <div>Stable release: <a href="{{ page.stable_release }}">{{ page.stable_release }}</a></div>
+  <div>Security advisories</div>
+  <div>Commercial support: {% if page.commercial_support_url != '' %}<a href="{{ page.commercial_support_url }}">Yes</a>{% else %}Not yet{% endif %}</div>
+  <div><a href="{{ page.source_code_url }}">Source Code</a></div>
+</div>
+
+
     <!-- main listing content -->
     <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
 
-        <h1 style="border-bottom:1px solid #ddd;">
-        <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
-        <img src="{{ page.logo2 }}" width="60"/>
-        <span class="hidden">GitHub</span>
+        <h1 style="border-bottom:0px solid #ddd;">
+        <span class="">{{ page.name}}</span>
         <div style="margin-bottom:12px;"></div>
       </h1>
 
@@ -30,7 +49,6 @@
           </p>
         </blockquote>
 
-
         <h3 style="border-bottom:1px solid #ddd;margin:60px 0 0 0;">US Gov Instances</h3>
 
           {% for instance in page.usg_instances %}
@@ -42,9 +60,9 @@
 
 
 
-        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Recent Security Alerts</h3>
+        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Recent US Cert Alerts</h3>
         <p>
-          10/21/2013: The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.
+          {{ page.us_cert_recent }}
         </p>
 
 
@@ -70,34 +88,7 @@
           <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
 
-<!-- left sidebar -->
-<div class="container lg-font col-sm-3" style="margin-top:90px;border:0px solid gray;">
 
-  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">General Information</h5>
-  <dl>
-    <dt>term</dt><dd>definition</dd>
-    <dt>term</dt><dd>definition</dd>
-  </dl>
-
-  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">Accreditations</h5>
-  <ul>
-  {% for accreditation in page.accreditations %}
-    <li>{{ accreditation }}</li>
-  {% endfor %}
-  </ul>
-  
-  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">Virtual Machines</h5>
-  <dl>
-    <dt>term</dt><dd>definition</dd>
-    <dt>term</dt><dd>definition</dd>
-  </dl>
-
-
-  <h5 style="background-color:#eaa;padding:4px 4px 4px 24px;color:black;">Tags</h5>
-  <p>tag1 tag2 tag3</p>
-
-
-</div>
 
     </div>
 
