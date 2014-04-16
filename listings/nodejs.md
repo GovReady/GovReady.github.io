@@ -44,6 +44,13 @@ usg_instances:
     img_src: /img/listings/design-manual/dm_thm.png
     live_url: "http://cfpb.github.io/design-manual/"
 
+  - name: qu
+    organization: CFPB
+    description: Qu is a framework for building data APIs. It is still under heavy development and is changing rapidly. Qu was created to serve the Consumer Financial Protection Bureau's public data sets.
+    url: "https://github.com/cfpb/qu/"
+    img_src: /img/listings/qu/qu_thm.png
+    live_url: "http://cfpb.github.io/qu/"
+
 # Summary - (Facts, no copyright)
 # ========================================================= #
 managed_by: Joyent

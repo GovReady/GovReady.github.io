@@ -3,26 +3,37 @@
 
 <div class="listing-page">
 
+  
   <!-- listing container -->
   <div class="container lg-font col-sm-12">
+
+
 
     <!-- listing sidebar -->
     {% include listing_sb.html %}
 
     <!-- main listing content -->
-    <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+
+
 
         <h1 class="listing-title">
-          <span class="">{{ page.name }}</span>
+          <span class="">{{ page.name }} in Government</span>
         </h1>
 
-        <blockquote>
+<div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
 
-          <p>{{ page.description }}</p>
-          <p><small>via <a href="{{ page.description_src_url }}">{{ page.description_src_url }}</a></small></p>
-        </blockquote>
+          <ul class="nav nav-tabs">
+  <li class="active"><a href="#">About</a></li>
+  <li><a href="#">Procuring</a></li>
+  <li><a href="#">508 Accessibility</a></li>
+  <li><a href="#">Configuring</a></li>
+  <li><a href="#">Security</a></li>
+  <li><a href="#">FISMA Compliance</a></li>
+  <li><a href="#">More...</a></li>
+  
+</ul>
 
-        <h3 class="listing-section">Use Case in Government</h3>
+
         <p>{{ page.benefit }}</p>
 
         <h3 class="listing-section">US Gov Instances</h3>
