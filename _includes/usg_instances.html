@@ -1,0 +1,14 @@
+<!-- USG Instances -->
+<div class="row">
+{% for instance in page.usg_instances %}
+   <div class="col-sm-6 col-md-4 listing-instance">
+    <div class="thumbnail">
+      <img src="{{ instance.img_src }}" data-src="{{ instance.img_src }}" alt="thumbnail of {{ instance.name }}">
+      <div class="caption">
+        <h4 style="text-align:center;"><a href="{{ instance.url }}">{{ instance.organization }} {{ instance.name }}</a></h4>
+        <p><small>{{ instance.description }}</small></p>
+      </div>
+    </div>
+   </div>
+{% endfor %}
+</div>

@@ -40,7 +40,29 @@
 }
 
 
+/* Software Listing Styles */
 
+.listing-page {
+  background-color: #fff;
+  padding:40px 0 48px 0;
+  min-height: 740px;
+}
+
+.listing-title {
+
+}
+.listing-section {
+  border-bottom:1px solid #ddd;
+  margin:50px 0 0 0;
+}
+
+.listing-video {
+  margin:8px 12px 0px 0px;
+}
+
+.listing-instance {
+  margin-top:8px;
+}
 
 
 
