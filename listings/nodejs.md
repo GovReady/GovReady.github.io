@@ -28,6 +28,36 @@ description_src_url: "http://wikipedia.org/en/nodejs"
 benefit: |
   NodeJS significantly lowers the cost of large scale, real-time web apps with lots of interactions back and forth between the user and the server or between the users. NodeJS is also useful when user interactions trigger different types of events on the server that take varying amounts of time to complete. 
 
+
+# Procurement
+# ========================================================= #
+procurement_guidance: |
+  <p>NodeJS is licensed to the general public therefore should be treated as commercial computer software (e.g., COTS) as per <a href="http://acquisition.gov/far/current/html/Subpart%202_1.html#wp1145508">FAR Supbart 2.101</a>.</p> 
+
+  <p>NodeJS is available as open source software and in this format can be acquired and used at no contract directly by agency staff and contractors according to the agency's policy on open source software. Staff and contractors at government agencies that do not have formal open source software policy are authorized to use open source according to the FAR.</p>
+
+  <p>An enterprise version of NodeJS is offered by <a href="http://www.joyent.com/technology/nodejs">Joyent</a>. As of this writing, only Joyent offering an enterprise version of NodeJS and therefore is eligible for sole source acquisition.</p> 
+
+  <p>Various vendors host applications in NodeJS. Various vendors support NodeJS and NodeJS applications.</p>
+
+procurement_references: 
+
+  - name: FAR Part 12—Acquisition of Commercial Items
+    url: "http://acquisition.gov/far/current/html/FARTOCP12.html"
+    description: This section describes purchase options
+
+  - name: Federal Acquisition Regulation; FAR Case 2000-305, Commercially Available Off-the-Shelf (COTS) Items
+    url: "https://www.federalregister.gov/articles/2009/01/15/E9-551/federal-acquisition-regulation-far-case-2000-305-commercially-available-off-the-shelf-cots-items"
+    summary: |
+      The Civilian Agency Acquisition Council and the Defense Acquisition Regulations Council (Councils) have agreed on a final rule amending the Federal Acquisition Regulation (FAR) to implement Section 4203 of the Clinger-Cohen Act of 1996 (41 U.S.C. 431) (the Act) with respect to the inapplicability of certain laws to contracts and subcontracts for the acquisition of commercially available off-the-shelf (COTS) items.
+
+  - name: "Free-Libre / Open Source Software (FLOSS) is Commercial Software"
+    url: "http://www.dwheeler.com/essays/commercial-floss.html"
+    description: | 
+      Nearly all FLOSS projects are commercial. In this essay I’ll explain why it's so important to understand that FLOSS software is almost always commercial, and then give examples of each of those four points (listed above) to justify the claim that FLOSS is commercial. 
+
+
+
 # Usage - (Facts, no copyright)
 # ========================================================= #
 usg_instances:

@@ -1,0 +1,15 @@
+<h2>Procurement</h2>
+
+<div>
+	{{ page.procurement_guidance }}
+</div>
+
+
+<div>
+	<h3>References</h3>
+{% for reference in page.procurement_references %}
+<ul>
+	<li><a href="{{ reference.url }}">{{ reference.name }}</a> {{ reference.description }} </li>
+</ul>
+{% endfor %}
+</div>
