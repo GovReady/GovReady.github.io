@@ -23,40 +23,76 @@
 <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
 
           <ul class="nav nav-tabs">
-  <li class="active"><a href="#">About</a></li>
-  <li><a href="#">Procuring</a></li>
-  <li><a href="#">508 Accessibility</a></li>
-  <li><a href="#">Configuring</a></li>
-  <li><a href="#">Security</a></li>
-  <li><a href="#">FISMA Compliance</a></li>
-  <li><a href="#">More...</a></li>
-  
-</ul>
+            <li class="active"><a href="#why" data-toggle="tab">About</a></li>
+            <li><a href="#procurement" data-toggle="tab">Procurement</a></li>
+            <li><a href="#security" data-toggle="tab">Security</a></li>
+            <li><a href="#configuring" data-toggle="tab">Configuring</a></li>
+            <li><a href="#compliance" data-toggle="tab">FISMA Compliance</a></li>
+            <li><a href="#accessibility" data-toggle="tab">508 Accessibility</a></li>
+            <li><a href="#more" data-toggle="tab">More...</a></li>
+          </ul>
 
 
-        <p>{{ page.benefit }}</p>
 
-        <h3 class="listing-section">US Gov Instances</h3>
-        {% include usg_instances.html %}
+          <div id="my-tab-content" class="tab-content">
+              <div class="tab-pane active" id="why">
+                  
+                  <p>{{ page.benefit }}</p>
 
-
-        <h3 class="listing-section">Videos</h3>
-        <div class="clearfix">
-          {% for video in page.videos %}
-            <span class="pull-left listing-video" >{{ video }}</span>
-          {% endfor %}
-        </div>
+                  <h3 class="listing-section">US Gov Instances</h3>
+                  {% include usg_instances.html %}
 
 
-        <h3 class="listing-section">Recent US Cert Alerts</h3>
-        <p>{{ page.us_cert_recent }}</p>
+                  <h3 class="listing-section">Videos</h3>
+                  <div class="clearfix">
+                    {% for video in page.videos %}
+                      <span class="pull-left listing-video" >{{ video }}</span>
+                    {% endfor %}
+                  </div>
+              </div>
 
-        <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Accessibility - Section 508</h3>
-        Accessibility web page: <a href="{{ page.accessibility_url }}">{{ page.accessibility_url }}</a>
+              <div class="tab-pane active" id="procurement">
+                {% include procurement.html %}
+              </div>
+
+              <div class="tab-pane" id="security">
+                  <h2>Security</h2>          
+                  <h3 class="listing-section">Recent US Cert Alerts</h3>
+                  <p>{{ page.us_cert_recent }}</p>
+              </div>
+
+              <div class="tab-pane" id="configuring">
+                  <h2>Configuring</h2>
+                  <p>yellow yellow yellow yellow yellow</p>
+              </div>
+
+              <div class="tab-pane" id="compliance">
+                  <h2>FISMA Compliance</h2>
+                  <p>Compliance compliance compliance</p>
+              </div>
+
+              <div class="tab-pane" id="accessibility">
+                  <h2>508 Accessibility</h2>
+                  <p>orange orange orange orange orange</p> <h3 style="border-bottom:1px solid #ddd;margin:50px 0 0 0;">Accessibility - Section 508</h3>
+                  Accessibility web page: <a href="{{ page.accessibility_url }}">{{ page.accessibility_url }}</a>
+              </div>
+
+              <div class="tab-pane" id="more">
+                  <h2>More</h2>
+                  <p>more more more more</p>
+              </div>
+
+          </div>
 
     </div>
 
   </div>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+  </script>  
 
 
 {% include footer.html %}
