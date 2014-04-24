@@ -1,6 +1,6 @@
 ---
 layout: listing2
-permalink: /mockup/nodejs2/
+permalink: /mockup/tea2/
 
 # Quick Assess
 # ========================================================= #
@@ -10,17 +10,17 @@ quick_assessment:
   - name: GovReady Internal
     value: true
   - name: GovReady External
-    value: true
+    value: false
   - name: In use?
     value: true
   - name: Patching?
-    value: true
+    value: false
   - name: Enterprise version?
-    value: true
+    value: false
   - name: Support?
-    value: true
+    value: false
   - name: Recommended for FISMA
-    value: L
+    value: L, M, H
   - name: Easy procurement?
     value: true
   - name: SCAP?
@@ -29,9 +29,9 @@ quick_assessment:
 
 # Basic
 # ========================================================= #
-name: NodeJS
-website: "http://www.nodejs.org/"
-logo1: /img/listings/nodejs/nodejs.png
+name: Tea
+website: ""
+logo1: 
 logo2:
 logo1_usage:
   - "http://nodejs.org/logos/"
@@ -41,9 +41,7 @@ accreditations:
   - Awesome
 
 description: |
-  Node.js is a software platform for scalable server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on Windows, Mac OS X and Linux with no changes.
-
-  Node.js internally uses the Google V8 JavaScript engine to execute code, and a large percentage of the basic modules are written in JavaScript. Node.js contains a built-in HTTP server library, making it possible to run a web server without Apache or Lighttpd.
+  Some description for Tea goes here.
 
 description_src: Wikipedia
 description_src_url: "http://wikipedia.org/en/nodejs"
@@ -51,7 +49,9 @@ description_src_url: "http://wikipedia.org/en/nodejs"
 # Benefit - (Copyright 2014 Greg Elin. All Rights Reserved.)
 # ========================================================= #
 benefit: |
-  NodeJS significantly lowers the cost of large scale, real-time web apps with lots of interactions back and forth between the user and the server or between the users. NodeJS is also useful when user interactions trigger different types of events on the server that take varying amounts of time to complete. 
+  Tea supports statiticians and economists who need to impute missing and erroneous data in large data sets, including data sets of hundreds of millions of rows. Unlike other techniques, Tea works with data in R and provides user-friendly data quality specification and simple way to specify which  statistical model to use to impute missing data models. 
+
+  <p>Tea is considered <b>GovReady for internal use by federal agencies</b> because Tea was developed by Census economist Ben Klemens and Census econonmist Roland Rodriques and is currently used in the Census data preparation.</p>
 
 
 # Procurement
