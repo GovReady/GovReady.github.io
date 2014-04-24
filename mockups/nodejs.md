@@ -1,6 +1,6 @@
 ---
 layout: listing
-permalink: /nodejs/
+permalink: /mockup/nodejs/
 
 # Basic
 # ========================================================= #
@@ -111,10 +111,6 @@ videos:
   - <h4>NodeJS intro</h4><iframe width="260" height="157"  src="//www.youtube.com/embed/GJmFG4ffJZU" frameborder="0" allowfullscreen></iframe>
   - <h4>NodeJS Tech Internals</h4><iframe width="260" height="157" src="http://www.youtube.com/embed/L0pjVcIsU6A" frameborder="0" allowfullscreen></iframe>
   
-# Observations
-# ========================================================= #
-observations: |
-  Node categorized by open source, managed by a distinct company that released product, available on GitHub. Single project download. Lots of  plugins.
 
 
 ---

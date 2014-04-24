@@ -1,6 +1,6 @@
 ---
 layout: listing
-permalink: /mysql/
+permalink: /mockup/mysql/
 name: MySQL
 website: "http://www.mysql.com"
 logo1: /img/listings/mysql/powered-by-mysql-125x64.png
@@ -23,8 +23,4 @@ accessibility_url: "http://www.oracle.com/us/corporate/accessibility/templates/t
 ---
 
 
-# Summary - (Facts, no copyright)
-# ========================================================= #
-managed_by: Joyent
-managed_by_url: "http://www.joyent.com/technology/nodejs"
 Mysql is very **awesome**.
