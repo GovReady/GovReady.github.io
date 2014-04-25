@@ -1,0 +1,35 @@
+	<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="border:1px solid #999;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {% assign loop_index = 0 %}
+        {% for item in page.usg_instances %}
+          <li data-target="#myCarousel" data-slide-to="0" class="{{ loop_index }}"></li>
+          {% capture loop_index %}{{ loop_index | plus:1 }}{% endcapture %}
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+
+        {% assign loop_index = 0 %}
+        {% for item in page.usg_instances %}
+          
+          {% if loop_index == 0 %}<div class="item active">{% else %}<div class="item">{% endif %}
+            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="{{ item.img_src }}">
+            <div class="container">
+              <div class="carousel-caption" style=" background-color: rgba(20, 20, 20, 0.5);padding:12px;">
+                <h1>{{ item.organization }} {{ item.name }}</h1>
+                <p>{{ item.description }}</p>
+                <p><a class="btn btn-lg btn-primary" href="{{ item.url }}" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          {% capture loop_index %}{{ loop_index | plus:1 }}{% endcapture %}
+        {% endfor %}
+
+        
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    <!-- /.carousel -->

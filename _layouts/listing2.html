@@ -9,18 +9,14 @@
 
 
 
-    <!-- listing sidebar -->
-    {% include listing_sb2.html %}
-
+    
     <!-- main listing content -->
 
-
-
         <h1 class="listing-title">
-          <span class="">{{ page.name }} in Government</span>
+          <span class="">GovReady Assessment of {{ page.name }}</span>
         </h1>
 
-<div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+        <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
 
           <ul class="nav nav-tabs">
             <li class="active"><a href="#why" data-toggle="tab">About</a></li>
@@ -39,8 +35,9 @@
                   
                   <p>{{ page.benefit }}</p>
 
-                  <h3 class="listing-section">US Gov Instances</h3>
-                  {% include usg_instances.html %}
+                  <h3 class="listing-section">Gallery of Federal Government Uses of {{ page.name }}</h3>
+                  <div>&nbsp;</div>
+                  {% include instances_carousel.html %}
 
 
                   <h3 class="listing-section">Videos</h3>
@@ -51,7 +48,7 @@
                   </div>
               </div>
 
-              <div class="tab-pane active" id="procurement">
+              <div class="tab-pane" id="procurement">
                 {% include procurement.html %}
               </div>
 
@@ -82,9 +79,14 @@
                   <p>more more more more</p>
               </div>
 
-          </div>
+          </div> <!-- /tab content -->
 
-    </div>
+    </div> 
+    <!-- /main listing content -->
+
+    <!-- listing sidebar -->
+    {% include listing_sb2.html %}
+
 
   </div>
 
