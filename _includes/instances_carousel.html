@@ -5,7 +5,7 @@
       <ol class="carousel-indicators">
         {% assign loop_index = 0 %}
         {% for item in page.usg_instances %}
-          <li data-target="#myCarousel" data-slide-to="0" class="{{ loop_index }}"></li>
+          <li data-target="#myCarousel" data-slide-to="{{ loop_index }}" class=""></li>
           {% capture loop_index %}{{ loop_index | plus:1 }}{% endcapture %}
         {% endfor %}
       </ol>
