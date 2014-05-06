@@ -1,31 +1,6 @@
 ---
-layout: listing2
-permalink: /nodejs/
-
-# Quick Assess
-# ========================================================= #
-
-quick_assessment: 
-
-  - name: GovReady Internal
-    value: true
-  - name: GovReady External
-    value: true
-  - name: In use?
-    value: true
-  - name: Patching?
-    value: true
-  - name: Enterprise version?
-    value: true
-  - name: Support?
-    value: true
-  - name: Recommended for FISMA
-    value: L
-  - name: Easy procurement?
-    value: true
-  - name: SCAP?
-    value: false
-      
+layout: listing
+permalink: /listings.prev1/nodejs/
 
 # Basic
 # ========================================================= #
@@ -90,20 +65,20 @@ usg_instances:
     organization: CFPB
     description: EC2mapper is a web application that provides a user-friendly interface to view Amazon AWS network configurations, while allowing changes to be easily tracked over time.
     url: "https://github.com/cfpb/ec2mapper"
-    img_src: "/img/listings/ec2mapper/ss2_cropped.png"
+    img_src: "/img/listings/ec2mapper/ss4_thm.png"
 
   - name: design-manual
     organization: CFPB
     description: A set of design principles and standards for the Consumer Financial Protection Bureau. 
     url: "https://github.com/cfpb/design-manual"
-    img_src: /img/listings/design-manual/dm_900x500.png
+    img_src: /img/listings/design-manual/dm_thm.png
     live_url: "http://cfpb.github.io/design-manual/"
 
   - name: qu
     organization: CFPB
     description: Qu is a framework for building data APIs. It is still under heavy development and is changing rapidly. Qu was created to serve the Consumer Financial Protection Bureau's public data sets.
     url: "https://github.com/cfpb/qu/"
-    img_src: /img/listings/qu/qu_900x500.png
+    img_src: /img/listings/qu/qu_thm.png
     live_url: "http://cfpb.github.io/qu/"
 
 # Summary - (Facts, no copyright)
@@ -136,6 +111,10 @@ videos:
   - <h4>NodeJS intro</h4><iframe width="260" height="157"  src="//www.youtube.com/embed/GJmFG4ffJZU" frameborder="0" allowfullscreen></iframe>
   - <h4>NodeJS Tech Internals</h4><iframe width="260" height="157" src="http://www.youtube.com/embed/L0pjVcIsU6A" frameborder="0" allowfullscreen></iframe>
   
+# Observations
+# ========================================================= #
+observations: |
+  Node categorized by open source, managed by a distinct company that released product, available on GitHub. Single project download. Lots of  plugins.
 
 
 ---

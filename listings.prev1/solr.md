@@ -1,11 +1,11 @@
 ---
 layout: listing
-permalink: /dkan/
-name: DKAN
+permalink: /listings.prev1/solr/
+name: Solr
 accreditations:
   - none
   - Awesome
 ---
 
 
-DKAN
+Solr
