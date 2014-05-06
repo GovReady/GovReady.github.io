@@ -88,7 +88,7 @@ procurement_references:
 usg_instances:
   - name: ec2mapper
     organization: CFPB
-    description: EC2mapper is a web application that provides a user-friendly interface to view Amazon AWS network configurations, while allowing changes to be easily tracked over time.
+    description: EC2mapper is a web application that provides a user-friendly interface to view Amazon AWS network configurations.
     url: "https://github.com/cfpb/ec2mapper"
     img_src: "/img/listings/ec2mapper/ss2_cropped.png"
 
@@ -101,7 +101,7 @@ usg_instances:
 
   - name: qu
     organization: CFPB
-    description: Qu is a framework for building data APIs. It is still under heavy development and is changing rapidly. Qu was created to serve the Consumer Financial Protection Bureau's public data sets.
+    description: Qu is a framework for building data APIs. 
     url: "https://github.com/cfpb/qu/"
     img_src: /img/listings/qu/qu_900x500.png
     live_url: "http://cfpb.github.io/qu/"
@@ -140,11 +140,3 @@ videos:
 
 ---
 
-[ec2mapper](https://github.com/cfpb/ec2mapper "ec2mapper on GitHub") (internal)
-
-
-
-bekk.github.io/retire.js
-
-oswap
-sdfdfsd
