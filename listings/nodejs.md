@@ -1,5 +1,30 @@
 ---
+###################
+# About this file #
+###################
+# This is a Jekyll content page for GovReady(TM) Clearinghouse technology listing.
+# The GovReady Clearinghouse technology listings are still in development and may change.
+# The content of this page drives the displayed content.
+#
+# The syntax for this file is YAML "Frontmatter" plus ASCII text formatted in markdown.
+# The Front matter is all content between the "---" and "---"
+# Any line begininging with a '#' is a comment and will be ignored.
+
+###################
+# Using this file #
+###################
+# To use this file, adjust the content to represent the product.
+
+
+#######################
+# Jekyll Instructions #
+#######################
+
+# Identify the layout template to be used for this page
 layout: listing2
+
+# Identify the permalink for the rendered page.
+# Tech listings should be `/tech/` to render as `http:/govready.org/tech/`
 permalink: /nodejs/
 
 # Quick Assess
