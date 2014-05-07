@@ -178,7 +178,7 @@ issue_tracker_url: "https://github.com/nuams/dkan/issues"
 src_code_url: "https://github.com/nuams/dkan"
 stable_release: "v1.0"
 stable_release_url: "https://github.com/nuams/dkan"
-commercial_support_url: "http://www.nucivic.com/products/nucivic"
+commercial_support_url: "http://www.nucivic.com/products/nudata"
 
 
 ################
