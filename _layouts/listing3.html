@@ -1,0 +1,106 @@
+{% include header.html %}
+
+
+<div class="listing-page">
+
+  
+  <!-- listing container -->
+  <div class="container lg-font col-sm-12">
+
+
+
+    
+    <!-- main listing content -->
+
+        <h1 class="listing-title">
+          <span class="">GovReady {{ page.name }} </span> 
+        </h1>
+
+
+        <div class="container lg-font col-sm-12 pull-left"  style="border:0px solid gray;">
+
+         
+              <div class="" id="about">
+                 
+                  <table class="table table-striped" width="100%" border="0">
+                    <tr>
+                    {% for item in page.quick_assessment %}
+                      <td><div style="">{{ item.name }}
+
+                      {% if item.value %}
+                         <span class="glyphicon glyphicon-ok text-success"></span>
+                      {% else %}
+                         <span class="glyphicon glyphicon-remove text-danger"></span>
+                      {% endif %}
+                    </div>
+                      </td>
+                    {% endfor %}
+                  
+                    </tr>
+                  </table>
+
+                  <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
+                  <img src="{{ page.logo2 }}" width="60"/>
+
+                  <p>{{ page.benefit }}</p>
+
+              </div>
+
+              <div>
+                  <h2 class="listing-section">Gallery of Government Deployments</h2>
+                  <div>&nbsp;</div>
+                  {% include instances_carousel.html %}
+              </div>
+
+              <div>
+                  <h2 class="listing-section">Videos</h2>
+                  <div class="clearfix">
+                    {% for video in page.videos %}
+                      <span class="pull-left listing-video" >{{ video }}</span>
+                    {% endfor %}
+                  </div>
+              </div>
+
+              <div>
+                  <h2 class="listing-section">FISMA-Certified Configurations</h2>
+
+                  <p>FISMA-Certified Configurations of DKAN are achieved via deployments that implement appropriate 800-53 controls on the underlying Operating System, Apache, MySQL, PHP and Drupal components. </p>
+
+
+                  <p><b>NuData on Acquia Cloud</b>. 
+                  This configuration inherits most of its controls from being hosted on FedRamp certified Acquia's Cloud and hardened Drupal configuration. As of 05/08/2014, the DKAN code has not receive </p>
+
+                  <p><b>DIY FISMA-Certified</b>.
+                    Begin with a FedRamp Cloud Provider. Next select a vetted Operating System image. Assemble approved configurations of Apache, PHP5 and MySQL.  DKAN's download includes Drupal version blah, blah, which corresponds to Acquia's blah, blah. The custom Drupal PHP code for DKAN's feature has yet to be FISMA-certified as of May 8, 2014.
+                  </p>
+              </div>
+
+              <div class="" id="procurement">
+                <h2 class="listing-section">Security (Monitoring &amp; Patching)</h2>
+              </div>
+
+              <div class="" id="security">
+                  <h2 class="listing-section">Available Support</h2> 
+              </div>
+
+              <div class="" id="accessibility">
+                  <h2 class="listing-section">508 Accessibility</h2>
+                  <p>orange orange orange orange orange</p> 
+              </div>
+
+
+    </div> 
+    <!-- /main listing content -->
+
+    
+
+  </div>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+  </script>  
+
+
+{% include footer.html %}

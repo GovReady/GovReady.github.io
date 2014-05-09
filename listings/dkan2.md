@@ -10,9 +10,6 @@
 # The Front matter is all content between the "---" and "---"
 # Any line begininging with a '#' is a comment and will be ignored.
 
-# Version of this file
-govready_version: 0.2
-
 #######################
 # License / Copyright #
 #######################
@@ -49,35 +46,6 @@ layout: listing2
 # Identify the permalink for the rendered page.
 # Tech listings should be `/tech/` to render as `http:/govready.org/tech/`
 permalink: /dkan/
-
-
-#####################
-# Basic Information #
-#####################
-
-# Name of tech
-name: DKAN
-
-summary: An open data catalog publishing suite.
-version: 1.0
-release: 2
-copyright: various
-vendor: NuCivic
-packager: Luke Fretwell <luke@nuams.co>
-govready_file: https://github.com/GovReady/govready-dkan/raw/master/govready.md
-
-# Primary website
-website: "http://www.nucivic.com/dkan/"
-
-# Full path to logo images
-# Put product name logo in `logo1` and pure icon in `logo2`.
-# Use `logo1` only if logo has name and icon
-logo1: http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png
-logo2:
-
-# Is there a formal policy on logo usage? Note link here.
-logo1_usage:
-  - "http://nucivic.com/about/media-kit/"
 
 
 #########################
@@ -123,6 +91,27 @@ quick_assessment:
   # Does SCAP content exist?
   - name: SCAP?
     value: false
+      
+
+#####################
+# Basic Information #
+#####################
+
+# Name of tech
+name: DKAN
+
+# Primary website
+website: "http://www.nucivic.com/dkan/"
+
+# Full path to logo images
+# Put product name logo in `logo1` and pure icon in `logo2`.
+# Use `logo1` only if logo has name and icon
+logo1: http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png
+logo2:
+
+# Is there a formal policy on logo usage? Note link here.
+logo1_usage:
+  - "http://nucivic.com/about/media-kit/"
 
 
 #####################

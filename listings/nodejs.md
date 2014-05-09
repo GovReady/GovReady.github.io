@@ -10,6 +10,9 @@
 # The Front matter is all content between the "---" and "---"
 # Any line begininging with a '#' is a comment and will be ignored.
 
+# Version of this file
+govready_version: 0.2
+
 #######################
 # License / Copyright #
 #######################
@@ -46,6 +49,47 @@ layout: listing2
 # Identify the permalink for the rendered page.
 # Tech listings should be `/tech/` to render as `http:/govready.org/tech/`
 permalink: /nodejs/
+
+
+#####################
+# Basic Information #
+#####################
+
+# Name of tech
+name: NodeJS
+
+# Adding the below to leverage RPM package manager conventions
+# The information below is just sample content
+#
+# `Source` should uniquely identify this technology
+
+summary: A very short phrase goes here.
+version: 1.0
+release: 2
+copyright: GPL
+group: Applications/Development
+source: ftp://ftp.gnomovision.com/pub/cdplayer/cdplayer-1.0.tgz
+url: http://www.gnomovision.com/cdplayer/cdplayer.html
+distribution: WSS Linux
+vendor: White Socks Software, Inc.
+packager: Santa Claus <sclaus@northpole.com>
+govready_file: govready
+
+
+
+# Primary website
+website: "http://www.nodejs.org/"
+
+# Full path to logo images
+# Put product name logo in `logo1` and pure icon in `logo2`.
+# Use `logo1` only if logo has name and icon
+logo1: /img/listings/nodejs/nodejs.png
+logo2:
+
+# Is there a formal policy on logo usage? Note link here.
+logo1_usage:
+  - "http://nodejs.org/logos/"
+  - "http://nodejs.org/trademark-policy.pdf"
 
 
 #########################
@@ -91,28 +135,6 @@ quick_assessment:
   # Does SCAP content exist?
   - name: SCAP?
     value: false
-      
-
-#####################
-# Basic Information #
-#####################
-
-# Name of tech
-name: NodeJS
-
-# Primary website
-website: "http://www.nodejs.org/"
-
-# Full path to logo images
-# Put product name logo in `logo1` and pure icon in `logo2`.
-# Use `logo1` only if logo has name and icon
-logo1: /img/listings/nodejs/nodejs.png
-logo2:
-
-# Is there a formal policy on logo usage? Note link here.
-logo1_usage:
-  - "http://nodejs.org/logos/"
-  - "http://nodejs.org/trademark-policy.pdf"
 
 
 #####################

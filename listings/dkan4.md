@@ -44,11 +44,11 @@ govready_version: 0.2
 #######################
 
 # Identify the layout template to be used for this page
-layout: listing2
+layout: listing4
 
 # Identify the permalink for the rendered page.
 # Tech listings should be `/tech/` to render as `http:/govready.org/tech/`
-permalink: /dkan/
+permalink: /dkan4/
 
 
 #####################
@@ -89,11 +89,11 @@ logo1_usage:
 quick_assessment: 
 
   # OK to use as part of an internal-to-government service?
-  - name: GovReady Internal
+  - name: Internal?
     value: true
   
   # OK to use as part of a public facing service?
-  - name: GovReady External
+  - name: Public?
     value: true
   
   # Actively being used by federal agency?
@@ -111,10 +111,6 @@ quick_assessment:
   # Can support be purchased?
   - name: Support?
     value: true
-  
-  # Suitable for what version of FISMA, L, M, H?
-  - name: Recommended for FISMA
-    value: L
 
   # Is technology easy to procure
   - name: Easy procurement?
@@ -167,11 +163,18 @@ procurement_references:
 # Images should be 900x500 currently. Either send the images to us, or make the image file available online.
 
 usg_instances:
-  - name: dkan
-    organization: NuCivic
-    description: .
-    url: "https://camo.githubusercontent.com/3649fae9c6e8ef0f22772340cb88f1b343d40e06/687474703a2f2f662e636c2e6c792f6974656d732f337133763132307130683171326432413373334c2f53637265656e73686f74253230323031342d30342d323925323031382e34302e31352e706e67"
-    live_url: "https://camo.githubusercontent.com/3649fae9c6e8ef0f22772340cb88f1b343d40e06/687474703a2f2f662e636c2e6c792f6974656d732f337133763132307130683171326432413373334c2f53637265656e73686f74253230323031342d30342d323925323031382e34302e31352e706e67"
+  - name: ec2mapper
+    organization: CFPB
+    description: EC2mapper is a web application that provides a user-friendly interface to view Amazon AWS network configurations.
+    url: "https://github.com/cfpb/ec2mapper"
+    img_src: "/img/listings/ec2mapper/ss2_cropped.png"
+
+  - name: design-manual
+    organization: CFPB
+    description: A set of design principles and standards for the Consumer Financial Protection Bureau. 
+    url: "https://github.com/cfpb/design-manual"
+    img_src: /img/listings/design-manual/dm_900x500.png
+    live_url: "http://cfpb.github.io/design-manual/"
 
 
 ####################################

@@ -1,0 +1,39 @@
+<!-- listing sidebar -->
+<div class="container lg-font col-sm-3" style="margin-top:0px;border:0px solid gray;">
+
+  <h1 style="border-bottom:0px solid #ddd;">
+  <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
+  <img src="{{ page.logo2 }}" width="60"/>
+  <div style="margin-bottom:12px;"></div>
+</h1>
+
+  <div><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download GovReady DKAN VM</button></div>
+  </br>
+  <div><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Launch GovReady DKAN Sandbox</button></div>
+
+  <hr />
+
+  <div style="border:1px solid gray; padding:8px;">
+    <table class="table table-striped" width="100%" border="0">
+
+      {% for item in page.quick_assessment %}
+        <tr><td>{{ item.name }}</td>
+
+        {% if item.value %}
+           <td><span class="glyphicon glyphicon-ok text-success"></span></td></tr>
+        {% else %}
+           <td><span class="glyphicon glyphicon-remove text-danger"></span></td></tr>
+        {% endif %}
+
+      {% endfor %}
+      <tr><td>Primary Vendor</td><td><a href="{{ page.managed_by_url }}">{{ page.managed_by }}</a></td></tr>
+      <tr><td>Primary About</td><td><a href="{{ page.about_url }}">{{ page.name }}</a></td></tr>
+      <tr><td>License</td><td><a href="{{ page.license_url }}">OSS</a></td></tr>
+      <tr><td>Source Code</td><td><a href="{{ page.source_code_url }}">GitHub</a></td></tr>
+    </table>
+    
+
+  </div>
+ 
+
+</div>
