@@ -141,7 +141,7 @@ who: need to offer better access to their public data sets
 product_is: an open data catalog and portal 
 that: is built on top of Drupal
 unlike: bespoke data portals
-product_features: combines features of the CKAN data catalog with full Drupal CMS capabilities
+product_features: combines features of the CKAN data catalog with full Drupal content management and blog capabilities
 
 ##################################
 # FISMA-Certified Configurations #
