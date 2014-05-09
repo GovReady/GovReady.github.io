@@ -11,7 +11,7 @@
 # Any line begininging with a '#' is a comment and will be ignored.
 
 # Version of this file
-govready_version: 0.2
+govready_version: 0.3
 
 #######################
 # License / Copyright #
@@ -42,13 +42,11 @@ govready_version: 0.2
 #######################
 # Jekyll Instructions #
 #######################
-
 # Identify the layout template to be used for this page
-layout: listing3
+layout: listing4
 
-# Identify the permalink for the rendered page.
-# Tech listings should be `/tech/` to render as `http:/govready.org/tech/`
-permalink: /nodejs3/
+# Identify the permalink for the rendered page. Example: `/nodejs/` to render as `http:/govready.org/nodejs/`
+permalink: /nodejs4/
 
 
 #####################
@@ -75,8 +73,6 @@ vendor: White Socks Software, Inc.
 packager: Santa Claus <sclaus@northpole.com>
 govready_file: govready
 
-
-
 # Primary website
 website: "http://www.nodejs.org/"
 
@@ -101,11 +97,11 @@ logo_usage:
 quick_assessment: 
 
   # OK to use as part of an internal-to-government service?
-  - name: GovReady Internal
+  - name: Internal?
     value: true
   
   # OK to use as part of a public facing service?
-  - name: GovReady External
+  - name: Public?
     value: true
   
   # Actively being used by federal agency?
@@ -123,10 +119,6 @@ quick_assessment:
   # Can support be purchased?
   - name: Support?
     value: true
-  
-  # Suitable for what version of FISMA, L, M, H?
-  - name: Recommended for FISMA
-    value: L
 
   # Is technology easy to procure
   - name: Easy procurement?
@@ -137,21 +129,54 @@ quick_assessment:
     value: false
 
 
-#####################
-# About Tab Content #
-#####################
-# The following content will display under the `About` tab. 
+##################
+# Elevator Pitch #
+##################
 # This is the first information people will see about the item listed.
+#
+# The Elevator Pitch describes who, what, and why of the product. The pitch follows the format:
+#
+# For (target customers) who (customer need or pain paint), (product name) is a (product category) 
+# that (key benefit proposition or problem-solving capability). Unlike, the product alternative),
+# Our product (describe the key product features).
+#
 
-# The Benefit paragraph is a unique summary of the benefits of the technology for government use. 
-# This is content is targeted to government audience.
-# GovReady reserves the right to modify this content and to own the copyright on the presented copy.
-# Any content you provide will be take as a suggestion. The purpose of this arrangement is to insure
-# the benefit description is provided by an editorial independent source. 
-# Benefit content is Copyrighted 2014 Greg Elin. All Rights Reserved.
-# ========================================================= #
-benefit: |
-  NodeJS significantly lowers the cost of large scale, real-time web apps with lots of interactions back and forth between the user and the server or between the users. NodeJS is also useful when user interactions trigger different types of events on the server that take varying amounts of time to complete. 
+for: web and mobile developers
+who: are building real-time web apps lots of user-to-user or user-to-server interactions
+product_is: a server-side Javascript application framework with integrated web server and rich ecosystem of community plugins
+that: is highly scalable 
+unlike: traditional server-side application frameworks
+product_features: executes in a single threaded loop with callbacks that simplifies management of asynchronous browser-to-server interactions
+
+
+##################################
+# FISMA-Certified Configurations #
+##################################
+
+FISMA_components: 
+  - name: facility
+    tier: Infrastructure/Data center
+    dependency: required
+    alternatives:
+      - Any FedRamp CSP
+    
+  - name: Linux
+    tier: Infrastructure/Operating system
+    dependency: required
+    adoption_usfed: widely used
+    alternatives:
+      - Windows
+    
+  - name: NodeJS
+    tier: Application/Programming Language
+    dependency: required
+    adoption_usfed: rare
+    alternatives:
+      - n/a
+
+
+FISMA-Certified: |
+  <p><b><a href="https://github.com/18f/fbopen">FBOpen.gsa.gov</a></b> by 18F (GSA) is a FISMA-Compliant configurtion which has an Authority to Operate issued by GSA. Most of the 800-53 controls are inherited from being hosted on FedRamp-certified AWS cloud and on hardened version of Ubuntu.</p>
 
 
 ###########################
@@ -162,31 +187,15 @@ benefit: |
 
 # Provide a narrative description describing how to categorize the technology from a procurement perspective. 
 procurement_guidance: |
-  <p>NodeJS is licensed to the general public therefore should be treated as commercial computer software (e.g., COTS) as per <a href="http://acquisition.gov/far/current/html/Subpart%202_1.html#wp1145508">FAR Supbart 2.101</a>.</p> 
-
-  <p>NodeJS is available as open source software and in this format can be acquired and used at no contract directly by agency staff and contractors according to the agency's policy on open source software. Staff and contractors at government agencies that do not have formal open source software policy are authorized to use open source according to the FAR.</p>
-
-  <p>An enterprise version of NodeJS is offered by <a href="http://www.joyent.com/technology/nodejs">Joyent</a>. As of this writing, only Joyent offering an enterprise version of NodeJS and therefore is eligible for sole source acquisition.</p> 
-
-  <p>Various vendors host applications in NodeJS. Various vendors support NodeJS and NodeJS applications.</p>
+  <p>TBD</p> 
 
 # List the relevent FAR sections for procurement of this item as a convenience to procurement professionals.
 # This section is still under development.
 procurement_references: 
 
-  - name: FAR Part 12—Acquisition of Commercial Items
-    url: "http://acquisition.gov/far/current/html/FARTOCP12.html"
-    description: This section describes purchase options
-
-  - name: Federal Acquisition Regulation; FAR Case 2000-305, Commercially Available Off-the-Shelf (COTS) Items
-    url: "https://www.federalregister.gov/articles/2009/01/15/E9-551/federal-acquisition-regulation-far-case-2000-305-commercially-available-off-the-shelf-cots-items"
-    summary: |
-      The Civilian Agency Acquisition Council and the Defense Acquisition Regulations Council (Councils) have agreed on a final rule amending the Federal Acquisition Regulation (FAR) to implement Section 4203 of the Clinger-Cohen Act of 1996 (41 U.S.C. 431) (the Act) with respect to the inapplicability of certain laws to contracts and subcontracts for the acquisition of commercially available off-the-shelf (COTS) items.
-
-  - name: "Free-Libre / Open Source Software (FLOSS) is Commercial Software"
-    url: "http://www.dwheeler.com/essays/commercial-floss.html"
-    description: | 
-      Nearly all FLOSS projects are commercial. In this essay I’ll explain why it so important to understand that FLOSS software is almost always commercial, and then give examples of each of those four points (listed above) to justify the claim that FLOSS is commercial. 
+  - name: TBD
+    url: "TBD"
+    description: TBD
 
 
 ##################
@@ -251,15 +260,14 @@ security:
   - "http://www.slideshare.net/evilpacket/node-day-enterprise-nodejs-security"
 
 
-####################################
+
+##########
 # Videos #
-####################################
+##########
 # Select videos that would help developers, project managemers, IT admins, CIOs rapidly grok the technology
 videos:
   - <h4>NodeJS intro</h4><iframe width="260" height="157"  src="//www.youtube.com/embed/GJmFG4ffJZU" frameborder="0" allowfullscreen></iframe>
   - <h4>NodeJS Tech Internals</h4><iframe width="260" height="157" src="http://www.youtube.com/embed/L0pjVcIsU6A" frameborder="0" allowfullscreen></iframe>
-  
 
 # End of Frontmatter. Do not touch the `---` below.
 ---
-

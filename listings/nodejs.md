@@ -87,7 +87,7 @@ logo1: /img/listings/nodejs/nodejs.png
 logo2:
 
 # Is there a formal policy on logo usage? Note link here.
-logo1_usage:
+logo_usage:
   - "http://nodejs.org/logos/"
   - "http://nodejs.org/trademark-policy.pdf"
 
