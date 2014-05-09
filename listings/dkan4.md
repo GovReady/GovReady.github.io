@@ -183,8 +183,7 @@ FISMA_notes:
 
 
 FISMA-Certified: |
-  <p><b><a href="">NuData</a></b>. 
-  This configuration inherits most of its controls from being hosted on FedRamp certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.</p>
+  <p><b><a href="">NuData</a></b> is a SaaS offering of DKAN that claims FISMA-Compliance because it is hosted on FedRamp-certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.</p>
 
 FISMA-Certified_DIY: |
   Begin with a FedRamp Cloud Provider. Next select a vetted Operating System image. Assemble approved configurations of Apache, PHP5 and MySQL.  DKAN's download includes Drupal version blah, blah, which corresponds to Acquia's blah, blah. The custom Drupal PHP code for DKAN's feature has yet to be FISMA-certified as of May 8, 2014.

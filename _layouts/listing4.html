@@ -42,6 +42,8 @@
 
               <div>
                   <h2 class="listing-section">FISMA-Certified Configurations</h2>
+
+                  <h3 class="listing-subsection">How are FISMA-certified configurations of {{ page.name }} achieved?</h3>
                   <p>FISMA-Certified Configurations of {{ page.name }} are achieved via appropriate 800-53 controls on 
                     {% for item in page.FISMA_components %}
                       {% if forloop.last %}
@@ -55,11 +57,11 @@
                       <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
                   {% endfor %}
 
-                  <h3 class="listing-subsection">Available Configurations</h3>
+                  <h3 class="listing-subsection">What FISMA-certified configurations of {{ page.name }} are available?</h3>
                   
                   {{ page.FISMA-Certified }}
 
-                  <h3 class="listing-subsection">Roll Your Own</h3>
+                  <h3 class="listing-subsection">Roll Your Own FISMA-certified configuration of {{ page.name }} </h3>
                   {{ page.FISMA-Certified_DIY }}
 
               </div>
