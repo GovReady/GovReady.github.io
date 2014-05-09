@@ -15,86 +15,104 @@
         <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
 
         <h1 class="listing-title">
-          <span class="">GovReady {{ page.name }} </span> 
+          <span class="">GovReady Assessment of {{ page.name }} </span> 
         </h1>
-
-
-        
          
-              <div class="" id="about">
-                  <p>For {{ page.for }} who {{ page.who }}, <b>{{ page.name }} is {{ page.product_is }} that {{ page.that }}</b>.
-                     Unlike {{ page.unlike }}, {{ page.name }} {{ page.product_features }}.</p>
+          <div class="" id="about">
+              <p>For {{ page.for }} who {{ page.who }}, <b>{{ page.name }} is {{ page.product_is }} that {{ page.that }}</b>.
+                 Unlike {{ page.unlike }}, {{ page.name }} {{ page.product_features }}.</p>
 
+          </div>
+
+          <div>
+              <h2 class="listing-section">Gallery of Government Deployments</h2>
+              {% include instances_carousel.html %}
+          </div>
+
+          <div>
+              <h2 class="listing-section">Videos</h2>
+              <div class="clearfix">
+                {% for video in page.videos %}
+                  <span class="pull-left listing-video" >{{ video }}</span>
+                {% endfor %}
               </div>
+          </div>
 
-              <div>
-                  <h2 class="listing-section">Gallery of Government Deployments</h2>
-                  {% include instances_carousel.html %}
-              </div>
+          <div>
+              <h2 class="listing-section">FISMA-Certified Configurations</h2>
 
-              <div>
-                  <h2 class="listing-section">Videos</h2>
-                  <div class="clearfix">
-                    {% for video in page.videos %}
-                      <span class="pull-left listing-video" >{{ video }}</span>
-                    {% endfor %}
-                  </div>
-              </div>
+              <h3 class="listing-subsection">How are FISMA-certified configurations of {{ page.name }} achieved?</h3>
+              <p>F<td></td>ISMA-Certified Configurations of {{ page.name }} are achieved via appropriate 800-53 controls on 
+                {% for item in page.FISMA_components %}
+                  {% if forloop.last %}
+                    and <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>.
+                  {% else %}
+                    <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>, 
+                  {% endif %}
+                {% endfor %}
+              </p>
+              {% for item in page.FISMA_notes %}
+                  <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
+              {% endfor %}
 
-              <div>
-                  <h2 class="listing-section">FISMA-Certified Configurations</h2>
-
-                  <h3 class="listing-subsection">How are FISMA-certified configurations of {{ page.name }} achieved?</h3>
-                  <p>FISMA-Certified Configurations of {{ page.name }} are achieved via appropriate 800-53 controls on 
-                    {% for item in page.FISMA_components %}
-                      {% if forloop.last %}
-                        and <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>.
-                      {% else %}
-                        <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>, 
-                      {% endif %}
-                    {% endfor %}
-                  </p>
-                  {% for item in page.FISMA_notes %}
-                      <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
-                  {% endfor %}
-
-                  <h3 class="listing-subsection">What FISMA-certified configurations of {{ page.name }} are available?</h3>
-                  
-                  {{ page.FISMA-Certified }}
-
-                  <h3 class="listing-subsection">Roll Your Own FISMA-certified configuration of {{ page.name }} </h3>
-                  {{ page.FISMA-Certified_DIY }}
-
-              </div>
-
-              <div class="" id="security">
-                <h2 class="listing-section">Security Monitoring &amp; Patching</h2>
-                <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam. Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
-
-                
+              <h3 class="listing-subsection">What FISMA-certified configurations of {{ page.name }} are available?</h3>
               
-                <h3 class="listing-subsection">Recent US Cert Alerts</h3>
-                  <p>{{ page.us_cert_recent }}</p>
-              
+              {{ page.FISMA-Certified }}
 
-              </div>
+              <h3 class="listing-subsection">Roll Your Own FISMA-certified configuration of {{ page.name }} </h3>
+              <table class="table table-striped" width="100%" border="0">
+                <tr>
+                    <td>Component</td>
+                    <td>Tier</td>
+                    <td>Federal Gov Penetration</td>
+                    <td>Substitutes</td>
+                </tr>
+                {% for item in page.FISMA_components %}
+                  <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.tier }}</td>
+                    <td>{{ item.adoption_usfed }}</td>
+                    <td>{% for other in item.alternatives %} {{ other }} {% endfor %}</td>
+                  </tr>
+                {% endfor %}
+              </table>
 
-              
-              <div class="" id="support">
-                  <h2 class="listing-section">Available Support</h2> 
-                  <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
 
-                  <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
+          </div>
 
-                  <p>Modus facete detracto ei his, debitis menandri nec at. At has diam velit molestie. Vel at bonorum pertinacia. Has id homero appetere reformidans, cum in vidisse consequat, elitr labore euripidis ius eu. Mea no feugiat volutpat sadipscing. Vel eu alia prima movet, eius decore neglegentur at nam.</p>
-              </div>
+          <div class="" id="security">
+            <h2 class="listing-section">Security Monitoring &amp; Patching</h2>
+            <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam. Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
 
-              <div class="" id="accessibility">
-                  <h2 class="listing-section">508 Accessibility</h2>
-                  <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
+            
+          
+            <h3 class="listing-subsection">Recent US Cert Alerts</h3>
+              <p>{{ page.us_cert_recent }}</p>
+          
 
-                  <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
-              </div>
+          </div>
+
+          
+          <div class="" id="support">
+            <h2 class="listing-section">Available Support</h2> 
+            <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
+
+            <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
+
+            <p>Modus facete detracto ei his, debitis menandri nec at. At has diam velit molestie. Vel at bonorum pertinacia. Has id homero appetere reformidans, cum in vidisse consequat, elitr labore euripidis ius eu. Mea no feugiat volutpat sadipscing. Vel eu alia prima movet, eius decore neglegentur at nam.</p>
+          </div>
+
+          <div class="" id="accessibility">
+            <h2 class="listing-section">508 Accessibility</h2>
+            <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
+
+            <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
+          </div>
+
+          <div class="" id="misc">
+            <h2 class="listing-section">Miscellaneous</h2>
+            <p>{{ page.vendor }} describes its logo usage policy at <a href="{{ page.logo_usage }}">{{ page.logo_usage }}</a>.</p>
+          </div>
 
 
     </div> 

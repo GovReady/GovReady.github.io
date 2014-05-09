@@ -42,12 +42,10 @@ govready_version: 0.3
 #######################
 # Jekyll Instructions #
 #######################
-
 # Identify the layout template to be used for this page
 layout: listing4
 
-# Identify the permalink for the rendered page.
-# Tech listings should be `/tech/` to render as `http:/govready.org/tech/`
+# Identify the permalink for the rendered page. Example: `/nodejs/` to render as `http:/govready.org/nodejs/`
 permalink: /dkan4/
 
 
@@ -76,7 +74,7 @@ logo1: http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png
 logo2:
 
 # Is there a formal policy on logo usage? Note link here.
-logo1_usage:
+logo_usage:
   - "http://nucivic.com/about/media-kit/"
 
 
@@ -121,21 +119,18 @@ quick_assessment:
     value: false
 
 
-#####################
-# About Tab Content #
-#####################
-# The following content will display under the `About` tab. 
+##################
+# Elevator Pitch #
+##################
 # This is the first information people will see about the item listed.
-
-# The Benefit paragraph is a unique summary of the benefits of the technology for government use. 
-# This is content is targeted to government audience.
-# GovReady reserves the right to modify this content and to own the copyright on the presented copy.
-# Any content you provide will be take as a suggestion. The purpose of this arrangement is to insure
-# the benefit description is provided by an editorial independent source. 
-# Benefit content is Copyrighted 2014 Greg Elin. All Rights Reserved.
-# ========================================================= #
-elevator_pitch: |
-  DKAN is a Drupal-based open data platform with a full suite of cataloging, publishing and visualization features that allows governments, nonprofits and universities to easily publish data to the public. You can host DKAN yourself or leverage cloud-based offerings from NuCivic. 
+#
+# The Elevator Pitch describes who, what, and why of the product. The pitch follows the format:
+#
+# For (target customers) who (customer need or pain paint), (product name) is a (product category) 
+# that (key benefit proposition or problem-solving capability). Unlike, the product alternative),
+# Our product (describe the key product features).
+#
+ 
 for: organizations
 who: need to offer better access to their public data sets 
 product_is: an open data catalog and portal 
@@ -143,44 +138,63 @@ that: is built on top of Drupal
 unlike: bespoke data portals
 product_features: combines features of the CKAN data catalog with full Drupal content management and blog capabilities
 
+
 ##################################
 # FISMA-Certified Configurations #
 ##################################
 
 FISMA_components: 
   - name: facility
+    tier: Infrastructure/Data center
     dependency: required
+    alternatives:
+      - Any FedRamp CSP
     
   - name: Linux
+    tier: Infrastructure/Operating system
     dependency: required
+    adoption_usfed: widely used
     alternatives:
       - None
     
   - name: Apache
+    tier: Application/Web Server
     dependency: required
+    adoption_usfed: widely used
     alternatives:
       - NGINX
 
   - name: MySQL
+    tier: Application/Database
     dependency: required
+    adoption_usfed: broadly used
     alternatives:
       - MariaDB
       - PostgreSQL
 
   - name: PHP
+    tier: Infrastructure/Programming Language
     dependency: required
+    adoption_usfed: broadly used
     alternatives:
       - None
 
   - name: Drupal
+    tier: Application/CMS
     dependency: required
+    adoption_usfed: emerging
     alternatives:
       - None
     notes:
       - Part of DKAN download
     
   - name: DKAN
+    tier: Application/Customized CMS
     dependency: required
+    adoption_usfed: rare
+    alternatives:
+      - n/a
+    
 
 FISMA_notes:
   - name: DKAN not yet certified
@@ -191,9 +205,6 @@ FISMA_notes:
 FISMA-Certified: |
   <p><b><a href="">NuData</a></b> is a SaaS offering of DKAN that claims FISMA-Compliance because it is hosted on FedRamp-certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.</p>
 
-FISMA-Certified_DIY: |
-  Begin with a FedRamp Cloud Provider. Next select a vetted Operating System image. Assemble approved configurations of Apache, PHP5 and MySQL.  DKAN's download includes Drupal version blah, blah, which corresponds to Acquia's blah, blah. The custom Drupal PHP code for DKAN's feature has yet to be FISMA-certified as of May 8, 2014.
-  </p>
 
 ###########################
 # Procurement Tab Content #
