@@ -11,7 +11,7 @@
 # Any line begininging with a '#' is a comment and will be ignored.
 
 # Version of this file
-govready_version: 0.2
+govready_version: 0.3
 
 #######################
 # License / Copyright #
@@ -134,8 +134,14 @@ quick_assessment:
 # the benefit description is provided by an editorial independent source. 
 # Benefit content is Copyrighted 2014 Greg Elin. All Rights Reserved.
 # ========================================================= #
-benefit: |
+elevator_pitch: |
   DKAN is a Drupal-based open data platform with a full suite of cataloging, publishing and visualization features that allows governments, nonprofits and universities to easily publish data to the public. You can host DKAN yourself or leverage cloud-based offerings from NuCivic. 
+for: Government bodies
+who: need to offer better access to their public data sets 
+product_is: an open data catalog and portal 
+that: is built on top of Drupal
+unlike: bespoke data portals
+product_features: combines features of CKAN data catalog and full Drupal CMS capabilities
 
 ##################################
 # FISMA-Certified Configurations #
