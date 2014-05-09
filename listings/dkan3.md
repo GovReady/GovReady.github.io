@@ -136,7 +136,59 @@ quick_assessment:
 # ========================================================= #
 benefit: |
   DKAN is a Drupal-based open data platform with a full suite of cataloging, publishing and visualization features that allows governments, nonprofits and universities to easily publish data to the public. You can host DKAN yourself or leverage cloud-based offerings from NuCivic. 
+##################################
+# FISMA-Certified Configurations #
+##################################
 
+FISMA_components: 
+  - name: facility
+    dependency: required
+    
+  - name: Linux
+    dependency: required
+    alternatives:
+      - None
+    
+  - name: Apache
+    dependency: required
+    alternatives:
+      - NGINX
+
+  - name: MySQL
+    dependency: required
+    alternatives:
+      - MariaDB
+      - PostgreSQL
+
+  - name: PHP
+    dependency: required
+    alternatives:
+      - None
+
+  - name: Drupal
+    dependency: required
+    alternatives:
+      - None
+    notes:
+      - Part of DKAN download
+    
+  - name: DKAN
+    dependency: required
+
+FISMA_notes:
+  - name: DKAN not yet certified
+    description: Code specific to DKAN itself is not known to have been FISMA-certified. 
+    date: 2014-05-09
+
+
+FISMA-Certified: |
+
+  <p><b>NuData on Acquia Cloud</b>. 
+  This configuration inherits most of its controls from being hosted on FedRamp certified Acquia's Cloud and hardened Drupal configuration. As of 05/08/2014, the DKAN code has not receive </p>
+
+  <p><b>DIY FISMA-Certified</b>.
+  Begin with a FedRamp Cloud Provider. Next select a vetted Operating System image. Assemble approved configurations of Apache, PHP5 and MySQL.  DKAN's download includes Drupal version blah, blah, which corresponds to Acquia's blah, blah. The custom Drupal PHP code for DKAN's feature has yet to be FISMA-certified as of May 8, 2014.
+  </p>
 
 ###########################
 # Procurement Tab Content #

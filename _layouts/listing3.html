@@ -63,16 +63,19 @@
 
               <div>
                   <h2 class="listing-section">FISMA-Certified Configurations</h2>
-
-                  <p>FISMA-Certified Configurations of DKAN are achieved via deployments that implement appropriate 800-53 controls on the underlying Operating System, Apache, MySQL, PHP and Drupal components. </p>
-
-
-                  <p><b>NuData on Acquia Cloud</b>. 
-                  This configuration inherits most of its controls from being hosted on FedRamp certified Acquia's Cloud and hardened Drupal configuration. As of 05/08/2014, the DKAN code has not receive </p>
-
-                  <p><b>DIY FISMA-Certified</b>.
-                    Begin with a FedRamp Cloud Provider. Next select a vetted Operating System image. Assemble approved configurations of Apache, PHP5 and MySQL.  DKAN's download includes Drupal version blah, blah, which corresponds to Acquia's blah, blah. The custom Drupal PHP code for DKAN's feature has yet to be FISMA-certified as of May 8, 2014.
+                  <div>
+                  <h2 class="listing-section">FISMA-Certified Configurations</h2>
+                  <p>FISMA-Certified Configurations of {{ page.name }} are achieved via appropriate 800-53 controls on the components of 
+                    {% for item in page.FISMA_components %}
+                      {% if forloop.last %}
+                        and <span class="" >{{ item.name }}</span>.
+                      {% else %}
+                        <span class="" >{{ item.name }}</span>, 
+                      {% endif %}
+                    {% endfor %}
                   </p>
+
+                  {{ page.FISMA-Certified }}
               </div>
 
               <div class="" id="procurement">
