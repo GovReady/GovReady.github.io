@@ -186,7 +186,7 @@ FISMA-Certified: |
   <p><b><a href="">NuData</a></b>. 
   This configuration inherits most of its controls from being hosted on FedRamp certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.</p>
 
-  <p><b>DIY FISMA-Certified</b>.
+FISMA-Certified_DIY: |
   Begin with a FedRamp Cloud Provider. Next select a vetted Operating System image. Assemble approved configurations of Apache, PHP5 and MySQL.  DKAN's download includes Drupal version blah, blah, which corresponds to Acquia's blah, blah. The custom Drupal PHP code for DKAN's feature has yet to be FISMA-certified as of May 8, 2014.
   </p>
 
@@ -254,7 +254,14 @@ commercial_support_url: "http://www.nucivic.com/products/nudata"
 # Purpose of this tab is to communicate to security professionals and developers how the technology can be monitored and patched.
 
 us_cert_recent: |
-  TBD
+  <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4450">10/21/2013 - CVE-2013-4450</a> <span class="text-warning">Medium severity</span> The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.
+security:
+  - "https://nodesecurity.io/advisories"
+  - "https://nodesecurity.io/rss.xml"
+  - "https://twitter.com/nodesecurity"
+  - "http://blog.nodejs.org/"
+  - "https://groups.google.com/forum/#!forum/nodejs-sec"
+  - "http://www.slideshare.net/evilpacket/node-day-enterprise-nodejs-security"
 
 
 ####################################

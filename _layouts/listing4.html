@@ -28,7 +28,6 @@
 
               <div>
                   <h2 class="listing-section">Gallery of Government Deployments</h2>
-                  <div>&nbsp;</div>
                   {% include instances_carousel.html %}
               </div>
 
@@ -52,26 +51,46 @@
                       {% endif %}
                     {% endfor %}
                   </p>
-
                   {% for item in page.FISMA_notes %}
                       <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
                   {% endfor %}
 
+                  <h3 class="listing-subsection">Available Configurations</h3>
+                  
                   {{ page.FISMA-Certified }}
 
-              </div>
+                  <h3 class="listing-subsection">Roll Your Own</h3>
+                  {{ page.FISMA-Certified_DIY }}
 
-              <div class="" id="procurement">
-                <h2 class="listing-section">Security (Monitoring &amp; Patching)</h2>
               </div>
 
               <div class="" id="security">
+                <h2 class="listing-section">Security (Monitoring &amp; Patching)</h2>
+                <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam. Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
+
+                
+              
+                <h3 class="listing-subsection">Recent US Cert Alerts</h3>
+                  <p>{{ page.us_cert_recent }}</p>
+              
+
+              </div>
+
+              
+              <div class="" id="support">
                   <h2 class="listing-section">Available Support</h2> 
+                  <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
+
+                  <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
+
+                  <p>Modus facete detracto ei his, debitis menandri nec at. At has diam velit molestie. Vel at bonorum pertinacia. Has id homero appetere reformidans, cum in vidisse consequat, elitr labore euripidis ius eu. Mea no feugiat volutpat sadipscing. Vel eu alia prima movet, eius decore neglegentur at nam.</p>
               </div>
 
               <div class="" id="accessibility">
                   <h2 class="listing-section">508 Accessibility</h2>
-                  <p>orange orange orange orange orange</p> 
+                  <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
+
+                  <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
               </div>
 
 
