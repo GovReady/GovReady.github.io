@@ -46,7 +46,7 @@ govready_version: 0.3
 layout: listing4
 
 # Identify the permalink for the rendered page. Example: `/nodejs/` to render as `http:/govready.org/nodejs/`
-permalink: /dkan4/
+permalink: /apache4/
 
 
 #####################
@@ -54,28 +54,35 @@ permalink: /dkan4/
 #####################
 
 # Name of tech
-name: DKAN
+name: Apache
 
-summary: An open data catalog publishing suite.
+# Adding the below to leverage RPM package manager conventions
+# The information below is just sample content
+#
+# `Source` should uniquely identify this technology
+
+summary: A very short phrase goes here.
 version: 1.0
 release: 2
-copyright: various
-vendor: NuCivic
-packager: Luke Fretwell <luke@nuams.co>
-govready_file: https://github.com/GovReady/govready-dkan/raw/master/govready.md
+copyright: GPL
+group: Applications/Development
+source: ftp://ftp.gnomovision.com/pub/cdplayer/cdplayer-1.0.tgz
+url: http://www.gnomovision.com/cdplayer/cdplayer.html
+distribution: WSS Linux
+vendor: Apache Foundation
 
 # Primary website
-website: "http://www.nucivic.com/dkan/"
+website: "http://httpd.apache.org/"
 
 logo:
-  dedicated_webpage: "http://nucivic.com/about/media-kit/"
+  dedicated_webpage: "http://www.apache.org/foundation/press/kit/"
   dedicated_feed: false
   feed_format: false
   supplemental_info: 
-  img_src: "http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png"
+  img_src: "http://www.apache.org/images/feather.gif"
 
 logo_usage:
-  dedicated_webpage: "http://nucivic.com/about/media-kit/"
+  dedicated_webpage: "http://www.apache.org/foundation/marks/"
   dedicated_feed: false
   feed_format: false
   img_src: false
@@ -98,7 +105,7 @@ quick_assessment:
   
   # Actively being used by federal agency?
   - name: In use?
-    value: false
+    value: true
   
   # Are patches regularly published and easy to find automatically?
   - name: Patching?
@@ -116,9 +123,9 @@ quick_assessment:
   - name: Easy procurement?
     value: true
 
-   # Vulnerabilities tacked in NVD?
+  # Vulnerabilities tacked in NVD?
   - name: Tracked in NVD?
-    value: false
+    value: true
 
   # Does SCAP content exist?
   - name: SCAP?
@@ -136,13 +143,14 @@ quick_assessment:
 # that (key benefit proposition or problem-solving capability). Unlike, the product alternative),
 # Our product (describe the key product features).
 #
- 
+# Product name and punction is automatically inserted. 
+
 for: organizations
-who: need to offer better access to their public data sets 
-product_is: an open data catalog and portal 
-that: is built on top of Drupal
-unlike: bespoke data portals
-product_features: combines features of the CKAN data catalog with full Drupal content management and blog capabilities
+who: want to utilize the web for sharing documents, data, and delivery interactive services 
+product_is: a HTTP web server
+that: is open source, mature, Java-based, highly-configurable and the world's most popular web server
+unlike: propietary web servers
+product_features: Apache and it's configuration files are well known to most system administrators and ships with most Linux distributions
 
 
 ##################################
@@ -161,75 +169,31 @@ FISMA_components:
     dependency: required
     adoption_usfed: widely used
     alternatives:
-      - None
+      - Windows
     
   - name: Apache
     tier: Application/Web Server
     dependency: required
     adoption_usfed: widely used
     alternatives:
-      - NGINX
-
-  - name: MySQL
-    tier: Application/Database
-    dependency: required
-    adoption_usfed: broadly used
-    alternatives:
-      - MariaDB
-      - PostgreSQL
-
-  - name: PHP
-    tier: Application/Programming Language
-    dependency: required
-    adoption_usfed: broadly used
-    alternatives:
       - None
-
-  - name: Drupal
-    tier: Application/CMS
-    dependency: required
-    adoption_usfed: emerging
-    alternatives:
-      - None
-    notes:
-      - Part of DKAN download
-    
-  - name: DKAN
-    tier: Application/Customized CMS
-    dependency: required
-    adoption_usfed: rare
-    alternatives:
-      - None
-    
-
-FISMA_notes:
-  - name: DKAN not yet certified
-    description: Code specific to DKAN itself is not known to have been FISMA-certified. 
-    date: 2014-05-09
-    severity: warning
 
 
 FISMA-Certified: |
-  <p><b><a href="">NuData</a></b> is a SaaS offering of DKAN that claims FISMA-Compliance because it is hosted on FedRamp-certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.</p>
+  <p><b><a href="https://github.com/18f/fbopen">RedHat Enterprise Linux</a></b> by RedHat (GSA) is a widely used by government offering Linux Operationg system that includes signed software packages including Apache. </p>
 
 
-###########################
-# Procurement Tab Content #
-###########################
-# This section is still under development.
-# The purpose of this section is to describe how to legally obtain, or "procure" the technology for use. The content of this page is aimed at project managers and procurement professionals.
+##################
+# Usage Gallery #
+##################
+# Images should be 900x500 currently. Either send the images to us, or make the image file available online.
 
-# Provide a narrative description describing how to categorize the technology from a procurement perspective. 
-procurement_guidance: |
-  <p>TBD</p> 
-
-# List the relevent FAR sections for procurement of this item as a convenience to procurement professionals.
-# This section is still under development.
-procurement_references: 
-
-  - name: TBD
-    url: "TBD"
-    description: TBD
+usg_instances:
+  - name: fcc.gov
+    organization: FCC
+    description: FCC's web site.
+    url: "http://www.fcc.gov"
+    img_src: "/img/listings/apache/apache-fcc-gov_900x500.png"
 
 
 ####################################
@@ -239,35 +203,64 @@ procurement_references:
 # The goal is to incorporate this information into the Quick Assessment Data. 
 # For now just update information
 
-managed_by: NuCivic
-managed_by_url: "http://www.nucivic.com"
-license_url: "https://github.com/nuams/dkan/blob/7.x-1.x/LICENSE.txt"
-about_url: "http://www.nucivic.com/dkan/"
-issue_tracker_url: "https://github.com/nuams/dkan/issues"
-src_code_url: "https://github.com/nuams/dkan"
-stable_release: "v1.0"
-stable_release_url: "https://github.com/nuams/dkan"
-commercial_support_url: "http://www.nucivic.com/products/nudata"
+managed_by: Apache Foundation
+managed_by_url: "http://httpd.apache.org"
+license_url: "http://www.apache.org/licenses/"
+about_url: "http://httpd.apache.org/ABOUT_APACHE.html"
+issue_tracker_url: "https://issues.apache.org/bugzilla/"
+security_url: "http://httpd.apache.org/security_report.html"
+src_code_url: "http://svn.apache.org/repos/asf/httpd/"
+stable_release: "2.4.9"
+stable_release_url: "http://httpd.apache.org/download.cgi"
+commercial_support_url: 
+  - name: OpenLogic
+    url: "http://olex.openlogic.com/support/apache-support"
+  - name: Pantek
+    url: "http://www.pantek.com/support.php?subsect=apache&_vsrefdom=paidsearch&gclid=CO_anauNor4CFYMSOgodPy4ATw"
 
 
-################
-# Security Tab #
-################
+############
+# Security #
+############
 # Goal is to automate this content.
 # Purpose of this tab is to communicate to security professionals and developers how the technology can be monitored and patched.
 
+security_reports: 
+  dedicated_webpage: "http://httpd.apache.org/security_report.html"
+  dedicated_feed: false
+  feed_format: false
 
-####################################
+
+
+##########
 # Videos #
-####################################
+##########
 # Select videos that would help developers, project managemers, IT admins, CIOs rapidly grok the technology
 videos:
-  - <h4>DKAN 101</h4><iframe width="260" height="157" src="//www.youtube.com/embed/wj-7x9f8SIQ" frameborder="0" allowfullscreen></iframe>
-  
-videos2:
-  - name: DKAN 101
-    src: "//www.youtube.com/embed/wj-7x9f8SIQ"
-    duration: 
+  - <h4>Install Apache</h4><iframe width="260" height="157" src="//www.youtube.com/embed/oeZpY6JY4iI" frameborder="0" allowfullscreen></iframe>
+  - <h4>Quick Apache Web Server</h4><iframe width="260" height="157" src="//www.youtube.com/embed/xCJkMIYwjp8" frameborder="0" allowfullscreen></iframe>
+  - <h4>The Apache Web Server</h4><iframe width="260" height="157" src="//www.youtube.com/embed/eJ2ZPi3UCG0" frameborder="0" allowfullscreen></iframe>
+  - <h4>Install Apache HTTP<br />Server 2.2.13 for Windows</h4><iframe width="260" height="157" src="//www.youtube.com/embed/8tBkEWPOqqk" frameborder="0" allowfullscreen></iframe>
+
+#######################
+# Accessibility - 508 #
+#######################
+# Accessibility support for individuals with disabilities
+
+accessibility_info:
+  dedicated_webpage: false
+  dedicated_feed: false
+
+accessibility_v-pat:
+  dedicated_webpage: false
+  dedicated_feed: false
+
+accessibility_notes:
+  - name: Apache is text-based configuration
+    description: Apache configuration is text-based. Users of assistive-technologies should be able to work with Apache.
+    date: 2014-05-12
+    severity: success
+
 
 # End of Frontmatter. Do not touch the `---` below.
 ---

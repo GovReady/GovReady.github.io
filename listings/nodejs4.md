@@ -179,25 +179,6 @@ FISMA-Certified: |
   <p><b><a href="https://github.com/18f/fbopen">FBOpen.gsa.gov</a></b> by 18F (GSA) is a FISMA-Compliant configurtion which has an Authority to Operate issued by GSA. Most of the 800-53 controls are inherited from being hosted on FedRamp-certified AWS cloud and on hardened version of Ubuntu.</p>
 
 
-###########################
-# Procurement Tab Content #
-###########################
-# This section is still under development.
-# The purpose of this section is to describe how to legally obtain, or "procure" the technology for use. The content of this page is aimed at project managers and procurement professionals.
-
-# Provide a narrative description describing how to categorize the technology from a procurement perspective. 
-procurement_guidance: |
-  <p>TBD</p> 
-
-# List the relevent FAR sections for procurement of this item as a convenience to procurement professionals.
-# This section is still under development.
-procurement_references: 
-
-  - name: TBD
-    url: "TBD"
-    description: TBD
-
-
 ##################
 # Usage Gallery #
 ##################

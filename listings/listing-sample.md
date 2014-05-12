@@ -11,7 +11,7 @@
 # Any line begininging with a '#' is a comment and will be ignored.
 
 # Version of this file
-govready_version: 0.3
+govready_version: 0.3.1
 
 #######################
 # License / Copyright #
@@ -46,7 +46,7 @@ govready_version: 0.3
 layout: listing4
 
 # Identify the permalink for the rendered page. Example: `/nodejs/` to render as `http:/govready.org/nodejs/`
-permalink: /dkan4/
+permalink: /nodejs4/
 
 
 #####################
@@ -54,31 +54,39 @@ permalink: /dkan4/
 #####################
 
 # Name of tech
-name: DKAN
+name: NodeJS
 
-summary: An open data catalog publishing suite.
+# Adding the below to leverage RPM package manager conventions
+# The information below is just sample content
+#
+# `Source` should uniquely identify this technology
+
+summary: A very short phrase goes here.
 version: 1.0
 release: 2
-copyright: various
-vendor: NuCivic
-packager: Luke Fretwell <luke@nuams.co>
-govready_file: https://github.com/GovReady/govready-dkan/raw/master/govready.md
+copyright: GPL
+group: Applications/Development
+source: ftp://ftp.gnomovision.com/pub/cdplayer/cdplayer-1.0.tgz
+url: http://www.gnomovision.com/cdplayer/cdplayer.html
+distribution: WSS Linux
+vendor: White Socks Software, Inc.
+packager: Santa Claus <sclaus@northpole.com>
+govready_file: govready
 
 # Primary website
-website: "http://www.nucivic.com/dkan/"
+website: "http://www.nodejs.org/"
 
-logo:
-  dedicated_webpage: "http://nucivic.com/about/media-kit/"
-  dedicated_feed: false
-  feed_format: false
-  supplemental_info: 
-  img_src: "http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png"
+# Full path to logo images
+# Put product name logo in `logo1` and pure icon in `logo2`.
+# Use `logo1` only if logo has name and icon
+logo1: /img/listings/nodejs/nodejs.png
+logo2:
 
+# Is there a formal policy on logo usage? Note link here.
 logo_usage:
-  dedicated_webpage: "http://nucivic.com/about/media-kit/"
-  dedicated_feed: false
-  feed_format: false
-  img_src: false
+  - "http://nodejs.org/logos/"
+  - "http://nodejs.org/trademark-policy.pdf"
+
 
 #########################
 # Quick Assessment Data #
@@ -98,7 +106,7 @@ quick_assessment:
   
   # Actively being used by federal agency?
   - name: In use?
-    value: false
+    value: true
   
   # Are patches regularly published and easy to find automatically?
   - name: Patching?
@@ -116,10 +124,6 @@ quick_assessment:
   - name: Easy procurement?
     value: true
 
-   # Vulnerabilities tacked in NVD?
-  - name: Tracked in NVD?
-    value: false
-
   # Does SCAP content exist?
   - name: SCAP?
     value: false
@@ -136,13 +140,14 @@ quick_assessment:
 # that (key benefit proposition or problem-solving capability). Unlike, the product alternative),
 # Our product (describe the key product features).
 #
- 
-for: organizations
-who: need to offer better access to their public data sets 
-product_is: an open data catalog and portal 
-that: is built on top of Drupal
-unlike: bespoke data portals
-product_features: combines features of the CKAN data catalog with full Drupal content management and blog capabilities
+# Product name and punction is automatically inserted. 
+
+for: web and mobile developers
+who: are building real-time web apps lots of user-to-user or user-to-server interactions
+product_is: a server-side Javascript application framework with integrated web server and rich ecosystem of community plugins
+that: is highly scalable 
+unlike: traditional server-side application frameworks
+product_features: executes in a single threaded loop with callbacks that simplifies management of asynchronous browser-to-server interactions
 
 
 ##################################
@@ -161,56 +166,18 @@ FISMA_components:
     dependency: required
     adoption_usfed: widely used
     alternatives:
-      - None
+      - Windows
     
-  - name: Apache
-    tier: Application/Web Server
-    dependency: required
-    adoption_usfed: widely used
-    alternatives:
-      - NGINX
-
-  - name: MySQL
-    tier: Application/Database
-    dependency: required
-    adoption_usfed: broadly used
-    alternatives:
-      - MariaDB
-      - PostgreSQL
-
-  - name: PHP
+  - name: NodeJS
     tier: Application/Programming Language
-    dependency: required
-    adoption_usfed: broadly used
-    alternatives:
-      - None
-
-  - name: Drupal
-    tier: Application/CMS
-    dependency: required
-    adoption_usfed: emerging
-    alternatives:
-      - None
-    notes:
-      - Part of DKAN download
-    
-  - name: DKAN
-    tier: Application/Customized CMS
     dependency: required
     adoption_usfed: rare
     alternatives:
-      - None
-    
-
-FISMA_notes:
-  - name: DKAN not yet certified
-    description: Code specific to DKAN itself is not known to have been FISMA-certified. 
-    date: 2014-05-09
-    severity: warning
+      - n/a
 
 
 FISMA-Certified: |
-  <p><b><a href="">NuData</a></b> is a SaaS offering of DKAN that claims FISMA-Compliance because it is hosted on FedRamp-certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.</p>
+  <p><b><a href="https://github.com/18f/fbopen">FBOpen.gsa.gov</a></b> by 18F (GSA) is a FISMA-Compliant configurtion which has an Authority to Operate issued by GSA. Most of the 800-53 controls are inherited from being hosted on FedRamp-certified AWS cloud and on hardened version of Ubuntu.</p>
 
 
 ###########################
@@ -232,6 +199,33 @@ procurement_references:
     description: TBD
 
 
+##################
+# Usage Gallery #
+##################
+# Images should be 900x500 currently. Either send the images to us, or make the image file available online.
+
+usg_instances:
+  - name: ec2mapper
+    organization: CFPB
+    description: EC2mapper is a web application that provides a user-friendly interface to view Amazon AWS network configurations.
+    url: "https://github.com/cfpb/ec2mapper"
+    img_src: "/img/listings/ec2mapper/ss2_cropped.png"
+
+  - name: design-manual
+    organization: CFPB
+    description: A set of design principles and standards for the Consumer Financial Protection Bureau. 
+    url: "https://github.com/cfpb/design-manual"
+    img_src: /img/listings/design-manual/dm_900x500.png
+    live_url: "http://cfpb.github.io/design-manual/"
+
+  - name: qu
+    organization: CFPB
+    description: Qu is a framework for building data APIs. 
+    url: "https://github.com/cfpb/qu/"
+    img_src: /img/listings/qu/qu_900x500.png
+    live_url: "http://cfpb.github.io/qu/"
+
+
 ####################################
 # Quick Reference - To Be Improved #
 ####################################
@@ -239,15 +233,15 @@ procurement_references:
 # The goal is to incorporate this information into the Quick Assessment Data. 
 # For now just update information
 
-managed_by: NuCivic
-managed_by_url: "http://www.nucivic.com"
-license_url: "https://github.com/nuams/dkan/blob/7.x-1.x/LICENSE.txt"
-about_url: "http://www.nucivic.com/dkan/"
-issue_tracker_url: "https://github.com/nuams/dkan/issues"
-src_code_url: "https://github.com/nuams/dkan"
-stable_release: "v1.0"
-stable_release_url: "https://github.com/nuams/dkan"
-commercial_support_url: "http://www.nucivic.com/products/nudata"
+managed_by: Joyent
+managed_by_url: "http://www.joyent.com/technology/nodejs"
+license_url: "https://raw.github.com/joyent/node/v0.10.26/LICENSE"
+about_url: "http://www.nodejs.org/about/"
+issue_tracker_url: "https://github.com/joyent/node/issues"
+src_code_url: "https://github.com/joyent/node"
+stable_release: "v0.10.26"
+stable_release_url: "http://www.nodejs.org/download/"
+commercial_support_url: "http://www.joyent.com/products/support-nodejs"
 
 
 ################
@@ -256,18 +250,25 @@ commercial_support_url: "http://www.nucivic.com/products/nudata"
 # Goal is to automate this content.
 # Purpose of this tab is to communicate to security professionals and developers how the technology can be monitored and patched.
 
+us_cert_recent: |
+  <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4450">10/21/2013 - CVE-2013-4450</a> <span class="text-warning">Medium severity</span> The HTTP server in Node.js 0.10.x before 0.10.21 and 0.8.x before 0.8.26 allows remote attackers to cause a denial of service (memory and CPU consumption) by sending a large number of pipelined requests without reading the response.
+security:
+  - "https://nodesecurity.io/advisories"
+  - "https://nodesecurity.io/rss.xml"
+  - "https://twitter.com/nodesecurity"
+  - "http://blog.nodejs.org/"
+  - "https://groups.google.com/forum/#!forum/nodejs-sec"
+  - "http://www.slideshare.net/evilpacket/node-day-enterprise-nodejs-security"
 
-####################################
+
+
+##########
 # Videos #
-####################################
+##########
 # Select videos that would help developers, project managemers, IT admins, CIOs rapidly grok the technology
 videos:
-  - <h4>DKAN 101</h4><iframe width="260" height="157" src="//www.youtube.com/embed/wj-7x9f8SIQ" frameborder="0" allowfullscreen></iframe>
-  
-videos2:
-  - name: DKAN 101
-    src: "//www.youtube.com/embed/wj-7x9f8SIQ"
-    duration: 
+  - <h4>NodeJS intro</h4><iframe width="260" height="157"  src="//www.youtube.com/embed/GJmFG4ffJZU" frameborder="0" allowfullscreen></iframe>
+  - <h4>NodeJS Tech Internals</h4><iframe width="260" height="157" src="http://www.youtube.com/embed/L0pjVcIsU6A" frameborder="0" allowfullscreen></iframe>
 
 # End of Frontmatter. Do not touch the `---` below.
 ---

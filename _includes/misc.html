@@ -1,0 +1,6 @@
+<h2 class="listing-section">Miscellaneous</h2>
+{% if page.logo_usage.dedicated_webpage %}
+	<p>{{ page.vendor }} describes its logo usage policy at <a href="{{ page.logo_usage.dedicated_webpage }}">{{ page.logo_usage.dedicated_webpage }}</a>.</p>
+{% else %}
+	<p>{{ page.name }} is not currently publishing a logo usage policy.</p>
+{% endif %}

@@ -1,3 +1,4 @@
+{% if page.usg_instances %}
 	<!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="border:1px solid #999;">
@@ -33,3 +34,5 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
     <!-- /.carousel -->
+{% endif %}
+<p>Do you know of a government deployment of {{ page.name }}? <a href="/tips/">Tip GovReady!</a>

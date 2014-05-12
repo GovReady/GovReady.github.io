@@ -24,6 +24,7 @@
 
           </div>
 
+          
           <div>
               <h2 class="listing-section">Gallery of Government Deployments</h2>
               {% include instances_carousel.html %}
@@ -59,20 +60,33 @@
               
               {{ page.FISMA-Certified }}
 
+              <p>Do you know of a FISMA-Certified configuration of {{ page.name }}? <a href="/tips/">Tip GovReady!</a>
+
+
               <h3 class="listing-subsection">Roll Your Own FISMA-certified configuration of {{ page.name }} </h3>
-              <table class="table table-striped" width="100%" border="0">
-                <tr>
-                    <td>Component</td>
-                    <td>Tier</td>
-                    <td>Federal Gov Penetration</td>
-                    <td>Substitutes</td>
-                </tr>
+              <table class="table table-hover" width="100%" border="0">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Tier</th>
+                    <th>Federal Gov Penetration</th>
+                    <th>Substitutes</th>
+                  </tr>
+                </thead>
                 {% for item in page.FISMA_components %}
                   <tr>
-                    <td>{{ item.name }}</td>
+                    <td><a href="/{{ item.name | downcase}}4/">{{ item.name }}</a></td>
                     <td>{{ item.tier }}</td>
                     <td>{{ item.adoption_usfed }}</td>
-                    <td>{% for other in item.alternatives %} {{ other }} {% endfor %}</td>
+                    <td>
+                      {% for other in item.alternatives %} 
+                        {% if other == "None" %}
+                          {{ other }}
+                        {% else %}
+                         <a href="/{{ other | downcase}}4/">{{ other }} 
+                        {% endif %}
+                      {% endfor %}
+                    </td>
                   </tr>
                 {% endfor %}
               </table>
@@ -82,36 +96,44 @@
 
           <div class="" id="security">
             <h2 class="listing-section">Security Monitoring &amp; Patching</h2>
-            <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam. Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
-
             
-          
-            <h3 class="listing-subsection">Recent US Cert Alerts</h3>
-              <p>{{ page.us_cert_recent }}</p>
-          
+            {% if page.security_reports.dedicated_webpage %}
+              <p>Security Reports: <a href="{{ page.security_reports.dedicated_webpage }}">{{ page.security_reports.dedicated_webpage }}</a></p>
+            {% else %}
+              <p>{{ page.name }} is not currently maintaining a dedicated security report page.</p>
+            {% endif %}
 
-          </div>
-
-          
-          <div class="" id="support">
-            <h2 class="listing-section">Available Support</h2> 
-            <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
-
-            <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
-
-            <p>Modus facete detracto ei his, debitis menandri nec at. At has diam velit molestie. Vel at bonorum pertinacia. Has id homero appetere reformidans, cum in vidisse consequat, elitr labore euripidis ius eu. Mea no feugiat volutpat sadipscing. Vel eu alia prima movet, eius decore neglegentur at nam.</p>
+            {% if page.security_reports.dedicated_feed %}
+              <p>Security Reports data feed: <a href="{{ page.security_reports.dedicated_dedicated_feed }}">{{ page.security_reports.dedicated_feed }}</a></p>
+            {% else %}
+              <p>{{ page.name }} is not currently maintaining a dedicated security report data feed.</p>
+            {% endif %}
+  
           </div>
 
           <div class="" id="accessibility">
             <h2 class="listing-section">508 Accessibility</h2>
-            <p>Lorem ipsum dolor sit amet, an illum mollis nusquam vel. Id vis quem posse omnesque. Id libris facilis voluptaria vix, mei eu vide invenire interpretaris. Nec id mazim delenit, ne eam sapientem similique, his ex tota laudem quidam.</p>
 
-            <p>Ea choro primis facilisi est, id sit eros error nihil. Omnis congue forensibus at his. Essent verear aeterno te est, minim omnes adolescens id ius. No soluta convenire usu, mel ex illud aperiam iudicabit. Illum legimus placerat vix ne, vix ei habeo tantas.</p>
+            {% if page.accessibility_info.dedicated_webpage %}
+              <p>Accessibility Information: <a href="{{ page.accessibility_info.dedicated_webpage }}">{{ page.accessibility_info.dedicated_webpage }}</a></p>
+            {% else %}
+              <p>{{ page.name }} is not currently maintaining a dedicated page regarding accessibility.</p>
+            {% endif %}
+
+            {% if page.accessibility_info.accessibility_v %}
+              <p>Accessibility Information: <a href="{{ page.accessibility_info.accessibility_v }}">{{ page.accessibility_info.accessibility_v }}</a></p>
+            {% else %}
+              <p>{{ page.name }} is not currently maintaining a V-PAT online.</p>
+            {% endif %}
+
+            {% for item in page.accessibility_notes %}
+                  <p class="text-{{ item:severity }}" >NOTE: {{ item.date }} {{ item.description }}</p>
+              {% endfor %}
+
           </div>
 
           <div class="" id="misc">
-            <h2 class="listing-section">Miscellaneous</h2>
-            <p>{{ page.vendor }} describes its logo usage policy at <a href="{{ page.logo_usage }}">{{ page.logo_usage }}</a>.</p>
+            {% include misc.html %}
           </div>
 
 
