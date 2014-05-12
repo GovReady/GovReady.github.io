@@ -94,7 +94,7 @@ quick_assessment:
   
   # OK to use as part of a public facing service?
   - name: Public?
-    value: true
+    value: false
   
   # Actively being used by federal agency?
   - name: In use?
