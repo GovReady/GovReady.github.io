@@ -97,10 +97,9 @@ epitch:
   for:              economists, statiticians and data scientists
   who:              need to impute missing and erroneous data in large data sets, including data sets of hundreds of millions of rows
   product_is:       Tea is imputation software
-  that:             works with data in R uses statistical models to impute missing data
+  that:             works with data in R and uses statistical models to impute missing data
   unlike:           existing tools with proprietary formats
-  product_features: Tea was developed at the US Census and provides a standardized data-quality specification format and user-friendly way to use advanced statistics to impute missing data
-
+  product_features: Tea was developed at the US Census and provides a simple, standardized data-quality specification format to define missing data
 ##################
 # Usage Gallery #
 ##################
