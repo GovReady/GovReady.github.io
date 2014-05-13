@@ -93,6 +93,33 @@
 }
 
 
+/* Listing styles */
+
+#listing a {
+  color: black;
+}
+
+.tip-govready {
+  font-size: 0.5em;
+  color: #555;
+  margin: 8px 0 0 0;
+}
+
+#listing .tip-govready a {
+  color: #555;
+}
+
+#listing .well {
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff, 0%, #fff, 100%);
+  background-image: -moz-linear-gradient(top, #fff 0%, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  background-repeat: repeat-x;
+  border-color: #dcdcdc;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff', GradientType=0);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
 
 
 

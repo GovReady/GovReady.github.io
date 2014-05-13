@@ -54,26 +54,30 @@ permalink:    /apache/
 # `logo_policy.img_src` identifies image to visually represent logo policy page if it exists
 product:
   name:             Apache
+  govready_file:    false
   website:          "http://httpd.apache.org/"
   summary:          Web's most popular web server
   group:            Applications/Web Server
-  source:           "http://httpd.apache.org"
+  source:           "http://www.apache.org/dist/httpd/"
   url:              "http://httpd.apache.org"
+  source_host:      Apache
+  source_code_url:  "http://www.apache.org/dist/httpd/"
   vendor:           Apache Foundation
   vendor_url:       "http://apache.org"
-  license_url:      "http://www.apache.org/licenses/"
+  license:          Apache License, Version 2.0
+  license_url:      "http://www.apache.org/licenses/LICENSE-2.0"
   about_url:        "http://httpd.apache.org/ABOUT_APACHE.html"
   logo:
     dedicated_html: "http://www.apache.org/foundation/press/kit/"
     dedicated_data: false
     img_src:        "http://www.apache.org/images/feather.gif"
+    img_src2:       false
   logo_policy:
     dedicated_html: "http://www.apache.org/foundation/marks/"
     dedicated_data: false
     img_src:        false
   issue_tracker_url:  "https://issues.apache.org/bugzilla/"
   security_url:       "http://httpd.apache.org/security_report.html"
-  src_code_url:       "http://svn.apache.org/repos/asf/httpd/"
   download:           "http://httpd.apache.org/download.cgi"
   commercial_support_url: 
     - name:   OpenLogic
@@ -242,7 +246,7 @@ quick_assessment:
     value: true
 
   # Actively being developed by federal agency
-  - name: In use?
+  - name: In development?
     value: true
 
   # Are patches regularly published?
@@ -258,7 +262,7 @@ quick_assessment:
     value: true
 
   # Vulnerabilities tacked in NVD?
-  - name: Tracked in NVD?
+  - name: in NVD?
     value: true
 
   # Does SCAP content exist?

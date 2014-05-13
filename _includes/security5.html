@@ -1,14 +1,15 @@
-          <div class="" id="security">
-            <h2 class="listing-section">Security Monitoring &amp; Patching</h2>
-            {% if page.security.reports.dedicated_html %}
-              <p>Security Reports: <a href="{{ page.security.reports.dedicated_html }}">{{ page.security.reports.dedicated_html }}</a></p>
-            {% else %}
-              <p>{{ page.name }} is not currently maintaining a dedicated security report page.</p>
-            {% endif %}
+      <div class="" id="security">
+        <h2 class="listing-section">Security Monitoring &amp; Patching</h2>
 
-            {% if page.security.reports.dedicated_data %}
-              <p>Security Reports data feed: <a href="{{ page.security.reports.dedicated_data }}">{{ page.security.reports.dedicated_data }}</a></p>
-            {% else %}
-              <p>{{ page.product.name }} does not currently have a dedicated security report data feed.</p>
-            {% endif %}
-          </div>
+        {% if page.security.reports.dedicated_html %}
+          <p>Security Reports: <a href="{{ page.security.reports.dedicated_html }}">{{ page.security.reports.dedicated_html }}</a></p>
+        {% else %}
+          <p>{{ page.product.name }} is not currently maintaining a dedicated security report page.</p>
+        {% endif %}
+
+        {% if page.security.reports.dedicated_data %}
+          <p>Security Reports data feed: <a href="{{ page.security.reports.dedicated_data }}">{{ page.security.reports.dedicated_data }}</a></p>
+        {% else %}
+          <p>{{ page.product.name }} does not currently have a dedicated security report data feed.</p>
+        {% endif %}
+      </div>
