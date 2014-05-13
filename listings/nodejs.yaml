@@ -43,10 +43,10 @@ govready_version: 0.3
 # Jekyll Instructions #
 #######################
 # Identify the layout template to be used for this page
-layout: listing4
+layout: listing5
 
 # Identify the permalink for the rendered page. Example: `/nodejs/` to render as `http:/govready.org/nodejs/`
-permalink: /nodejs4/
+permalink: /nodejs/
 
 
 #####################

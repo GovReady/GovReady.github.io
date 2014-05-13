@@ -54,15 +54,19 @@ permalink:    /tea/
 # `logo_policy.img_src` identifies image to visually represent logo policy page if it exists
 product:
   name:             Tea
+  govready_file:    false
   website:          false
   summary:          Tea is used by census staff
   group:            Applications/Data Management
   source:           ""
-  url:              "http://httpd.apache.org"
-  vendor:           Census
-  vendor_url:       ""
+  url:              "https://github.com/rodri363/tea"
+  source_host:      GitHub
+  source_code_url:  "https://github.com/rodri363/tea"
+  vendor:           US Census
+  vendor_url:       "http://www.census.gov"
+  license:          Public Domain
   license_url:      ""
-  about_url:        ""
+  about_url:        "https://github.com/rodri363/tea"  
   logo:
     dedicated_html: ""
     dedicated_data: false
@@ -76,7 +80,7 @@ product:
   src_code_url:       ""
   download:           ""
   commercial_support_url: false
-  
+
 
 ##################
 # Elevator Pitch #
@@ -95,7 +99,7 @@ epitch:
   product_is:       Tea is imputation software
   that:             works with data in R uses statistical models to impute missing data
   unlike:           existing tools with proprietary formats
-  product_features: Tea was developed at the US Census and provides a standardized data-quality specification format and user-friendly way to use advanced statistics to impute missing data.
+  product_features: Tea was developed at the US Census and provides a standardized data-quality specification format and user-friendly way to use advanced statistics to impute missing data
 
 ##################
 # Usage Gallery #
@@ -104,22 +108,22 @@ epitch:
 # `facing`          identifies if system is `internal` or `public` facing
 
 usg_instances:
-  deployed_est:       thousands
-  planned_est:        thousands
+  deployed_est:       few
+  planned_est:        unknown
   deployed:
-    - name:           fcc.gov
-      organization:   FCC
-      description:    FCC's web site
-      facing:         public
-      url:            "http://www.fcc.gov"
-      img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
+  #  - name:           fcc.gov
+  #    organization:   FCC
+  #    description:    FCC's web site
+  #    facing:         public
+  #    url:            "http://www.fcc.gov"
+  #    img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
   planned:  
-    - name:           fcc.gov
-      organization:   FCC
-      description:    FCC's web site
-      facing:         internal 
-      url:            "http://www.fcc.gov"
-      img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
+  #  - name:           fcc.gov
+  #    organization:   FCC
+  #    description:    FCC's web site
+  #    facing:         internal 
+  #    url:            "http://www.fcc.gov"
+  #    img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
 
 
 ##########
@@ -127,22 +131,9 @@ usg_instances:
 ##########
 # Select videos that would help developers, project managemers, IT admins, CIOs rapidly grok the technology
 videos:
-  - name:           Install Apache
-    video_src:      //www.youtube.com/embed/oeZpY6JY4iI
-    video_service:  youtube
-
-  - name:           Quick Apache Web Server
-    video_src:      //www.youtube.com/embed/xCJkMIYwjp8
-    video_service:  youtube
-
-  - name:           The Apache Web Server
-    video_src:      //www.youtube.com/embed/eJ2ZPi3UCG0
-    video_service:  youtube
-
-  - name:           Install Apache HTTP<br />Server 2.2.13 for Windows
-    video_src:      //www.youtube.com/embed/8tBkEWPOqqk
-    video_service:  youtube
-
+  #- name:           Video name
+  #  video_src:      //www.youtube.com/embed/oeZpY6JY4iI
+  #  video_service:  youtube
 
 ############
 # Security #
@@ -151,7 +142,7 @@ videos:
 
 security:
   reports: 
-    dedicated_html: "http://httpd.apache.org/security_report.html"
+    dedicated_html: false
     dedicated_data: false
   scap:
     dedicated_html: false
@@ -179,20 +170,41 @@ FISMA:
       dependency:     required
       adoption_usfed: widely used
       alternatives:
-        - Windows
+        - None
 
-    - name:           Apache
-      tier:           Application/Web Server
+    - name:           SQLite
+      tier:           Application/Database
       dependency:     required
-      adoption_usfed: widely used
+      adoption_usfed: broadly used, mostly internal
+      alternatives:
+        - MySQL
+
+    - name:           R
+      tier:           Application/Statistics
+      dependency:     required
+      adoption_usfed: somewhat used, mostly internal
+      alternatives:
+        - None
+
+    - name:           Apophenia
+      tier:           Application/Statistics
+      dependency:     required
+      adoption_usfed: rare, internal-only
+      alternatives:
+        - None
+
+    - name:           Tea
+      tier:           Application/Statistics
+      dependency:     required
+      adoption_usfed: wrare, internal-only
       alternatives:
         - None
 
   certified-configurations:
-    - name:           RedHat Enterprise Linux
-      url:            ""
-      vendor:         RedHat
-      description:    A widely used by government offering Linux Operationg system that includes signed software packages including Apache.
+    #- name:           RedHat Enterprise Linux
+    #  url:            ""
+    #  vendor:         RedHat
+    #  description:    A widely used by government offering Linux Operationg system that includes signed software packages including Apache.
 
 
 #######################
@@ -210,9 +222,9 @@ accessibility:
     dedicated_data: false
 
   notes:
-    - name: Apache is text-based configuration
-      description: Apache configuration is text-based. Users of assistive-technologies should be able to work with Apache.
-      date: 2014-05-12
+    - name: Tea is text-based configuration
+      description: Tea configuration is text-based. Users of assistive-technologies should be able to work with Apache.
+      date: 2014-05-15
       severity: success
 
 
@@ -230,31 +242,31 @@ quick_assessment:
 
   # OK to use as part of a public facing service?
   - name: Public?
-    value: true
+    value: false
 
   # Actively being used (deployed) by federal agency?
   - name: In use?
     value: true
 
   # Actively being developed by federal agency
-  - name: In use?
+  - name: In development?
     value: true
 
   # Are patches regularly published?
   - name: Patching?
-    value: true
+    value: false
 
   # Is an enterprise version available?
   - name: Enterprise version?
-    value: true
+    value: false
 
   # Can support be purchased?
   - name: Support?
-    value: true
+    value: false
 
   # Vulnerabilities tacked in NVD?
   - name: Tracked in NVD?
-    value: true
+    value: false
 
   # Does SCAP content exist?
   - name: SCAP?
