@@ -1,0 +1,54 @@
+{% include header.html %}
+
+
+<div class="listing-page">
+
+  
+  <!-- listing container -->
+  <div class="container lg-font col-sm-12">
+
+
+
+    
+    <!-- main listing content -->
+
+        <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+
+        <h1 class="listing-title">
+        	page.name:{{ page.name }}<br>
+        	{% capture listing %}{{ page.name }}{% endcapture %}
+        	listing: {{ listing }}<br>
+        	{% capture datavar %}site.data.{{ page.name }}{% endcapture %}
+        	datavar: {{ datavar }}<br>
+        	datafile: {{ page.datafile }}<br>
+          <span class="">GovReady Assessment of1 {{ page.datafile.name }} </span> 
+        </h1>
+
+          <div class="" id="about">
+              <p>For {{ site.data.apache.for }} who {{ site.data.apache.who }}, <b>{{ site.data.apache.name }} is {{ site.data.apache.product_is }} that {{ site.data.apache.that }}</b>.
+                 Unlike {{ site.data.apache.unlike }}, {{ site.data.apache.name }} {{ site.data.apache.product_features }}.</p>
+          </div>
+
+          
+          <div>
+              <h2 class="listing-section">Gallery of Government Deployments</h2>
+              {% include instances_carouselx.html %}
+          </div>
+  
+  </div> 
+    <!-- /main listing content -->
+    <!-- listing sidebar -->
+     include listing_sb2.html 
+
+    
+
+  </div>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+  </script>  
+
+
+{% include footer.html %}

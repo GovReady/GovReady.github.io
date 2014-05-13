@@ -1,0 +1,7 @@
+name:           Apache
+tier:           Application/Web Server
+adoption_usfed: widely used
+alternatives:	
+  - NGINX
+  - IIS
+  - Tomcat

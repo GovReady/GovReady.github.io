@@ -1,0 +1,53 @@
+          <div id="fisma-certified">
+            <h2 class="listing-section">FISMA-Certified Configurations</h2>
+          <h3 class="listing-subsection">How are FISMA-certified configurations of {{ page.name }} achieved?</h3>
+              <p>FISMA-Certified Configurations of {{ page.name }} are achieved via appropriate 800-53 controls on 
+                {% for item in page.FISMA.components %}
+                  {% if forloop.last %}
+                    and <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>.
+                  {% else %}
+                    <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>, 
+                  {% endif %}
+                {% endfor %}
+              </p>
+              {% for item in page.FISMA_notes %}
+                  <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
+              {% endfor %}
+
+              <h3 class="listing-subsection">What FISMA-certified configurations of {{ page.name }} are available?</h3>
+              
+              {{ page.FISMA-Certified }}
+
+              <p>Do you know of a FISMA-Certified configuration of {{ page.name }}? <a href="/tips/">Tip GovReady!</a></p>
+
+
+              <h3 class="listing-subsection">Roll Your Own FISMA-certified configuration of {{ page.name }} </h3>
+              <table class="table table-hover" width="100%" border="0">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Tier</th>
+                    <th>Federal Gov Penetration</th>
+                    <th>Substitutes</th>
+                  </tr>
+                </thead>
+                {% for item in page.FISMA.components %}
+                  <tr>
+                    <td><a href="/{{ item.name | downcase}}4/">{{ item.name }}</a></td>
+                    <td>{{ item.tier }}</td>
+                    <td>{{ item.adoption_usfed }}</td>
+                    <td>
+                      {% for other in item.alternatives %} 
+                        {% if other == "None" %}
+                          {{ other }}
+                        {% else %}
+                         <a href="/{{ other | downcase}}4/">{{ other }}</a>
+                        {% endif %}
+                      {% endfor %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </table>
+
+            </div>
+

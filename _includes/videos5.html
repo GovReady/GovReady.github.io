@@ -1,0 +1,10 @@
+		<div id="videos">
+            <h2 class="listing-section">Videos</h2>
+              <div class="clearfix">
+                {% for video in page.videos %}
+                  <span class="pull-left listing-video">
+                    <h4>{{ video.name }}</h4><iframe width="260" height="157" src="{{ video.video_src }}" frameborder="0" allowfullscreen></iframe>
+                  </span>
+                {% endfor %}
+              </div>
+          </div>

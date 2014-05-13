@@ -1,62 +1,51 @@
 {% include header.html %}
 
-
 <div class="listing-page">
 
-  
   <!-- listing container -->
   <div class="container lg-font col-sm-12">
 
+        <!-- main listing content -->
+        <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+
+          <h1 class="listing-title">
+            <span class="">GovReady Assessment of {{ page.product.name }} </span> 
+          </h1>
+         
+          
+          {% include epitch5.html %}
+          
+          
+          {% include deployments5.html %}
+        
+
+          {% include videos5.html %}
+          
+
+          {% include fisma-certified5.html %}
+
+          
+          {% include security5.html %}
 
 
+          {% include accessibility5.html %}
+
+          
+          {% include misc5.html %}
+          
+       </div> <!-- /main listing content -->
     
-    <!-- main listing content -->
-    <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
-
-    	<h1 class="listing-title">
-      		<span class="">GovReady Assessment of {{ page.name }} </span> 
-    	</h1>
-
-    	<p>For organizations who want to utilize the web for sharing documents, data, and delivery interactive services, <b>Apache is a HTTP web server that is open source, mature, Java-based, highly-configurable and the world's most popular web server.</b> Unlike propietary web servers, Apache Apache and it's configuration files are well known to most system administrators and ships with most Linux distributions.</p>
-
-    	<p>For {{ page.for }} who {{ page.who }}, <b>{{ page.name }} is {{ page.product_is }} that {{ page.that }}</b>.
-                 Unlike {{ page.unlike }}, {{ page.name }} {{ page.product_features }}.</p>
-	
-      {% for node in page.govready %}
-
-      	{% if node.name == "Elevator Pitch" %}
-      		<p>
-      		   For {{ page.for }} who {{ page.who }}, <b>{{ page.name }} is {{ page.product_is }} that {{ page.that }}</b>.
-               Unlike {{ page.unlike }}, {{ page.name }} {{ page.product_features }}.
-            </p>
-      	{% endif %}
+    <!-- listing sidebar -->
+    {% include listing_sb2.html %}
 
 
-      	{% if node.name == "GovReady Metadata" %}
-      		<div class="metadata">
-			<ul>
-				<li>version: {{ node.version }} </li>
-				<li>date: {{ node.date }} </li>
-				<li>packager_name: {{ node.packager_name }} </li>
-			</ul>
-		</div>
+  </div><!-- /listing container -->
 
-      	{% endif %}
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+  </script>  
 
-      {% endfor %}
-
-		
-
-
-
-
-	</div>
-	<!-- /main listing content -->
-
-  </div>
-  <!-- /listing container -->
-
-</div>
-<!-- listing-page -->
 
 {% include footer.html %}

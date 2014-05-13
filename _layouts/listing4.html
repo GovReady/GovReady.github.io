@@ -21,7 +21,6 @@
           <div class="" id="about">
               <p>For {{ page.for }} who {{ page.who }}, <b>{{ page.name }} is {{ page.product_is }} that {{ page.that }}</b>.
                  Unlike {{ page.unlike }}, {{ page.name }} {{ page.product_features }}.</p>
-
           </div>
 
           
@@ -34,7 +33,9 @@
               <h2 class="listing-section">Videos</h2>
               <div class="clearfix">
                 {% for video in page.videos %}
-                  <span class="pull-left listing-video" >{{ video }}</span>
+                  <span class="pull-left listing-video">
+                    <h4>{{ video.name }}</h4><iframe width="260" height="157" src="{{ video.video_src }}" frameborder="0" allowfullscreen></iframe>
+                  </span>
                 {% endfor %}
               </div>
           </div>
