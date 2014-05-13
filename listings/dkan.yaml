@@ -241,7 +241,7 @@ accessibility:
 
   notes:
     - name: DKAN is Drupal-based
-      description: DKAN is based on Drupal and inherits its accessibility from Druap accessibility features.
+      description: DKAN is based on Drupal and inherits its accessibility from Drupal accessibility features.
       date: 2014-05-13
       severity: success
 
