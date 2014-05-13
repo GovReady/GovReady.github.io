@@ -54,7 +54,7 @@ permalink:    /dkan/
 # `logo_policy.img_src` identifies image to visually represent logo policy page if it exists
 product:
   name:             DKAN
-  govready_file:    "https://github.com/GovReady/govready-dkan/raw/master/govready.md"
+  govready_file:    "https://github.com/GovReady/govready-dkan/raw/master/GOVREADY.yaml"
   website:          "http://www.nucivic.com/dkan/"
   summary:          An open data catalog publishing suite
   group:            Applications/Data Portal
