@@ -100,10 +100,10 @@ product:
 epitch:
   for:              organizations
   who:              want to utilize the web for sharing documents, data, and delivery interactive services
-  product_is:       Apache a HTTP web server
+  product_is:       Apache is a HTTP web server
   that:             is open source, mature, Java-based, highly-configurable and the world's most popular web server
   unlike:           propietary web servers
-  product_features: Apache and it's configuration files are well known to most system administrators and ships with most Linux distributions
+  product_features: Apache and its configuration files are well known to most system administrators and ships with most Linux distributions
 
 
 ##################
