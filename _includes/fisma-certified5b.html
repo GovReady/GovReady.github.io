@@ -1,0 +1,67 @@
+          <div id="fisma-certified">
+            <h2 class="listing-section">FISMA-Certified Configurations</h2>
+              
+              <!-- FISMA Components-->
+              <p>FISMA-Certified Configurations of {{ page.product.name }} are achieved via appropriate 800-53 controls on 
+                {% for item in page.FISMA.components %}
+                  {% if forloop.last %}
+                    and <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>.
+                  {% else %}
+                    <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>, 
+                  {% endif %}
+                {% endfor %}
+              </p>
+
+              
+              <!-- Roll Your Own -->
+              <h3 class="listing-subsection">Building a FISMA-certified configuration of {{ page.product.name }} </h3>
+              <div class="well" style="">
+                <table class="table table-hover" width="100%" border="0" style="">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Tier</th>
+                    <th>Federal Gov Penetration</th>
+                    <th>Substitutes</th>
+                  </tr>
+                </thead>
+                {% for item in page.FISMA.components %}
+                  <tr>
+                    <td><a href="/{{ item.name | downcase}}4/">{{ item.name }}</a></td>
+                    <td>{{ item.tier }}</td>
+                    <td>{{ item.adoption_usfed }}</td>
+                    <td>
+                      {% for other in item.alternatives %} 
+                        {% if other == "None" %}
+                          {{ other }}
+                        {% else %}
+                         <a href="/{{ other | downcase}}4/">{{ other }}</a>
+                        {% endif %}
+                      {% endfor %}
+                    </td>
+                  </tr>
+                {% endfor %}
+                </table>
+              </div>
+
+              <!-- FISMA Notes-->
+              {% for item in page.FISMA.notes %}
+                  <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
+              {% endfor %}
+
+              <!-- Available FISMA-certified configurations -->
+              <h3 class="listing-subsection">Available FISMA-certified configurations of {{ page.product.name }}</h3>  
+                <ul>
+                {% for item in page.FISMA.certified-configurations %}
+                    <li>
+                      <b><a href="{{ item.url}} ">{{ item.name }}.</a></b>
+                      By {{ item.vendor }}.
+                      {{ item.description }}
+                    </dt>
+                {% endfor %}
+              </ul>
+              <p class="tip-govready">Do you know of a FISMA-Certified configuration of {{ page.product.name }}? <a href="/tips/">Tip GovReady!</a></p>
+
+
+            </div><!-- /FISMA-certified -->
+
