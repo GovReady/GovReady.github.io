@@ -1,0 +1,294 @@
+---
+###################
+# About this file #
+###################
+# This is a Jekyll content page for GovReady(TM) Clearinghouse technology listing.
+# The content of this page drives the displayed content.
+# Syntax for this file is YAML.
+# Comments: lines begininging with '#' is a comment and will be ignored.
+# Use file extension `.yaml` to get syntax coloring.
+#
+# `template_version`    identifies current version underlying structure, fields, or comments of this file.
+# `template_copyright`  identifies copyright owner of this file, excluding any facts presented. 
+govready:
+  template_version:     0.3.5
+  template_copyright:   Copyright 2014 GovReady. All Rights Reserved.
+
+#######################
+# License / Copyright #
+#######################
+# The underlying structure of this page is Copyrighted 2014 GovReady. All Rights Reserved.
+# This page is a composite work, Copyrighted 2014 GovReady. All Rights Reserved.
+# This page includes facts and publicly available content not copyrighted by GovReady.
+# Content indicated as proprietary, or copyrighted Greg Elin, or copyrightted GovReady may not be
+# re-used except as defined by Fair Use provisions or permission granted in writing.
+
+
+#######################
+# Jekyll Instructions #
+#######################
+# `layout`              identifies the template to display this content.
+# `permalink`           identifies the for the rendered page. Example: `/nodejs/` to render as `http:/govready.org/nodejs/`.
+layout:       listing5
+permalink:    /dkan/
+
+
+#####################
+# Basic Information #
+#####################
+# `name`                identifies name of listing 
+# `website`             identifies primary website for product
+# `summary`             identifies a brief description for product
+# `group`               identifies tier/category
+# `source`              identifies unique URL to disambiguate this product
+# `vendor`              identifies originating vendor of product
+# `vendor_url`          identifies homepage url for venfor of product
+# `license_url`         identifies unique URL for product's license
+# `about_url`           identifies originator vendor's product about page
+# `logo`                identifies page where logos can be located
+# `logo.dedicated_html` identifies html version of logo page if exists
+# `logo.dedicated_data` identifies data version of logo page if exists
+# `logo.img_src`        identifies url for logo image to display on listing page
+# `logo_policy.dedicated_html`   identifies html version of logo usage policy page if exists
+# `logo_policy.dedicated_data`   identifies data version of logo usage policy page if exists
+# `logo_policy.img_src` identifies image to visually represent logo policy page if it exists
+product:
+  name:             DKAN
+  govready_file:    "https://github.com/GovReady/govready-dkan/raw/master/GOVREADY.yaml"
+  website:          "http://www.nucivic.com/dkan/"
+  summary:          An open data catalog publishing suite
+  group:            Applications/Data Portal
+  source:           "http://www.apache.org/dist/httpd/"
+  url:              "http://www.nucivic.com/dkan/"
+  source_host:      GitHub
+  source_code_url:  "https://github.com/nuams/dkan"
+  vendor:           NuCivic
+  vendor_url:       "http://www.nucivic.com"
+  license:          Mixed
+  license_url:      "https://github.com/nuams/dkan/blob/7.x-1.x/LICENSE.txt"
+  about_url:        "http://www.nucivic.com/dkan/"
+  logo:
+    dedicated_html: "http://nucivic.com/about/media-kit/"
+    dedicated_data: false
+    img_src:        "http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png"
+    img_src2:       false
+  logo_policy:
+    dedicated_html: "http://nucivic.com/about/media-kit/"
+    dedicated_data: false
+    img_src:        false
+  issue_tracker_url:  "https://github.com/nuams/dkan/issues"
+  security_url:       ""
+  download:           "https://github.com/nuams/dkan"
+  commercial_support_url: 
+    - name:   OpenLogic
+      url:    "http://olex.openlogic.com/support/apache-support"
+    - name:   Pantek
+      url:    "http://www.pantek.com/support.php?subsect=apache&_vsrefdom=paidsearch&gclid=CO_anauNor4CFYMSOgodPy4ATw"
+    - name:   NuCivic
+      url:    "http://www.nucivic.com/products/nudata"
+
+
+##################
+# Elevator Pitch #
+##################
+# The Elevator Pitch describes who, what, and why of the product. The pitch follows the format:
+#
+# For (target customers) who (customer need or pain paint), (product name) is a (product category) 
+# that (key benefit proposition or problem-solving capability). Unlike, (product alternatives),
+# (product name) (describe the key product features).
+#
+# Linking and end punctuation added automatically.
+
+epitch:
+  for:              organizations
+  who:              need to offer better access to their public data sets 
+  product_is:       DKAN is an open data catalog and portal 
+  that:             is built on top of Drupal
+  unlike:           bespoke data portals
+  product_features: DKAN combines features of the CKAN data catalog with full Drupal content management and blog capabilities
+
+
+##################
+# Usage Gallery #
+##################
+# Images should be 900x500 currently. Either send the images to us, or make the image file available online.
+# `facing`          identifies if system is `internal` or `public` facing
+
+usg_instances:
+  deployed_est:       none
+  planned_est:        few
+  deployed:
+    #- name:           USAID DKAN
+    #  organization:   USAID
+    #  description:    FCC's web site
+    #  facing:         public
+    #  url:            "http://www.fcc.gov"
+    #  img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
+  planned:  
+    - name:           USAID DKAN
+      organization:   USAID
+      description:    TBD
+      facing:         external 
+      url:            TBD
+      img_src:        false
+
+
+##########
+# Videos #
+##########
+# Select videos that would help developers, project managemers, IT admins, CIOs rapidly grok the technology
+videos:
+  - name:           DKAN 101
+    video_src:      //www.youtube.com/embed/wj-7x9f8SIQ
+    video_service:  youtube
+
+
+############
+# Security #
+############
+# Purpose of this tab is to communicate to security professionals and developers how the technology can be monitored and patched.
+
+security:
+  reports: 
+    dedicated_html: false
+    dedicated_data: false
+  scap:
+    dedicated_html: false
+    dedicated_data: false
+  dod_stig:
+    dedicated_html: false
+    dedicated_data: false
+    level:          false
+
+
+##################################
+# FISMA-Certified Configurations #
+##################################
+
+FISMA:
+  components: 
+    - name:           facility
+      tier:           Infrastructure/Data center
+      dependency:     required
+      alternatives:
+        - FedRamp CSP
+
+    - name:           Linux
+      tier:           Infrastructure/Operating system
+      dependency:     required
+      adoption_usfed: widely used
+      alternatives:
+        - Windows
+
+    - name:           Apache
+      tier:           Application/Web Server
+      dependency: required
+      adoption_usfed: widely used
+      alternatives:
+        - NGINX
+
+    - name:           MySQL
+      tier:           Application/Database
+      dependency:     required
+      adoption_usfed: broadly used
+      alternatives:
+        - MariaDB
+        - PostgreSQL
+
+    - name:           PHP
+      tier:           Application/Programming Language
+      dependency:     required
+      adoption_usfed: broadly used
+      alternatives:
+        - None
+
+    - name:           Drupal
+      tier:           Application/CMS
+      dependency:     required
+      adoption_usfed: emerging
+      alternatives:
+        - None
+      notes:
+        - Part of DKAN download
+
+    - name:           DKAN
+      tier:           Application/Customized CMS
+      dependency:     required
+      adoption_usfed: rare
+      alternatives:
+        - None
+
+  certified-configurations:
+    - name:           NuData
+      url:            "http://nucivic.com/products/nudata/"
+      vendor:         NuCivic
+      description:    SaaS offering of DKAN that claims FISMA-Compliance because it is hosted on FedRamp-certified <a href="">Acquia Cloud</a> and hardened Drupal configuration.
+
+
+#######################
+# Accessibility - 508 #
+#######################
+# Accessibility support for individuals with disabilities
+
+accessibility:
+  profile:
+    dedicated_html: false
+    dedicated_feed: false
+
+  v-pat:
+    dedicated_html: false
+    dedicated_data: false
+
+  notes:
+    - name: DKAN is Drupal-based
+      description: DKAN is based on Drupal and inherits its accessibility from Drupal accessibility features.
+      date: 2014-05-13
+      severity: success
+
+
+####################
+# Quick Assessment #
+####################
+# YAML list of key-value pairs to drive quick assessment content block in right sidebar
+# ONLY CHANGE THE VALUES
+
+quick_assessment: 
+
+  # OK to use as part of an internal-to-government service?
+  - name: Internal?
+    value: true
+
+  # OK to use as part of a public facing service?
+  - name: Public?
+    value: true
+
+  # Actively being used (deployed) by federal agency?
+  - name: In use?
+    value: false
+
+  # Actively being developed by federal agency
+  - name: In development?
+    value: true
+
+  # Are patches regularly published?
+  - name: Patching?
+    value: true
+
+  # Is an enterprise version available?
+  - name: Enterprise version?
+    value: false
+
+  # Can support be purchased?
+  - name: Support?
+    value: true
+
+  # Vulnerabilities tacked in NVD?
+  - name: in NVD?
+    value: false
+
+  # Does SCAP content exist?
+  - name: SCAP?
+    value: false
+
+# End of Frontmatter. Do not touch the `---` below.
+---
