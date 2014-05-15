@@ -100,7 +100,7 @@ product:
 epitch:
   for:              organizations
   who:              have web sites
-  product_is:       Apache is a HTTP web server
+  product_is:       Apache is a web server
   that:             is the world's most popular web server
   unlike:           propietary web servers
   product_features: Apache is open source, powerful, flexible and well known to most system administrators
