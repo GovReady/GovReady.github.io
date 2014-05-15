@@ -219,10 +219,10 @@ accessibility:
     dedicated_data: false
 
   notes:
-    #- name: Apache is text-based configuration
-    #  description: Apache configuration is text-based. Users of assistive-technologies should be able to work with Apache.
-    #  date: 2014-05-12
-    #  severity: success
+    - name: Apache is text-based configuration
+      description: Apache configuration is text-based.
+      date: 2014-05-12
+      severity: success
 
 
 ####################
