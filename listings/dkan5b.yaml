@@ -101,7 +101,7 @@ product:
 
 epitch:
   for:              organizations
-  who:              offering public access to their data sets 
+  who:              are offering public access to their data sets 
   product_is:       DKAN is an open data catalog and portal 
   that:             is built on top of Drupal
   unlike:           bespoke data portals
