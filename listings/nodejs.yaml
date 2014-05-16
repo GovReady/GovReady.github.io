@@ -294,7 +294,7 @@ quick_assessment:
 
   # Vulnerabilities tacked in NVD?
   - name: in NVD?
-    value: true
+    value: false
 
   # Does SCAP content exist?
   - name: SCAP?
