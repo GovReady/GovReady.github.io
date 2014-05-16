@@ -98,10 +98,10 @@ product:
 epitch:
   for:              web and mobile developers
   who:              are building real-time web apps lots of user-to-user or user-to-server interactions
-  product_is:       a server-side Javascript application framework with integrated web server and rich ecosystem of community plugins
+  product_is:       NodeJS a web application framework with integrated web server and rich ecosystem of community plugins
   that:             is highly scalable 
   unlike:           traditional server-side application frameworks
-  product_features: executes in a single threaded loop with callbacks that simplifies management of asynchronous browser-to-server interactions
+  product_features: NodeJS executes in a single threaded loop with callbacks that simplifies management of asynchronous browser-to-server interactions
 
 
 ##################
