@@ -11,7 +11,7 @@
 # `template_version`    identifies current version underlying structure, fields, or comments of this file.
 # `template_copyright`  identifies copyright owner of this file, excluding any facts presented. 
 govready:
-  template_version:     0.3.5
+  template_version:     0.3.5.1
   template_copyright:   Copyright 2014 GovReady. All Rights Reserved.
 
 #######################
@@ -113,7 +113,8 @@ epitch:
 ##################
 # Images should be 900x500 currently. Either send the images to us, or make the image file available online.
 # `facing`          identifies if system is `internal` or `public` facing
-
+# `planned.stage`   identifies stage from sequence [evaluating, pilot, planned deployment, ]
+# `est_launch`      identifies estimated month/year of launch (example: 09/2014)
 usg_instances:
   deployed_est:       none
   planned_est:        few
@@ -125,12 +126,16 @@ usg_instances:
     #  url:            "http://www.fcc.gov"
     #  img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
   planned:  
-    - name:           USAID DKAN
-      organization:   USAID
+    - name:           
+      organization:   hidden
       description:    TBD
       facing:         external 
       url:            TBD
       img_src:        false
+      stage:          planned deployment
+      est_launch:     09/2014
+      contact_email:  andrew@nuams.co
+
 
 
 ##########
