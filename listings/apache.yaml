@@ -220,7 +220,7 @@ accessibility:
 
   notes:
     - name: Apache is text-based configuration
-      description: Apache configuration is text-based. 
+      description: Apache configuration is text-based.
       date: 2014-05-12
       severity: success
 
