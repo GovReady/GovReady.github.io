@@ -1,0 +1,46 @@
+{% include header.html %}
+
+<div class="listing-page">
+
+  <!-- listing container -->
+  <div class="container lg-font col-sm-12" id="listing">
+
+        <!-- main listing content -->
+        <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+
+          <h1 class="listing-title">
+            <span class="">Currently Available GovReady Assessments </span> 
+          </h1>         
+
+          {% for item in site.data.listings %}
+            <h3><a href="/{{ item.name }}/" style="">{{ item.name }}</a></h3>
+          {% endfor %}
+          <!--div class="row">
+            {% for item in site.data.listings %}
+          <div class="col-sm-6 col-md-4">
+            
+             <div class="thumbnail" style="height:200px;">
+              <a href="/{{ item.name }}/"><img src="{{ item.img_src }}" data-src="holder.js/300x200" alt="{{ item.name }}" width="200"></a>
+              <div class="caption">
+                <p>{{ item.product_is }}. <a href="/{{ item.name }}/">View</a></p>
+              </div>
+            </div>
+            
+          </div>
+          {% endfor %}
+        </div-->
+        
+          
+       </div> <!-- /main listing content -->
+    
+
+  </div><!-- /listing container -->
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+  </script>  
+
+
+{% include footer.html %}
