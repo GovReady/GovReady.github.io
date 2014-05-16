@@ -9,7 +9,7 @@
           <h1 class="listing-title">Currently Available GovReady Assessments</h1>
 
           {% for item in site.data.listings %}
-            <h3><a href="/{{ item.name }}/" style="">{{ item.name }}</a></h3>
+            <h3><a href="{{ item.permalink }}" style="">{{ item.name }}</a></h3>
           {% endfor %}
           
        </div><!-- /main listing content -->
@@ -22,4 +22,4 @@
     });
   </script>  
 
-{% include footer.html %
+{% include footer.html %}

@@ -1,11 +1,14 @@
 - name: Apache
+  permalink: /apache/
   img_src: "http://www.apache.org/images/feather.gif"
   product_is: Apache is a web server
 
 - name: DKAN
+  permalink: /dkan/
   img_src: "http://nucivic.com/wp-content/uploads/2014/04/logo-dkan.png"
   product_is: DKAN is an open data catalog and portal
 
 - name: NodeJS
+  permalink: /nodejs/
   img_src: /img/listings/nodejs/nodejs.png
   product_is: NodeJS is a web application framework with integrated web server and rich ecosystem of community plugins
