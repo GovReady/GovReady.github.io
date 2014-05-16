@@ -1,0 +1,36 @@
+<!-- listing sidebar -->
+<div class="container lg-font col-sm-3" style="margin-top:0px;border:0px solid gray;">
+
+  <h1 style="border-bottom:0px solid #ddd;">
+  <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
+  <img src="{{ page.logo2 }}" width="60"/>
+  <div style="margin-bottom:12px;"></div>
+</h1>
+
+  <div>Managed by: <a href="{{ page.managed_by_url }}">{{ page.managed_by }}</a></div>
+  <div><a href="{{ page.license_url }}">License</a></div>
+  <div><a href="{{ page.about_url }}">Official About</a></div>
+  <div><a href="{{ page.issue_tracker_url }}">Issue Tracker</a></div>
+  <div>Stable release: <a href="{{ page.stable_release }}">{{ page.stable_release }}</a></div>
+  <div>Security advisories</div>
+  <div>Commercial support: {% if page.commercial_support_url != '' %}<a href="{{ page.commercial_support_url }}">Yes</a>{% else %}Not yet{% endif %}</div>
+  <div><a href="{{ page.source_code_url }}">Source Code</a></div>
+
+  <hr />
+
+  <div><a href="#"></a></div>
+  <div><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download GovReady Vagrant</button></div>
+  <br />
+  <div><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-cloud"></span> Launch GovReady Instance</button></div>
+  <p><a href="#">Build your own...</a></p>
+  <hr />
+
+ <div style="margin-top:20px;">
+  <h4>Used By</h4>
+  <img src="https://avatars3.githubusercontent.com/u/1071563?s=32"/>
+ </div>
+ 
+  <div style="margin-top:60px;"></div>
+
+
+</div>

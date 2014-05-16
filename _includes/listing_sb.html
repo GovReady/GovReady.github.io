@@ -2,35 +2,42 @@
 <div class="container lg-font col-sm-3" style="margin-top:0px;border:0px solid gray;">
 
   <h1 style="border-bottom:0px solid #ddd;">
-  <a href="{{ page.website }}"><img src="{{ page.logo1 }}" width="160"/></a>
-  <img src="{{ page.logo2 }}" width="60"/>
+  {% if page.product.logo.img_src %}
+  <a href="{{ page.product.website }}"><img src="{{ page.product.logo.img_src }}" width="160"/></a>
+  {% endif %}
+  {% if page.product.logo.img_src2 %}
+  <img src="{{ page.product.logo.img_src2 }}" width="60"/>
+  {% endif %}
   <div style="margin-bottom:12px;"></div>
 </h1>
 
-  <div>Managed by: <a href="{{ page.managed_by_url }}">{{ page.managed_by }}</a></div>
-  <div><a href="{{ page.license_url }}">License</a></div>
-  <div><a href="{{ page.about_url }}">Official About</a></div>
-  <div><a href="{{ page.issue_tracker_url }}">Issue Tracker</a></div>
-  <div>Stable release: <a href="{{ page.stable_release }}">{{ page.stable_release }}</a></div>
-  <div>Security advisories</div>
-  <div>Commercial support: {% if page.commercial_support_url != '' %}<a href="{{ page.commercial_support_url }}">Yes</a>{% else %}Not yet{% endif %}</div>
-  <div><a href="{{ page.source_code_url }}">Source Code</a></div>
+  <div><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download GovReady {{ page.product.name }} VM</button></div>
+  </br>
+  <div><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Launch GovReady {{ page.product.name }} Sandbox</button></div>
 
   <hr />
 
-  <div><a href="#"></a></div>
-  <div><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download GovReady Vagrant</button></div>
-  <br />
-  <div><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-cloud"></span> Launch GovReady Instance</button></div>
-  <p><a href="#">Build your own...</a></p>
-  <hr />
+  <div class="well">
+    <!-- Quick Assessment table -->
+    <table class="table table-striped" width="100%" border="0">
 
- <div style="margin-top:20px;">
-  <h4>Used By</h4>
-  <img src="https://avatars3.githubusercontent.com/u/1071563?s=32"/>
- </div>
+      {% for item in page.quick_assessment %}
+        <tr><td width="110px">{{ item.name }}</td>
+        {% if item.value %}
+           <td style="text-align:center;"><span class="glyphicon glyphicon-ok text-success"></span></td></tr>
+        {% else %}
+           <td style="text-align:center;"><span class="glyphicon glyphicon-remove text-danger"></span></td></tr>
+        {% endif %}
+
+      {% endfor %}
+      <tr><td>Vendor</td><td><a href="{{ page.product.managed_by_url }}">{{ page.product.vendor }}</a></td></tr>
+      <tr><td>About</td><td><a href="{{ page.product.vendor_url }}">{{ page.product.name }}</a></td></tr>
+      <tr><td>License</td><td><a href="{{ page.product.license_url }}">{{ page.product.license }}</a></td></tr>
+      <tr><td>Source Code</td><td><a href="{{ page.product.source_code_url }}">{{ page.product.source_host }}</a></td></tr>
+    </table>
+    
+
+  </div>
  
-  <div style="margin-top:60px;"></div>
-
 
 </div>

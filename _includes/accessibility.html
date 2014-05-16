@@ -1,0 +1,19 @@
+          <div class="" id="accessibility">
+            <h2 class="listing-section">508 Accessibility</h2>
+
+            {% if page.accessibility.profile.dedicated_html %}
+              <p>Accessibility Information: <a href="{{ page.accessibility.profile.dedicated_html }}">{{ page.accessibility.profile.dedicated_html }}</a></p>
+            {% else %}
+              <p>{{ page.product.name }} is not currently maintaining a dedicated page regarding accessibility.</p>
+            {% endif %}
+
+            {% if page.accessibility.v-pat.dedicated_html %}
+              <p>Accessibility Information: <a href="{{ page.accessibility.v-pat.dedicated_html. }}">{{ page.accessibility.v-pat.dedicated_html }}</a></p>
+            {% else %}
+              <p>{{ page.product.name }} is not currently maintaining a V-PAT online.</p>
+            {% endif %}
+
+            {% for item in page.accessibility.notes %}
+                  <p class="text-{{ item:severity }}" >NOTE: {{ item.date }} {{ item.description }}</p>
+              {% endfor %}
+            </div>

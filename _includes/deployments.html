@@ -1,0 +1,42 @@
+<div id="deployments">
+  <h2 class="listing-section">Gallery of Government Deployments</h2>
+  {% if page.usg_instances.deployed %}
+	<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="border:1px solid #999;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {% assign loop_index = 0 %}
+        {% for item in page.usg_instances.deployed %}
+          <li data-target="#myCarousel" data-slide-to="{{ loop_index }}" class=""></li>
+          {% capture loop_index %}{{ loop_index | plus:1 }}{% endcapture %}
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+
+        {% assign loop_index = 0 %}
+        {% for item in page.usg_instances.deployed %}
+          
+          {% if loop_index == 0 %}<div class="item active">{% else %}<div class="item">{% endif %}
+            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="{{ item.img_src }}">
+            <div class="container">
+              <div class="carousel-caption" style=" background-color: rgba(20, 20, 20, 0.7);padding:12px;">
+                <h1><a href="{{ item.url }}" target="_blank" style="color:white;">{{ item.organization }} {{ item.name }}</a></h1>
+                
+                
+              </div>
+            </div>
+          </div>
+          {% capture loop_index %}{{ loop_index | plus:1 }}{% endcapture %}
+        {% endfor %}
+
+        
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    <!-- /.carousel -->
+{% endif %}
+<p class="tip-govready">Do you know of a government deployment of {{ page.product.name }}? <a href="/tips/">Tip GovReady!</a></p>
+
+</div>
