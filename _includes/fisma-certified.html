@@ -12,26 +12,9 @@
                 {% endfor %}
               </p>
 
-              <!-- FISMA Notes-->
-              {% for item in page.FISMA.notes %}
-                  <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
-              {% endfor %}
-
-              <!-- Available FISMA-certified configurations -->
-              <h3 class="listing-subsection">Available FISMA-certified configurations of {{ page.product.name }}</h3>  
-                <ul>
-                {% for item in page.FISMA.certified-configurations %}
-                    <li>
-                      <b><a href="{{ item.url}} ">{{ item.name }}.</a></b>
-                      By {{ item.vendor }}.
-                      {{ item.description }}
-                    </dt>
-                {% endfor %}
-              </ul>
-              <p class="tip-govready">Do you know of a FISMA-Certified configuration of {{ page.product.name }}? <a href="/tips/">Tip GovReady!</a></p>
-
+              
               <!-- Roll Your Own -->
-              <h3 class="listing-subsection">Roll Your Own FISMA-certified configuration of {{ page.product.name }} </h3>
+              <!--h3 class="listing-subsection">Building a FISMA-certified configuration of {{ page.product.name }} </h3-->
               <div class="well" style="">
                 <table class="table table-hover" width="100%" border="0" style="">
                 <thead>
@@ -58,8 +41,27 @@
                     </td>
                   </tr>
                 {% endfor %}
-              </table>
-            </div>
+                </table>
+              </div>
+
+              <!-- FISMA Notes-->
+              {% for item in page.FISMA.notes %}
+                  <p class="text-warning" >NOTE: As of {{ item.date }}, {{ item.description }}</p>
+              {% endfor %}
+
+              <!-- Available FISMA-certified configurations -->
+              <h3 class="listing-subsection">Available FISMA-certified configurations of {{ page.product.name }}</h3>  
+                <ul>
+                {% for item in page.FISMA.certified-configurations %}
+                    <li>
+                      <b><a href="{{ item.url}} ">{{ item.name }}.</a></b>
+                      By {{ item.vendor }}.
+                      {{ item.description }}
+                    </dt>
+                {% endfor %}
+              </ul>
+              <p class="tip-govready">Do you know of a FISMA-Certified configuration of {{ page.product.name }}? <a href="/tips/">Tip GovReady!</a></p>
+
 
             </div><!-- /FISMA-certified -->
 
