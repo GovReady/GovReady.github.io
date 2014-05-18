@@ -8,6 +8,19 @@
       <div>
         {{ content }}
 
+
+        <h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Identifiers</h3>
+        <ul>
+        	<li>ident: {{ page.ident }}</li>
+        	<li>severity: {{ page.severity }}</li>
+        	<li>title: {{ page.title }}</li>
+        	<li>rule_id: {{ page.rule_id }} </li>
+        	<li><a href="file:///codedata/virtualmachines/aqueduct/compliance/bash/ssg/dev/{{ page.rule_id}}.sh">/codedata/virtualmachines/aqueduct/compliance/bash/ssg/dev/{{ page.rule_id}}.sh</a>
+
+        </ul>
+
+
+
         {% include disqus.html %}
 
       </div>
