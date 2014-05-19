@@ -12,3 +12,21 @@
   permalink: /nodejs/
   img_src: /img/listings/nodejs/nodejs.png
   product_is: NodeJS is a web application framework with integrated web server and rich ecosystem of community plugins
+
+# Non Tech listings
+
+- name: Scap Security Guide CCE Rules
+  permalink: /cce/
+  img_src: ""
+  product_is: list of Scap Security Guide CCE Rules
+
+- name: Scap Security Guide CCE Rules Fix Availability
+  permalink: /cce/fixes/
+  img_src: ""
+  product_is: list of Scap Security Guide CCE Rules and if fixes exist
+
+- name: NIST 800-53 v4 Controls
+  permalink: /800-53/
+  img_src: ""
+  product_is: list of NIST 800-53 rules
+
