@@ -119,14 +119,14 @@ usg_instances:
   deployed_est:       none
   planned_est:        few
   deployed:
-    #- name:           USAID DKAN
-    #  organization:   USAID
-    #  description:    FCC's web site
+    #- name:           hidden
+    #  organization:   hidden
+    #  description:    description here
     #  facing:         public
-    #  url:            "http://www.fcc.gov"
-    #  img_src:        "/img/listings/apache/apache-fcc-gov_900x500.png"
+    #  url:            ""
+    #  img_src:        ""
   planned:  
-    - name:           
+    - name:           hidden
       organization:   hidden
       description:    TBD
       facing:         external 
