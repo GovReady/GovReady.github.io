@@ -19,8 +19,8 @@
         </h1>
          
           <div class="" id="about">
-              <p>For {{ page.for }} who {{ page.who }}, <b>{{ page.name }} is {{ page.product_is }} that {{ page.that }}</b>.
-                 Unlike {{ page.unlike }}, {{ page.name }} {{ page.product_features }}.</p>
+              <p>For {{ page.for }} who {{ page.epitch.who }}, <b>{{ page.name }} is {{ page.epitch.product_is }} that {{ page.epitch.that }}</b>.
+                 Unlike {{ page.epitch.unlike }}, {{ page.epitch.name }} {{ page.epitch.product_features }}.</p>
           </div>
 
           
@@ -45,7 +45,7 @@
 
               <h3 class="listing-subsection">How are FISMA-certified configurations of {{ page.name }} achieved?</h3>
               <p>F<td></td>ISMA-Certified Configurations of {{ page.name }} are achieved via appropriate 800-53 controls on 
-                {% for item in page.FISMA_components %}
+                {% for item in page.FISMA.components %}
                   {% if forloop.last %}
                     and <span class="" ><a href="/{{ item.name }}/">{{ item.name }}</a></span>.
                   {% else %}
@@ -74,7 +74,7 @@
                     <th>Substitutes</th>
                   </tr>
                 </thead>
-                {% for item in page.FISMA_components %}
+                {% for item in page.FISMA.components %}
                   <tr>
                     <td><a href="/{{ item.name | downcase}}4/">{{ item.name }}</a></td>
                     <td>{{ item.tier }}</td>
@@ -95,43 +95,9 @@
 
           </div>
 
-          <div class="" id="security">
-            <h2 class="listing-section">Security Monitoring &amp; Patching</h2>
-            
-            {% if page.security_reports.dedicated_webpage %}
-              <p>Security Reports: <a href="{{ page.security_reports.dedicated_webpage }}">{{ page.security_reports.dedicated_webpage }}</a></p>
-            {% else %}
-              <p>{{ page.name }} is not currently maintaining a dedicated security report page.</p>
-            {% endif %}
+          {% include security.html %}
 
-            {% if page.security_reports.dedicated_feed %}
-              <p>Security Reports data feed: <a href="{{ page.security_reports.dedicated_dedicated_feed }}">{{ page.security_reports.dedicated_feed }}</a></p>
-            {% else %}
-              <p>{{ page.name }} is not currently maintaining a dedicated security report data feed.</p>
-            {% endif %}
-  
-          </div>
-
-          <div class="" id="accessibility">
-            <h2 class="listing-section">508 Accessibility</h2>
-
-            {% if page.accessibility_info.dedicated_webpage %}
-              <p>Accessibility Information: <a href="{{ page.accessibility_info.dedicated_webpage }}">{{ page.accessibility_info.dedicated_webpage }}</a></p>
-            {% else %}
-              <p>{{ page.name }} is not currently maintaining a dedicated page regarding accessibility.</p>
-            {% endif %}
-
-            {% if page.accessibility_info.accessibility_v %}
-              <p>Accessibility Information: <a href="{{ page.accessibility_info.accessibility_v }}">{{ page.accessibility_info.accessibility_v }}</a></p>
-            {% else %}
-              <p>{{ page.name }} is not currently maintaining a V-PAT online.</p>
-            {% endif %}
-
-            {% for item in page.accessibility_notes %}
-                  <p class="text-{{ item:severity }}" >NOTE: {{ item.date }} {{ item.description }}</p>
-              {% endfor %}
-
-          </div>
+          {% include accessibility.html %}
 
           <div class="" id="misc">
             {% include misc.html %}
