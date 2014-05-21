@@ -175,34 +175,27 @@ product:
 # # FISMA-Certified Configurations #
 # ##################################
 
-# FISMA:
-#   components: 
-#     - name:           facility
-#       tier:           Infrastructure/Data center
-#       dependency:     required
-#       alternatives:
-#         - FedRamp CSP
+FISMA:
+  components: 
+    - name:           facility
+      tier:           Infrastructure/Data center
+      dependency:     required
+      alternatives:
+        - FedRamp CSP
 
-#     - name:           Linux
-#       tier:           Infrastructure/Operating system
-#       dependency:     required
-#       adoption_usfed: widely used
-#       alternatives:
-#         - Windows
+    - name:           Linux
+      tier:           Infrastructure/Operating system
+      dependency:     required
+      adoption_usfed: widely used
+      alternatives:
+        - Windows
 
-#     - name:           Apache
-#       tier:           Application/Web Server
-#       dependency:     required
-#       adoption_usfed: widely used
-#       alternatives:
-#         - None
-
-#   certified-configurations:
-#     - name:           RedHat Enterprise Linux
-#       url:            ""
-#       vendor:         RedHat
-#       description:    A widely used by government offering Linux Operationg system that includes signed software packages including Apache.
-
+    - name:           MySQL
+      tier:           Application/Database
+      dependency:     required
+      adoption_usfed: broadly used
+      alternatives:
+        - None
 
 # #######################
 # # Accessibility - 508 #
