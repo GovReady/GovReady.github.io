@@ -9,8 +9,8 @@ event:
   description: 119 civic hackathon events in 100 cities
   location: various locations
   location_url: "http://hackforchange.org/events/"
-  start_date: 2014-05-30
-  end_date: 2014-06-01
+  start_date: "2014-05-30"
+  end_date: "2014-06-01"
 published: true
 ---
 
