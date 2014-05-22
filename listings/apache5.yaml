@@ -1,3 +1,4 @@
+---
 govready: 
   template_version: 0.3.5
   template_copyright: Copyright 2014 GovReady. All Rights Reserved.
@@ -138,3 +139,4 @@ quick_assessment:
     value: true
   - name: "SCAP?"
     value: false
+---
