@@ -1,0 +1,140 @@
+govready: 
+  template_version: 0.3.5
+  template_copyright: Copyright 2014 GovReady. All Rights Reserved.
+layout: listing
+permalink: /apache5/
+product: 
+  name: Apache5
+  govready_file: false
+  website: "http://httpd.apache.org/"
+  summary: "Web's most popular web server"
+  group: Applications/Web Server
+  source: "http://www.apache.org/dist/httpd/"
+  url: "http://httpd.apache.org"
+  source_host: Apache
+  source_code_url: "http://www.apache.org/dist/httpd/"
+  vendor: Apache Foundation
+  vendor_url: "http://apache.org"
+  license: "Apache License, Version 2.0"
+  license_url: "http://www.apache.org/licenses/LICENSE-2.0"
+  about_url: "http://httpd.apache.org/ABOUT_APACHE.html"
+  logo: 
+    dedicated_html: "http://www.apache.org/foundation/press/kit/"
+    dedicated_data: false
+    img_src: "http://www.apache.org/images/feather.gif"
+    img_src2: false
+  logo_policy: 
+    dedicated_html: "http://www.apache.org/foundation/marks/"
+    dedicated_data: false
+    img_src: false
+  issue_tracker_url: "https://issues.apache.org/bugzilla/"
+  security_url: "http://httpd.apache.org/security_report.html"
+  download: "http://httpd.apache.org/download.cgi"
+  commercial_support_url: 
+    - name: OpenLogic
+      url: "http://olex.openlogic.com/support/apache-support"
+    - name: Pantek
+      url: "http://www.pantek.com/support.php?subsect=apache&_vsrefdom=paidsearch&gclid=CO_anauNor4CFYMSOgodPy4ATw"
+epitch: 
+  for: organizations
+  who: have web sites
+  product_is: Apache is a web server
+  that: "is the world's most popular web server"
+  unlike: propietary web servers
+  product_features: "Apache is open source, powerful, flexible and well known to most system administrators"
+usg_instances: 
+  deployed_est: thousands
+  planned_est: thousands
+  deployed: 
+    - name: fcc.gov
+      organization: FCC
+      description: "FCC's web site"
+      facing: public
+      url: "http://www.fcc.gov"
+      img_src: "/img/listings/apache/apache-fcc-gov_900x500.png"
+  planned: 
+    - name: fcc.gov
+      organization: FCC
+      description: "FCC's web site"
+      facing: internal
+      url: "http://www.fcc.gov"
+      img_src: "/img/listings/apache/apache-fcc-gov_900x500.png"
+videos: 
+  - name: Install Apache
+    video_src: //www.youtube.com/embed/oeZpY6JY4iI
+    video_service: youtube
+  - name: Quick Apache Web Server
+    video_src: //www.youtube.com/embed/xCJkMIYwjp8
+    video_service: youtube
+  - name: The Apache Web Server
+    video_src: //www.youtube.com/embed/eJ2ZPi3UCG0
+    video_service: youtube
+  - name: "Install Apache HTTP<br />Server 2.2.13 for Windows"
+    video_src: //www.youtube.com/embed/8tBkEWPOqqk
+    video_service: youtube
+security: 
+  reports: 
+    dedicated_html: "http://httpd.apache.org/security_report.html"
+    dedicated_data: false
+  scap: 
+    dedicated_html: false
+    dedicated_data: false
+  dod_stig: 
+    dedicated_html: ""
+    dedicated_data: ""
+    level: II
+FISMA: 
+  components: 
+    - name: facility
+      tier: Infrastructure/Data center
+      dependency: required
+      alternatives: 
+        - FedRamp CSP
+    - name: Linux
+      tier: Infrastructure/Operating system
+      dependency: required
+      adoption_usfed: widely used
+      alternatives: 
+        - Windows
+    - name: Apache
+      tier: Application/Web Server
+      dependency: required
+      adoption_usfed: widely used
+      alternatives: 
+        - None
+  "certified-configurations": 
+    - name: RedHat Enterprise Linux
+      url: ""
+      vendor: RedHat
+      description: A widely used by government offering Linux Operationg system that includes signed software packages including Apache.
+accessibility: 
+  profile: 
+    dedicated_html: false
+    dedicated_feed: false
+  "v-pat": 
+    dedicated_html: false
+    dedicated_data: false
+  notes: 
+    - name: "Apache is text-based configuration"
+      description: "Apache configuration is text-based."
+      date: 2014-05-12T00:00:00.000Z
+      severity: success
+quick_assessment: 
+  - name: "Internal?"
+    value: true
+  - name: "Public?"
+    value: true
+  - name: "In use?"
+    value: true
+  - name: "In development?"
+    value: true
+  - name: "Patching?"
+    value: true
+  - name: "Enterprise version?"
+    value: true
+  - name: "Support?"
+    value: true
+  - name: "in NVD?"
+    value: true
+  - name: "SCAP?"
+    value: false
