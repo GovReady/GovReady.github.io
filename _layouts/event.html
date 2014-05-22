@@ -1,0 +1,28 @@
+{% include header.html %}
+
+<div class="listing-page">
+
+  <!-- listing container -->
+  <div class="container lg-font col-sm-12" id="listing">
+
+        <!-- main listing content -->
+        <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+
+          <h1 class="listing-title">
+            <span class="">Event | {{ page.event.title }} </span> 
+          </h1>
+
+          <p>
+          	{{ page.event.tagline }}<br />
+          	{{ page.event.start_date }} to {{ page.event.end_date }} at <a href="{{ page.event.location_url }}">{{ page.event.location }}</a>. 
+
+          	Website: <a href="{{ page.event.url }}">{{ page.event.url }}</a>
+          </p>
+
+          {{ content }}
+         
+         </div>
+     </div>
+ </div>
+
+{% include footer.html %}
