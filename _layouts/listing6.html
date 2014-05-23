@@ -1,0 +1,57 @@
+{% include header.html %}
+
+<div class="listing-page">
+
+  <!-- listing container -->
+  <div class="container lg-font col-sm-12" id="listing">
+
+        <!-- main listing content -->
+        <div class="container lg-font col-sm-9 pull-left"  style="border:0px solid gray;">
+
+          <h1 class="listing-title">
+            <span class="">GovReady Assessment of {{ page.product.name }} </span> 
+          </h1>
+         
+          {% include epitch.html %}
+
+
+          {% include vm.html %}          
+          
+          
+          {% include fisma-certified.html %}
+
+
+          {% include security.html %}
+
+
+          {% include deployments.html %}
+        
+
+          {% include videos.html %}
+          
+
+          {% include accessibility.html %}
+
+          
+          {% include misc.html %}
+
+
+          {% include disclaimer.html %}
+          
+          
+       </div> <!-- /main listing content -->
+    
+    <!-- listing sidebar -->
+    {% include listing_sb.html %}
+
+
+  </div><!-- /listing container -->
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+  </script>  
+
+
+{% include footer.html %}
