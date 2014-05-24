@@ -1,0 +1,30 @@
+---
+layout: control
+permalink: /CCE-27487-8/
+name: CCE-27487-8
+title: Set Permissions on the /etc/httpd/conf/ Directory
+ident: CCE-27487-8
+severity: low
+rule_id: httpd_conf_dir_permissions
+oval_id: oval:ssg:def:186
+aqueduct_bash_fix: 1
+---
+<p class="text-info">Failing to set permissions on the /etc/httpd/conf/ directory is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Access to the web server's configuration files may allow an unauthorized user or attacker
+to access information about the web server or alter the server's configuration files.
+</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Restrict File and Directory Access</i> rules. <a href="/cce/ssg/group/httpd_restrict_file_dir_access"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Set permissions on the web server configuration directory to 750:
+<pre xmlns="http://www.w3.org/1999/xhtml"># chmod 750 /etc/httpd/conf/</pre>
+</description></p>
+
+

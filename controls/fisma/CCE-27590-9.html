@@ -1,0 +1,30 @@
+---
+layout: control
+permalink: /CCE-27590-9/
+name: CCE-27590-9
+title: Serve Avahi Only via Required Protocol
+ident: CCE-27590-9
+severity: low
+rule_id: avahi_ip_only
+oval_id: oval:ssg:def:373
+aqueduct_bash_fix: 1
+---
+<p class="text-info">Failing to serve avahi only via required protocol is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""></p>
+<p><small>via FISMA SSG. View all 5 <i>Configure Avahi if Necessary</i> rules. <a href="/cce/ssg/group/avahi_configuration"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+If you are using only IPv4, edit <xhtml:code>/etc/avahi/avahi-daemon.conf</xhtml:code> and ensure
+the following line exists in the <xhtml:code>[server]</xhtml:code> section:
+<pre xmlns="http://www.w3.org/1999/xhtml">use-ipv6=no</pre>
+Similarly, if you are using only IPv6, disable IPv4 sockets with the line:
+<pre xmlns="http://www.w3.org/1999/xhtml">use-ipv4=no</pre>
+</description></p>
+
+

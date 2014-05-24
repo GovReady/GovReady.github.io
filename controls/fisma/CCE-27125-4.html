@@ -1,0 +1,33 @@
+---
+layout: control
+permalink: /CCE-27125-4/
+name: CCE-27125-4
+title: Root Path Must Be Vendor Default
+ident: CCE-27125-4
+severity: low
+rule_id: root_path_default
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to root path must be vendor default is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The root account's executable search path must be the vendor default, and must
+contain only absolute paths.
+</rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Restrict Root Logins</i> rules. <a href="/cce/ssg/group/root_logins"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Assuming root shell is bash, edit the following files:
+<pre xmlns="http://www.w3.org/1999/xhtml">~/.profile</pre>
+<pre xmlns="http://www.w3.org/1999/xhtml">~/.bashrc</pre>
+Change any <xhtml:code>PATH</xhtml:code> variables to the vendor default for root and remove any
+empty <xhtml:code>PATH</xhtml:code> entries or references to relative paths.
+</description></p>
+
+

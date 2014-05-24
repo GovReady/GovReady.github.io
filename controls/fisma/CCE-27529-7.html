@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-27529-7/
+name: CCE-27529-7
+title: Install Virus Scanning Software
+ident: CCE-27529-7
+severity: low
+rule_id: install_antivirus
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to install virus scanning software is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Virus scanning software can be used to detect if a system has been compromised by
+computer viruses, as well as to limit their spread to other systems. 
+</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Additional Security Software</i> rules. <a href="/cce/ssg/group/additional_security_software"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Install virus scanning software, which uses signatures to search for the
+presence of viruses on the filesystem. 
+The McAfee uvscan virus scanning tool is provided for DoD systems.
+Ensure virus definition files are no older than 7 days, or their last release.
+<!-- need info here on where DoD admins can go to get this -->
+Configure the virus scanning software to perform scans dynamically on all
+accessed files.  If this is not possible, configure the
+system to scan all altered files on the system on a daily
+basis. If the system processes inbound SMTP mail, configure the virus scanner
+to scan all received mail.
+<!-- what's the basis for the IAO language? would not failure of a check
+     imply a discussion, for every check in this document, 
+     with the IAO (or SSO or ISSO or ISSM or whatever is the right acronym in your
+     particular neighborhood) should occur? -->
+</description></p>
+
+

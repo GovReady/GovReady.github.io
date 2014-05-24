@@ -1,0 +1,42 @@
+---
+layout: control
+permalink: /CCE-27581-8/
+name: CCE-27581-8
+title: Limit Available Methods
+ident: CCE-27581-8
+severity: low
+rule_id: httpd_limit_available_methods
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to limit available methods is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Minimizing the number of available methods to the web client reduces risk
+by limiting the capabilities allowed by the web server.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Directory Restrictions</i> rules. <a href="/cce/ssg/group/httpd_directory_restrictions"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Web server methods are defined in section 9 of RFC 2616 (http://www.ietf.org/rfc/rfc2616.txt).
+If a web server does not require the implementation of all available methods,
+they should be disabled.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+Note: <xhtml:code>GET</xhtml:code> and <xhtml:code>POST</xhtml:code> are the most common methods. A majority of the others
+are limited to the WebDAV protocol.
+<pre xmlns="http://www.w3.org/1999/xhtml">&lt;Directory /var/www/html&gt;
+# ...
+   # Only allow specific methods (this command is case-sensitive!)
+   &lt;LimitExcept GET POST&gt;
+      Order allow,deny
+   &lt;/LimitExcept&gt;
+# ...
+&lt;/Directory&gt;</pre>
+</description></p>
+
+

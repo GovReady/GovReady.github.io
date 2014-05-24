@@ -1,0 +1,32 @@
+---
+layout: control
+permalink: /CCE-27635-2/
+name: CCE-27635-2
+title: Ensure Software Patches Installed
+ident: CCE-27635-2
+severity: high
+rule_id: security_patches_up_to_date
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-danger">Failing to ensure software patches installed is of <b>high</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Installing software updates is a fundamental mitigation against
+the exploitation of publicly-known vulnerabilities.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Updating Software</i> rules. <a href="/cce/ssg/group/updating"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If the system is joined to the Red Hat Network, a Red Hat Satellite Server,
+or a yum server, run the following command to install updates:
+<pre xmlns="http://www.w3.org/1999/xhtml"># yum update</pre>
+If the system is not configured to use one of these sources, updates (in the form of RPM packages)
+can be manually downloaded from the Red Hat Network and installed using <xhtml:code>rpm</xhtml:code>.
+</description></p>
+
+

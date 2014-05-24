@@ -1,0 +1,29 @@
+---
+layout: control
+permalink: /CCE-26923-3/
+name: CCE-26923-3
+title: Disable Booting from USB Devices in Boot Firmware
+ident: CCE-26923-3
+severity: low
+rule_id: bios_disable_usb_boot
+oval_id: oval:ssg:def:133
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable booting from usb devices in boot firmware is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Booting a system from a USB device would allow an attacker to
+circumvent any security measures provided by the operating system. Attackers
+could mount partitions and modify the configuration of the OS.</rationale></p>
+<p><small>via FISMA SSG. View all 14 <i>Restrict Dynamic Mounting and Unmounting of
+Filesystems</i> rules. <a href="/cce/ssg/group/mounting"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Configure the system boot firmware (historically called BIOS on PC
+systems) to disallow booting from USB drives. 
+</description></p>
+
+

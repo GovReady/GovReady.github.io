@@ -1,0 +1,29 @@
+---
+layout: control
+permalink: /CCE-27414-2/
+name: CCE-27414-2
+title: Specify UID and GID for Anonymous NFS Connections
+ident: CCE-27414-2
+severity: low
+rule_id: nfs_no_anonymous
+oval_id: oval:ssg:def:858
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to specify uid and gid for anonymous nfs connections is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Specifying the anonymous UID and GID as -1 ensures that the remote root user is mapped to a local account which has no permissions on the system.</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Disable NFS Server Daemons</i> rules. <a href="/cce/ssg/group/disabling_nfsd"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To specify the UID and GID for remote root users, edit the <xhtml:code>/etc/exports</xhtml:code> file and add the following for each export:
+<pre xmlns="http://www.w3.org/1999/xhtml">
+anonuid=-1
+anongid=-1
+</pre>
+</description></p>
+
+

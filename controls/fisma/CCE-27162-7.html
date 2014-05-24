@@ -1,0 +1,32 @@
+---
+layout: control
+permalink: /CCE-27162-7/
+name: CCE-27162-7
+title:  Disable Logwatch on Clients if a Logserver Exists
+ident: CCE-27162-7
+severity: low
+rule_id: disable_logwatch_for_logserver
+oval_id: oval:ssg:def:1138
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to  disable logwatch on clients if a logserver exists is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""></p>
+<p><small>via FISMA SSG. View all 3 <i>Configure Syslog</i> rules. <a href="/cce/ssg/group/logging"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"> 
+Does your site have a central logserver which has been configured to report on logs received from all systems? 
+If so:
+<pre xmlns="http://www.w3.org/1999/xhtml"> 
+# rm /etc/cron.daily/0logwatch 
+</pre>
+If no logserver exists, it will be necessary for each machine to run Logwatch individually. Using a central 
+logserver provides the security and reliability benefits discussed earlier, and also makes monitoring logs easier 
+and less time-intensive for administrators.</description></p>
+
+

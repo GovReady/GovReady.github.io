@@ -1,0 +1,29 @@
+---
+layout: control
+permalink: /CCE-27379-7/
+name: CCE-27379-7
+title: All GIDs referenced in /etc/passwd must be defined in /etc/group
+ident: CCE-27379-7
+severity: low
+rule_id: gid_passwd_group_same
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to all gids referenced in /etc/passwd must be defined in /etc/group is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Inconsistency in GIDs between <xhtml:code>/etc/passwd</xhtml:code> and <xhtml:code>/etc/group</xhtml:code> could lead to a user having unintended rights.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Verify Proper Storage and Existence of Password
+Hashes</i> rules. <a href="/cce/ssg/group/password_storage"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Add a group to the system for each GID referenced without a corresponding group.
+</description></p>
+
+

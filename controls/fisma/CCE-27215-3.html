@@ -5,7 +5,8 @@ name: CCE-27215-3
 title: Set Interval For Counting Failed Password Attempts
 ident: CCE-27215-3
 severity: medium
-rule_id: deny_password_attempts_fail_interval
+rule_id: accounts_passwords_pam_fail_interval
+oval_id: oval:ssg:def:203
 aqueduct_bash_fix: 
 ---
 <p class="text-warning">Failing to set interval for counting failed password attempts is of <b>medium</b> severity.</p>
@@ -22,10 +23,11 @@ specific period of time prevents direct password guessing attacks.
 
 <h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
-To configure the system to lock out accounts after a number of incorrect login
-attempts within a 15 minute interval using <xhtml:code>pam_faillock.so</xhtml:code>:
+Utilizing <xhtml:code>pam_faillock.so</xhtml:code>, the <xhtml:code>fail_interval</xhtml:code> directive configures the system to lock out accounts after a number of incorrect login
+attempts.
 <br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
-Add the following lines immediately below the <xhtml:code>pam_env.so</xhtml:code> statement in <xhtml:code>/etc/pam.d/system-auth</xhtml:code>:
+Add the following <xhtml:code>fail_interval</xhtml:code> directives to <xhtml:code>pam_faillock.so</xhtml:code> immediately below the <xhtml:code>pam_env.so</xhtml:code> statement in
+<xhtml:code>/etc/pam.d/system-auth</xhtml:code> and <xhtml:code>/etc/pam.d/password-auth</xhtml:code>:
 <pre xmlns="http://www.w3.org/1999/xhtml">auth [default=die] pam_faillock.so authfail deny=3 unlock_time=604800 fail_interval=900</pre>
 <pre xmlns="http://www.w3.org/1999/xhtml">auth required pam_faillock.so authsucc deny=3 unlock_time=604800 fail_interval=900</pre>
 </description></p>

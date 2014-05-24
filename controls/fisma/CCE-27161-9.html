@@ -1,0 +1,27 @@
+---
+layout: control
+permalink: /CCE-27161-9/
+name: CCE-27161-9
+title: Disable Interface Usage of IPv6
+ident: CCE-27161-9
+severity: low
+rule_id: network_ipv6_disable_interfaces
+oval_id: oval:ssg:def:279
+aqueduct_bash_fix: 1
+---
+<p class="text-info">Failing to disable interface usage of ipv6 is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""></p>
+<p><small>via FISMA SSG. View all 3 <i>Disable Support for IPv6 Unless Needed</i> rules. <a href="/cce/ssg/group/disabling_ipv6"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">To disable interface usage of IPv6, add or correct the following lines in <xhtml:code>/etc/sysconfig/network</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">NETWORKING_IPV6=no
+IPV6INIT=no</pre>
+</description></p>
+
+

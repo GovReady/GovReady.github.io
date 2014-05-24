@@ -1,0 +1,32 @@
+---
+layout: control
+permalink: /CCE-27565-1/
+name: CCE-27565-1
+title: Restrict Other Critical Directories
+ident: CCE-27565-1
+severity: low
+rule_id: httpd_restrict_critical_directories
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to restrict other critical directories is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Directories accessible from a web client should be configured with the least amount of
+access possible in order to avoid unauthorized access to restricted content or server information.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Directory Restrictions</i> rules. <a href="/cce/ssg/group/httpd_directory_restrictions"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+All accessible web directories should be configured with similarly restrictive settings.
+The <xhtml:code>Options</xhtml:code> directive should be limited to necessary functionality and the <xhtml:code>AllowOverride</xhtml:code>
+directive should be used only if needed. The <xhtml:code>Order</xhtml:code> and <xhtml:code>Deny</xhtml:code> access control tags
+should be used to deny access by default, allowing access only where necessary.
+</description></p>
+
+

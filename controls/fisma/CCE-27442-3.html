@@ -1,0 +1,40 @@
+---
+layout: control
+permalink: /CCE-27442-3/
+name: CCE-27442-3
+title: Disable Proxy Support
+ident: CCE-27442-3
+severity: low
+rule_id: httpd_proxy_support
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable proxy support is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Minimizing the number of loadable modules available to the web server reduces risk
+by limiting the capabilities allowed by the web server.
+</rationale></p>
+<p><small>via FISMA SSG. View all 12 <i>httpd Core Modules</i> rules. <a href="/cce/ssg/group/httpd_core_modules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The <xhtml:code>proxy</xhtml:code> module provides proxying support, allowing <xhtml:code>httpd</xhtml:code> to forward requests and
+serve as a gateway for other servers. If its functionality is unnecessary, comment out the module:
+<pre xmlns="http://www.w3.org/1999/xhtml">#LoadModule proxy_module modules/mod_proxy.so</pre>
+<!-- dependencies: #LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+#LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+#LoadModule proxy_http_module modules/mod_proxy_http.so
+#LoadModule proxy_connect_module modules/mod_proxy_connect.so-->
+If proxy support is needed, load <xhtml:code>mod_proxy</xhtml:code> and the appropriate proxy protocol handler
+module (one of <xhtml:code>mod_proxy_http</xhtml:code>, <xhtml:code>mod_proxy_ftp</xhtml:code>, or <xhtml:code>mod_proxy_connect</xhtml:code>). Additionally,
+make certain that a server is secure before enabling proxying, as open proxy servers
+are a security risk. <xhtml:code>mod_proxy_balancer</xhtml:code> enables load balancing, but requires that
+<xhtml:code>mod status</xhtml:code> be enabled.
+</description></p>
+
+

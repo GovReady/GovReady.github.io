@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27111-4/
+name: CCE-27111-4
+title: Ensure No Daemons are Unconfined by SELinux
+ident: CCE-27111-4
+severity: medium
+rule_id: selinux_confinement_of_daemons
+oval_id: oval:ssg:def:514
+aqueduct_bash_fix: 1
+---
+<p class="text-warning">Failing to ensure no daemons are unconfined by selinux is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Daemons which run with the <xhtml:code>initrc_t</xhtml:code> context may cause AVC denials,
+or allow privileges that the daemon does not require.
+</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>SELinux</i> rules. <a href="/cce/ssg/group/selinux"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Daemons for which the SELinux policy does not contain rules will inherit the
+context of the parent process. Because daemons are launched during
+startup and descend from the <xhtml:code>init</xhtml:code> process, they inherit the <xhtml:code>initrc_t</xhtml:code> context.
+<br xmlns="http://www.w3.org/1999/xhtml"/>
+<br xmlns="http://www.w3.org/1999/xhtml"/>
+To check for unconfined daemons, run the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># ps -eZ | egrep "initrc" | egrep -vw "tr|ps|egrep|bash|awk" | tr ':' ' ' | awk '{ print $NF }'</pre>
+It should produce no output in a well-configured system.
+</description></p>
+
+

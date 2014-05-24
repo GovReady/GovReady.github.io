@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27135-3/
+name: CCE-27135-3
+title: Build and Test AIDE Database
+ident: CCE-27135-3
+severity: low
+rule_id: aide_build_database
+oval_id: oval:ssg:def:621
+aqueduct_bash_fix: 1
+---
+<p class="text-info">Failing to build and test aide database is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+For AIDE to be effective, an initial database of "known-good" information about files
+must be captured and it should be able to be verified against the installed files.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Verify Integrity with AIDE</i> rules. <a href="/cce/ssg/group/aide"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Run the following command to generate a new database:
+<pre xmlns="http://www.w3.org/1999/xhtml"># /usr/sbin/aide --init</pre>
+By default, the database will be written to the file <xhtml:code>/var/lib/aide/aide.db.new.gz</xhtml:code>.
+Storing the database, the configuration file <xhtml:code>/etc/aide.conf</xhtml:code>, and the binary
+<xhtml:code>/usr/sbin/aide</xhtml:code> (or hashes of these files), in a secure location (such as on read-only media) provides additional assurance about their integrity.
+The newly-generated database can be installed as follows:
+<pre xmlns="http://www.w3.org/1999/xhtml"># cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz</pre>
+To initiate a manual check, run the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># /usr/sbin/aide --check</pre>
+If this check produces any unexpected output, investigate.
+</description></p>
+
+

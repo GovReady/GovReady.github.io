@@ -1,0 +1,32 @@
+---
+layout: control
+permalink: /CCE-27522-2/
+name: CCE-27522-2
+title: Configure auditd Number of Logs Retained
+ident: CCE-27522-2
+severity: medium
+rule_id: configure_auditd_num_logs
+oval_id: oval:ssg:def:1041
+aqueduct_bash_fix: 
+---
+<p class="text-warning">Failing to configure auditd number of logs retained is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">The total storage for audit log files must be large enough to retain
+log information over the period required. This is a function of the maximum log
+file size and the number of logs retained.</rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Configure auditd Data Retention</i> rules. <a href="/cce/ssg/group/configure_auditd_data_retention"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Determine how many log files
+<xhtml:code>auditd</xhtml:code> should retain when it rotates logs.
+Edit the file <xhtml:code>/etc/audit/auditd.conf</xhtml:code>. Add or modify the following
+line, substituting <i xmlns="http://www.w3.org/1999/xhtml">NUMLOGS</i> with the correct value:
+<pre xmlns="http://www.w3.org/1999/xhtml">num_logs = <i>NUMLOGS</i></pre>
+Set the value to 5 for general-purpose systems. 
+Note that values less than 2 result in no log rotation.</description></p>
+
+

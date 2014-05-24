@@ -5,8 +5,9 @@ name: CCE-27034-8
 title: Ensure the Default C Shell Umask is Set Correctly
 ident: CCE-27034-8
 severity: low
-rule_id: user_umask_cshrc
-aqueduct_bash_fix: 1
+rule_id: accounts_umask_cshrc
+oval_id: oval:ssg:def:1146
+aqueduct_bash_fix: 
 ---
 <p class="text-info">Failing to ensure the default c shell umask is set correctly is of <b>low</b> severity.</p>
 
@@ -23,7 +24,7 @@ written to by unauthorized users.</rationale></p>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 To ensure the default umask for users of the C shell is set properly,
 add or correct the <xhtml:code>umask</xhtml:code> setting in <xhtml:code>/etc/csh.cshrc</xhtml:code> to read as follows:
-<pre xmlns="http://www.w3.org/1999/xhtml">umask 077<!-- <sub idref="umask_user_value" /> --></pre>
+<pre xmlns="http://www.w3.org/1999/xhtml">umask 077<!-- <sub idref="var_accounts_user_umask" /> --></pre>
 </description></p>
 
 

@@ -1,0 +1,50 @@
+---
+layout: control
+permalink: /CCE-27596-6/
+name: CCE-27596-6
+title: Encrypt Partitions
+ident: CCE-27596-6
+severity: low
+rule_id: encrypt_partitions
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to encrypt partitions is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The risk of a system's physical compromise, particularly mobile systems such as
+laptops, places its data at risk of compromise.  Encrypting this data mitigates
+the risk of its loss if the system is lost.
+</rationale></p>
+<p><small>via FISMA SSG. View all 6 <i>Disk Partitioning</i> rules. <a href="/cce/ssg/group/disk_partitioning"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Red Hat Enterprise Linux 6 natively supports partition encryption through the
+Linux Unified Key Setup-on-disk-format (LUKS) technology. The easiest way to 
+encrypt a partition is during installation time.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+For manual installations, select the <xhtml:code>Encrypt</xhtml:code> checkbox during
+partition creation to encrypt the partition. When this
+option is selected the system will prompt for a passphrase to use in
+decrypting the partition. The passphrase will subsequently need to be entered manually
+every time the system boots.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+For automated/unattended installations, it is possible to use Kickstart by adding
+the <xhtml:code>--encrypted</xhtml:code> and <xhtml:code>--passphrase=</xhtml:code> options to the definition of each partition to be
+encrypted. For example, the following line would encrypt the root partition:
+<pre xmlns="http://www.w3.org/1999/xhtml">part / --fstype=ext3 --size=100 --onpart=hda1 --encrypted --passphrase=<i>PASSPHRASE</i></pre>
+Any <i xmlns="http://www.w3.org/1999/xhtml">PASSPHRASE</i> is stored in the Kickstart in plaintext, and the Kickstart must then be protected accordingly.
+Omitting the <xhtml:code>--passphrase=</xhtml:code> option from the partition definition will cause the
+installer to pause and interactively ask for the passphrase during installation.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+Detailed information on encrypting partitions using LUKS can be found on
+the Red Had Documentation web site:<br xmlns="http://www.w3.org/1999/xhtml"/>
+https://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-LUKS_Disk_Encryption.html
+</description></p>
+
+

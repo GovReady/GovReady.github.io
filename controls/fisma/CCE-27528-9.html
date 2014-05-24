@@ -1,0 +1,37 @@
+---
+layout: control
+permalink: /CCE-27528-9/
+name: CCE-27528-9
+title: Disable Zone Transfers from the Nameserver
+ident: CCE-27528-9
+severity: low
+rule_id: dns_server_disable_zone_transfers
+oval_id: oval:ssg:def:360
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable zone transfers from the nameserver is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">If both the primary and secondary nameserver are under your control,
+or if you have only one nameserver, it may be possible to use an external
+configuration management mechanism to distribute zone updates. In that case, it
+is not necessary to allow zone transfers within BIND itself, so they should be
+disabled to avoid the potential for abuse.</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Protect DNS Data from Tampering or Attack</i> rules. <a href="/cce/ssg/group/dns_server_protection"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Is it necessary for a secondary nameserver to receive zone data
+via zone transfer from the primary server?  If not, follow the instructions in
+this section. If so, see the next section for instructions on protecting zone
+transfers.
+Add or correct the following directive within <xhtml:code>/etc/named.conf</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">options {
+  allow-transfer { none; };
+  ...
+}</pre>
+</description></p>
+
+

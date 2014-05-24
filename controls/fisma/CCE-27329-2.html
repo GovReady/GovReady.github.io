@@ -1,0 +1,36 @@
+---
+layout: control
+permalink: /CCE-27329-2/
+name: CCE-27329-2
+title: Disable WebDAV (Distributed Authoring and Versioning)
+ident: CCE-27329-2
+severity: low
+rule_id: httpd_webdav
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable webdav (distributed authoring and versioning) is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Minimizing the number of loadable modules available to the web server, reduces risk
+by limiting the capabilities allowed by the web server.
+</rationale></p>
+<p><small>via FISMA SSG. View all 12 <i>httpd Core Modules</i> rules. <a href="/cce/ssg/group/httpd_core_modules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+WebDAV is an extension of the HTTP protocol that provides distributed and
+collaborative access to web content. If its functionality is unnecessary,
+comment out the related modules:
+<pre xmlns="http://www.w3.org/1999/xhtml">#LoadModule dav_module modules/mod_dav.so
+#LoadModule dav_fs_module modules/mod_dav_fs.so</pre>
+If there is a critical need for WebDAV, extra care should be taken in its configuration.
+Since DAV access allows remote clients to manipulate server files, any location on the
+server that is DAV enabled should be protected by access controls.
+</description></p>
+
+

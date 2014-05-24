@@ -5,8 +5,9 @@ name: CCE-26371-5
 title: Ensure the Default Umask is Set Correctly in login.defs
 ident: CCE-26371-5
 severity: low
-rule_id: user_umask_logindefs
-aqueduct_bash_fix: 1
+rule_id: accounts_umask_login_defs
+oval_id: oval:ssg:def:230
+aqueduct_bash_fix: 
 ---
 <p class="text-info">Failing to ensure the default umask is set correctly in login.defs is of <b>low</b> severity.</p>
 
@@ -23,7 +24,7 @@ written to by unauthorized users.</rationale></p>
 <p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
 To ensure the default umask controlled by <xhtml:code>/etc/login.defs</xhtml:code> is set properly,
 add or correct the <xhtml:code>UMASK</xhtml:code> setting in <xhtml:code>/etc/login.defs</xhtml:code> to read as follows:
-<pre xmlns="http://www.w3.org/1999/xhtml">UMASK 077<!-- <sub idref="umask_user_value" /> --></pre>
+<pre xmlns="http://www.w3.org/1999/xhtml">UMASK 077<!-- <sub idref="var_accounts_user_umask" /> --></pre>
 </description></p>
 
 

@@ -1,0 +1,33 @@
+---
+layout: control
+permalink: /CCE-26958-9/
+name: CCE-26958-9
+title: Specify Additional Remote NTP Servers
+ident: CCE-26958-9
+severity: low
+rule_id: ntpd_specify_multiple_servers
+oval_id: oval:ssg:def:245
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to specify additional remote ntp servers is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Specifying additional NTP servers increases the availability of
+accurate time data, in the event that one of the specified servers becomes
+unavailable. This is typical for a system acting as an NTP server for
+other systems.
+</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Network Time Protocol</i> rules. <a href="/cce/ssg/group/ntp"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Additional NTP servers can be specified for time synchronization
+in the file <xhtml:code>/etc/ntp.conf</xhtml:code>.  To do so, add additional lines of the
+following form, substituting the IP address or hostname of a remote NTP server for
+<em xmlns="http://www.w3.org/1999/xhtml">ntpserver</em>:
+<pre xmlns="http://www.w3.org/1999/xhtml">server <i>ntpserver</i></pre>
+</description></p>
+
+

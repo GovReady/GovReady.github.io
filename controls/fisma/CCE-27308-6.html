@@ -1,0 +1,31 @@
+---
+layout: control
+permalink: /CCE-27308-6/
+name: CCE-27308-6
+title: Prevent Other Programs from Using Avahi's Port
+ident: CCE-27308-6
+severity: low
+rule_id: avahi_prevent_port_sharing
+oval_id: oval:ssg:def:373
+aqueduct_bash_fix: 1
+---
+<p class="text-info">Failing to prevent other programs from using avahi's port is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+This helps ensure that only Avahi is responsible for mDNS traffic coming from
+that port on the system.
+</rationale></p>
+<p><small>via FISMA SSG. View all 5 <i>Configure Avahi if Necessary</i> rules. <a href="/cce/ssg/group/avahi_configuration"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To prevent other mDNS stacks from running, edit <xhtml:code>/etc/avahi/avahi-daemon.conf</xhtml:code>
+and ensure the following line appears in the <xhtml:code>[server]</xhtml:code> section:
+<pre xmlns="http://www.w3.org/1999/xhtml">disallow-other-stacks=yes</pre>
+</description></p>
+
+

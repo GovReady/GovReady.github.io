@@ -5,8 +5,9 @@ name: CCE-26917-5
 title: Ensure the Default Bash Umask is Set Correctly
 ident: CCE-26917-5
 severity: low
-rule_id: user_umask_bashrc
-aqueduct_bash_fix: 1
+rule_id: accounts_umask_bashrc
+oval_id: oval:ssg:def:847
+aqueduct_bash_fix: 
 ---
 <p class="text-info">Failing to ensure the default bash umask is set correctly is of <b>low</b> severity.</p>
 
@@ -24,7 +25,7 @@ written to by unauthorized users.</rationale></p>
 To ensure the default umask for users of the Bash shell is set properly,
 add or correct the <xhtml:code>umask</xhtml:code> setting in <xhtml:code>/etc/bashrc</xhtml:code> to read
 as follows:
-<pre xmlns="http://www.w3.org/1999/xhtml">umask 077<!-- <sub idref="umask_user_value" /> --></pre>
+<pre xmlns="http://www.w3.org/1999/xhtml">umask 077<!-- <sub idref="var_accounts_user_umask" /> --></pre>
 </description></p>
 
 

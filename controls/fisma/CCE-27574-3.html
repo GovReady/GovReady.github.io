@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-27574-3/
+name: CCE-27574-3
+title: Restrict Web Directory
+ident: CCE-27574-3
+severity: low
+rule_id: httpd_restrict_web_directory
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to restrict web directory is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Access to the web server's directory hierarchy could allow access to unauthorized files
+by web clients. Following symbolic links could also allow such access.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Directory Restrictions</i> rules. <a href="/cce/ssg/group/httpd_directory_restrictions"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The default configuration for the web (<xhtml:code>/var/www/html</xhtml:code>) Directory allows directory
+indexing (<xhtml:code>Indexes</xhtml:code>) and the following of symbolic links (<xhtml:code>FollowSymLinks</xhtml:code>).
+Neither of these is recommended.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+The <xhtml:code>/var/www/html</xhtml:code> directory hierarchy should not be viewable via the web, and
+symlinks should only be followed if the owner of the symlink also owns the linked file.
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+Ensure that this policy is adhered to by altering the related section of the configuration:
+<pre xmlns="http://www.w3.org/1999/xhtml">&lt;Directory "/var/www/html"&gt;
+#  ...
+   Options SymLinksIfOwnerMatch
+#  ...
+&lt;/Directory&gt;</pre>
+</description></p>
+
+

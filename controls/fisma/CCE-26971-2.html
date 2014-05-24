@@ -5,8 +5,9 @@ name: CCE-26971-2
 title: Verify Only Root Has UID 0
 ident: CCE-26971-2
 severity: medium
-rule_id: no_uidzero_except_root
-aqueduct_bash_fix: 1
+rule_id: accounts_no_uid_except_zero
+oval_id: oval:ssg:def:1150
+aqueduct_bash_fix: 
 ---
 <p class="text-warning">Failing to verify only root has uid 0 is of <b>medium</b> severity.</p>
 

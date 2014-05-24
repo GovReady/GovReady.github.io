@@ -1,0 +1,31 @@
+---
+layout: control
+permalink: /CCE-26795-5/
+name: CCE-26795-5
+title: Restrict Web Browser Use for Administrative Accounts
+ident: CCE-26795-5
+severity: low
+rule_id: no_root_webbrowsing
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to restrict web browser use for administrative accounts is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+If a browser vulnerability is exploited while running with administrative privileges,
+the entire system could be compromised. Specific exceptions for local service
+administration should be documented in site-defined policy.
+</rationale></p>
+<p><small>via FISMA SSG. View all 7 <i>Restrict Root Logins</i> rules. <a href="/cce/ssg/group/root_logins"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Enforce policy requiring administrative accounts use web browsers only for
+local service administration.
+</description></p>
+
+

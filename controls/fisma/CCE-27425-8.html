@@ -1,0 +1,31 @@
+---
+layout: control
+permalink: /CCE-27425-8/
+name: CCE-27425-8
+title: Set httpd ServerTokens Directive to Prod
+ident: CCE-27425-8
+severity: low
+rule_id: httpd_servertokens_prod
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 1
+---
+<p class="text-info">Failing to set httpd servertokens directive to prod is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Information disclosed to clients about the configuration of the web server and system could be used
+to plan an attack on the given system. This information disclosure should be restricted to a minimum.
+</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Restrict Web Server Information Leakage</i> rules. <a href="/cce/ssg/group/httpd_restrict_info_leakage"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US"><xhtml:code>ServerTokens Prod</xhtml:code> restricts information in page headers, returning only the word "Apache."
+<br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
+Add or correct the following directive in <xhtml:code>/etc/httpd/conf/httpd.conf</xhtml:code>:
+<pre xmlns="http://www.w3.org/1999/xhtml">ServerTokens Prod</pre>
+</description></p>
+
+

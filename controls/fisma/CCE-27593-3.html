@@ -1,0 +1,31 @@
+---
+layout: control
+permalink: /CCE-27593-3/
+name: CCE-27593-3
+title: Ensure Default Password Is Not Used
+ident: CCE-27593-3
+severity: medium
+rule_id: snmpd_not_default_password
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-warning">Failing to ensure default password is not used is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Presence of the default SNMP password enables querying of different system
+aspects and could result in unauthorized knowledge of the system.
+</rationale></p>
+<p><small>via FISMA SSG. View all 2 <i>Configure SNMP Server if Necessary</i> rules. <a href="/cce/ssg/group/snmp_configure_server"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Edit <xhtml:code>/etc/snmp/snmpd.conf</xhtml:code>, remove default community string <xhtml:code>public</xhtml:code>.  
+Upon doing that, restart the SNMP service:
+<pre xmlns="http://www.w3.org/1999/xhtml"># service snmpd restart</pre>
+</description></p>
+
+

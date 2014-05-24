@@ -1,0 +1,41 @@
+---
+layout: control
+permalink: /CCE-27424-1/
+name: CCE-27424-1
+title: Verify that Shared Library Files Have Root Ownership
+ident: CCE-27424-1
+severity: medium
+rule_id: file_ownership_library_dirs
+oval_id: oval:ssg:def:853
+aqueduct_bash_fix: 
+---
+<p class="text-warning">Failing to verify that shared library files have root ownership is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Files from shared library directories are loaded into the address
+space of processes (including privileged ones) or of the kernel itself at
+runtime. Proper ownership is necessary to protect the integrity of the system.
+</rationale></p>
+<p><small>via FISMA SSG. View all 4 <i>Verify File Permissions Within Some Important Directories</i> rules. <a href="/cce/ssg/group/permissions_within_important_dirs"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">System-wide shared library files, which are linked to executables
+during process load time or run time, are stored in the following directories
+by default:
+<pre xmlns="http://www.w3.org/1999/xhtml">/lib
+/lib64
+/usr/lib
+/usr/lib64
+</pre>
+Kernel modules, which can be added to the kernel during runtime, are also
+stored in <xhtml:code>/lib/modules</xhtml:code>. All files in these directories should be
+owned by the <xhtml:code>root</xhtml:code> user. If the directory, or any file in these
+directories, is found to be owned by a user other than root correct its
+ownership with the following command:
+<pre xmlns="http://www.w3.org/1999/xhtml"># chown root <i>FILE</i></pre>
+</description></p>
+
+

@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27468-8/
+name: CCE-27468-8
+title: Disable Server Activity Status
+ident: CCE-27468-8
+severity: low
+rule_id: httpd_server_activity_status
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable server activity status is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Minimizing the number of loadable modules available to the web server reduces risk
+by limiting the capabilities allowed by the web server.
+</rationale></p>
+<p><small>via FISMA SSG. View all 12 <i>httpd Core Modules</i> rules. <a href="/cce/ssg/group/httpd_core_modules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The <xhtml:code>status</xhtml:code> module provides real-time access to statistics on the internal operation of
+the web server. This may constitute an unnecessary information leak and should be disabled
+unless necessary. To do so, comment out the related module:
+<pre xmlns="http://www.w3.org/1999/xhtml">#LoadModule status_module modules/mod_status.so</pre>
+If there is a critical need for this module, ensure that access to the status
+page is properly restricted to a limited set of hosts in the status handler
+configuration.
+</description></p>
+
+

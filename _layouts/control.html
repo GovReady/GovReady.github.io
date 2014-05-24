@@ -14,6 +14,11 @@
         	<li>ident: {{ page.ident }}</li>
         	<li>title: {{ page.title }}</li>
         	<li>rule_id: {{ page.rule_id }} </li>
+          {% if page.oval_id %}
+          <li>oval_id: {{ page.oval_id }} <pre>oscap oval eval --id {{ page.oval_id }} ssg-rhel6-oval.xml</pre></li>
+          {% else %}
+          <li>oval_id: -- </li>
+          {% endif %}
         </ul>
 
         {% include aqueduct-embed.html %}

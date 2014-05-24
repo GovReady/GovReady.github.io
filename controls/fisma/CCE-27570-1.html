@@ -1,0 +1,33 @@
+---
+layout: control
+permalink: /CCE-27570-1/
+name: CCE-27570-1
+title: Disable HTTP mod_rewrite
+ident: CCE-27570-1
+severity: low
+rule_id: httpd_mod_rewrite
+oval_id: oval:ssg:def:281
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable http mod_rewrite is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Minimizing the number of loadable modules available to the web server reduces risk
+by limiting the capabilities allowed by the web server.
+</rationale></p>
+<p><small>via FISMA SSG. View all 12 <i>httpd Core Modules</i> rules. <a href="/cce/ssg/group/httpd_core_modules"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+The <xhtml:code>mod_rewrite</xhtml:code> module is very powerful and can protect against
+certain classes of web attacks. However, it is also very complex and has a
+significant history of vulnerabilities itself. If its functionality is
+unnecessary, comment out the related module:
+<pre xmlns="http://www.w3.org/1999/xhtml">#LoadModule rewrite_module modules/mod_rewrite.so</pre>
+</description></p>
+
+

@@ -5,8 +5,9 @@ name: CCE-26844-1
 title: Set Deny For Failed Password Attempts
 ident: CCE-26844-1
 severity: medium
-rule_id: deny_password_attempts
-aqueduct_bash_fix: 1
+rule_id: accounts_passwords_pam_faillock_deny
+oval_id: oval:ssg:def:268
+aqueduct_bash_fix: 
 ---
 <p class="text-warning">Failing to set deny for failed password attempts is of <b>medium</b> severity.</p>
 
@@ -26,7 +27,7 @@ To configure the system to lock out accounts after a number of incorrect login
 attempts using <xhtml:code>pam_faillock.so</xhtml:code>:
 <br xmlns="http://www.w3.org/1999/xhtml"/><br xmlns="http://www.w3.org/1999/xhtml"/>
 Add the following lines immediately below the <xhtml:code>pam_unix.so</xhtml:code> statement in <xhtml:code>AUTH</xhtml:code> section of
-<xhtml:code>/etc/pam.d/system-auth</xhtml:code>:
+both <xhtml:code>/etc/pam.d/system-auth</xhtml:code> and /etc/pam.d/password-auth:
 <pre xmlns="http://www.w3.org/1999/xhtml">auth [default=die] pam_faillock.so authfail deny=3 unlock_time=604800 fail_interval=900</pre>
 <pre xmlns="http://www.w3.org/1999/xhtml">auth required pam_faillock.so authsucc deny=3 unlock_time=604800 fail_interval=900</pre>
 </description></p>

@@ -1,0 +1,30 @@
+---
+layout: control
+permalink: /CCE-27440-7/
+name: CCE-27440-7
+title: Enable Smart Card Login
+ident: CCE-27440-7
+severity: medium
+rule_id: smartcard_auth
+oval_id: 
+aqueduct_bash_fix: 
+---
+<p class="text-warning">Failing to enable smart card login is of <b>medium</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Smart card login provides two-factor authentication stronger than
+that provided by a username/password combination. Smart cards leverage a PKI
+(public key infrastructure) in order to provide and verify credentials.
+</rationale></p>
+<p><small>via FISMA SSG. View all 1 <i>Hardware Tokens for Authentication</i> rules. <a href="/cce/ssg/group/smart_card_login"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+To enable smart card authentication, consult the documentation at:
+<ul xmlns="http://www.w3.org/1999/xhtml"><li>https://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Smart_Cards/enabling-smart-card-login.html</li></ul>
+</description></p>
+
+

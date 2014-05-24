@@ -1,0 +1,35 @@
+---
+layout: control
+permalink: /CCE-27533-9/
+name: CCE-27533-9
+title: Disable Root Access to SMB Shares
+ident: CCE-27533-9
+severity: low
+rule_id: smb_server_disable_root
+oval_id: oval:ssg:def:384
+aqueduct_bash_fix: 
+---
+<p class="text-info">Failing to disable root access to smb shares is of <b>low</b> severity.</p>
+
+<h3 style="border-bottom:1px solid #ddd;margin:30px 0 8px 0;">Rationale</h3>
+<blockquote>
+<p class=""><rationale xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+Typically, administrator access is required when Samba must create user and
+machine accounts and shares. Domain member servers and standalone servers may
+not need administrator access at all. If that is the case, add the invalid
+users parameter to <xhtml:code>[global]</xhtml:code> instead.
+</rationale></p>
+<p><small>via FISMA SSG. View all 3 <i>Configure Samba if Necessary</i> rules. <a href="/cce/ssg/group/configuring_samba"><span class="glyphicon glyphicon-link"></span></a> </small></p>
+</blockquote>
+
+
+<h3 style="border-bottom:1px solid #ddd;margin:50px 0 8px 0;">Technical Description</h3>
+<p><description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US">Administrators should not use administrator accounts to access
+Samba file and printer shares. Disable the root user and the wheel
+administrator group:
+<pre xmlns="http://www.w3.org/1999/xhtml">[<i>share</i>]
+  invalid users = root @wheel</pre>
+If administrator accounts cannot be disabled, ensure that local machine
+passwords and Samba service passwords do not match.</description></p>
+
+
