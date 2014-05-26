@@ -15,7 +15,11 @@
         	<li>title: {{ page.title }}</li>
         	<li>rule_id: {{ page.rule_id }} </li>
           {% if page.oval_id %}
-          <li>oval_id: {{ page.oval_id }} <pre>oscap oval eval --id {{ page.oval_id }} ssg-rhel6-oval.xml</pre></li>
+          <li>oval_id: {{ page.oval_id }} 
+            <div>Test OVAL rule with following command line (requires: `openscap` optional: sudo)
+             <pre>oscap oval eval --id {{ page.oval_id }} /usr/share/xml/scap/ssg/content/ssg-rhel6-oval.xml</pre>
+            </div>
+          </li>
           {% else %}
           <li>oval_id: -- </li>
           {% endif %}
