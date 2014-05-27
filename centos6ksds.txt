@@ -2,11 +2,10 @@ text
 skipx
 install
 url --url http://mirror.cogentco.com/pub/linux/centos/6/os/x86_64/
-repo --name=epel --baseurl=http://download.fedoraproject.org/pub/epel/6/x86_64/
-repo --name=updates --baseurl=http://mirror.cogentco.com/pub/linux/centos/6/updates/x86_64/
 lang en_US.UTF-8
 keyboard us
 rootpw vagrant
+firewall --disabled
 
 
 authconfig --enableshadow --passalgo=sha512
@@ -23,13 +22,11 @@ logvol swap --fstype swap --name=swap --vgname=vg0 --size 2048
 logvol /var --fstype ext4 --fsoptions="noatime,nodev" --name=var --vgname=vg0 --size=4096
 logvol /home --fstype ext4 --fsoptions="noatime,nodev" --name=home --vgname=vg0 --size=2048
  
-services --enabled=network,ntpd,ntpdate
- 
+services --enabled=network
+
 reboot
  
 %packages --nobase
-epel-release
-openssh-clients
 openssh-server
 yum
 at
@@ -38,11 +35,8 @@ vixie-cron
 cronie-noanacron
 crontabs
 logrotate
-ntp
-ntpdate
 tmpwatch
 rsync
-mailx
 which
 wget
 -postfix
