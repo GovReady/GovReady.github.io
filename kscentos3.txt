@@ -21,10 +21,9 @@ part /OtherOS --fstype=ext4 --asprimary --size=10240
 part swap --asprimary --size=2048
 part pv.fedora1000 --grow --asprimary --size=500
 volgroup fedora --pesize=32768 pv.fedora1000
-logvol /centosVM --fstype=ext4 --name=centosVM --vgname=fedora --size=30720
-logvol /home --fstype=ext4 --name=home --vgname=fedora --size=81920
-logvol / --fstype=ext4 --name=root --vgname=fedora --size=25600
-logvol /windowsVM --fstype=ext4 --name=windowsVM --vgname=fedora --size=40960
+logvol /centosVM --fstype=ext4 --name=centosVM --vgname=fedora --size=10000
+logvol /home --fstype=ext4 --name=home --vgname=fedora --size=5000
+logvol / --fstype=ext4 --name=root --vgname=fedora --size=5000
 bootloader --location=mbr --driveorder=sda --append="nomodeset rhgb quiet"
 # setup the network with DHCP
 network --device=eth0 --bootproto=dhcp
