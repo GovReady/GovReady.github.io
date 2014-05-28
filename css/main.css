@@ -1,4 +1,6 @@
-
+@media screen and (min-width: 480px){
+	
+}
 
 /* ==========================================================================
    Author's custom styles
@@ -71,6 +73,7 @@
   margin-top:8px;
 }
 
+<<<<<<< HEAD
 .footer {
   margin: 40px 0 0 0;
 }
@@ -91,9 +94,37 @@
       text-align:center;
       height: 130px;
 }
+=======
+/* Footer */
 
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+/* Contact Info */
+
+.caption a {
+  display: block;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0 0 0 30px;
+}
+	
+.caption h3.phone a {
+  background-image: url('../img/phone.png');
+}
 
 /* Listing styles */
+.caption h3.mail a {
+  background-image: url('../img/mail.png');
+}
+
+.caption h3.github a {
+  background-image: url('../img/github.png');
+}
 
 #listing a {
   /* color: #3435B0; */
