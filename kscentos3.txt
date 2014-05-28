@@ -27,7 +27,6 @@ logvol / --fstype=ext4 --name=root --vgname=fedora --size=5000
 bootloader --location=mbr --driveorder=sda --append="nomodeset rhgb quiet"
 
 zerombr
-autopart
 ## Firstboot - the druid that helps you to set up the system after install - disabled
 firstboot --disabled
 
