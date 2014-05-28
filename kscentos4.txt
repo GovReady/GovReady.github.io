@@ -13,7 +13,8 @@ rootpw vagrant
 ## Fresh install, not an upgrade
 install
 ## Specify install source - install via HTTP, more SL urls here: http://www.scientificlinux.org/download/mirrors
-##url --url=http://www.mirrorservice.org/sites/mirror.centos.org/6.5/os/x86_64/
+#url --url=http://www.mirrorservice.org/sites/mirror.centos.org/6.5/os/x86_64/
+cdrom
 ## Disk Partitioning - how the boot loader should be installed, delete all partitions/mbr, then create new layout
 bootloader --location=mbr
 zerombr
