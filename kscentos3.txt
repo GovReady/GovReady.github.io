@@ -4,7 +4,7 @@ cdrom
 lang en_US.UTF-8
 keyboard uk
 timezone --utc Europe/London
-rootpw  --iscrypted $$nndedddewfooofcerd3r434
+rootpw  vagrant
 selinux --disabled
 # Custom user added
 user --name=kevinmitnick --groups=users --password=HackThePlanet
@@ -25,18 +25,17 @@ logvol /centosVM --fstype=ext4 --name=centosVM --vgname=fedora --size=10000
 logvol /home --fstype=ext4 --name=home --vgname=fedora --size=5000
 logvol / --fstype=ext4 --name=root --vgname=fedora --size=5000
 bootloader --location=mbr --driveorder=sda --append="nomodeset rhgb quiet"
+
+zerombr
+autopart
+## Firstboot - the druid that helps you to set up the system after install - disabled
+firstboot --disabled
+
+
 # setup the network with DHCP
 network --device=eth0 --bootproto=dhcp
 # packages that will be installed, anything starting with an @ sign is a yum package group.
 %packages
-@admin-tools
-@authoring-and-publishing
-@base
-@core
-@development-libs
-@development-tools
-@dial-up
-@editors
 ncftp
 
 
