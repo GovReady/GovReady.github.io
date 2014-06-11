@@ -6,8 +6,8 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
 # usage: 
-#  install:    curl -Lk https://govready.org/installgovready.sh | sudo bash
-#  uninstall:  curl -Lk https://govready.org/installgovready.sh | sudo UNINSTALL=1 bash
+#  install:    curl -Lk http://govready.org/installgovready.sh | sudo bash
+#  uninstall:  curl -Lk http://govready.org/installgovready.sh | sudo UNINSTALL=1 bash
 
 # 
 set -e -E -u -o pipefail; shopt -s failglob; set -o posix; set +o histexpand
