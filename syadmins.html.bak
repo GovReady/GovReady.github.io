@@ -1,0 +1,75 @@
+---
+layout: default 
+permalink: /sysadmins/
+---
+
+ <div class="" style="background-color: #fff;padding:40px 0 48px 0;min-height: 740px;">
+ 	<div class="container lg-font col-sm-12" style="">
+  
+ 	<h1 class="large-18 columns" style="border:0px solid blue;margin-top:20px;">GovReady for SysAdmins and Security</h1>
+  <article>
+        <div class="row">
+          
+          <div class="large-2 columns">
+            <img src="/img/sa2.png" width="125" height="250" />
+          </div>
+
+          <div class="large-10 columns">
+            <p class="text-left" style="max-width:600px;margin-top:4px;">GovReady is a pure bash shell script wrapper around OpenScap and the Fedora SCAP-Security-Guide. 
+            </p>
+            <p class="text-left" style="max-width:600px;">GovReady is currently <b>pre-release</b> and currently requires root privileges to install and run. (We are working on that.) The <a href="https://github.com/GovReady/govready">source code</a> is simple enough for manual review. We invite you to try GovReady and provide feedback.
+            </p>
+            <p class="text-left" style="max-width:600px;">We invite you to try GovReady and provide feedback.
+            </p>
+          </div>
+        </div>
+  </article>
+
+    <article>
+        <div class="row">
+
+          <div class="row col-lg-12">
+            <h2 class="text-left">Get started</h2>
+            <h3 class="text-left">Install on a vagrant box</h3>
+            <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
+vagrant ssh
+
+su -
+
+curl -Lk https://raw.githubusercontent.com/GovReady/govready/master/install.sh | sudo bash
+
+govready install_ssg
+
+govready scan
+
+ls usgcb-rhel6-server-results-*.html
+
+lynx usgcb-rhel6-server-results-*.html
+
+            </pre>
+
+            <h3 class="text-left" style="margin-top:20px;">Install on your server</h3>
+            <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
+ssh you@yourdevserver
+
+su -
+
+curl -Lk https://raw.githubusercontent.com/GovReady/govready/master/install.sh | sudo bash
+
+govready install_ssg
+
+govready scan
+
+ls usgcb-rhel6-server-results-*.html
+
+lynx usgcb-rhel6-server-results-*.html
+
+            </pre>
+          </div>
+        </div>
+  </article>
+
+      
+            
+    </div>
+  </div>
