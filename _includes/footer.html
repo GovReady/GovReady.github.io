@@ -54,6 +54,11 @@
              $( "#menu-contact" ).toggleClass( "active", true );
            });
 
+          $('noscript[data-large][data-small]').each(function() { 
+            var src = screen.width >= 500 ? $(this).data('large') : $(this).data('small');
+            $('<img src="' + src + '" alt="' + $(this).data('alt') + '" />').insertAfter($(this));
+          });
+
          }); // End Document Ready function
 
      </script>

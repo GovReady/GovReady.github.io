@@ -12,13 +12,6 @@ name: Home
         <img src='/img/govready_logo.png' alt='GovReady Logo' />
       </noscript>
 
-      <script>
-        $('noscript[data-large][data-small]').each(function() { 
-          var src = screen.width >= 500 ? $(this).data('large') : $(this).data('small');
-          $('<img src="' + src + '" alt="' + $(this).data('alt') + '" />').insertAfter($(this));
-        });
-      </script>
-
       <img src="/img/govready_logo.png" alt="GovReady Large Logo" width="750px">
     </h1>
 
