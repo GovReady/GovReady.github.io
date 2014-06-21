@@ -1,96 +1,47 @@
 ---
-layout: default
+layout: default 
 permalink: /
 name: Home
 ---
 
-<!-- Main Content Section -->
-<div class="container lg-font col-md-12" style="padding-top:40px;">
+  <!-- Main Content Section -->
+  <div class="container lg-font col-md-12" style="padding-top:40px;">
 
-  <h1 class="col-md-12 text-center">
-    <img src="/img/govready_logo.png" alt="GovReady Large Logo" style="margin:20px 0 0 0;" >
-  </h1>
-
-  <div class="row col-md-12" style="margin:40px 0 0 0;">
-    <!--h2>From zero to civic hero faster</h2-->
-    <!--h2>Tools for faster, government-ready innovation</h2-->
-    <!--h2>Making open source FISMA-compliant for government use</h2-->
-    <!--h2>FISMA-compliant open source for government</h2-->
-    <!--h2>Make your open source IT ready for government</h2-->
-    <h2>Open source. Secure. FISMA-compliance.</h2>
-    <!--h2 style="width:490px;margin:auto;text-align:left;padding-left:140px;"><span style="color:green">√</span> Open source <br><span style="color:green">√</span> Secure <br><span style="color:green">√</span> FISMA-compliance</h2-->
-  </div><!--/end row-->
+    <h1 class="col-md-12 text-center">GovReady for Civic Innovators</h1>
 
     <div class="row col-md-12" style="margin:40px 0 0 0;">
-
+      
       <div class="col-md-2">
-        <img src="/img/sa2.png" width="125" height="250" />
+        <img src="/img/ci2.png" width="125" height="250" />
       </div>
 
       <div class="col-md-10">
-        <p class="text-left" style="margin-top:4px;">GovReady is a pure bash shell script wrapper around OpenScap and the Fedora SCAP-Security-Guide. 
+        <p class="text-left">GovReady helps developers understand and build secure, FISMA-compliant IT Systems for use in government and other security-conscious organizations.
         </p>
-        <p class="text-left">GovReady is currently <b>pre-release</b> and currently requires root privileges to install and run. (We are working on that.) The <a href="https://github.com/GovReady/govready">source code</a> is simple enough for manual review. We invite you to try GovReady and provide feedback.
-        </p>
-        <p class="text-left">We invite you to try GovReady and provide feedback.
+        <p class="text-left">GovReady is currently <b>pre-release</b>. We invite you to try GovReady and provide feedback.
         </p>
       </div>
     </div>
 
-  <div class="row col-md-12" style="padding-top:40px;">
-    <div class="col-md-6 col-xs-6 text-center">
-      <a href="/innovators/"><input type="image" img src="/img/ci2.png" alt="Innovators Page" width="125" height="250" border="no"/></a>
-      <h4><a href="/innovators/">For Civic Innovators</a></h4>
-    </div>
+    <div class="row col-md-12">
+      <h2 class="text-left">Get started</h2>
+      <h3 class="text-left">Install on a vagrant box</h3>
+      <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
+vagrant ssh
 
-    <div class="col-md-6 col-xs-6 text-center">
-      <a href="/sysadmins/"><input type="image" img src="/img/sa2.png" alt="SysAdmin Page" width="125" height="250" border="no" /></a>
-      <h4><a href="/sysadmin/">For SysAdmins &amp; Security</a></h4>
-    </div>
-  </div> <!--/end row-->
+su -
 
-  <!--div class="row col-md-12">
-    <p>
-      <i>GovReady</i> aims to speed and standarize IT certificaton the way Bootstrap speeds and standardizes front-end web site design.
-    </p>
+curl -Lk https://raw.githubusercontent.com/GovReady/govready/master/install.sh | sudo bash
 
-      <p class="text-muted">
-        GitMachines/GovReady is a 2013 Winner of John S. and James L. Knight Foundation 2013 News Challenge.
-        <a
-        href="http://knightfoundation.org/grants/201345714/">Learn more...</a>
-      </p>
-  </div--><!--/end row-->
+govready install_ssg
 
-  <div class="row col-md-12 col-xs-12" style="padding-top:40px;">
-    <a name="contact" style=""></a>
-    <h1 class="text-center">Contact</h1>
+govready scan
 
-     <div class="row col-md-12 text-center">
-      <div class="col-md-4 col-xs-4 text-center">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3 class="phone"><a href="tel:612-888-4468">612-888-4GOV</a></h3>
-          </div>
-        </div>
-      </div>
+ls usgcb-rhel6-server-results-*.html
 
-      <div class="col-md-4 col-xs-4 text-center">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3 class="mail"><a href="mailto:info@govready.org">info@govready.org</a></h3>
-          </div>
-        </div>
-      </div>
+lynx usgcb-rhel6-server-results-*.html
+      </pre>
 
-      <div class="col-md-4 col-xs-4 text-center">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3 class="github"><a href="https://github.com/GovReady/govready/issues">Bugs / Issues</a></h3>
-          </div>
-        </div>
-      </div>
+    </div><!--/end row-->
 
-    </div>
-  </div> <!--/end row-->
-
-</div><!--/end container-->
+  </div><!--/end container-->
