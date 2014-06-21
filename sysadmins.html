@@ -1,43 +1,34 @@
 ---
 layout: default 
 permalink: /sysadmins/
+name: Sys Admins &amp; Security
 ---
 
-    <!-- Main Content Section -->
-    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-
-<div class="" style="background-color: #fff;padding:40px 0 48px 0;min-height: 740px;">
-  
-
-  <div class="container lg-font col-md-12">
+  <!-- Main Content Section -->
+  <div class="container lg-font col-md-12" style="padding-top:40px;">
 
     <h1 class="col-md-12 text-center">GovReady for Sys Admins &amp; Security</h1>
-    
 
-        <div class="row col-md-12">
+    <div class="row col-md-12" style="margin:40px 0 0 0;">
 
-          <div class="col-md-2">
-            <img src="/img/sa2.png" width="125" height="250" />
-          </div>
+      <div class="col-md-2">
+        <img src="/img/sa2.png" width="125" height="250" />
+      </div>
 
-          <div class="col-md-10">
-          	<p class="text-left" style="margin-top:4px;">GovReady is a pure bash shell script wrapper around OpenScap and the Fedora SCAP-Security-Guide. 
-            </p>
-            <p class="text-left">GovReady is currently <b>pre-release</b> and currently requires root privileges to install and run. (We are working on that.) The <a href="https://github.com/GovReady/govready">source code</a> is simple enough for manual review. We invite you to try GovReady and provide feedback.
-            </p>
-            <p class="text-left">We invite you to try GovReady and provide feedback.
-            </p>
-          </div>
-        </div>
+      <div class="col-md-10">
+      	<p class="text-left" style="margin-top:4px;">GovReady is a pure bash shell script wrapper around OpenScap and the Fedora SCAP-Security-Guide. 
+        </p>
+        <p class="text-left">GovReady is currently <b>pre-release</b> and currently requires root privileges to install and run. (We are working on that.) The <a href="https://github.com/GovReady/govready">source code</a> is simple enough for manual review. We invite you to try GovReady and provide feedback.
+        </p>
+        <p class="text-left">We invite you to try GovReady and provide feedback.
+        </p>
+      </div>
+    </div>
 
-
-
-        <div class="row col-md-12">
-
-          <div class="col-md-12">
-          	<h2 class="text-left">Get started</h2>
-            <h3 class="text-left">Install on a vagrant box</h3>
-            <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
+    <div class="row col-md-12">
+    	<h2 class="text-left">Get started</h2>
+      <h3 class="text-left">Install on a vagrant box</h3>
+      <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
 vagrant ssh
 
 su -
@@ -51,11 +42,10 @@ govready scan
 ls usgcb-rhel6-server-results-*.html
 
 lynx usgcb-rhel6-server-results-*.html
+      </pre>
 
-            </pre>
-
-            <h3 class="text-left" style="margin-top:20px;">Install on your server</h3>
-            <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
+      <h3 class="text-left" style="margin-top:20px;">Install on your server</h3>
+      <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
 ssh you@yourdevserver
 
 su -
@@ -69,13 +59,9 @@ govready scan
 ls usgcb-rhel6-server-results-*.html
 
 lynx usgcb-rhel6-server-results-*.html
+        </pre>
+      </div><!--/end row-->
 
-            </pre>
-          </div>
-        </div>
+  </div><!--/end container-->
 
-      
-            
-    </div>
-  </div>
 
