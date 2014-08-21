@@ -18,29 +18,91 @@ name: Innovators
       <div class="col-md-10">
       	<p class="text-left">GovReady helps developers understand and build secure, FISMA-compliant IT Systems for use in government and other security-conscious organizations.
       	</p>
-      	<p class="text-left">GovReady is currently <b>pre-release</b>. We invite you to try GovReady and provide feedback.
+      	<p class="text-left">GovReady is currently <b>pre-release</b> version 0.4.x. We invite you to try GovReady and provide feedback.
       	</p>
       </div>
     </div>
 
     <div class="row col-md-12">
-    	<h2 class="text-left">Get started</h2>
+    	<h2 class="text-left">RedHat 6, 7 quickstart (64 bit)</h2>
     	<h3 class="text-left">Install on a vagrant box</h3>
       <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
 vagrant ssh
 
-su -
+# Install govready using curl. govready will install OpenSCAP and SCAP-Security-Content
+curl -Lk io.govready.org/install | sudo bash
 
-curl -Lk https://raw.githubusercontent.com/GovReady/govready/master/install.sh | sudo bash
+# Switch to root to run all tests properly
+su - 
 
-govready install_ssg
+# Create a directory and cd into it
+mkdir myfisma
+cd myfisma
 
+# Initialize the directory
+govready init
+
+# Run a scan
 govready scan
 
-ls usgcb-rhel6-server-results-*.html
+# List results
+ls -l scans
 
-lynx usgcb-rhel6-server-results-*.html
+# View a report - from the command line, old school style using lynx browser
+lynx scans/test-results-0820-0220.html
+
+# See available profiles (e.g., baselines)
+govready profiles
+
+# Run a scan for a different profile (e.g., baseline)
+govready scan usgcb-rhel6-server
+
     	</pre>
+
+
+      <h2 class="text-left">Centos 6 quickstart (64 bit)</h2>
+      <h3 class="text-left">Install on a vagrant box</h3>
+      <pre style="text-align:left;color:orange;background-color: #111;padding:12px;font-size:1.1em;">
+vagrant ssh
+
+# Install govready using curl. govready will install OpenSCAP and SCAP-Security-Content
+curl -Lk io.govready.org/install | sudo bash
+
+# Switch to root so scanner can run all tests properly
+su - 
+
+# Create a directory and cd into it
+mkdir myfisma
+cd myfisma
+
+# Initialize the directory
+govready init
+
+# Download and add CentOS cpe-dictionary.xml and cpe-oval.xml SCAP data
+# Be certain to place the SCAP files into scap/content directory
+wget https://raw.githubusercontent.com/GovReady/govready/xplatform/templates/ssg-centos6-cpe-dictionary.xml --output-document scap/content/ssg-centos6-cpe-dictionary.xml
+
+wget https://raw.githubusercontent.com/GovReady/govready/xplatform/templates/ssg-centos6-cpe-oval.xml --output-document scap/content/ssg-centos6-cpe-oval.xml
+
+# Update GovReadyfile using sed command (or update the CPE line manually using a text editor)
+sed -i 's:^CPE.*:CPE = scap/content/ssg-centos6-cpe-dictionary.xml:' GovReadyfile
+
+# Run a scan
+govready scan
+
+# List results
+ls -l scans
+
+# View a report - from the command line, old school style using lynx browser
+lynx scans/test-results-0820-0220.html
+
+# See available profiles (e.g., baselines)
+govready profiles
+
+# Run a scan for a different profile (e.g., baseline)
+govready scan usgcb-rhel6-server
+
+      </pre>
 
     </div><!--/end row-->
 
