@@ -1,9 +1,5 @@
 markdown: kramdown
 relative_permalinks: false
 description: "Get your product used by government. Download the GovReady toolkit to make FISMA and software security easy and collaborative."
-keywords: - FISMA
-- SCAP
-- OpenSCAP
-- Compliance
-- 800-53
+title: "GovReady - We make FISMA easy"
 main_title: "GovReady - We make FISMA easy"
