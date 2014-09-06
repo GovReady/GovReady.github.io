@@ -23,6 +23,8 @@ export LANG=en_US.UTF-8
 
 # Start jekyll server
 jekyll serve -twP 4000 --watch
+# alternate
+# bundle exec jekykll serve --watch
 # wait while site generated
 
 ```
