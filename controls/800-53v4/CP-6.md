@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-6/
 name: CP-6
+control: CP-6
 title: ALTERNATE STORAGE SITE CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

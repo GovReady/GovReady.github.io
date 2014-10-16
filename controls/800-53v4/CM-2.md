@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-2/
 name: CM-2
+control: CM-2
 title: BASELINE CONFIGURATION CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

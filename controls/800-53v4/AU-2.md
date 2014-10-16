@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-2/
 name: AU-2
+control: AU-2
 title: AUDIT EVENTS AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

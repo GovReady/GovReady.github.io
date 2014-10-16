@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IA-5/
 name: IA-5
+control: IA-5
 title: AUTHENTICATOR MANAGEMENT IDENTIFICATION AND AUTHENTICATION
 family: IDENTIFICATION AND AUTHENTICATION
 family_cnt: 11

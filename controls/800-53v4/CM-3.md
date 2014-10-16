@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-3/
 name: CM-3
+control: CM-3
 title: CONFIGURATION CHANGE CONTROL CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

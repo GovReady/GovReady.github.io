@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-4/
 name: AU-4
+control: AU-4
 title: AUDIT STORAGE CAPACITY AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

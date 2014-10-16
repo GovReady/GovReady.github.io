@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SA-9/
 name: SA-9
+control: SA-9
 title: EXTERNAL INFORMATION SYSTEM SERVICES SYSTEM AND SERVICES ACQUISITION
 family: SYSTEM AND SERVICES ACQUISITION
 family_cnt: 22

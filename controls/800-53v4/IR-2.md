@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IR-2/
 name: IR-2
+control: IR-2
 title: INCIDENT RESPONSE TRAINING INCIDENT RESPONSE
 family: INCIDENT RESPONSE
 family_cnt: 10

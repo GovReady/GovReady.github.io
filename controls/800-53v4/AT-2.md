@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AT-2/
 name: AT-2
+control: AT-2
 title: SECURITY AWARENESS TRAINING AWARENESS AND TRAINING
 family: AWARENESS AND TRAINING
 family_cnt: 5

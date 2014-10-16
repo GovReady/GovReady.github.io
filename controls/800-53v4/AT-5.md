@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AT-5/
 name: AT-5
+control: AT-5
 title: CONTACTS WITH SECURITY GROUPS AND ASSOCIATIONS AWARENESS AND TRAINING
 family: AWARENESS AND TRAINING
 family_cnt: 5

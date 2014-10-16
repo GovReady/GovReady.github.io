@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-9/
 name: AC-9
+control: AC-9
 title: PREVIOUS LOGON (ACCESS) NOTIFICATION ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

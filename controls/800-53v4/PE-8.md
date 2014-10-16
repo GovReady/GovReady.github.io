@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PE-8/
 name: PE-8
+control: PE-8
 title: VISITOR ACCESS RECORDS PHYSICAL AND ENVIRONMENTAL PROTECTION
 family: PHYSICAL AND ENVIRONMENTAL PROTECTION
 family_cnt: 20

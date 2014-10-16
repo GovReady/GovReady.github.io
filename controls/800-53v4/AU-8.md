@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-8/
 name: AU-8
+control: AU-8
 title: TIME STAMPS AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

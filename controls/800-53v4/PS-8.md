@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-8/
 name: PS-8
+control: PS-8
 title: PERSONNEL SANCTIONS PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-6/
 name: CM-6
+control: CM-6
 title: CONFIGURATION SETTINGS CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

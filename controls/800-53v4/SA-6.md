@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SA-6/
 name: SA-6
+control: SA-6
 title: SOFTWARE USAGE RESTRICTIONS SYSTEM AND SERVICES ACQUISITION
 family: SYSTEM AND SERVICES ACQUISITION
 family_cnt: 22

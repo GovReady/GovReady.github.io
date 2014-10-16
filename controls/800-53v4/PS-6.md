@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-6/
 name: PS-6
+control: PS-6
 title: ACCESS AGREEMENTS PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

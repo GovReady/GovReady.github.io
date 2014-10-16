@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-2/
 name: MP-2
+control: MP-2
 title: MEDIA ACCESS MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

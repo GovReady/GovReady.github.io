@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-7/
 name: AU-7
+control: AU-7
 title: AUDIT REDUCTION AND REPORT GENERATION AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

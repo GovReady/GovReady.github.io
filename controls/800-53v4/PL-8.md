@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-8/
 name: PL-8
+control: PL-8
 title: INFORMATION SECURITY ARCHITECTURE PLANNING
 family: PLANNING
 family_cnt: 9

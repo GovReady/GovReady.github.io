@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-6/
 name: AU-6
+control: AU-6
 title: AUDIT REVIEW, ANALYSIS, AND REPORTING AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

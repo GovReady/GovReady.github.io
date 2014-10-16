@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IR-3/
 name: IR-3
+control: IR-3
 title: INCIDENT RESPONSE TESTING INCIDENT RESPONSE
 family: INCIDENT RESPONSE
 family_cnt: 10

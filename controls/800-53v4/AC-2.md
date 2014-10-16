@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-2/
 name: AC-2
+control: AC-2
 title: ACCOUNT MANAGEMENT ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

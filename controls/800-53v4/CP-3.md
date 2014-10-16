@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-3/
 name: CP-3
+control: CP-3
 title: CONTINGENCY TRAINING CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

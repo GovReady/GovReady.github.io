@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /RA-3/
 name: RA-3
+control: RA-3
 title: RISK ASSESSMENT RISK ASSESSMENT
 family: RISK ASSESSMENT
 family_cnt: 6

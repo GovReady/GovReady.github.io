@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-8/
 name: CP-8
+control: CP-8
 title: TELECOMMUNICATIONS SERVICES CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

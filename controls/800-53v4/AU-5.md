@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-5/
 name: AU-5
+control: AU-5
 title: RESPONSE TO AUDIT PROCESSING FAILURES AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

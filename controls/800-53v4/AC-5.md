@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-5/
 name: AC-5
+control: AC-5
 title: SEPARATION OF DUTIES ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

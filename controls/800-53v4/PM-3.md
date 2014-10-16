@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-3/
 name: PM-3
+control: PM-3
 title: INFORMATION SECURITY RESOURCES Program Management
 family: Program Management
 family_cnt: 16

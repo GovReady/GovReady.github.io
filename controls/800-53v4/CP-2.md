@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-2/
 name: CP-2
+control: CP-2
 title: CONTINGENCY PLAN CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

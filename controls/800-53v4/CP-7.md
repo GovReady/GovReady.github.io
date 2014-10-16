@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-7/
 name: CP-7
+control: CP-7
 title: ALTERNATE PROCESSING SITE CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

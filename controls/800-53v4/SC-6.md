@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SC-6/
 name: SC-6
+control: SC-6
 title: RESOURCE AVAILABILITY SYSTEM AND COMMUNICATIONS PROTECTION
 family: SYSTEM AND COMMUNICATIONS PROTECTION
 family_cnt: 44

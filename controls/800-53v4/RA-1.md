@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /RA-1/
 name: RA-1
+control: RA-1
 title: RISK ASSESSMENT POLICY AND PROCEDURES RISK ASSESSMENT
 family: RISK ASSESSMENT
 family_cnt: 6

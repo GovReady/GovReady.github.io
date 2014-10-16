@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MA-2/
 name: MA-2
+control: MA-2
 title: CONTROLLED MAINTENANCE MAINTENANCE
 family: MAINTENANCE
 family_cnt: 6

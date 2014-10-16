@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-8/
 name: MP-8
+control: MP-8
 title: MEDIA DOWNGRADING MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SA-8/
 name: SA-8
+control: SA-8
 title: SECURITY ENGINEERING PRINCIPLES SYSTEM AND SERVICES ACQUISITION
 family: SYSTEM AND SERVICES ACQUISITION
 family_cnt: 22

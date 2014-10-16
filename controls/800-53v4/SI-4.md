@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SI-4/
 name: SI-4
+control: SI-4
 title: INFORMATION SYSTEM MONITORING SYSTEM AND INFORMATION INTEGRITY
 family: SYSTEM AND INFORMATION INTEGRITY
 family_cnt: 17

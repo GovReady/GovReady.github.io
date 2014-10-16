@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-2/
 name: PM-2
+control: PM-2
 title: SENIOR INFORMATION SECURITY OFFICER Program Management
 family: Program Management
 family_cnt: 16

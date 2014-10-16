@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-3/
 name: MP-3
+control: MP-3
 title: MEDIA MARKING MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

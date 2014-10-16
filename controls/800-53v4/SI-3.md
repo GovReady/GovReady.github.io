@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SI-3/
 name: SI-3
+control: SI-3
 title: MALICIOUS CODE PROTECTION SYSTEM AND INFORMATION INTEGRITY
 family: SYSTEM AND INFORMATION INTEGRITY
 family_cnt: 17

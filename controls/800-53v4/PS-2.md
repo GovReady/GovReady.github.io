@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-2/
 name: PS-2
+control: PS-2
 title: POSITION RISK DESIGNATION PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SC-7/
 name: SC-7
+control: SC-7
 title: BOUNDARY PROTECTION SYSTEM AND COMMUNICATIONS PROTECTION
 family: SYSTEM AND COMMUNICATIONS PROTECTION
 family_cnt: 44

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-1/
 name: MP-1
+control: MP-1
 title: MEDIA PROTECTION POLICY AND PROCEDURES MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

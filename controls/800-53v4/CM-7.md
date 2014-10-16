@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-7/
 name: CM-7
+control: CM-7
 title: LEAST FUNCTIONALITY CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

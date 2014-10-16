@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-9/
 name: CM-9
+control: CM-9
 title: CONFIGURATION MANAGEMENT PLAN CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

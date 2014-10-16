@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AT-3/
 name: AT-3
+control: AT-3
 title: ROLE-BASED SECURITY TRAINING AWARENESS AND TRAINING
 family: AWARENESS AND TRAINING
 family_cnt: 5

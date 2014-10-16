@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-6/
 name: MP-6
+control: MP-6
 title: MEDIA SANITIZATION MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

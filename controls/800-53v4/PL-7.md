@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-7/
 name: PL-7
+control: PL-7
 title: SECURITY CONCEPT OF OPERATIONS PLANNING
 family: PLANNING
 family_cnt: 9

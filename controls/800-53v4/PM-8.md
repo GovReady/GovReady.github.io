@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-8/
 name: PM-8
+control: PM-8
 title: CRITICAL INFRASTRUCTURE PLAN Program Management
 family: Program Management
 family_cnt: 16

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-7/
 name: PS-7
+control: PS-7
 title: THIRD-PARTY PERSONNEL SECURITY PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

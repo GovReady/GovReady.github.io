@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-7/
 name: MP-7
+control: MP-7
 title: MEDIA USE MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

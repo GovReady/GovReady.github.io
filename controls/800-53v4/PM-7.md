@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-7/
 name: PM-7
+control: PM-7
 title: ENTERPRISE ARCHITECTURE Program Management
 family: Program Management
 family_cnt: 16

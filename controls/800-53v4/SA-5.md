@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SA-5/
 name: SA-5
+control: SA-5
 title: INFORMATION SYSTEM DOCUMENTATION SYSTEM AND SERVICES ACQUISITION
 family: SYSTEM AND SERVICES ACQUISITION
 family_cnt: 22

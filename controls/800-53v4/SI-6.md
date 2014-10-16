@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SI-6/
 name: SI-6
+control: SI-6
 title: SECURITY FUNCTION VERIFICATION SYSTEM AND INFORMATION INTEGRITY
 family: SYSTEM AND INFORMATION INTEGRITY
 family_cnt: 17

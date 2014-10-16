@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-3/
 name: AU-3
+control: AU-3
 title: CONTENT OF AUDIT RECORDS AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

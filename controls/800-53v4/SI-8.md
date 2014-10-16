@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SI-8/
 name: SI-8
+control: SI-8
 title: SPAM PROTECTION SYSTEM AND INFORMATION INTEGRITY
 family: SYSTEM AND INFORMATION INTEGRITY
 family_cnt: 17

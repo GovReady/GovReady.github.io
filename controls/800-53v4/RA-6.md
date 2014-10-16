@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /RA-6/
 name: RA-6
+control: RA-6
 title: TECHNICAL SURVEILLANCE COUNTERMEASURES SURVEY RISK ASSESSMENT
 family: RISK ASSESSMENT
 family_cnt: 6

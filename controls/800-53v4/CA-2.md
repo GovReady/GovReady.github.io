@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CA-2/
 name: CA-2
+control: CA-2
 title: SECURITY ASSESSMENTS SECURITY ASSESSMENT AND AUTHORIZATION
 family: SECURITY ASSESSMENT AND AUTHORIZATION
 family_cnt: 9

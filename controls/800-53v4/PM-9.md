@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-9/
 name: PM-9
+control: PM-9
 title: RISK MANAGEMENT STRATEGY Program Management
 family: Program Management
 family_cnt: 16

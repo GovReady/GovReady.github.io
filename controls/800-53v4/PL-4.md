@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-4/
 name: PL-4
+control: PL-4
 title: RULES OF BEHAVIOR PLANNING
 family: PLANNING
 family_cnt: 9

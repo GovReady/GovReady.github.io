@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SA-7/
 name: SA-7
+control: SA-7
 title: USER-INSTALLED SOFTWARE SYSTEM AND SERVICES ACQUISITION
 family: SYSTEM AND SERVICES ACQUISITION
 family_cnt: 22

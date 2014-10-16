@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-1/
 name: PS-1
+control: PS-1
 title: PERSONNEL SECURITY POLICY AND PROCEDURES PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

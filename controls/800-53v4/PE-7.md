@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PE-7/
 name: PE-7
+control: PE-7
 title: VISITOR CONTROL PHYSICAL AND ENVIRONMENTAL PROTECTION
 family: PHYSICAL AND ENVIRONMENTAL PROTECTION
 family_cnt: 20

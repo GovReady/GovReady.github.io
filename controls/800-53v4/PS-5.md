@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-5/
 name: PS-5
+control: PS-5
 title: PERSONNEL TRANSFER PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

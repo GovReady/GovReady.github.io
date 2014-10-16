@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-4/
 name: AC-4
+control: AC-4
 title: INFORMATION FLOW ENFORCEMENT ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

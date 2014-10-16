@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-3/
 name: AC-3
+control: AC-3
 title: ACCESS ENFORCEMENT ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

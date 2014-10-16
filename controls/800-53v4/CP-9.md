@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-9/
 name: CP-9
+control: CP-9
 title: INFORMATION SYSTEM BACKUP CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

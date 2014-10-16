@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-4/
 name: CM-4
+control: CM-4
 title: SECURITY IMPACT ANALYSIS CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

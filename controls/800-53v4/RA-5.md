@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /RA-5/
 name: RA-5
+control: RA-5
 title: VULNERABILITY SCANNING RISK ASSESSMENT
 family: RISK ASSESSMENT
 family_cnt: 6

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /RA-2/
 name: RA-2
+control: RA-2
 title: SECURITY CATEGORIZATION RISK ASSESSMENT
 family: RISK ASSESSMENT
 family_cnt: 6

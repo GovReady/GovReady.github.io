@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-1/
 name: PL-1
+control: PL-1
 title: SECURITY PLANNING POLICY AND PROCEDURES PLANNING
 family: PLANNING
 family_cnt: 9

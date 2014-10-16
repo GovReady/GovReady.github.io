@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IR-9/
 name: IR-9
+control: IR-9
 title: INFORMATION SPILLAGE RESPONSE INCIDENT RESPONSE
 family: INCIDENT RESPONSE
 family_cnt: 10

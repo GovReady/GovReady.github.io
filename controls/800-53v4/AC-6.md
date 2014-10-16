@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-6/
 name: AC-6
+control: AC-6
 title: LEAST PRIVILEGE ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

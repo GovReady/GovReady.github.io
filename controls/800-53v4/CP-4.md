@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CP-4/
 name: CP-4
+control: CP-4
 title: CONTINGENCY PLAN TESTING CONTINGENCY PLANNING
 family: CONTINGENCY PLANNING
 family_cnt: 13

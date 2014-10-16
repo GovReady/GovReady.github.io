@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-4/
 name: MP-4
+control: MP-4
 title: MEDIA STORAGE MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

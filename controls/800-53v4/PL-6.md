@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-6/
 name: PL-6
+control: PL-6
 title: SECURITY-RELATED ACTIVITY PLANNING PLANNING
 family: PLANNING
 family_cnt: 9

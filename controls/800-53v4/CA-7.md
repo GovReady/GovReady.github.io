@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CA-7/
 name: CA-7
+control: CA-7
 title: CONTINUOUS MONITORING SECURITY ASSESSMENT AND AUTHORIZATION
 family: SECURITY ASSESSMENT AND AUTHORIZATION
 family_cnt: 9

@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-2/
 name: PL-2
+control: PL-2
 title: SYSTEM SECURITY PLAN PLANNING
 family: PLANNING
 family_cnt: 9

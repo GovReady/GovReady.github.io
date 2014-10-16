@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IR-1/
 name: IR-1
+control: IR-1
 title: INCIDENT RESPONSE POLICY AND PROCEDURES INCIDENT RESPONSE
 family: INCIDENT RESPONSE
 family_cnt: 10

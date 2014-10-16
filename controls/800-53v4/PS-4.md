@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-4/
 name: PS-4
+control: PS-4
 title: PERSONNEL TERMINATION PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

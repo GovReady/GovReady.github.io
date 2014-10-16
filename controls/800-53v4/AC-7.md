@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-7/
 name: AC-7
+control: AC-7
 title: UNSUCCESSFUL LOGON ATTEMPTS ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

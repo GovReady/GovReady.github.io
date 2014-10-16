@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-5/
 name: CM-5
+control: CM-5
 title: ACCESS RESTRICTIONS FOR CHANGE CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

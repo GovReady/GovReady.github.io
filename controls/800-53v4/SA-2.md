@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SA-2/
 name: SA-2
+control: SA-2
 title: ALLOCATION OF RESOURCES SYSTEM AND SERVICES ACQUISITION
 family: SYSTEM AND SERVICES ACQUISITION
 family_cnt: 22

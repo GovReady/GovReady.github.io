@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CM-8/
 name: CM-8
+control: CM-8
 title: INFORMATION SYSTEM COMPONENT INVENTORY CONFIGURATION MANAGEMENT
 family: CONFIGURATION MANAGEMENT
 family_cnt: 11

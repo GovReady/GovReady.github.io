@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IA-4/
 name: IA-4
+control: IA-4
 title: IDENTIFIER MANAGEMENT IDENTIFICATION AND AUTHENTICATION
 family: IDENTIFICATION AND AUTHENTICATION
 family_cnt: 11

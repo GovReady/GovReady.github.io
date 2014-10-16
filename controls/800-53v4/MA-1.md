@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MA-1/
 name: MA-1
+control: MA-1
 title: SYSTEM MAINTENANCE POLICY AND PROCEDURES MAINTENANCE
 family: MAINTENANCE
 family_cnt: 6

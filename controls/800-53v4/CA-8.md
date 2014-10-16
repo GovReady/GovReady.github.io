@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CA-8/
 name: CA-8
+control: CA-8
 title: PENETRATION TESTING SECURITY ASSESSMENT AND AUTHORIZATION
 family: SECURITY ASSESSMENT AND AUTHORIZATION
 family_cnt: 9

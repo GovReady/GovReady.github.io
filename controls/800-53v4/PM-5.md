@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-5/
 name: PM-5
+control: PM-5
 title: INFORMATION SYSTEM INVENTORY Program Management
 family: Program Management
 family_cnt: 16

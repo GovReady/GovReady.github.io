@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /MP-5/
 name: MP-5
+control: MP-5
 title: MEDIA TRANSPORT MEDIA PROTECTION
 family: MEDIA PROTECTION
 family_cnt: 8

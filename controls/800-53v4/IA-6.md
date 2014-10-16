@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IA-6/
 name: IA-6
+control: IA-6
 title: AUTHENTICATOR FEEDBACK IDENTIFICATION AND AUTHENTICATION
 family: IDENTIFICATION AND AUTHENTICATION
 family_cnt: 11

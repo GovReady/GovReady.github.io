@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-5/
 name: PL-5
+control: PL-5
 title: PRIVACY IMPACT ASSESSMENT PLANNING
 family: PLANNING
 family_cnt: 9

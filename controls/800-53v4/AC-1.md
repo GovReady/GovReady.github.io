@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-1/
 name: AC-1
+control: AC-1
 title: ACCESS CONTROL POLICY AND PROCEDURES ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

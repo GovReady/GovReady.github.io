@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PE-3/
 name: PE-3
+control: PE-3
 title: PHYSICAL ACCESS CONTROL PHYSICAL AND ENVIRONMENTAL PROTECTION
 family: PHYSICAL AND ENVIRONMENTAL PROTECTION
 family_cnt: 20

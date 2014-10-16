@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-1/
 name: PM-1
+control: PM-1
 title: INFORMATION SECURITY PROGRAM PLAN Program Management
 family: Program Management
 family_cnt: 16

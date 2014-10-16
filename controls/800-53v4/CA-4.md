@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /CA-4/
 name: CA-4
+control: CA-4
 title: SECURITY CERTIFICATION SECURITY ASSESSMENT AND AUTHORIZATION
 family: SECURITY ASSESSMENT AND AUTHORIZATION
 family_cnt: 9

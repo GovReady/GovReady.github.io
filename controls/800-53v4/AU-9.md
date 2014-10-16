@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-9/
 name: AU-9
+control: AU-9
 title: PROTECTION OF AUDIT INFORMATION AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

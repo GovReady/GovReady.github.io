@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SI-9/
 name: SI-9
+control: SI-9
 title: INFORMATION INPUT RESTRICTIONS SYSTEM AND INFORMATION INTEGRITY
 family: SYSTEM AND INFORMATION INTEGRITY
 family_cnt: 17

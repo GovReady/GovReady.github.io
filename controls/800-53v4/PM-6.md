@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PM-6/
 name: PM-6
+control: PM-6
 title: INFORMATION SECURITY MEASURES OF PERFORMANCE Program Management
 family: Program Management
 family_cnt: 16

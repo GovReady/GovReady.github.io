@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AU-1/
 name: AU-1
+control: AU-1
 title: AUDIT AND ACCOUNTABILITY POLICY AND PROCEDURES AUDIT AND ACCOUNTABILITY
 family: AUDIT AND ACCOUNTABILITY
 family_cnt: 16

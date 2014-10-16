@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /AC-8/
 name: AC-8
+control: AC-8
 title: SYSTEM USE NOTIFICATION ACCESS CONTROL
 family: ACCESS CONTROL
 family_cnt: 26

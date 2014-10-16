@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PS-3/
 name: PS-3
+control: PS-3
 title: PERSONNEL SCREENING PERSONNEL SECURITY
 family: PERSONNEL SECURITY
 family_cnt: 8

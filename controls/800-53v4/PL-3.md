@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-3/
 name: PL-3
+control: PL-3
 title: SYSTEM SECURITY PLAN UPDATE PLANNING
 family: PLANNING
 family_cnt: 9

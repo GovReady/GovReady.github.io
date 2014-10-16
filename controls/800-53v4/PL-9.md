@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /PL-9/
 name: PL-9
+control: PL-9
 title: CENTRAL MANAGEMENT PLANNING
 family: PLANNING
 family_cnt: 9

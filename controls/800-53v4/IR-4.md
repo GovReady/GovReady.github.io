@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /IR-4/
 name: IR-4
+control: IR-4
 title: INCIDENT HANDLING INCIDENT RESPONSE
 family: INCIDENT RESPONSE
 family_cnt: 10

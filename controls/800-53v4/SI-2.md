@@ -2,6 +2,7 @@
 layout: 800-53control
 permalink: /SI-2/
 name: SI-2
+control: SI-2
 title: FLAW REMEDIATION SYSTEM AND INFORMATION INTEGRITY
 family: SYSTEM AND INFORMATION INTEGRITY
 family_cnt: 17
