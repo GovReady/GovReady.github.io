@@ -1,6 +1,6 @@
 ---
 layout: raw 
-permalink: /fixes/require_smb_client_signing/ssg/govready/bash/fix/
+permalink: /fixes/require_smb_client_signing/ssg/govready/bash/fix
 rule_id: require_smb_client_signing
 ---
 #!/bin/bash -u
